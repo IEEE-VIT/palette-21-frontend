@@ -1,0 +1,29 @@
+.container{
+    text-align: center;
+    max-width:100%!important;
+    font-weight: bolder;
+}
+.tier{
+    color:white;
+    outline:none;
+    font-size:2vw;
+}
+.tier:hover{
+    color:white
+}
+img{
+    width:30vh;
+    margin:auto 15px
+}
+.sponsors-heading{
+    padding-top:7vw;
+    padding-bottom: 3vw;
+    font-size: 3vw;
+}
+.sponsors-logo{
+    padding:6vw 10vw;
+}
+.logo{
+    width:15vw!important;
+    padding:2vw 1vw
+}

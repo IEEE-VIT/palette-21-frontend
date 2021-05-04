@@ -1,0 +1,73 @@
+.register{
+    background-color: #4329E8;
+    color:white;
+    font-weight: 400;
+    padding:10px;
+    width: 100%;
+    font-size: 1.5vw;
+}
+.register:hover{
+    color:white
+}
+.nav-register{
+    color:rgb(67,41,232);
+    background-color:rgb(67,41,232,0.16);
+    font-weight: 500;
+    font-size: 1.4vw;
+    padding:10px;
+}
+.register-heading{
+    font-size: 3.8vw;
+    margin-bottom:5vw;
+    font-weight: 500;
+}
+.star-one{
+    position:absolute;
+    right:-15px;
+    width:12vw;
+}
+.star-two{
+    position: absolute;
+    left:-15px;
+    width:10vw;
+}
+.register-body{
+    margin:8vw auto;
+    text-align: center;
+    max-width:100%!important;
+    font-weight: bolder;
+}
+
+.illus-one {
+    width: 20vw;
+    position: relative;
+    animation: illusOne 7s 1000;
+    animation-direction: alternate;
+    z-index:-1
+  }
+  
+  @keyframes illusOne {
+    0%   {left: -20vw; top: -10vw;}
+    25%  {left: 15vw; top: 15vw;}
+    50%  {left: 20vw; top: 10vw;}
+    75%  {left: -25vw; top: 5vw;}
+    100% {left: -12vw; top: 2vw;}
+  }
+
+  
+.illus-two {
+    width: 15vw;
+    position: relative;
+    animation: illusTwo 7s 1000;
+    animation-direction: alternate;
+    z-index:-1
+
+  }
+  
+  @keyframes illusTwo {
+    0%   {left: 20vw; top: 0vw;}
+    25%  {left: -20vw; top: -5vw;}
+    50%  {left: -15vw; top: -10vw;}
+    75%  {left: -25vw; top: 5vw;}
+    100% {left: 15vw; top: 2vw;}
+  }

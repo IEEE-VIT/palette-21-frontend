@@ -1,0 +1,32 @@
+.outer-brand{
+    background-color: white;
+    height: 45vw;
+    padding-top: 5vw;
+    overflow: hidden;
+}
+.main-brand-div{
+    background-color:#4329E8;
+    color:white; 
+    height: 40vw;
+}
+.brand-content{
+    padding:4vw 8vw;
+    width:70vw;
+    font-size:1.8vw;
+}
+.brand-head{
+    font-size: 5.5vw;
+    font-weight: bolder;
+}
+.teapot{
+    width:40vw;
+    position:absolute;
+    right:-5vw;
+    top:-8vw
+}
+.colors{
+    position:absolute;
+    width:44vw;
+    top:9vw;
+    right:19vw;
+}

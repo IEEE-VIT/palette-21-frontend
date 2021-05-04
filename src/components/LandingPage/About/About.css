@@ -1,0 +1,86 @@
+/* Main Content of the About section*/
+.content{
+    margin-top: 8%;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-container{
+    display: flex; 
+    max-width:100%;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#description{
+    width: 38%;
+    min-width:380px;
+}
+#logo
+{   width: fit-content;
+    min-width:380px;
+}
+
+@media (max-width: 980px) {
+    .flex-item {
+      flex: 100%;
+    }
+    .content{
+        text-align: center;
+    }
+    .flex-item{
+        padding:0.6em;
+    }
+  }
+
+#paletteLogo{
+    width: 26vw;
+}
+
+.marquee{
+    overflow-x:hidden;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+}
+/*Marquee */
+.container{
+  margin: 0%;
+  padding: 0%;
+  font-size: 10vh;
+  font-weight: 800;
+  font-style: italic;
+}
+
+
+/*Animation for Marquee*/
+@keyframes Slde {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+
+.r1{
+    -webkit-animation: Slde 15s linear infinite reverse;
+    animation: Slde 15s linear infinite reverse;
+}
+.r2{
+    -webkit-animation: Slde 15s linear infinite;
+    animation: Slde 15s linear infinite;
+}
+
+.chld{
+    margin-left: 0.14em;
+    margin-right: 0.14em;
+}
+
+.chld:nth-child(odd){
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.14px;
+}

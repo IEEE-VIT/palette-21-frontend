@@ -26,6 +26,14 @@
     padding-left: 0.6rem !important;
 }
 
+.mr-10rm {
+    margin-right: 6rem;
+}
+
+.line-sp {
+    line-height: 1.53;
+}
+
 .headcont {
     background-image: linear-gradient(#4828C6, #2E1397);
 }

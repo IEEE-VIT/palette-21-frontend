@@ -47,9 +47,12 @@ function EventThemes(props) {
                 <h1>
                   <i>Introducing our theme</i>
                 </h1>
-                <h5 style={{ fontWeight: 300 }} className="mt-3">
-                  Convallis turpis ellat tempus, viverra aliquet. Nullam viverra
-                  num aucter sit ipsum malesuada a, duis volutpat.
+                <h5
+                  style={{ fontWeight: 300 }}
+                  className="mt-3 mr-10rm line-sp"
+                >
+                  Convallis turpis ellat tempus, viverra aliquet. Nul lam num
+                  aucter sit ipsum malesuada a, duis volutpat.
                 </h5>
               </div>
               <div className="pb-5r">

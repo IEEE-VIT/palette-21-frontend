@@ -35,6 +35,10 @@
     padding-left: 0.6rem !important;
 }
 
+.pt-10rem {
+    padding-top: 10rem !important;
+}
+
 .mr-10rm {
     margin-right: 6rem;
 }
@@ -99,6 +103,7 @@
 
 .mar-items {
     margin-right: 1.5rem !important;
+    margin-bottom: 2rem !important;
     cursor: pointer;
     font-size: 21px;
 }

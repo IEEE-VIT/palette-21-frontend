@@ -42,18 +42,21 @@ function EventThemes(props) {
         <div className="row flex-grow-1">
           <div className="col-sm-6 col-md-6"></div>
           <div className="col-sm-6 col-md-6 d-flex flex-column justify-content-around pl-5 pr-5 overflow-wrp">
-            <div className="pt-8rem flex-grow-1 d-flex flex-column justify-content-center">
-              <h1 className="mr-5r">
+            <div className="pt-10rem flex-grow-1 d-flex flex-column justify-content-center">
+              <h1 className="mr-2">
                 <i>Introducing our theme</i>
               </h1>
-              <h5 style={{ fontWeight: 300 }} className="mt-3 mr-10rm line-sp">
-                Convallis turpis ellat tempus, viverra aliquet. Nul lam num
+              <h5 style={{ fontWeight: 300 }} className="mt-3 mr-2 line-sp">
+                Convallis turpis ellat tempus, viverra aliquet. Nul lam num{" "}
+                <br />
                 aucter sit ipsum malesuada a, duis volutpat.
               </h5>
             </div>
             <div className="pt-8rem d-flex flex-column pb-5r flex-grow-1">
               <div className="flex-grow-1">
-                <h1 className="big-head">{eventThemeTitles[selectedIndex]}</h1>
+                <h1 className="big-head pt-8rem">
+                  {eventThemeTitles[selectedIndex]}
+                </h1>
                 <h4 className="big-head-subt mt-3 flex-grow-1">
                   {eventThemeDescr[selectedIndex]}
                 </h4>

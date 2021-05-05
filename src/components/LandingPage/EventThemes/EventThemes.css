@@ -23,6 +23,10 @@
     margin-right: 5rem !important;
 }
 
+.mb-5r {
+    margin-bottom: 5rem !important;
+}
+
 .pb-5r {
     padding-bottom: 5rem !important;
 }
@@ -39,12 +43,16 @@
     padding-top: 10rem !important;
 }
 
+.pt-15rem {
+    padding-top: 15rem !important;
+}
+
 .mr-10rm {
     margin-right: 6rem;
 }
 
 .line-sp {
-    line-height: 1.53;
+    line-height: 1.63;
 }
 
 .headcont {
@@ -84,6 +92,10 @@
     flex-grow: 1;
 }
 
+.flex-none {
+    flex: none !important;
+}
+
 .whiteb {
     color: white;
 }
@@ -116,3 +128,4 @@
     padding-right: 0px !important;
     padding-left: 0px !important;
 }
+

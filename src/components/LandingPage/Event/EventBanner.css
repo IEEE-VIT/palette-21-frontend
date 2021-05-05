@@ -10,22 +10,8 @@
     padding-top: 20rem;
 }
 
-.big-screen {
-    display: block;
-}
-
-.small-screen {
-    display: none;
-}
-
-@media only screen and (max-width: 1200px) {
-    .big-screen {
-        display: none;
-    }
-    
-    .small-screen {
-        display: block;
-    }
+.pt-30vh {
+    padding-top: 30vh;
 }
 
 .bg-bg {
@@ -56,6 +42,17 @@
     right: 5rem;
 }
 
+.img-arr-judges-topr-sm {
+    position: absolute;
+    opacity: 0.77;
+    top: 5vh;
+    left: 5vh;
+}
+
+.img-arr-sm {
+    height: 200vh;
+}
+
 .speakers-text {
     position: absolute;
     opacity: 0.07;
@@ -65,12 +62,41 @@
     width: 100%;
 }
 
+.speakers-text-sm {
+    position: absolute;
+    opacity: 0.07;
+    z-index: 0;
+    top: 30vh;
+    width: 100%;
+}
+
 .speaker-pic {
     position: absolute;
     z-index: 20;
     bottom: -3rem;
-    right: 10rem;
+    right: 6vw;
     height: 90vh;
+}
+
+.speaker-pic-small {
+    position: absolute;
+    z-index: 30;
+    height: 80vh;
+    margin-left: 5.2rem;
+    margin-top: 20vh;
+}
+
+.speaker-desc-sm {
+    position: absolute;
+    z-index: 40;
+    top: 60vh;
+    padding-left: 10vw !important;
+}
+
+.event-block {
+    position: absolute;
+    top: 100vh;
+    margin-left: 10vw !important; 
 }
 
 .z-top-text {
@@ -94,3 +120,4 @@
 .white-text-bold {
     color: white !important;
 }
+

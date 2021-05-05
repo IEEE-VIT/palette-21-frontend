@@ -6,8 +6,17 @@
     margin-top: 2.6rem !important;
 }
 
-.mt-5rbig {
+.mt-8rbig {
     margin-top: 8rem !important;
+}
+
+.pt-8rem {
+    padding-top: 8rem !important;
+}
+
+.pt-8rem-pb-5rem {
+    padding-top: 8rem !important;
+    padding-bottom: 5rem !important;
 }
 
 .mr-5r {
@@ -41,6 +50,7 @@
 .img-arr {
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .img-arr-img-tr {
@@ -64,7 +74,11 @@
     .img-arr-img-bl {
         opacity: 0;
     }
-  }
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
 
 .whiteb {
     color: white;

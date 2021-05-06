@@ -1,37 +1,54 @@
 /* Main Content of the About section*/
-.content{
-    margin-top: 8%;
+.content1{
+    margin-top: 1vh;
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    top: -40vh;
 }
 
-.flex-container{
-    display: flex; 
-    max-width:100%;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    align-items: center; 
+
+img.dots{
+    height:50vh;
+    width:20vw;
+    position: relative;
+    left: 0%;
+    top: 6vh;
+    z-index: -1;
 }
 
-#description{
-    width: 38%;
-    min-width:380px;
-}
-#logo
-{   width: fit-content;
-    min-width:380px;
+#about{
+    font-weight: 700;
+    font-size:6vh;
+    font-style: italic;
+    padding: 3.5vh;
 }
 
-@media (max-width: 980px) {
-    .flex-item {
-      flex: 100%;
-    }
-    .content{
+#palettelogo{
+    margin-left:auto;
+    margin-right:auto;
+}
+#cont, #logo{
+    padding: 3.5vh;
+    font-size: 2.5vh;
+    height:fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+
+@media (max-width: 768px) {
+    .content1{
         text-align: center;
+        top: -45vh;
     }
-    .flex-item{
-        padding:0.6em;
+    #cont{
+        font-size: 1em;
+    }
+    img.dots{
+        width:34vw;
+        top:0%;
     }
   }
 
@@ -40,16 +57,18 @@
 }
 
 .marquee{
+    position: relative;
+    top: -25vh;
     overflow-x:hidden;
-    margin-top: 10vw;
-    margin-bottom: 10vw;
+    margin-bottom: 8vw;
 }
 /*Marquee */
 .container{
   margin: 0%;
   padding: 0%;
-  font-size: 10vh;
-  font-weight: 800;
+  font-family: "Neue Montreal";
+  font-size: 11vh;
+  font-weight: 900;
   font-style: italic;
 }
 
@@ -57,8 +76,8 @@
 /*Animation for Marquee*/
 @keyframes Slde {
     0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
     }
     100% {
         -webkit-transform: translateX(-50%);

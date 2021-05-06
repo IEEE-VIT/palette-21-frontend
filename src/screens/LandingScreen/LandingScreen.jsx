@@ -5,6 +5,7 @@ import Hero from "../../components/LandingPage/Hero/Hero";
 import About from "../../components/LandingPage/About/About";
 import EventThemes from "../../components/LandingPage/EventThemes/EventThemes";
 import EventCarousel from "../../components/LandingPage/Event/EventCarouselSection";
+import TestimonialCarousel from "../../components/LandingPage/Testimonials/TestimonialCarousel";
 
 export default function LandingScreen() {
   return (
@@ -14,6 +15,7 @@ export default function LandingScreen() {
       <About />
       <EventThemes />
       <EventCarousel />
+      <TestimonialCarousel />
     </div>
   );
 }

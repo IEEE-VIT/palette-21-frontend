@@ -1,0 +1,83 @@
+.testi-section-bg {
+    background: linear-gradient(180deg, #2F33ED 0%, #171AB7 100%);
+}
+
+.testi-section-bg .img-arr-img-tr {
+    position: absolute;
+    opacity: 0.21;
+    top: 1.3rem;
+    right: 0rem;
+}
+
+.testi-section-bg .img-arr-img-bl {
+    position: absolute;
+    opacity: 0.21;
+    bottom: -5rem;
+    left: 0rem;
+}
+
+.winner-pic-big {
+    height: 44vh;
+    padding-right: 5vw;
+}
+
+.winner-desc {
+    padding-right: 5vw;
+}
+
+.winner-quote {
+    padding-right: 2vw;
+    position: relative;
+}
+
+.winner-quote .quote-mark {
+    position: absolute;
+    opacity: 0.2;
+    top: -3rem;
+    left: -2rem;
+}
+
+.winner-desc-text {
+    width: 30vw;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 170%;
+}
+
+.testimonial-title-text {
+    position: absolute;
+    top: 12vh;
+    left: 3vw;
+}
+
+.img-arr-img-tl-sm {
+    position: absolute;
+    opacity: 0.2;
+    top: 0vh;
+    left: 0vh;
+    height: 50vh;
+}
+
+.quote-mark-sm {
+    position: absolute;
+    opacity: 0.2;
+    top: 0rem;
+    left: -2rem;
+}
+
+.winner-pic-sm {
+    padding-right: 0;
+    padding-top: 10vh;
+}
+
+.winner-desc-sm {
+    padding-right: 0;
+}
+
+.winner-desc-text-sm {
+    padding-top: 7vh;
+    width: 76vw;
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 170%;
+}

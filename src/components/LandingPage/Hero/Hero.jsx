@@ -1,27 +1,68 @@
 import React from "react";
 import HeroP from "../../../assets/hero-p.svg";
 import HeroS from "../../../assets/hero-star.svg";
+import Event from "../../../assets/event-date.svg";
+import Reg from "../../../assets/reg-date.svg";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Row, Col } from "react-bootstrap";
 import "./Hero.css";
 
+const useStyles = makeStyles(() => ({
+  signinButton: {
+    color: "white !important",
+    borderWidth: "1px",
+    borderColor: "white !important",
+    width: "12.56rem",
+    height: "3.3rem",
+    fontSize: "1.11rem",
+  },
+  caption: {
+    fontWeight: "400",
+    fontStyle: "italic",
+    fontSize: "1.5rem",
+    color: "white !important",
+  },
+}));
+
 export default function Hero() {
+  const classes = useStyles();
   var title = "Palette'21";
-  var caption = "Designathon-some catchy line";
+  var caption = "Prototype your imagination";
   return (
-    <div className="hero">
-      <div id="bkgd">
-        <img src={HeroS} id="star-bkgd"></img>
-        <img src={HeroP} id="p-bkgd"></img>
-      </div>
-      <div className="content">
-        <Typography variant="h2">{title}</Typography>
-        <Typography>{caption}</Typography>
-        <Typography></Typography>
-        <Button variant="outlined" color="secondary">
-          Register
-        </Button>
-      </div>
+    <div id="hero">
+      <Row>
+        <Col className="bkgd1" xs={12} lg={7}>
+          <img src={HeroS} id="hero-star"></img>
+          <img src={HeroP} id="hero-p"></img>
+        </Col>
+        <Col className="content" xs={12} lg={5}>
+          <div>
+            <Typography variant="h2" id="palette21">
+              {title}
+            </Typography>
+            <Typography className={classes.caption}>{caption}</Typography>
+          </div>
+          <div id="bl2">
+            <div className="inline-block block-l">
+              <img src={Event} alt="" id="event-date"></img>
+            </div>
+            <div className="inline-block block-r">
+              <img src={Reg} alt="" id="reg-date"></img>
+            </div>
+          </div>
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="large"
+            className={classes.signinButton}
+          >
+            REGISTER NOW
+          </Button>
+        </Col>
+      </Row>
     </div>
   );
 }

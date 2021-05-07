@@ -6,10 +6,28 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-bottom: 100px;
 }
 .prizes-heading{
-    font-size:4vw;
+    font-size:2.8rem;
+    font-weight: 600;
 }
 .prizes-content{
-    font-size:2vw;
+    font-size:1.7rem;
+    font-weight: normal;
+}
+
+@media screen and (max-width : 500px) {
+    .prizes-div {
+        padding-bottom: 0;
+    }
+    .prizes-heading{
+        font-size:2rem;
+        font-weight: 600;
+    }
+    .prizes-content{
+        font-size:1rem;
+        font-weight: normal;
+    }
+    
 }

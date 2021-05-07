@@ -1,7 +1,7 @@
 import React from "react";
 import './Brand.css';
-import Teapot from '../../../images/teapot.png';
-import Colors from '../../../images/colors.png';
+import brandimg from "../../../images/brand-img-desktop.png";
+import brandimg_mobile from "../../../images/brand-img.png"
 
 const Brand = () => {
     return(
@@ -9,10 +9,10 @@ const Brand = () => {
                     <div class="brand-content">
                         <div class="brand-head">Let your creative juices flow</div>
                         <br/>
-                        <p>The one of its Design Hack</p>
+                        <p>The one of its kind Design Hack</p>
                     </div>
-                    <img src={Teapot} className="teapot"/>
-                    <img src={Colors} className="colors"/>
+                    <img src={brandimg} id="brand-img" />
+                    <img src={brandimg_mobile} id="brand-img-mobile" /> 
             </div>
     );
   

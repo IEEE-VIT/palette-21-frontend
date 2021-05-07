@@ -4,25 +4,53 @@
     height: 100vh;
     width: 100vw;
     position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .brand-content{
     padding:4vw 8vw;
     width:70vw;
-    font-size:1.8vw;
+    font-size:1.5rem;
 }
 .brand-head{
-    font-size: 5.5vw;
+    font-size: 5rem;
     font-weight: bolder;
+    line-height: normal;
 }
-.teapot{
-    width:36vw;
-    position:absolute;
-    right:0vw;
-    top:0vw
+
+#brand-img {
+    position: absolute;
+    top : -20px;
+    right : -70px;
+    height : 130vh;
+    width : auto;
+    margin : 0;
 }
-.colors{
-    position:absolute;
-    width:44vw;
-    top:9vw;
-    right:19vw;
+
+@media screen and (max-width : 1359px) {
+    #brand-img {
+        position: absolute;
+        top : 60px;
+        right : -100px;
+        height : 110vh;
+        width : auto;
+        margin : 0;
+    }
+}
+
+@media screen and (max-width : 1185px) {
+    .brand-content{
+        padding:4vw 8vw;
+        width:70vw;
+        font-size:1.3rem;
+    }
+    .brand-head{
+        font-size: 4rem;
+        font-weight: bolder;
+        line-height: normal;
+    }
+}
+
+@media screen and (max-width : 876px) {
+    
 }

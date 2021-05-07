@@ -5,6 +5,8 @@ import StarOne from '../../../images/regStar1.png';
 import StarTwo from '../../../images/regStar2.png';
 import Illustration from '../../../images/Illustration.png';
 import IllustrationTwo from '../../../images/IllustrationTwo.png';
+import google from "../../../images/google.png";
+import figma from "../../../images/figma.png";
 
 const Register = () => {
     
@@ -18,7 +20,7 @@ const Register = () => {
             <Row>
                 <Col xs={2} md={4}></Col>
                 <Col>
-                    <button className="btn register">CONTINUE WITH GOOGLE</button>
+                    <button className="btn register"><img src={google} />CONTINUE WITH GOOGLE</button>
                 </Col>
                 <Col xs={2} md={4}></Col>
             </Row>
@@ -27,7 +29,7 @@ const Register = () => {
                 <Col xs={2} md={4}></Col>
                 <Col>
                 <div>
-                    <button className="btn register">CONTINUE WITH FIGMA</button>
+                    <button className="btn register"><img src={figma} />CONTINUE WITH FIGMA</button>
                 </div>
                 </Col>
                 <Col xs={2} md={4}></Col>

@@ -7,6 +7,7 @@
     overflow-y: auto;
     box-sizing: border-box;
     overflow-x: hidden;
+    text-align: center;
 }
 
 #Flashback__leftcontainer {
@@ -18,12 +19,12 @@
 }
 
 #Flashback__leftcontainer h4 {
-    font-size: 1.5rem !important;
+    font-size: 1.7rem !important;
     font-weight: 600;
 }
 
 #Flashback__leftcontainer p {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     margin-top: 30px;
     font-weight: normal;
 }
@@ -33,12 +34,44 @@
     margin-bottom: 30px;
 }
 
-#Flashback__rightcontainer {
+#Flashback__rightcontainerdesktop {
     width: 65vw;
     height : 100vh;
 }
 
-#Flashback__rightcontainer img {
+#Flashback__rightcontainerdesktop img {
     width : 100%;
     height :100%;
+}
+
+#Flashback__rightcontainermobile {
+    display : none;
+    width : 100%;
+    height : auto;
+}
+#Flashback__rightcontainermobile img {
+    margin : 0;
+    width : 100vw;
+    height : auto;
+}
+@media screen and (max-width : 765px) {
+    #Flashback__rightcontainerdesktop {
+        display : none;
+    }
+    #Flashback__rightcontainermobile {
+        display: flex;
+    }
+    #Flashback__container {
+        flex-direction: column;
+        align-items: center;
+        height: max-content;
+    }
+    #Flashback__leftcontainer {
+        width : 100vw;
+        padding : 0;
+        margin: 0;
+    }
+    #Flashback__leftcontainer h4, #Flashback__leftcontainer p{
+        padding : 13px 15px;
+    }
 }

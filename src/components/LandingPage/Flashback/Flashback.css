@@ -1,0 +1,44 @@
+#Flashback__container {
+    height : 100vh;
+    width : 100vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow-y: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#Flashback__leftcontainer {
+    display : flex;
+    flex-direction : column;
+    width : 35vw;
+    padding-top : 30px;
+    padding-left : 30px;
+}
+
+#Flashback__leftcontainer h4 {
+    font-size: 1.5rem !important;
+    font-weight: 600;
+}
+
+#Flashback__leftcontainer p {
+    font-size: 1.15rem;
+    margin-top: 30px;
+    font-weight: normal;
+}
+
+#Flashback__leftcontainer img {
+    width : 90%;
+    margin-bottom: 30px;
+}
+
+#Flashback__rightcontainer {
+    width: 65vw;
+    height : 100vh;
+}
+
+#Flashback__rightcontainer img {
+    width : 100%;
+    height :100%;
+}

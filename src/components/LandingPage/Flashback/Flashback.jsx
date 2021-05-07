@@ -1,20 +1,24 @@
-import React, {Component, useState} from "react";
-import {Container, Row, Col, Nav, Navbar} from "react-bootstrap";
+import React, {useState} from "react";
 import './Flashback.css';
-import FlashbackRight from '../../../images/flashback-right.png';
-import FlashbackLeft from '../../../images/flashback-left.png';
+import FlashbackRight from '../../../images/flashback-right-pic1.png';
+import FlashbackLeftPic1 from '../../../images/flashback-left-pic1.png';
+import FlashbackLeftPic2 from '../../../images/flashback-left-pic2.png';
 
 const Flashback = () => {
+    const [moveRight,setMoveRight] = useState(0);
     return(
-        <div>
-            <Row>
-                <Col><div>
-                    <p>This our few glimpses from our past edition</p>
-                    <p>Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat.</p>
+        <div id="Flashback__container" onScroll={(event)=>{
+            setMoveRight(event.nativeEvent.srcElement.scrollTop);
+        }}>
+                <div id="Flashback__leftcontainer">
+                    <h4 >This our few glimpses from our past edition</h4>
+                    <p  >Palette ‘21 is the 4th edition of the prestigious design-a-thon conducted yearly by IEEE VIT. While the last three editions witnessed amazing graphic designs and web designs, this year it is a 48 hour long design hack based entirely on the concepts of UI & UX.</p>
+                    <img className="is-inview"  data-scroll src={FlashbackLeftPic1}/>
+                    <img id="elem1"  src={FlashbackLeftPic2}/>
+                </div>
+                <div style={{ marginTop : moveRight}} id="Flashback__rightcontainer">
                     <img src={FlashbackRight}/>
-                </div></Col>
-                <Col><img src={FlashbackLeft} style={{width:'100%'}}/></Col>
-            </Row>
+                </div>
         </div>
     );
   

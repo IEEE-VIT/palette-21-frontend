@@ -13,8 +13,6 @@ const Register = () => {
             <img src={StarOne} class="star-one"/>
             <img class="illus-one" src={Illustration}/>
             <p class="register-heading">Register yourself for palette 2021!</p>
-            
-            
             <br/>
             <img src={StarTwo} class="star-two"/>
             <Row>

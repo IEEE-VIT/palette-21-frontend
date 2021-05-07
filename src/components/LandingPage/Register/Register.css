@@ -6,6 +6,10 @@
     width: 100%;
     font-size: 1.5vw;
 }
+.register-body {
+    width  :100vw;
+    height : 100vh;
+}
 .register:hover{
     color:white
 }
@@ -20,6 +24,7 @@
     font-size: 3.8vw;
     margin-bottom:5vw;
     font-weight: 500;
+    z-index : -1;
 }
 .star-one{
     position:absolute;
@@ -43,7 +48,7 @@
     position: relative;
     animation: illusOne 7s 1000;
     animation-direction: alternate;
-    z-index:-1
+    z-index:1 ;
   }
   
   @keyframes illusOne {

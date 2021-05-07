@@ -97,6 +97,7 @@
 }
 
 .event-block {
+    height: 50%;
     position: absolute;
     top: 100vh;
     margin-left: 10vw !important; 

@@ -69,7 +69,7 @@ function EventBanner(props) {
         </div>
       </div>
       <div className="d-lg-none">
-        <div className="flex-grow-1 img-arr-sm">
+        <div className="flex-grow-1 d-flex flex-column img-arr-sm">
           <div className="d-flex flex-column">
             <div>
               <img src={judgesText} className="img-arr-judges-topr-sm" />
@@ -85,7 +85,7 @@ function EventBanner(props) {
               </h5>
             </div>
           </div>
-          <div className="event-block">
+          <div className="event-block d-flex flex-column flex-grow-1 justify-content-between align-items-start">
             {/*}> className="flex-grow-1 d-flex flex-column justify-content-between z-index-mid">*/}
             <div className="pt-5">
               <span className="red-allcaps">{eventCategory}</span>
@@ -100,7 +100,7 @@ function EventBanner(props) {
                 {eventDesc}
               </h5>
             </div>
-            <div className="pt-30vh mb-5r">
+            <div className="mb-5r">
               <h1 className="red-text-bold">
                 <b>{date}</b>
               </h1>

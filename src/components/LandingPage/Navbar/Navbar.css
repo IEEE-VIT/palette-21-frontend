@@ -7,7 +7,7 @@
     border-radius: 6px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 922px) {
     .NavLinks{
         font-family:"Neue Montreal";
         font-weight: 700;

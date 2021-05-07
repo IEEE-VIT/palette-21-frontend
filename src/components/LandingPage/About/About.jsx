@@ -10,14 +10,14 @@ import { Typography } from "@material-ui/core";
 
 export default function About() {
   return (
-    <div>
+    <div id="about-container">
       <img src={dots} alt="" className="dots"></img>
       <div className="content1">
         <Typography variant="h2" id="about">
           About
         </Typography>
         <Row>
-          <Col className="cont" xs={12} md={6}>
+          <Col className="cont" xs={12} lg={6}>
             <Typography id="cont">
               Palette ‘21 is the 4th edition of the prestigious design-a-thon
               conducted yearly by IEEE VIT. While the last three editions
@@ -32,7 +32,7 @@ export default function About() {
               and they will be continuing with one of their choice.
             </Typography>
           </Col>
-          <Col xs={12} md={6}>
+          <Col xs={12} lg={6}>
             <div id="logo">
               <img src={Palette} alt="Palette" id="paletteLogo"></img>
             </div>

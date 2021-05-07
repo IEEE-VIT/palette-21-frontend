@@ -31,20 +31,20 @@ img.dots{
 }
 #cont, #logo{
     padding: 3.5vh;
-    font-size: 2.5vh;
+    font-size: 1.5vw;
     height:fit-content;
     width: fit-content;
     margin: auto;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .content1{
         text-align: center;
         top: -45vh;
     }
     #cont{
-        font-size: 1em;
+        font-size: 2.5vw;
     }
     img.dots{
         width:34vw;

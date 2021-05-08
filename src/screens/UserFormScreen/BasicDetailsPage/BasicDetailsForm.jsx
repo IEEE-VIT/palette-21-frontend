@@ -61,7 +61,7 @@ export default function BasicDetailsForm() {
 
   return (
     <div>
-      <Box m={4} mx={6}>
+      <Box m={4} mx={15} mt={10}>
         <Paper class={classes.paper} variant="elevation" elevation={10}>
           <Box p={4}>
             <Grid container direction="column">
@@ -196,9 +196,9 @@ export default function BasicDetailsForm() {
                       <MenuItem value="">
                         <em>None</em>
                       </MenuItem>
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
+                      <MenuItem value={10}>Twitter</MenuItem>
+                      <MenuItem value={20}>Instagram</MenuItem>
+                      <MenuItem value={30}>Friend</MenuItem>
                     </Select>
                   </FormControl>
                 </Box>

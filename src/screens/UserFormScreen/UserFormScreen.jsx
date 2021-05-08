@@ -2,7 +2,7 @@ import { Button, Grid } from "@material-ui/core";
 import { React, useState } from "react";
 import BasicDeatilsPage from "./BasicDetailsPage/BasicDeatilsPage";
 import BasicTeamForm from "./BasicDetailsPage/BasicTeamForm";
-import TeamFormationForm from "./TeamFormation/TeamForm";
+import CreateTeamForm from "./TeamFormation/CreateTeamForm";
 
 export default function UserFormScreen() {
   const [screen, setScreen] = useState("userBasicDetails");
@@ -12,13 +12,13 @@ export default function UserFormScreen() {
   };
 
   const switchPage = (input) => {
-    switch (input) {
+    switch (input) {      
       case "userBasicDetails":
         return <BasicDeatilsPage />;
-      case "teamBasicDetails":
-        return <BasicTeamForm />;
+      case "createTeamForm":
+        return <CreateTeamForm />;
       case "teamFormation":
-        return <TeamFormationForm />;
+        return <BasicTeamForm />;
     }
   };
   return (
@@ -55,7 +55,7 @@ export default function UserFormScreen() {
                 variant="contained"
                 color="primary"
                 onClick={() => {
-                  setPage("teamBasicDetails");
+                  setPage("teamFormation");
                 }}
               >
                 Team Formation

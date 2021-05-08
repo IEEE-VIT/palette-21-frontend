@@ -3,14 +3,36 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: ["Inter"].join(","),
+  },
+  palette: {
+    type: "dark",
+    background: {
+      default: "#141414",
+    },
+    primary: {
+      main: "#563AE8",
+      contrastText: "#fff",
+    },
+    secondary: {
+      main: "#FFF",
+      contrastText: "#fff",
+    },
+  },
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <React.StrictMode>
       <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+    </React.StrictMode>
+  </ThemeProvider>,
   document.getElementById("root")
 );
 

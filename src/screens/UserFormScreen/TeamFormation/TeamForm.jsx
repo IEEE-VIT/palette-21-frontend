@@ -11,7 +11,7 @@ export default function TeamFormationForm() {
       alignItems="center"
       style={{ minHeight: "80vh" }}
     >
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <CreateTeamForm />
       </Grid>
     </Grid>

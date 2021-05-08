@@ -5,7 +5,7 @@ import figmaImage from "../assets/basicDetails/figma.svg";
 
 const useStyles = makeStyles({
   smallText: {
-    fontSize: "0.6rem",
+    fontSize: "0.8rem",
     textTransform: "none",
   },
   disabledButton: {

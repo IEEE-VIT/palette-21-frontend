@@ -11,10 +11,12 @@ import {
   Select,
   MenuItem,
   Typography,
+  Divider,
 } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import React from "react";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 
 const useStyles = makeStyles({
   paper: {
@@ -79,9 +81,9 @@ export default function CreateTeamForm() {
   };
   const classes = useStyles();
   return (
-    <Box m={4} mx={15} mt={10}>
+    <Box m={4} mx={2} mt={10}>
       <Paper class={classes.paper} variant="elevation" elevation={10}>
-        <Box p={4}>
+        <Box p={5}>
           <Grid container direction="column" alignItems="stretch">
             <Grid item>
               <Grid container direction="row" spacing={0} alignItems="center">
@@ -161,6 +163,63 @@ export default function CreateTeamForm() {
                     </Typography>
                   </Grid>
                 </Grid>
+              </Box>
+            </Grid>
+            <Grid item>
+              <Box my={2}>
+                <Grid
+                  container
+                  direction="row"
+                  spacing={2}
+                  alignItems="center"
+                  justify="center"
+                >
+                  <Grid item xs={5}>
+                    <Divider />
+                  </Grid>
+                  <Grid item xs={2}>
+                    <Typography align="center">or</Typography>
+                  </Grid>
+                  <Grid item xs={5}>
+                    <Divider />
+                  </Grid>
+                </Grid>
+              </Box>
+            </Grid>
+            <Grid item>
+              <Box my={1}>
+                <Paper variant="outlined" className={classes.outlinePaper}>
+                  <Box mx={2} my={2}>
+                    <TextField
+                      color="secondary"
+                      required
+                      label="Enter team code"
+                      placeholder="SSE-213"
+                      hint="SSEE-213"
+                      InputProps={{
+                        disableUnderline: true,
+                        className: classes.inputFields,
+                      }}
+                      InputLabelProps={{
+                        classes: {
+                          root: classes.labelRoot,
+                        },
+                      }}
+                    />
+                  </Box>
+                </Paper>
+              </Box>
+            </Grid>
+            <Grid item>
+              <Box my={2}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={classes.button}
+                  endIcon={<ArrowRightIcon />}
+                >
+                  Save and Next
+                </Button>
               </Box>
             </Grid>
           </Grid>

@@ -14,6 +14,8 @@ import {
 import React from "react";
 import SendIcon from "@material-ui/icons/Send";
 import GroupedButton from "../../../components/groupButton";
+import NumberFormat from "react-number-format";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles({
   paper: {
@@ -51,7 +53,46 @@ const useStyles = makeStyles({
   helperTitle: {
     color: "#999999",
   },
+  button: {
+    padding: "10px",
+    paddingLeft: "25px",
+    paddingRight: "25px",
+  },
 });
+
+function NumberFormatCustom(props) {
+  const { inputRef, onChange, ...other } = props;
+  const MAX_VAL = 10000;
+  const withValueLimit = (inputObj) => {
+    const { value } = inputObj;
+    if (value < MAX_VAL) return inputObj;
+  };
+  return (
+    <NumberFormat
+      {...other}
+      getInputRef={inputRef}
+      onValueChange={(values) => {
+        onChange({
+          target: {
+            name: props.name,
+            value: values.value,
+          },
+        });
+      }}
+      isNumericString
+      prefix="# "
+      allowNegative={false}
+      isAllowed={withValueLimit}
+    />
+  );
+}
+
+NumberFormatCustom.propTypes = {
+  inputRef: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
+
 export default function BasicDetailsForm() {
   const classes = useStyles();
   const [age, setAge] = React.useState("");
@@ -61,9 +102,9 @@ export default function BasicDetailsForm() {
 
   return (
     <div>
-      <Box m={4} mx={15} mt={10}>
+      <Box m={4} mx={3} mt={10}>
         <Paper class={classes.paper} variant="elevation" elevation={10}>
-          <Box p={4}>
+          <Box p={5}>
             <Grid container direction="column">
               <Grid item>
                 <Typography variant="h6">Enter your basic details</Typography>
@@ -89,6 +130,7 @@ export default function BasicDetailsForm() {
                             InputProps={{
                               disableUnderline: true,
                               className: classes.inputFields,
+                              inputComponent: NumberFormatCustom,
                             }}
                             InputLabelProps={{
                               classes: {
@@ -206,6 +248,7 @@ export default function BasicDetailsForm() {
               <Grid item>
                 <Box mt={3}>
                   <Button
+                    className={classes.button}
                     variant="contained"
                     color="primary"
                     endIcon={<SendIcon />}

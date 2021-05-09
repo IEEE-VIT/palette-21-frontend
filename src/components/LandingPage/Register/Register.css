@@ -15,24 +15,36 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 30px;
     position: relative;
-    overflow-y : hidden;
+    overflow : hidden;
+    padding : 0 20px;
 }
 .btn.register {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-size: 1rem;
     width: 400px;
     padding : 10px 5px;
+    font-weight: 400;
+    color : white;
+    margin-bottom: 20px;
+    border : none !important;
+    outline:  none !important;
 }
 
 .btn.register img {
     width : 20px;
+    margin-right: 10px;
 }
 .register:hover{
-    color:white
+    box-shadow: 0px 0px 3px 1px rgb(67,41,232);
+}
+.register:active , .register:focus{
+    box-shadow: 0px 0px 3px 1px rgb(67,41,232);
+    border : none !important;
+    outline:  none !important;
 }
 .nav-register{
     color:rgb(67,41,232);
@@ -42,7 +54,7 @@
     padding:10px;
 }
 .register-heading{
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin-bottom:5vw;
     font-weight: 500;
     z-index : -1;
@@ -67,7 +79,7 @@
 }
 
 .illus-one {
-    width: 19vw;
+    width: 17rem;
     position: relative;
     animation: illusOne 7s 1000;
     animation-direction: alternate;
@@ -84,7 +96,7 @@
 
   
 .illus-two {
-    width: 15vw;
+    width: 13rem;
     position: relative;
     animation: illusTwo 7s 1000;
     animation-direction: alternate;
@@ -98,4 +110,50 @@
     50%  {left: -15vw; top: -5vw;}
     75%  {left: -25vw; top: -3vw;}
     100% {left: 15vw; top: -8vw;}
+  }
+
+  @media screen and (max-width : 780px) {
+    .btn.register {
+        width: 300px;
+        padding : 8px 3px;
+        font-weight: 400;
+        font-size: 0.97rem;
+        color : white;
+        margin-bottom: 20px;
+    }
+    .btn.register img {
+        width : 19px;
+    }
+    .register-heading {
+        font-size: 1.8rem;
+    }
+  }
+
+  @media screen and (max-width : 562px) {
+      .register-heading {
+          font-size: 1.6rem;
+      }
+      .btn.register {
+        width: 250px;
+        padding : 8px 0px;
+        font-weight: 400;
+        font-size: 0.82rem;
+        color : white;
+        margin-bottom: 20px;
+    }
+    .btn.register img {
+        width : 16px;
+    }
+    .star-one{
+        width:4rem;
+    }
+    .star-two{
+        width:3rem;
+    }
+    .illus-one {
+        width: 14rem;
+    }
+    .illus-two {
+        width : 11rem;
+    }
   }

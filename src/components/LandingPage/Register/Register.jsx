@@ -17,23 +17,10 @@ const Register = () => {
             <p class="register-heading">Register yourself for palette 2021!</p>
             <br/>
             <img src={StarTwo} class="star-two"/>
-            <Row>
-                <Col xs={2} md={4}></Col>
-                <Col>
+            <div id="register-btns">
                     <button className="btn register"><img src={google} />CONTINUE WITH GOOGLE</button>
-                </Col>
-                <Col xs={2} md={4}></Col>
-            </Row>
-            <br/>
-            <Row>
-                <Col xs={2} md={4}></Col>
-                <Col>
-                <div>
                     <button className="btn register"><img src={figma} />CONTINUE WITH FIGMA</button>
-                </div>
-                </Col>
-                <Col xs={2} md={4}></Col>
-           </Row>
+           </div>
            <img class="illus-two" src={IllustrationTwo}/>
         </div>
     

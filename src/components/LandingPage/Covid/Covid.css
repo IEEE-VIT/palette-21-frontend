@@ -1,36 +1,80 @@
+#Covid__container {
+    height : 100vh;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
 .covid-body{
     background-color: #0A0A0A;
     border-radius: 16px;
-    width: 80vw;
+    min-width: 70vw;
+    max-width : 95vw;
+    width : auto;
     color:white;
     margin: 10vw auto;
-    padding:30px 40px
+    padding:30px 40px;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .covid-relief{
     border-radius: 16px;
-    width:100%!important;
     padding: 0;
     margin: 0;
+    width : 444px;
+    height: 289px;
+}
+
+#Covid__updatediv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#Covid__updatediv div:nth-child(1) {
+    display : flex;
+    justify-items: center;
+    align-items: center;
+}
+
+#Covid__details {
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .covid-heading{
-    font-size: 2vw;
+    font-size: 1.9rem;
     font-weight: bold;
+    text-align: center;
 }
 .covid-content{
-    font-size: 1.2vw;
+    font-size: 1.05rem;
     margin-bottom:5vw;
+    max-width : 40vw;
 }
 
 .donate-btn{
     background-color: white;
-    bottom:2px;
     font-weight: bold;
-    font-size: 1.4vw ;
+    font-size: 1rem;
 }
 .covid-update{
     text-align: center;
-    font-size:1.4vw
+    font-size:1.23rem;
+    margin : 0 30px;
+}
+#Covid__updatediv div:nth-child(1) .covid-update {
+    margin : 0;
+}
+
+.covid-update span {
+    font-weight: bold;
+    font-size: 1.35rem;
+    display: block;
 }
 
 .covid-image-one{
@@ -47,4 +91,99 @@
     right:2vw;
     margin-top:-11vw;
     width:15vw
+}
+
+.covid-relief-mobile {
+    display : none;
+}
+
+@media screen and (max-width : 1070px) {
+    .covid-update {
+        font-size: 1.1rem;
+        margin : 0 20px;
+    }
+    .covid-update span {
+        font-size: 1.25rem;
+    }
+    #Covid__updatediv div:nth-child(1) .covid-update {
+        margin : 0;
+    }
+    .donate-btn {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width : 983px) {
+    .covid-relief {
+        display: none;
+    }
+    .covid-relief-mobile {
+        display: block;
+        margin-bottom: 20px;
+    }
+    #Covid__details {
+        align-items: center;
+        padding : 0;
+    }
+    #Covid__details div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .covid-body {
+        min-width: auto;
+        padding : 30px 20px;
+    }
+    .covid-content {
+        text-align: center;
+        margin : 0;
+        padding : 0;
+        margin-bottom: 20px;
+        max-width: fit-content;
+    }
+}
+
+@media screen and (max-width : 607px) {
+    .covid-relief-mobile {
+        width : 80vw;
+    }
+    .covid-update span {
+        font-size: 1.1rem;
+    }
+    .covid-update {
+        font-size: 1rem;
+    }
+    .covid-body {
+        padding : 30px 20px;
+    }
+}
+
+@media screen and (max-width : 340px) {
+    .covid-heading {
+        font-size : 1.5rem;
+    }
+    .covid-content {
+        font-size : 0.97rem;
+    }
+    .covid-relief-mobile {
+        width : 75vw;
+    }
+    .covid-body {
+        padding : 30px 10px;
+        margin : 10vw 20px;
+    }
+    .covid-update {
+        font-size: 0.98rem;
+        margin : 0 10px;
+    }
+    .covid-update span {
+        font-size: 1rem;
+    }
+    #Covid__updatediv div:nth-child(1) .covid-update {
+        margin : 0;
+    }
+    .donate-btn{
+        font-size: 0.95rem;
+    }
 }

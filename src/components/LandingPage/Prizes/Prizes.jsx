@@ -5,8 +5,8 @@ import "./Prizes.css";
 const Prizes = () => {
     return(
         <div class="prizes-div">
-            <p class="prizes-heading">Prizes</p>
-            <p class="prizes-content">To be revealed soon!</p>
+            <p class="prizes-heading">Prizes will be anounced soon!</p>
+            <p class="prizes-content">We are currently in the process of counting money :)</p>
         </div>
     );
   

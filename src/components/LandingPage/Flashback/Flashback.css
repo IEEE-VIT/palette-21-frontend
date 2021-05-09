@@ -13,9 +13,11 @@
 #Flashback__leftcontainer {
     display : flex;
     flex-direction : column;
+    align-items: center;
     width : 35vw;
     padding-top : 30px;
     padding-left : 30px;
+    padding-right: 30px;
 }
 
 #Flashback__leftcontainer h4 {

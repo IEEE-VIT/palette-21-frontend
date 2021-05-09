@@ -1,29 +1,64 @@
-.container{
+#Sponsors__logos img{
+    width  :100px;
+    height : auto;
+    margin : 20px 50px;
+}
+
+#Sponsors__container{
+    height : 100vh;
+    background-image : linear-gradient(#FDAD00 0%, #F77A0F 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.Sponsors__heading {
+    margin-top : 60px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight : 600;
+    color : white;
     text-align: center;
-    max-width:100%!important;
-    font-weight: bolder;
+    padding : 0 20px;
 }
-.tier{
-    color:white;
-    outline:none;
-    font-size:2vw;
+
+#Sponsors__logos {
+    position: absolute;
+    top : 0;left :0; right :0;bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width : 55vw;
+    height : max-content;
+    justify-content: center;
+    align-items: center;
+    margin:  auto;
+    padding-top : 50px;
 }
-.tier:hover{
-    color:white
+
+@media screen and (max-width : 1080px) {
+    .Sponsors__heading {
+        font-size: 2.3rem;
+    }
+    #Sponsors__logos {
+        max-width: 85vw;
+    }
+    #Sponsors__logos img {
+        width : 80px;
+    }
 }
-.container img{
-    width:30vh;
-    margin:auto 15px
-}
-.sponsors-heading{
-    padding-top:7vw;
-    padding-bottom: 3vw;
-    font-size: 3vw;
-}
-.sponsors-logo{
-    padding:6vw 10vw;
-}
-.logo{
-    width:15vw!important;
-    padding:2vw 1vw
+
+@media screen and (max-width : 500px) {
+    .Sponsors__heading {
+        font-size: 2rem;
+        margin-top : 40px;
+    }
+    #Sponsors__logos {
+        padding-top : 30px;
+    }
+    #Sponsors__logos img {
+        width : 70px;
+        margin : 20px 20px;
+    }
 }

@@ -19,6 +19,7 @@
 }
 
 #brand-img {
+    display : block;
     position: absolute;
     top : -20px;
     right : -70px;
@@ -27,12 +28,13 @@
     margin : 0;
 }
 
+
 @media screen and (max-width : 1359px) {
     #brand-img {
         position: absolute;
-        top : 60px;
-        right : -100px;
-        height : 110vh;
+        top : 50px;
+        right : -40px;
+        height : 120vh;
         width : auto;
         margin : 0;
     }
@@ -51,6 +53,57 @@
     }
 }
 
-@media screen and (max-width : 876px) {
+@media screen and (max-width : 965px) {
+    .brand-content{
+        padding:4vw 8vw;
+        width:75vw;
+        font-size:1.2rem;
+    }
+    .brand-head{
+        font-size: 3.5rem;
+        font-weight: bolder;
+        line-height: normal;
+    }
     
+}
+
+@media screen and (max-width : 756px) {
+    #brand-img {
+        position: absolute;
+        top : 40px;
+        right : -90px;
+        height : 110vh;
+        width : auto;
+        margin : 0;
+    }
+    .brand-content{
+        padding:4vw 8vw;
+        width:80vw;
+        font-size:1.2rem;
+    }
+    .brand-head{
+        font-size: 3.1rem;
+        font-weight: bolder;
+        line-height: normal;
+    }
+}
+
+@media screen and (max-width : 670px) {
+    #brand-img {
+        top : 50px;
+        right : -120px;
+        height : 110vh;
+        width : auto;
+        margin : 0;
+    }
+    .brand-content{
+        padding:4vw 8vw;
+        width:90vw;
+        font-size:1.2rem;
+    }
+    .brand-head{
+        font-size: 3.1rem;
+        font-weight: bolder;
+        line-height: normal;
+    }
 }

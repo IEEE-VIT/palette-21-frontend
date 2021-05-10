@@ -12,12 +12,12 @@ export default function Sponsors() {
         <div id="Sponsors__container">
             <p class="Sponsors__heading">Meet our Sponsors</p>
             <div id="Sponsors__logos">
-                <img src ={sketch} />
-                <img src={acciolbis} />
-                <img src={axure} />
-                <img src={rosenfeld} />
-                <img src={divami} />
-                <img src={github} />
+                <a href="https://www.sketch.com/"><img src ={sketch} /></a>
+                <a href="https://www.accioibis.com/"><img src={acciolbis} /></a>
+                <a href="https://www.axure.com/"><img src={axure} /></a>
+                <a href="https://rosenfeldmedia.com/"><img src={rosenfeld} /></a>
+                <a href="https://www.divami.com/"><img src={divami} className="Sponsors__smallerlogo"/></a>
+                <a href="https://www.github.com/"><img src={github} /></a>
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 import React from "react";
 import './Brand.css';
 import brandimg from "../../../images/brand-img-desktop.png";
+import brandimgbigger from "../../../images/brand-img-bigger.png";
 
 const Brand = () => {
     return(
@@ -11,6 +12,7 @@ const Brand = () => {
                         <p>The one of its kind Design Hack</p>
                     </div>
                     <img src={brandimg} id="brand-img" />
+                    <img src={brandimgbigger} id="brand-img-bigger" />
             </div>
     );
   

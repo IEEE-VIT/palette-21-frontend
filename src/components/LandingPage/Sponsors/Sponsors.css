@@ -2,6 +2,17 @@
     width  :100px;
     height : auto;
     margin : 20px 50px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.Sponsors__smallerlogo {
+    width : 140px !important;
+}
+
+#Sponsors__logos img:hover {
+    transform: scale(1.2);
+
 }
 
 #Sponsors__container{
@@ -47,6 +58,9 @@
     #Sponsors__logos img {
         width : 80px;
     }
+    .Sponsors__smallerlogo {
+        width : 97px !important;
+    }
 }
 
 @media screen and (max-width : 500px) {
@@ -60,5 +74,8 @@
     #Sponsors__logos img {
         width : 70px;
         margin : 20px 20px;
+    }
+    .Sponsors__smallerlogo {
+        width : 96px !important;
     }
 }

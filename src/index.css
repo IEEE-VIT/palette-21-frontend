@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: local('NeueMontreal'), url(./assets/fonts/NeueMontreal-Regular.otf) format('opentype');
+}

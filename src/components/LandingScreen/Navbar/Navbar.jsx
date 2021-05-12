@@ -15,6 +15,7 @@ export default class NavbarComponent extends React.Component {
     this.state = {
       status: "top",
       show: false,
+      screenSize: window.innerWidth,
     };
   }
 
@@ -28,6 +29,9 @@ export default class NavbarComponent extends React.Component {
         }
       }
     });
+    this.screenListener = window.addEventListener("resize", () => {
+      this.setState({ screenSize: window.innerWidth });
+    });
   }
 
   componentDidUpdate() {
@@ -40,7 +44,7 @@ export default class NavbarComponent extends React.Component {
       <Navbar
         style={{
           backgroundColor:
-            screen.availWidth > 991
+            this.state.screenSize > 991
               ? this.state.status === "top"
                 ? "transparent"
                 : "white"
@@ -54,10 +58,10 @@ export default class NavbarComponent extends React.Component {
         expand="lg"
         fixed="top"
       >
-        {this.state.show || screen.availWidth < 992 ? (
+        {this.state.show || this.state.screenSize < 992 ? (
           <img src={Logo} alt="" id="Logo"></img>
         ) : null}
-        {screen.availWidth < 991 ? <p>{title}</p> : null}
+        {this.state.screenSize < 991 ? <p>{title}</p> : null}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto ml-auto">
@@ -66,7 +70,7 @@ export default class NavbarComponent extends React.Component {
                 href="#about-container"
                 style={{
                   color:
-                    this.state.status === "top" && screen.availWidth > 991
+                    this.state.status === "top" && this.state.screenSize > 991
                       ? "white"
                       : "black",
                 }}
@@ -79,7 +83,7 @@ export default class NavbarComponent extends React.Component {
                 href="#Speakers"
                 style={{
                   color:
-                    this.state.status === "top" && screen.availWidth > 991
+                    this.state.status === "top" && this.state.screenSize > 991
                       ? "white"
                       : "black",
                 }}
@@ -92,7 +96,7 @@ export default class NavbarComponent extends React.Component {
                 href="#Timeline"
                 style={{
                   color:
-                    this.state.status === "top" && screen.availWidth > 991
+                    this.state.status === "top" && this.state.screenSize > 991
                       ? "white"
                       : "black",
                 }}
@@ -105,7 +109,7 @@ export default class NavbarComponent extends React.Component {
                 href="#FAQs"
                 style={{
                   color:
-                    this.state.status === "top" && screen.availWidth > 991
+                    this.state.status === "top" && this.state.screenSize > 991
                       ? "white"
                       : "black",
                 }}
@@ -118,7 +122,7 @@ export default class NavbarComponent extends React.Component {
                 href="#ContactUs"
                 style={{
                   color:
-                    this.state.status === "top" && screen.availWidth > 991
+                    this.state.status === "top" && this.state.screenSize > 991
                       ? "white"
                       : "black",
                 }}
@@ -138,7 +142,7 @@ export default class NavbarComponent extends React.Component {
               </div>
             ) : null}
           </Nav>
-          {screen.availWidth < 992 ? (
+          {this.state.screenSize < 992 ? (
             <div className="NavLinks  Reg">
               <a href="#Register">Register Now</a>
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Covid.css";
-import CovidRelief from '../../../images/CovidRelief.png';
+import CovidRelief from '../../assets/CovidRelief.png';
 
 const Covid = () => {
    
@@ -14,9 +14,7 @@ const Covid = () => {
                     </div>
                     <img src={CovidRelief} class="covid-relief-mobile" />   
                         <div id="Covid__updatediv">
-                            <div><p class="covid-update"><button class="btn donate-btn">Donate now</button></p></div>
-                            <div><p class="covid-update"><span>Rs. 3000</span>Raised</p></div>
-                            <div><p class="covid-update"><span>3006918</span>No. of Donors</p></div>
+                            <div><a href="https://covid19.ketto.org/" target="__blank"><p class="covid-update"><button class="btn donate-btn">Donate now</button></p></a></div>
                         </div>                       
                 </div>
                 <img src={CovidRelief} class="covid-relief"/>

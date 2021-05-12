@@ -1,5 +1,6 @@
 .main-div{
-    margin:100px
+    margin:100px;
+    overflow-y  : hidden;
 }
 .faq-heading{
     text-align: center;

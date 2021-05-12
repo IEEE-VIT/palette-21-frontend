@@ -24,7 +24,7 @@
     position: relative;
 }
 
-.Sponsors__heading {
+#Sponsors__heading {
     margin-top : 60px;
     margin-bottom: 20px;
     font-size: 2.5rem;
@@ -49,7 +49,7 @@
 }
 
 @media screen and (max-width : 1080px) {
-    .Sponsors__heading {
+    #Sponsors__heading {
         font-size: 2.3rem;
     }
     #Sponsors__logos {
@@ -64,7 +64,7 @@
 }
 
 @media screen and (max-width : 500px) {
-    .Sponsors__heading {
+    #Sponsors__heading {
         font-size: 2rem;
         margin-top : 40px;
     }

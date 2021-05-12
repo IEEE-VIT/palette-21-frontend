@@ -1,18 +1,17 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-import { Layout } from "antd";
-import LandingPage from "./pages/LandingPage";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import LandingScreen from "./screens/LandingScreen/LandingScreen";
 
-const App = () => {
-    return (
-        <Layout>
-    
-                <Switch>
-                    <Route exact path="/" component={LandingPage} />
-                </Switch>
-        
-        </Layout>
-    );
+const AppRouter = () => {
+  return (
+    <div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={LandingScreen} />
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
 };
 
-export default App;
+export default AppRouter;

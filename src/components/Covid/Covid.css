@@ -3,6 +3,7 @@
     display : flex;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 }
 .covid-body{
     background-color: #0A0A0A;
@@ -17,6 +18,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    overflow-y: hidden;
 }
 .covid-relief{
     border-radius: 16px;
@@ -55,6 +57,7 @@
     font-size: 1.05rem;
     margin-bottom:5vw;
     max-width : 40vw;
+    text-align: center;
 }
 
 .donate-btn{

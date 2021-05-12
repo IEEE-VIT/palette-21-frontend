@@ -1,7 +1,6 @@
 import React from "react";
 import "./LandingScreen.css";
 
-import Navbar from "../../components/LandingScreen/Navbar/Navbar";
 import NavbarComponent from "../../components/LandingScreen/Navbar/Navbar";
 import Hero from "../../components/LandingScreen/Hero/Hero";
 import About from "../../components/LandingScreen/About/About";
@@ -19,7 +18,7 @@ const theme = createMuiTheme({
 
 export default function LandingScreen() {
   return (
-    <div>
+    <div id="LandingScreen__container">
       <ThemeProvider theme={theme}>
         <NavbarComponent />
         <Hero />

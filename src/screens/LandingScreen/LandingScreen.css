@@ -1,3 +1,7 @@
 Navbar{
     overflow-x: none;
 }
+
+#LandingScreen__container {
+    overflow-x: hidden;
+}

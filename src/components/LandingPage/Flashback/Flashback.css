@@ -10,6 +10,19 @@
     text-align: center;
 }
 
+.thumbs-wrapper {
+    display: none;
+}
+
+.carousel:nth-child(2) {
+    display: none;
+}
+
+.carousel , .carousel-root , .carousel-slider ,.slider-wrapper, .axis-horizontal ,.slider.animated , .slide , .slide div{
+    width : 100%;
+    height : 100%;
+}
+
 #Flashback__leftcontainer {
     display : flex;
     flex-direction : column;

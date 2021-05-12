@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
 import './Flashback.css';
-import FlashbackRightPic1 from '../../assets/flashback-right-pic1.png';
-import FlashbackRightPic2 from '../../assets/flashback-right-pic2.png';
-import FlashbackLeftPic1 from '../../assets/flashback-left-pic1.png';
-import FlashbackLeftPic2 from '../../assets/flashback-left-pic2.png';
-import FlashbackLeftPic3 from '../../assets/flashback-left-pic3.png';
-import FlashbackLeftPic4 from '../../assets/flashback-left-pic4.png';
+import FlashbackRightPic1 from '../../../assets/flashback-right-pic1.png';
+import FlashbackRightPic2 from '../../../assets/flashback-right-pic2.png';
+import FlashbackLeftPic1 from '../../../assets/flashback-left-pic1.png';
+import FlashbackLeftPic2 from '../../../assets/flashback-left-pic2.png';
+import FlashbackLeftPic3 from '../../../assets/flashback-left-pic3.png';
+import FlashbackLeftPic4 from '../../../assets/flashback-left-pic4.png';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Fade from 'react-reveal/Fade';

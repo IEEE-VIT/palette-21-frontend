@@ -1,7 +1,7 @@
 import React from "react";
 import './Brand.css';
-import brandimg from "../../assets/brand-img-desktop.png";
-import brandimgbigger from "../../assets/brand-img-bigger.png";
+import brandimg from "../../../assets/brand-img-desktop.png";
+import brandimgbigger from "../../../assets/brand-img-bigger.png";
 import Fade from 'react-reveal/Fade';
 
 const Brand = () => {

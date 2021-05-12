@@ -1,10 +1,10 @@
 import React, {Component, useState} from "react";
 import {Container, Row, Col, Card, Accordion, Button} from "react-bootstrap";
 import "./Faq.css";
-import linkedin from "../../assets/linkedin.png";
-import twitter from "../../assets/twitter.png";
-import insta from "../../assets/insta.png";
-import plusIcon from "../../assets/plusIcon.png";
+import linkedin from "../../../assets/linkedin.png";
+import twitter from "../../../assets/twitter.png";
+import insta from "../../../assets/insta.png";
+import plusIcon from "../../../assets/plusIcon.png";
 
 
 const Faq = () => {

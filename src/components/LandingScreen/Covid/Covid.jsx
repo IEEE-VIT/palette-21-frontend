@@ -1,6 +1,6 @@
 import React from "react";
 import "./Covid.css";
-import CovidRelief from '../../assets/CovidRelief.png';
+import CovidRelief from '../../../assets/CovidRelief.png';
 
 const Covid = () => {
    

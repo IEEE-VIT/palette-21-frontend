@@ -1,11 +1,11 @@
 import React from "react";
 import "./Sponsors.css";
-import acciolbis from "../../assets/acciolbis.png";
-import axure from "../../assets/axure.svg";
-import divami from "../../assets/divami.png";
-import github from "../../assets/github.jpg";
-import rosenfeld from "../../assets/rosenfeld.png";
-import sketch from "../../assets/sketch.png";
+import acciolbis from "../../../assets/acciolbis.png";
+import axure from "../../../assets/axure.svg";
+import divami from "../../../assets/divami.png";
+import github from "../../../assets/github.jpg";
+import rosenfeld from "../../../assets/rosenfeld.png";
+import sketch from "../../../assets/sketch.png";
 import Fade from 'react-reveal/Fade';
 
 export default function Sponsors() {

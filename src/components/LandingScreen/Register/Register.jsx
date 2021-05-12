@@ -1,12 +1,12 @@
 import React, {Component, useState} from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import "./Register.css";
-import StarOne from '../../assets/regStar1.png';
-import StarTwo from '../../assets/regStar2.png';
-import Illustration from '../../assets/Illustration.png';
-import IllustrationTwo from '../../assets/IllustrationTwo.png';
-import google from "../../assets/google.png";
-import figma from "../../assets/figma.png";
+import StarOne from '../../../assets/regStar1.png';
+import StarTwo from '../../../assets/regStar2.png';
+import Illustration from '../../../assets/Illustration.png';
+import IllustrationTwo from '../../../assets/IllustrationTwo.png';
+import google from "../../../assets/google.png";
+import figma from "../../../assets/figma.png";
 import Fade from 'react-reveal/Fade';
 
 const Register = () => {

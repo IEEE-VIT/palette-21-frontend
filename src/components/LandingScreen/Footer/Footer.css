@@ -1,0 +1,73 @@
+.footer-bg {
+    height: 53vh;
+    position: relative;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #0A0A0A 50%, #0A0A0A 50%);
+}
+
+.palette-desc-left {
+    z-index: 10;
+    margin-left: 6vw;
+}
+
+.palette-desc-left h1 {
+    font-size: 5.5rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.palette-desc-left h3 {
+    padding-top: 0.6rem;
+    font-style: italic;
+}
+
+.palette-desc-right {
+    margin-right: 6vw;
+}
+
+.palette-desc-right h1 {
+    font-size: 5.5rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.palette-desc-right h3 {
+    padding-top: 0.6rem;
+    font-style: italic;
+}
+
+.footer-bg-2 {
+    height: 12vh;
+    overflow-y: hidden;
+    background: linear-gradient(to right, #0A0A0A 50%, #0A0A0A 50%);
+}
+
+.pb-6vh {
+    padding-bottom: 10vh;
+}
+
+.contact-det {
+    padding-right: 6vw;
+}
+
+.footer-bg-sm {
+    height: 150vh;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #0A0A0A 50%, #0A0A0A 50%);
+}
+
+.palette-desc-right-sm {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.palette-desc-right-sm h1 {
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.palette-desc-right-sm h3 {
+    padding-top: 0.6rem;
+    font-style: italic;
+}

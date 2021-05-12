@@ -1,0 +1,137 @@
+#hero{
+    width: 100vw;
+    background-image:url("../../../assets/Palette-Hero-Background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+Row{
+    height:100vh;
+}
+.bkgd1{
+    height:100vh;
+    width: fit-content;
+    overflow: hidden;
+}
+.content{
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+#hero-star{
+    width:140%;
+    position: relative;
+    top: -30%;
+    left: -48%;
+   
+    -webkit-animation: spin 28s linear infinite;
+    animation: spin 28s linear infinite;
+}
+
+#hero-p{
+    width: 21.5vw;
+    position: absolute;
+    top: 7.7%;
+    left: 3.8vw;
+}
+
+#palette21{
+    font-weight: 700;
+    font-style: italic;
+    color:#ffffff;
+}
+
+.inline-block{
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 6vh;
+    margin-bottom: 10vh;
+}
+
+#event-date{
+    width:10vw;
+}
+#reg-date{
+    width:17vw;
+}
+
+.block-l{
+    border-right: #ffffff solid ;
+    padding-left: 0em;
+}
+
+p{
+    margin: 0%;
+    font-family: "Neue Montreal";
+}
+.green{
+  color:rgba(132, 211, 33, 1);
+}
+.lrg{
+  font-size: 2rem;
+}
+.med{
+   font-size: 1.2rem;
+   color:rgba(255,255,255,1)
+}
+.bolder1{
+   font-weight: 800;
+   font-size: 2.4rem;
+}
+.bolder2{
+    font-weight: 500;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .bkgd1{
+      width: 100vw;
+      height: fit-content ;
+    }
+    .content{
+        width: 100vw;
+        margin-bottom: 10vh;
+        text-align: center;
+        position: relative;
+        top:-20vw;
+    }
+
+    #event-date{
+        width:8rem;
+    }
+    #reg-date{
+        width:12rem;
+    }
+
+    .inline-block{
+        display: inline-block;
+        padding: 1rem 2rem;
+        margin: 0 15%;
+    }
+    .block-l{
+        padding-left: 2rem;
+        border-right: none;
+        border-bottom: #ffffff solid;
+        margin-top: 5vh;
+    }   
+    .block-r{
+        margin-bottom: 5vh;
+    } 
+    #hero-star{
+        width: 140vw;  
+        position: relative;
+        top: -25vw;
+        left: -42vw;
+    }   
+    #hero-p{
+    width:40vw;
+    position: absolute;
+    left: 10vw;
+    top:10vw;
+    }
+  }

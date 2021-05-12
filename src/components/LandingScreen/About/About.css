@@ -1,0 +1,105 @@
+/* Main Content of the About section*/
+.content1{
+    margin-top: 1vh;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -40vh;
+}
+
+
+img.dots{
+    height:50vh;
+    width:20vw;
+    position: relative;
+    left: 0%;
+    top: 6vh;
+    z-index: -1;
+}
+
+#about{
+    font-weight: 700;
+    font-size:6vh;
+    font-style: italic;
+    padding: 3.5vh;
+}
+
+#palettelogo{
+    margin-left:auto;
+    margin-right:auto;
+}
+#cont, #logo{
+    padding: 3.5vh;
+    font-size: 1.5vw;
+    height:fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+
+@media (max-width: 992px) {
+    .content1{
+        text-align: center;
+        top: -45vh;
+    }
+    #cont{
+        font-size: 2.5vw;
+    }
+    img.dots{
+        width:34vw;
+        top:0%;
+    }
+  }
+
+#paletteLogo{
+    width: 26vw;
+}
+
+.marquee{
+    position: relative;
+    top: -25vh;
+    overflow-x:hidden;
+    margin-bottom: 8vw;
+}
+/*Marquee */
+.container{
+  margin: 0%;
+  padding: 0%;
+  font-family: "Neue Montreal";
+  font-size: 11vh;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+/*Animation for Marquee*/
+@keyframes Slde {
+    0% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+    100% {
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+
+.r1{
+    -webkit-animation: Slde 15s linear infinite reverse;
+    animation: Slde 15s linear infinite reverse;
+}
+.r2{
+    -webkit-animation: Slde 15s linear infinite;
+    animation: Slde 15s linear infinite;
+}
+
+.chld{
+    margin-left: 0.14em;
+    margin-right: 0.14em;
+}
+
+.chld:nth-child(odd){
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.14px;
+}

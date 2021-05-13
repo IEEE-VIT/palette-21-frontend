@@ -1,37 +1,40 @@
 .main-div{
-    margin:100px;
-    overflow-y  : hidden;
+    margin:100px
 }
 .faq-heading{
     text-align: center;
-    font-size: 4vw;
-    font-weight: 500;
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 .faq-nav{
     width:100%;
     font-weight: 500;
-    height: 45px;
+    margin:5px auto;
     color:rgb(67,41,232);
     font-size: 1.4vw;
     padding:10px;
-    
+    outline-color: white;
+    box-shadow: rgb(0,0,0,0);
 }
 .faq-nav:hover{
     color:rgb(67,41,232);
-    
+    outline:none;
 }
 .faq-question{
     box-shadow: 0px 8px 24px rgba(239, 239, 239, 0.8);
     border-radius: 6px;
-    padding:20px 20px 10px 20px;
-    font-size:1.4vw
-   
-}
-.faq-question span{
+    padding:2vh;
+    font-size:2.4vh;
     font-weight: 500;
-    font-size: 2rem;
-    float: right;
-    margin-top: -10px ;
+    padding-left: 4vh;
+}
+.question{
+    height:fit-content;
+    margin: auto;  
+}
+.answer{
+    padding: 2.5vh;
+    font-weight: 300;
 }
 .social{
     width: 30px;
@@ -40,4 +43,11 @@
 .plus{
     width: 1.2rem;
     float: right;
+}
+.contact-btn{
+    background-color: black;
+    color:white;
+    bottom:2px;
+    font-weight: bold;
+    font-size: 1.4vw ;
 }

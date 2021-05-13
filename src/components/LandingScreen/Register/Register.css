@@ -1,4 +1,4 @@
-.register{
+.Register__register{
     background-color: #4329E8;
     color:white;
     font-weight: 400;
@@ -8,7 +8,7 @@
     box-sizing: border-box;
     z-index: 2;
 }
-.register-body {
+.Register__register-body {
     width  :100vw;
     height : 100vh;
     display: flex;
@@ -19,7 +19,7 @@
     overflow : hidden;
     padding : 0 20px;
 }
-.btn.register {
+.Register__btn.Register__register {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -29,56 +29,57 @@
     padding : 10px 5px;
     font-weight: 400;
     color : white;
+    border-radius : 4px;
     margin-bottom: 20px;
     border : none !important;
     outline:  none !important;
 }
 
-.btn.register img {
+.Register__btn.Register__register img {
     width : 20px;
     margin-right: 10px;
 }
-.register:hover{
+.Register__register:hover{
     box-shadow: 0px 0px 3px 1px rgb(67,41,232);
 }
-.register:active , .register:focus{
+.Register__register:active , .Register__register:focus{
     box-shadow: 0px 0px 3px 1px rgb(67,41,232);
     border : none !important;
     outline:  none !important;
 }
-.nav-register{
+.Register__nav-register{
     color:rgb(67,41,232);
     background-color:rgb(67,41,232,0.16);
     font-weight: 500;
     font-size: 1.4vw;
     padding:10px;
 }
-.register-heading{
+.Register__register-heading{
     font-size: 2.4rem;
     margin-bottom:5vw;
     font-weight: 500;
     z-index : -1;
 }
-.star-one{
+.Register__star-one{
     position:absolute;
     top : -7vw;
     right:0vw;
     width:11vw;
     margin : 0;
 }
-.star-two{
+.Register__star-two{
     position: absolute;
     bottom: 0;
     left:0;
     margin : 0;
     width:8vw;
 }
-.register-body{
+.Register__register-body{
     text-align: center;
     font-weight: bolder;
 }
 
-.illus-one {
+.Register__illus-one {
     width: 17rem;
     position: relative;
     animation: illusOne 7s 1000;
@@ -95,7 +96,7 @@
   }
 
   
-.illus-two {
+.Register__illus-two {
     width: 13rem;
     position: relative;
     animation: illusTwo 7s 1000;
@@ -113,7 +114,7 @@
   }
 
   @media screen and (max-width : 780px) {
-    .btn.register {
+    .Register__btn.Register__register {
         width: 300px;
         padding : 8px 3px;
         font-weight: 400;
@@ -121,19 +122,19 @@
         color : white;
         margin-bottom: 20px;
     }
-    .btn.register img {
+    .Register__btn.Register__register img {
         width : 19px;
     }
-    .register-heading {
+    .Register__register-heading {
         font-size: 1.8rem;
     }
   }
 
   @media screen and (max-width : 562px) {
-      .register-heading {
+      .Register__register-heading {
           font-size: 1.6rem;
       }
-      .btn.register {
+      .Register__btn.Register__register {
         width: 250px;
         padding : 8px 0px;
         font-weight: 400;
@@ -141,19 +142,19 @@
         color : white;
         margin-bottom: 20px;
     }
-    .btn.register img {
+    .Register__btn.Register__register img {
         width : 16px;
     }
-    .star-one{
+    .Register__star-one{
         width:4rem;
     }
-    .star-two{
+    .Register__star-two{
         width:3rem;
     }
-    .illus-one {
+    .Register__illus-one {
         width: 14rem;
     }
-    .illus-two {
+    .Register__illus-two {
         width : 11rem;
     }
   }

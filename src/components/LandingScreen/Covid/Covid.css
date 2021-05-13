@@ -60,10 +60,17 @@
     text-align: center;
 }
 
-.donate-btn{
+.Covid__donate-btn{
     background-color: white;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    padding : 10px 15px;
+    border-radius: 5px;
+    border : none !important;
+    outline:  none !important;
+}
+.Covid__donate-btn:hover {
+    box-shadow: 0px 0px 3px 1px white;
 }
 .covid-update{
     text-align: center;
@@ -111,7 +118,7 @@
     #Covid__updatediv div:nth-child(1) .covid-update {
         margin : 0;
     }
-    .donate-btn {
+    .Covid__donate-btn {
         font-size: 0.95rem;
     }
 }
@@ -186,7 +193,7 @@
     #Covid__updatediv div:nth-child(1) .covid-update {
         margin : 0;
     }
-    .donate-btn{
+    .Covid__donate-btn{
         font-size: 0.95rem;
     }
 }

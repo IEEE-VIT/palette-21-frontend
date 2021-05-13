@@ -9,16 +9,18 @@ function EventCarousel() {
       {eventData.map((item, idx) => {
         return (
           <Carousel.Item key={idx}>
-            <EventBanner
-              key={idx}
-              date={item.date}
-              speakerName={item.speakerName}
-              speakerDesc={item.speakerDesc}
-              speakerPic={item.speakerPic}
-              eventName={item.eventName}
-              eventCategory={item.eventCategory}
-              eventDesc={item.eventDesc}
-            />
+            <div id="EventCarousel__item">
+              <EventBanner
+                key={idx}
+                date={item.date}
+                speakerName={item.speakerName}
+                speakerDesc={item.speakerDesc}
+                speakerPic={item.speakerPic}
+                eventName={item.eventName}
+                eventCategory={item.eventCategory}
+                eventDesc={item.eventDesc}
+              />
+            </div>
           </Carousel.Item>
         );
       })}

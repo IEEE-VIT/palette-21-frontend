@@ -19,7 +19,9 @@ const Covid = () => {
             <div>
               <a href="https://covid19.ketto.org/" target="__blank">
                 <p className="covid-update">
-                  <button className="btn donate-btn">Donate now</button>
+                  <button className="Covid__btn Covid__donate-btn">
+                    Donate now
+                  </button>
                 </p>
               </a>
             </div>

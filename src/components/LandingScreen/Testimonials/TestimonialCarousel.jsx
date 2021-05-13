@@ -9,13 +9,15 @@ function EventCarousel() {
       {testimonialData.map((item, idx) => {
         return (
           <Carousel.Item key={idx}>
-            <Testimonial
-              key={idx}
-              winnerName={item.winnerName}
-              winnerAs={item.winnerAs}
-              winnerPic={item.winnerPic}
-              winnerQuote={item.winnerQuote}
-            />
+            <div id="Testimonial__item">
+              <Testimonial
+                key={idx}
+                winnerName={item.winnerName}
+                winnerAs={item.winnerAs}
+                winnerPic={item.winnerPic}
+                winnerQuote={item.winnerQuote}
+              />
+            </div>
           </Carousel.Item>
         );
       })}

@@ -1,38 +1,59 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Row, Col, Card, Accordion, Button } from "react-bootstrap";
 import "./Faq.css";
-import linkedin from "../../../assets/linkedin.png";
-import twitter from "../../../assets/twitter.png";
-import insta from "../../../assets/insta.png";
 import plusIcon from "../../../assets/plusIcon.png";
 
 const Faq = () => {
   const [questions, setQuestions] = useState([
     {
-      question:
-        "What are the elgibilty criteria to participate in the designathon?",
-      answer: "Lorem Ipsum",
+      question: "What is Palette?",
+      answer:
+        "Palette is a design oriented hackathon event where hackers collaborate to solve a problem and compete for cash prizes. It’s one part party, one part work-your-butt-off overnight battle against the clock and the competitors.",
+    },
+    {
+      question: "How to participate?",
+      answer:
+        "Head over to the *link* , follow the instructions to register and start hacking!",
+    },
+    {
+      question: "Why would someone participate in Palette?",
+      answer:
+        "We encourage you to participate in Palette to join the innovative design community and collaborate with fellow designers. Join in for the creative outlet, the community collaboration, the networking, the speaker sessions and the mind-blowing prizes and swags.",
+    },
+    {
+      question: "Who is this event for?",
+      answer:
+        "This event is open to the participants interested in the field of UI/UX.",
     },
     {
       question:
-        "What are the elgibilty criteria to participate in the designathon?",
-      answer: "Lorem Ipsum",
+        "Who can participate? Are there any prerequisites or required skills?",
+      answer:
+        "Anyone is welcome to participate in this event. There are no prerequisites necessary.",
     },
     {
-      question:
-        "What are the elgibilty criteria to participate in the designathon?",
-      answer: "Lorem Ipsum",
+      question: "How much does it cost?",
+      answer:
+        "There is NO registration fee for Palette. It is FREE for all participants. ",
     },
     {
-      question:
-        "What are the elgibilty criteria to participate in the designathon?",
-      answer: "Lorem Ipsum",
+      question: "Will there be prizes?",
+      answer:
+        "You bet! Head over to the prizes section to find out what we have in store.",
     },
     {
-      question:
-        "What are the elgibilty criteria to participate in the designathon?",
-      answer: "Lorem Ipsum",
+      question: "Who will be judging?",
+      answer:
+        "The judge panel consists of industry experts in the field of UI/UX. Head over to speaker’s section know more.",
     },
+  ]);
+  const [bg, setBg] = useState([
+    "rgba(67, 41, 232, 0.16)",
+    "white",
+    "white",
+    "white",
+    "white",
   ]);
 
   const eligibility = () => {
@@ -63,156 +84,25 @@ const Faq = () => {
         answer: "Lorem Ipsum",
       },
     ]);
-  };
-
-  const team = () => {
-    setQuestions([
-      { question: "What are the team details here?", answer: "Lorem Ipsum" },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-    ]);
-  };
-
-  const competition = () => {
-    setQuestions([
-      { question: "What kind of competition is this?", answer: "Lorem Ipsum" },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-    ]);
-  };
-
-  const prizes = () => {
-    setQuestions([
-      { question: "What are the prizes?", answer: "Lorem Ipsum" },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-    ]);
-  };
-
-  const support = () => {
-    setQuestions([
-      { question: "Will I be provided with help", answer: "Lorem Ipsum" },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-      {
-        question:
-          "What are the elgibilty criteria to participate in the designathon?",
-        answer: "Lorem Ipsum",
-      },
-    ]);
+    setBg(["rgba(67, 41, 232, 0.16)", "white", "white", "white", "white"]);
   };
 
   return (
-    <div style={{ margin: "auto 8vw" }}>
+    <div style={{ margin: "auto 8vw" }} id="FAQs">
       <Accordion defaultActiveKey="0">
         <Row>
           <Col xs={0} sm={1}></Col>
           <Col xs={12}>
             <br />
             <p className="faq-heading">FAQ</p>
-
-            <Row style={{ margin: "4vw auto" }}>
-              <Col xs={4} md={2}>
-                <button onClick={eligibility} className="btn faq-nav">
-                  ELIGIBILITY
-                </button>
-              </Col>
-              <Col xs={4} md={2}>
-                <button onClick={team} className="btn faq-nav">
-                  TEAM
-                </button>
-              </Col>
-              <Col xs={4} md={2}>
-                <button onClick={competition} className="btn faq-nav">
-                  COMPETITION
-                </button>
-              </Col>
-              <Col xs={6} md={3}>
-                <button onClick={prizes} className="btn faq-nav">
-                  AWARDS & PRIZES
-                </button>
-              </Col>
-              <Col xs={6} md={3}>
-                <button onClick={support} className="btn faq-nav">
-                  TECHNICAL SUPPORT
-                </button>
-              </Col>
-            </Row>
             <br />
-
             <Row>
-              <Col></Col>
               <Col xs={12} className="faq-question">
                 <Row>
-                  <Col xs={8}>{questions[0].question}</Col>
-                  <Col xs={4}>
+                  <Col xs={10} className="question">
+                    {questions[0].question}
+                  </Col>
+                  <Col xs={2}>
                     <Accordion.Toggle
                       as={Button}
                       variant="link"
@@ -224,22 +114,19 @@ const Faq = () => {
                   </Col>
                 </Row>
                 <Accordion.Collapse eventKey="2">
-                  <Card.Body style={{ padding: 0 }}>
+                  <Card.Body style={{ padding: 10 }} className="answer">
                     {questions[0].answer}
                   </Card.Body>
                 </Accordion.Collapse>
               </Col>
-              <Col></Col>
             </Row>
             <Row>
-              <Col></Col>
               <Col xs={12} className="faq-question">
                 <Row>
-                  <Col xs={8}>
-                    What are the elgibilty criteria to participate in the
-                    designathon?
+                  <Col xs={10} className="question">
+                    {questions[1].question}
                   </Col>
-                  <Col xs={4}>
+                  <Col xs={2}>
                     <Accordion.Toggle
                       as={Button}
                       variant="link"
@@ -251,20 +138,19 @@ const Faq = () => {
                   </Col>
                 </Row>
                 <Accordion.Collapse eventKey="1">
-                  <Card.Body style={{ padding: 0 }}>Lorem Ipsum</Card.Body>
+                  <Card.Body style={{ padding: 10 }} className="answer">
+                    {questions[1].answer}
+                  </Card.Body>
                 </Accordion.Collapse>
               </Col>
-              <Col></Col>
             </Row>
             <Row>
-              <Col></Col>
               <Col xs={12} className="faq-question">
                 <Row>
-                  <Col xs={8}>
-                    What are the elgibilty criteria to participate in the
-                    designathon?
+                  <Col xs={10} className="question">
+                    {questions[2].question}
                   </Col>
-                  <Col xs={4}>
+                  <Col xs={2}>
                     <Accordion.Toggle
                       as={Button}
                       variant="link"
@@ -276,20 +162,19 @@ const Faq = () => {
                   </Col>
                 </Row>
                 <Accordion.Collapse eventKey="3">
-                  <Card.Body style={{ padding: 0 }}>Lorem Ipsum</Card.Body>
+                  <Card.Body style={{ padding: 10 }} className="answer">
+                    {questions[2].answer}
+                  </Card.Body>
                 </Accordion.Collapse>
               </Col>
-              <Col></Col>
             </Row>
             <Row>
-              <Col></Col>
               <Col xs={12} className="faq-question">
                 <Row>
-                  <Col xs={8}>
-                    What are the elgibilty criteria to participate in the
-                    designathon?
+                  <Col xs={10} className="question">
+                    {questions[3].question}
                   </Col>
-                  <Col xs={4}>
+                  <Col xs={2}>
                     <Accordion.Toggle
                       as={Button}
                       variant="link"
@@ -301,20 +186,19 @@ const Faq = () => {
                   </Col>
                 </Row>
                 <Accordion.Collapse eventKey="4">
-                  <Card.Body style={{ padding: 0 }}>Lorem Ipsum</Card.Body>
+                  <Card.Body style={{ padding: 10 }} className="answer">
+                    {questions[3].answer}
+                  </Card.Body>
                 </Accordion.Collapse>
               </Col>
-              <Col></Col>
             </Row>
             <Row>
-              <Col></Col>
               <Col xs={12} className="faq-question">
                 <Row>
-                  <Col xs={8}>
-                    What are the elgibilty criteria to participate in the
-                    designathon?
+                  <Col xs={10} className="question">
+                    {questions[4].question}
                   </Col>
-                  <Col xs={4}>
+                  <Col xs={2}>
                     <Accordion.Toggle
                       as={Button}
                       variant="link"
@@ -326,12 +210,84 @@ const Faq = () => {
                   </Col>
                 </Row>
                 <Accordion.Collapse eventKey="5">
-                  <Card.Body style={{ padding: 0 }}>Lorem Ipsum</Card.Body>
+                  <Card.Body style={{ padding: 10 }} className="answer">
+                    {questions[4].answer}
+                  </Card.Body>
                 </Accordion.Collapse>
               </Col>
-              <Col></Col>
             </Row>
-
+            <Row>
+              <Col xs={12} className="faq-question">
+                <Row>
+                  <Col xs={10} className="question">
+                    {questions[5].question}
+                  </Col>
+                  <Col xs={2}>
+                    <Accordion.Toggle
+                      as={Button}
+                      variant="link"
+                      eventKey="6"
+                      style={{ float: "right" }}
+                    >
+                      <img className="plus" src={plusIcon} />
+                    </Accordion.Toggle>
+                  </Col>
+                </Row>
+                <Accordion.Collapse eventKey="6">
+                  <Card.Body style={{ padding: 10 }} className="answer">
+                    {questions[5].answer}
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} className="faq-question">
+                <Row>
+                  <Col xs={10} className="question">
+                    {questions[6].question}
+                  </Col>
+                  <Col xs={2}>
+                    <Accordion.Toggle
+                      as={Button}
+                      variant="link"
+                      eventKey="7"
+                      style={{ float: "right" }}
+                    >
+                      <img className="plus" src={plusIcon} />
+                    </Accordion.Toggle>
+                  </Col>
+                </Row>
+                <Accordion.Collapse eventKey="7">
+                  <Card.Body style={{ padding: 10 }} className="answer">
+                    {questions[6].answer}
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} className="faq-question">
+                <Row>
+                  <Col xs={10} className="question">
+                    {questions[7].question}
+                  </Col>
+                  <Col xs={2}>
+                    <Accordion.Toggle
+                      as={Button}
+                      variant="link"
+                      eventKey="8"
+                      style={{ float: "right" }}
+                    >
+                      <img className="plus" src={plusIcon} />
+                    </Accordion.Toggle>
+                  </Col>
+                </Row>
+                <Accordion.Collapse eventKey="8">
+                  <Card.Body style={{ padding: 10 }} className="answer">
+                    {questions[7].answer}
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Col>
+            </Row>
             <br />
             <br />
             <Row>
@@ -344,9 +300,9 @@ const Faq = () => {
             </Row>
             <br />
             <div className="text-center">
-              <img className="social" src={linkedin} />
-              <img className="social" src={twitter} />
-              <img className="social" src={insta} />
+              <a href="#ContactUs" className="btn contact-btn" role="button">
+                Contact Us
+              </a>
             </div>
             <br />
           </Col>

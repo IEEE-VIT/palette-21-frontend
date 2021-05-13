@@ -47,7 +47,7 @@ const Flashback = () => {
           </Carousel>
         </div>
       </Fade>
-      <Fade bottom duration={1600}>
+      <Fade bottom duration={1600} delay={1000}>
         <div
           style={{ marginTop: moveRight }}
           id="Flashback__rightcontainermobile"

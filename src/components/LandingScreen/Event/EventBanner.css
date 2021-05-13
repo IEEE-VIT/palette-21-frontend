@@ -1,59 +1,59 @@
-.ml-10rem {
+#EventCarousel__item .ml-10rem {
     margin-left: 10rem;
 }
 
-.pt-12rem {
+#EventCarousel__item .pt-12rem {
     padding-top: 12rem;
 }
 
-.pt-20rem {
+#EventCarousel__item .pt-20rem {
     padding-top: 20rem;
 }
 
-.pt-30vh {
+#EventCarousel__item .pt-30vh {
     padding-top: 30vh;
 }
 
-.bg-bg {
+#EventCarousel__item .bg-bg {
     background: radial-gradient(57.48% 57.48% at 43.62% 49.97%, #050505 0%, #151515 100%);
 }
 
-.whiteb {
+#EventCarousel__item .whiteb {
     color: white;
 }
 
-.red-allcaps {
+#EventCarousel__item .red-allcaps {
     color: #FB2022;
     font-size: 0.8rem;
     font-weight: 300;
 }
 
-.img-arr-img-tl {
+#EventCarousel__item .img-arr-img-tl {
     position: absolute;
     opacity: 0.087;
     top: 0rem;
     left: -3rem;
 }
 
-.img-arr-judges-topr {
+#EventCarousel__item .img-arr-judges-topr {
     position: absolute;
     opacity: 0.77;
     top: 10rem;
     right: 5rem;
 }
 
-.img-arr-judges-topr-sm {
+#EventCarousel__item .img-arr-judges-topr-sm {
     position: absolute;
     opacity: 0.77;
     top: 5vh;
     left: 5vh;
 }
 
-.img-arr-sm {
+#EventCarousel__item .img-arr-sm {
     height: 200vh;
 }
 
-.speakers-text {
+#EventCarousel__item .speakers-text {
     position: absolute;
     opacity: 0.07;
     z-index: 10;
@@ -62,7 +62,7 @@
     width: 100%;
 }
 
-.speakers-text-sm {
+#EventCarousel__item .speakers-text-sm {
     position: absolute;
     opacity: 0.07;
     z-index: 0;
@@ -70,7 +70,7 @@
     width: 100%;
 }
 
-.speaker-pic {
+#EventCarousel__item .speaker-pic {
     position: absolute;
     z-index: 20;
     bottom: -3rem;
@@ -78,7 +78,7 @@
     height: 95vh;
 }
 
-.speaker-pic-small {
+#EventCarousel__item .speaker-pic-small {
     position: absolute;
     z-index: 30;
     height: 80vh;
@@ -89,39 +89,39 @@
     margin-top: 20vh;
 }
 
-.speaker-desc-sm {
+#EventCarousel__item .speaker-desc-sm {
     position: absolute;
     z-index: 40;
     top: 60vh;
     padding-left: 10vw !important;
 }
 
-.event-block {
+#EventCarousel__item .event-block {
     height: 50%;
     position: absolute;
     top: 100vh;
     margin-left: 10vw !important; 
 }
 
-.z-top-text {
+#EventCarousel__item .z-top-text {
     z-index: 100;
     position: absolute;
     bottom: 5.5rem;
 }
 
-.z-index-mid {
+#EventCarousel__item .z-index-mid {
     z-index: 30   
 }
 
-.mt-4p5 {
+#EventCarousel__item .mt-4p5 {
     margin-top: 2.3rem;
 }
 
-.red-text-bold {
+#EventCarousel__item .red-text-bold {
     color: #FB2022 !important;
 }
 
-.white-text-bold {
+#EventCarousel__item .white-text-bold {
     color: white !important;
 }
 

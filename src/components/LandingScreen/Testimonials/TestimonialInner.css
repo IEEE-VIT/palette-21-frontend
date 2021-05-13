@@ -1,56 +1,56 @@
-.testi-section-bg {
+#Testimonial__item .testi-section-bg {
     background: linear-gradient(180deg, #2F33ED 0%, #171AB7 100%);
 }
 
-.testi-section-bg .img-arr-img-tr {
+#Testimonial__item .testi-section-bg .img-arr-img-tr {
     position: absolute;
     opacity: 0.21;
     top: 1.3rem;
     right: 0rem;
 }
 
-.testi-section-bg .img-arr-img-bl {
+#Testimonial__item .testi-section-bg .img-arr-img-bl {
     position: absolute;
     opacity: 0.21;
     bottom: -5rem;
     left: 0rem;
 }
 
-.winner-pic-big {
+#Testimonial__item .winner-pic-big {
     height: 44vh;
     padding-right: 5vw;
 }
 
-.winner-desc {
+#Testimonial__item .winner-desc {
     padding-right: 5vw;
 }
 
-.winner-quote {
+#Testimonial__item .winner-quote {
     padding-right: 2vw;
     position: relative;
 }
 
-.winner-quote .quote-mark {
+#Testimonial__item .winner-quote .quote-mark {
     position: absolute;
     opacity: 0.2;
     top: -3rem;
     left: -2rem;
 }
 
-.winner-desc-text {
+#Testimonial__item .winner-desc-text {
     width: 30vw;
     font-weight: normal;
     font-size: 20px;
     line-height: 170%;
 }
 
-.testimonial-title-text {
+#Testimonial__item .testimonial-title-text {
     position: absolute;
     top: 12vh;
     left: 3vw;
 }
 
-.img-arr-img-tl-sm {
+#Testimonial__item .img-arr-img-tl-sm {
     position: absolute;
     opacity: 0.2;
     top: 0vh;
@@ -58,23 +58,23 @@
     height: 50vh;
 }
 
-.quote-mark-sm {
+#Testimonial__item .quote-mark-sm {
     position: absolute;
     opacity: 0.2;
     top: 0rem;
     left: -2rem;
 }
 
-.winner-pic-sm {
+#Testimonial__item .winner-pic-sm {
     padding-right: 0;
     padding-top: 10vh;
 }
 
-.winner-desc-sm {
+#Testimonial__item .winner-desc-sm {
     padding-right: 0;
 }
 
-.winner-desc-text-sm {
+#Testimonial__item .winner-desc-text-sm {
     padding-top: 7vh;
     width: 76vw;
     font-weight: normal;

@@ -22,7 +22,9 @@ const LandingScreen = () => {
       <NavbarComponent />
       <Hero />
       <About />
-      <EventThemes />
+      <div id="LandingScreen__eventthemes">
+        <EventThemes />
+      </div>
       <EventCarousel />
       <Fade bottom duration={1000}>
         <Flashback />

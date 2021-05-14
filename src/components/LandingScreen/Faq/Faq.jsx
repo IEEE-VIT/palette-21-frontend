@@ -1,9 +1,53 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
-import { Row, Col, Card, Accordion, Button } from "react-bootstrap";
+import React, { useState, useContext } from "react";
+import {
+  Row,
+  Col,
+  Card,
+  Accordion,
+  Button,
+  useAccordionToggle,
+  AccordionContext,
+} from "react-bootstrap";
 import "./Faq.css";
 import plusIcon from "../../../assets/plusIcon.png";
+import minusIcon from "../../../assets/minusIcon.svg";
 import Fade from "react-reveal/Fade";
+
+function ContextAwareToggle({ children, eventKey, callback }) {
+  const currentEventKey = useContext(AccordionContext);
+
+  const decoratedOnClick = useAccordionToggle(
+    eventKey,
+    () => callback && callback(eventKey)
+  );
+
+  const isCurrentEventKey = currentEventKey === eventKey;
+
+  return (
+    <Row onClick={decoratedOnClick}>
+      <Col xs={10} className="question">
+        {children}
+      </Col>
+      <Col xs={2}>
+        <button
+          type="button"
+          style={{
+            float: "right",
+          }}
+          className="faq-btn"
+        >
+          {isCurrentEventKey ? (
+            <img className="plus" src={minusIcon} />
+          ) : (
+            <img className="plus" src={plusIcon} />
+          )}
+        </button>
+      </Col>
+    </Row>
+  );
+}
 
 const Faq = () => {
   const [questions, setQuestions] = useState([
@@ -100,21 +144,9 @@ const Faq = () => {
             <Fade bottom duration={1600} cascade>
               <Row>
                 <Col xs={12} className="faq-question">
-                  <Row>
-                    <Col xs={10} className="question">
-                      {questions[0].question}
-                    </Col>
-                    <Col xs={2}>
-                      <Accordion.Toggle
-                        as={Button}
-                        variant="link"
-                        eventKey="2"
-                        style={{ float: "right" }}
-                      >
-                        <img className="plus" src={plusIcon} />
-                      </Accordion.Toggle>
-                    </Col>
-                  </Row>
+                  <ContextAwareToggle eventKey="2">
+                    {questions[0].question}
+                  </ContextAwareToggle>
                   <Accordion.Collapse eventKey="2">
                     <Card.Body style={{ padding: 10 }} className="answer">
                       {questions[0].answer}
@@ -124,21 +156,9 @@ const Faq = () => {
               </Row>
               <Row>
                 <Col xs={12} className="faq-question">
-                  <Row>
-                    <Col xs={10} className="question">
-                      {questions[1].question}
-                    </Col>
-                    <Col xs={2}>
-                      <Accordion.Toggle
-                        as={Button}
-                        variant="link"
-                        eventKey="1"
-                        style={{ float: "right" }}
-                      >
-                        <img className="plus" src={plusIcon} />
-                      </Accordion.Toggle>
-                    </Col>
-                  </Row>
+                  <ContextAwareToggle eventKey="1">
+                    {questions[1].question}
+                  </ContextAwareToggle>
                   <Accordion.Collapse eventKey="1">
                     <Card.Body style={{ padding: 10 }} className="answer">
                       {questions[1].answer}
@@ -148,21 +168,9 @@ const Faq = () => {
               </Row>
               <Row>
                 <Col xs={12} className="faq-question">
-                  <Row>
-                    <Col xs={10} className="question">
-                      {questions[2].question}
-                    </Col>
-                    <Col xs={2}>
-                      <Accordion.Toggle
-                        as={Button}
-                        variant="link"
-                        eventKey="3"
-                        style={{ float: "right" }}
-                      >
-                        <img className="plus" src={plusIcon} />
-                      </Accordion.Toggle>
-                    </Col>
-                  </Row>
+                  <ContextAwareToggle eventKey="3">
+                    {questions[2].question}
+                  </ContextAwareToggle>
                   <Accordion.Collapse eventKey="3">
                     <Card.Body style={{ padding: 10 }} className="answer">
                       {questions[2].answer}
@@ -172,21 +180,9 @@ const Faq = () => {
               </Row>
               <Row>
                 <Col xs={12} className="faq-question">
-                  <Row>
-                    <Col xs={10} className="question">
-                      {questions[3].question}
-                    </Col>
-                    <Col xs={2}>
-                      <Accordion.Toggle
-                        as={Button}
-                        variant="link"
-                        eventKey="4"
-                        style={{ float: "right" }}
-                      >
-                        <img className="plus" src={plusIcon} />
-                      </Accordion.Toggle>
-                    </Col>
-                  </Row>
+                  <ContextAwareToggle eventKey="4">
+                    {questions[3].question}
+                  </ContextAwareToggle>
                   <Accordion.Collapse eventKey="4">
                     <Card.Body style={{ padding: 10 }} className="answer">
                       {questions[3].answer}
@@ -196,21 +192,9 @@ const Faq = () => {
               </Row>
               <Row>
                 <Col xs={12} className="faq-question">
-                  <Row>
-                    <Col xs={10} className="question">
-                      {questions[4].question}
-                    </Col>
-                    <Col xs={2}>
-                      <Accordion.Toggle
-                        as={Button}
-                        variant="link"
-                        eventKey="5"
-                        style={{ float: "right" }}
-                      >
-                        <img className="plus" src={plusIcon} />
-                      </Accordion.Toggle>
-                    </Col>
-                  </Row>
+                  <ContextAwareToggle eventKey="5">
+                    {questions[4].question}
+                  </ContextAwareToggle>
                   <Accordion.Collapse eventKey="5">
                     <Card.Body style={{ padding: 10 }} className="answer">
                       {questions[4].answer}
@@ -220,21 +204,9 @@ const Faq = () => {
               </Row>
               <Row>
                 <Col xs={12} className="faq-question">
-                  <Row>
-                    <Col xs={10} className="question">
-                      {questions[5].question}
-                    </Col>
-                    <Col xs={2}>
-                      <Accordion.Toggle
-                        as={Button}
-                        variant="link"
-                        eventKey="6"
-                        style={{ float: "right" }}
-                      >
-                        <img className="plus" src={plusIcon} />
-                      </Accordion.Toggle>
-                    </Col>
-                  </Row>
+                  <ContextAwareToggle eventKey="6">
+                    {questions[5].question}
+                  </ContextAwareToggle>
                   <Accordion.Collapse eventKey="6">
                     <Card.Body style={{ padding: 10 }} className="answer">
                       {questions[5].answer}
@@ -244,21 +216,9 @@ const Faq = () => {
               </Row>
               <Row>
                 <Col xs={12} className="faq-question">
-                  <Row>
-                    <Col xs={10} className="question">
-                      {questions[6].question}
-                    </Col>
-                    <Col xs={2}>
-                      <Accordion.Toggle
-                        as={Button}
-                        variant="link"
-                        eventKey="7"
-                        style={{ float: "right" }}
-                      >
-                        <img className="plus" src={plusIcon} />
-                      </Accordion.Toggle>
-                    </Col>
-                  </Row>
+                  <ContextAwareToggle eventKey="7">
+                    {questions[6].question}
+                  </ContextAwareToggle>
                   <Accordion.Collapse eventKey="7">
                     <Card.Body style={{ padding: 10 }} className="answer">
                       {questions[6].answer}
@@ -268,21 +228,9 @@ const Faq = () => {
               </Row>
               <Row>
                 <Col xs={12} className="faq-question">
-                  <Row>
-                    <Col xs={10} className="question">
-                      {questions[7].question}
-                    </Col>
-                    <Col xs={2}>
-                      <Accordion.Toggle
-                        as={Button}
-                        variant="link"
-                        eventKey="8"
-                        style={{ float: "right" }}
-                      >
-                        <img className="plus" src={plusIcon} />
-                      </Accordion.Toggle>
-                    </Col>
-                  </Row>
+                  <ContextAwareToggle eventKey="8">
+                    {questions[7].question}
+                  </ContextAwareToggle>
                   <Accordion.Collapse eventKey="8">
                     <Card.Body style={{ padding: 10 }} className="answer">
                       {questions[7].answer}

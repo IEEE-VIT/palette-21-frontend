@@ -55,6 +55,11 @@
     width: 1.2rem;
     float: right;
 }
+.faq-btn{
+    background-color: transparent;
+    border-color: transparent;
+    margin: 6px 0;
+}
 #FAQs .btn {
     outline : none ;
     border : none ;

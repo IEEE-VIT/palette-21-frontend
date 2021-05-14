@@ -4,14 +4,14 @@
 
 #Testimonial__item .testi-section-bg .img-arr-img-tr {
     position: absolute;
-    opacity: 0.21;
+    opacity: 0.31;
     top: 1.3rem;
     right: 0rem;
 }
 
 #Testimonial__item .testi-section-bg .img-arr-img-bl {
     position: absolute;
-    opacity: 0.21;
+    opacity: 0.41;
     bottom: -5rem;
     left: 0rem;
 }
@@ -48,6 +48,8 @@
     position: absolute;
     top: 12vh;
     left: 3vw;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 #Testimonial__item .img-arr-img-tl-sm {
@@ -66,6 +68,7 @@
 }
 
 #Testimonial__item .winner-pic-sm {
+    height : 320px;
     padding-right: 0;
     padding-top: 10vh;
 }
@@ -80,4 +83,21 @@
     font-weight: normal;
     font-size: 1.3rem;
     line-height: 170%;
+}
+
+.testimonial-title-text-small {
+    margin-top : 50px;
+}
+
+#Testimonial__item .winner-desc-sm{
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width : 520px) {
+    #Testimonial__item .winner-desc-sm h1{
+        font-size: 1.75rem !important;
+    }
+    #Testimonial__item .winner-desc-sm h3{
+        font-size: 1.35rem !important;
+    }
 }

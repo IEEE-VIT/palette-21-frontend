@@ -71,3 +71,25 @@
     padding-top: 0.6rem;
     font-style: italic;
 }
+
+#Footer__phone , #Footer__email {
+    font-size: 1.05rem;
+}
+
+@media screen and (max-width : 768px){
+    #Footer__phone , #Footer__email {
+        font-size: 1.2rem;
+    }
+    .palette-desc-right-sm {
+        padding-top : 80px;
+    }
+    .palette-desc-right-sm h1 {
+        padding-top : 50px;
+        text-align: center;
+    }
+    .palette-desc-right-sm h3 {
+        text-align: center;
+        padding : 5px 20px;
+    }
+    
+}

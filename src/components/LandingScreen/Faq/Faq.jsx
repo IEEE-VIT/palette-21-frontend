@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Row, Col, Card, Accordion, Button } from "react-bootstrap";
 import "./Faq.css";
 import plusIcon from "../../../assets/plusIcon.png";
+import Fade from "react-reveal/Fade";
 
 const Faq = () => {
   const [questions, setQuestions] = useState([
@@ -45,7 +46,7 @@ const Faq = () => {
     {
       question: "Who will be judging?",
       answer:
-        "The judge panel consists of industry experts in the field of UI/UX. Head over to speaker’s section know more.",
+        "The judge panel consists of industry experts in the field of UI/UX. Head over to speaker’s section to know more.",
     },
   ]);
   const [bg, setBg] = useState([
@@ -96,215 +97,221 @@ const Faq = () => {
             <br />
             <p className="faq-heading">FAQ</p>
             <br />
-            <Row>
-              <Col xs={12} className="faq-question">
-                <Row>
-                  <Col xs={10} className="question">
-                    {questions[0].question}
-                  </Col>
-                  <Col xs={2}>
-                    <Accordion.Toggle
-                      as={Button}
-                      variant="link"
-                      eventKey="2"
-                      style={{ float: "right" }}
-                    >
-                      <img className="plus" src={plusIcon} />
-                    </Accordion.Toggle>
-                  </Col>
-                </Row>
-                <Accordion.Collapse eventKey="2">
-                  <Card.Body style={{ padding: 10 }} className="answer">
-                    {questions[0].answer}
-                  </Card.Body>
-                </Accordion.Collapse>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs={12} className="faq-question">
-                <Row>
-                  <Col xs={10} className="question">
-                    {questions[1].question}
-                  </Col>
-                  <Col xs={2}>
-                    <Accordion.Toggle
-                      as={Button}
-                      variant="link"
-                      eventKey="1"
-                      style={{ float: "right" }}
-                    >
-                      <img className="plus" src={plusIcon} />
-                    </Accordion.Toggle>
-                  </Col>
-                </Row>
-                <Accordion.Collapse eventKey="1">
-                  <Card.Body style={{ padding: 10 }} className="answer">
-                    {questions[1].answer}
-                  </Card.Body>
-                </Accordion.Collapse>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs={12} className="faq-question">
-                <Row>
-                  <Col xs={10} className="question">
-                    {questions[2].question}
-                  </Col>
-                  <Col xs={2}>
-                    <Accordion.Toggle
-                      as={Button}
-                      variant="link"
-                      eventKey="3"
-                      style={{ float: "right" }}
-                    >
-                      <img className="plus" src={plusIcon} />
-                    </Accordion.Toggle>
-                  </Col>
-                </Row>
-                <Accordion.Collapse eventKey="3">
-                  <Card.Body style={{ padding: 10 }} className="answer">
-                    {questions[2].answer}
-                  </Card.Body>
-                </Accordion.Collapse>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs={12} className="faq-question">
-                <Row>
-                  <Col xs={10} className="question">
-                    {questions[3].question}
-                  </Col>
-                  <Col xs={2}>
-                    <Accordion.Toggle
-                      as={Button}
-                      variant="link"
-                      eventKey="4"
-                      style={{ float: "right" }}
-                    >
-                      <img className="plus" src={plusIcon} />
-                    </Accordion.Toggle>
-                  </Col>
-                </Row>
-                <Accordion.Collapse eventKey="4">
-                  <Card.Body style={{ padding: 10 }} className="answer">
-                    {questions[3].answer}
-                  </Card.Body>
-                </Accordion.Collapse>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs={12} className="faq-question">
-                <Row>
-                  <Col xs={10} className="question">
-                    {questions[4].question}
-                  </Col>
-                  <Col xs={2}>
-                    <Accordion.Toggle
-                      as={Button}
-                      variant="link"
-                      eventKey="5"
-                      style={{ float: "right" }}
-                    >
-                      <img className="plus" src={plusIcon} />
-                    </Accordion.Toggle>
-                  </Col>
-                </Row>
-                <Accordion.Collapse eventKey="5">
-                  <Card.Body style={{ padding: 10 }} className="answer">
-                    {questions[4].answer}
-                  </Card.Body>
-                </Accordion.Collapse>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs={12} className="faq-question">
-                <Row>
-                  <Col xs={10} className="question">
-                    {questions[5].question}
-                  </Col>
-                  <Col xs={2}>
-                    <Accordion.Toggle
-                      as={Button}
-                      variant="link"
-                      eventKey="6"
-                      style={{ float: "right" }}
-                    >
-                      <img className="plus" src={plusIcon} />
-                    </Accordion.Toggle>
-                  </Col>
-                </Row>
-                <Accordion.Collapse eventKey="6">
-                  <Card.Body style={{ padding: 10 }} className="answer">
-                    {questions[5].answer}
-                  </Card.Body>
-                </Accordion.Collapse>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs={12} className="faq-question">
-                <Row>
-                  <Col xs={10} className="question">
-                    {questions[6].question}
-                  </Col>
-                  <Col xs={2}>
-                    <Accordion.Toggle
-                      as={Button}
-                      variant="link"
-                      eventKey="7"
-                      style={{ float: "right" }}
-                    >
-                      <img className="plus" src={plusIcon} />
-                    </Accordion.Toggle>
-                  </Col>
-                </Row>
-                <Accordion.Collapse eventKey="7">
-                  <Card.Body style={{ padding: 10 }} className="answer">
-                    {questions[6].answer}
-                  </Card.Body>
-                </Accordion.Collapse>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs={12} className="faq-question">
-                <Row>
-                  <Col xs={10} className="question">
-                    {questions[7].question}
-                  </Col>
-                  <Col xs={2}>
-                    <Accordion.Toggle
-                      as={Button}
-                      variant="link"
-                      eventKey="8"
-                      style={{ float: "right" }}
-                    >
-                      <img className="plus" src={plusIcon} />
-                    </Accordion.Toggle>
-                  </Col>
-                </Row>
-                <Accordion.Collapse eventKey="8">
-                  <Card.Body style={{ padding: 10 }} className="answer">
-                    {questions[7].answer}
-                  </Card.Body>
-                </Accordion.Collapse>
-              </Col>
-            </Row>
-            <br />
-            <br />
-            <Row>
-              <Col></Col>
-              <Col xs={12} md={8} lg={6} className="text-center">
-                Couldn’t find your question? Hit us up at any below social
-                handles and we will get back to as soon as possible.
-              </Col>
-              <Col></Col>
-            </Row>
-            <br />
-            <div className="text-center">
-              <a href="#ContactUs" className="btn contact-btn" role="button">
-                Contact Us
-              </a>
-            </div>
-            <br />
+            <Fade bottom duration={1600} cascade>
+              <Row>
+                <Col xs={12} className="faq-question">
+                  <Row>
+                    <Col xs={10} className="question">
+                      {questions[0].question}
+                    </Col>
+                    <Col xs={2}>
+                      <Accordion.Toggle
+                        as={Button}
+                        variant="link"
+                        eventKey="2"
+                        style={{ float: "right" }}
+                      >
+                        <img className="plus" src={plusIcon} />
+                      </Accordion.Toggle>
+                    </Col>
+                  </Row>
+                  <Accordion.Collapse eventKey="2">
+                    <Card.Body style={{ padding: 10 }} className="answer">
+                      {questions[0].answer}
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} className="faq-question">
+                  <Row>
+                    <Col xs={10} className="question">
+                      {questions[1].question}
+                    </Col>
+                    <Col xs={2}>
+                      <Accordion.Toggle
+                        as={Button}
+                        variant="link"
+                        eventKey="1"
+                        style={{ float: "right" }}
+                      >
+                        <img className="plus" src={plusIcon} />
+                      </Accordion.Toggle>
+                    </Col>
+                  </Row>
+                  <Accordion.Collapse eventKey="1">
+                    <Card.Body style={{ padding: 10 }} className="answer">
+                      {questions[1].answer}
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} className="faq-question">
+                  <Row>
+                    <Col xs={10} className="question">
+                      {questions[2].question}
+                    </Col>
+                    <Col xs={2}>
+                      <Accordion.Toggle
+                        as={Button}
+                        variant="link"
+                        eventKey="3"
+                        style={{ float: "right" }}
+                      >
+                        <img className="plus" src={plusIcon} />
+                      </Accordion.Toggle>
+                    </Col>
+                  </Row>
+                  <Accordion.Collapse eventKey="3">
+                    <Card.Body style={{ padding: 10 }} className="answer">
+                      {questions[2].answer}
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} className="faq-question">
+                  <Row>
+                    <Col xs={10} className="question">
+                      {questions[3].question}
+                    </Col>
+                    <Col xs={2}>
+                      <Accordion.Toggle
+                        as={Button}
+                        variant="link"
+                        eventKey="4"
+                        style={{ float: "right" }}
+                      >
+                        <img className="plus" src={plusIcon} />
+                      </Accordion.Toggle>
+                    </Col>
+                  </Row>
+                  <Accordion.Collapse eventKey="4">
+                    <Card.Body style={{ padding: 10 }} className="answer">
+                      {questions[3].answer}
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} className="faq-question">
+                  <Row>
+                    <Col xs={10} className="question">
+                      {questions[4].question}
+                    </Col>
+                    <Col xs={2}>
+                      <Accordion.Toggle
+                        as={Button}
+                        variant="link"
+                        eventKey="5"
+                        style={{ float: "right" }}
+                      >
+                        <img className="plus" src={plusIcon} />
+                      </Accordion.Toggle>
+                    </Col>
+                  </Row>
+                  <Accordion.Collapse eventKey="5">
+                    <Card.Body style={{ padding: 10 }} className="answer">
+                      {questions[4].answer}
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} className="faq-question">
+                  <Row>
+                    <Col xs={10} className="question">
+                      {questions[5].question}
+                    </Col>
+                    <Col xs={2}>
+                      <Accordion.Toggle
+                        as={Button}
+                        variant="link"
+                        eventKey="6"
+                        style={{ float: "right" }}
+                      >
+                        <img className="plus" src={plusIcon} />
+                      </Accordion.Toggle>
+                    </Col>
+                  </Row>
+                  <Accordion.Collapse eventKey="6">
+                    <Card.Body style={{ padding: 10 }} className="answer">
+                      {questions[5].answer}
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} className="faq-question">
+                  <Row>
+                    <Col xs={10} className="question">
+                      {questions[6].question}
+                    </Col>
+                    <Col xs={2}>
+                      <Accordion.Toggle
+                        as={Button}
+                        variant="link"
+                        eventKey="7"
+                        style={{ float: "right" }}
+                      >
+                        <img className="plus" src={plusIcon} />
+                      </Accordion.Toggle>
+                    </Col>
+                  </Row>
+                  <Accordion.Collapse eventKey="7">
+                    <Card.Body style={{ padding: 10 }} className="answer">
+                      {questions[6].answer}
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} className="faq-question">
+                  <Row>
+                    <Col xs={10} className="question">
+                      {questions[7].question}
+                    </Col>
+                    <Col xs={2}>
+                      <Accordion.Toggle
+                        as={Button}
+                        variant="link"
+                        eventKey="8"
+                        style={{ float: "right" }}
+                      >
+                        <img className="plus" src={plusIcon} />
+                      </Accordion.Toggle>
+                    </Col>
+                  </Row>
+                  <Accordion.Collapse eventKey="8">
+                    <Card.Body style={{ padding: 10 }} className="answer">
+                      {questions[7].answer}
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Col>
+              </Row>
+              <br />
+              <br />
+              <Row>
+                <Col></Col>
+                <Col xs={12} md={8} lg={6} className="text-center">
+                  Couldn’t find your question? Hit us up at any below social
+                  handles and we will get back to as soon as possible.
+                </Col>
+                <Col></Col>
+              </Row>
+              <br />
+              <div className="text-center">
+                <a
+                  href="#Footer__container"
+                  className="btn contact-btn"
+                  role="button"
+                >
+                  Contact Us
+                </a>
+              </div>
+              <br />
+            </Fade>
           </Col>
           <Col xs={0} sm={1}></Col>
         </Row>

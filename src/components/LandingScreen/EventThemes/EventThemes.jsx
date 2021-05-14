@@ -7,6 +7,7 @@ import "./EventThemes.css";
 import "bootstrap/dist/css/bootstrap.css";
 import spikedCircleTr from "../../../assets/star-themes.svg";
 import spikedCircleBl from "../../../assets/star-themes-bl.svg";
+import Fade from "react-reveal";
 
 function SelectorButton(props) {
   return (
@@ -42,39 +43,45 @@ function EventThemes(props) {
         <div className="row flex-grow-1">
           <div className="col-sm-6 col-md-6"></div>
           <div className="col-sm-6 col-md-6 d-flex flex-column justify-content-around pl-5 pr-5 overflow-wrp">
-            <div className="pt-10rem flex-grow-1 d-flex flex-column justify-content-center">
-              <h1 className="mr-2">
-                <i>Introducing our theme</i>
-              </h1>
-              <h5 style={{ fontWeight: 300 }} className="mt-3 mr-2 line-sp">
-                Convallis turpis ellat tempus, viverra aliquet. Nul lam num{" "}
-                <br />
-                aucter sit ipsum malesuada a, duis volutpat.
-              </h5>
-            </div>
+            <Fade right cascade duration={1600}>
+              <div className="pt-10rem flex-grow-1 d-flex flex-column justify-content-center">
+                <h1 className="mr-2">
+                  <i>Introducing our theme</i>
+                </h1>
+                <h5 style={{ fontWeight: 300 }} className="mt-3 mr-2 line-sp">
+                  Convallis turpis ellat tempus, viverra aliquet. Nul lam num{" "}
+                  <br />
+                  aucter sit ipsum malesuada a, duis volutpat.
+                </h5>
+              </div>{" "}
+            </Fade>
             <div className="pt-8rem d-flex flex-column pb-5r flex-grow-1">
               <div className="flex-grow-1">
-                <h1 className="big-head pt-8rem">
-                  {eventThemeTitles[selectedIndex]}
-                </h1>
-                <h4 className="big-head-subt mt-3 flex-grow-1">
-                  {eventThemeDescr[selectedIndex]}
-                </h4>
+                <Fade right duration={1600}>
+                  <h1 className="big-head pt-8rem">
+                    {eventThemeTitles[selectedIndex]}
+                  </h1>
+                  <h4 className="big-head-subt mt-3 flex-grow-1">
+                    {eventThemeDescr[selectedIndex]}
+                  </h4>
+                </Fade>
               </div>
               <div className="mt-2p6">
-                <div className="d-flex flex-row flex-wrap mb-3">
-                  {eventThemeTitles.map((elem, idx) => {
-                    var isSelected = selectedIndex === idx;
-                    return (
-                      <SelectorButton
-                        text={elem}
-                        key={idx}
-                        selected={isSelected}
-                        onClick={() => setSelectedIndex(idx)}
-                      />
-                    );
-                  })}
-                </div>
+                <Fade right duration={1600}>
+                  <div className="d-flex flex-row flex-wrap mb-3">
+                    {eventThemeTitles.map((elem, idx) => {
+                      var isSelected = selectedIndex === idx;
+                      return (
+                        <SelectorButton
+                          text={elem}
+                          key={idx}
+                          selected={isSelected}
+                          onClick={() => setSelectedIndex(idx)}
+                        />
+                      );
+                    })}
+                  </div>
+                </Fade>
               </div>
             </div>
           </div>

@@ -6,8 +6,7 @@ import FlashbackLeftPic1 from "../../../assets/flashback-left-pic1.png";
 import FlashbackLeftPic2 from "../../../assets/flashback-left-pic2.png";
 import FlashbackLeftPic3 from "../../../assets/flashback-left-pic3.png";
 import FlashbackLeftPic4 from "../../../assets/flashback-left-pic4.png";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { Carousel } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
 
 const Flashback = () => {
@@ -19,7 +18,7 @@ const Flashback = () => {
         setMoveRight(event.nativeEvent.srcElement.scrollTop);
       }}
     >
-      <Fade bottom duration={1600} delay={1000}>
+      <Fade bottom cascade duration={1600}>
         <div id="Flashback__leftcontainer">
           <h4>These are few glimpses from our past editions of Palette</h4>
           <p>
@@ -31,34 +30,40 @@ const Flashback = () => {
           <img src={FlashbackLeftPic3} />
           <img src={FlashbackLeftPic4} />
         </div>
-      </Fade>
-      <Fade right duration={1600} delay={1000}>
-        <div
-          style={{ marginTop: moveRight }}
-          id="Flashback__rightcontainerdesktop"
-        >
-          <Carousel infiniteLoop autoPlay interval={3000}>
-            <div>
-              <img src={FlashbackRightPic1} />
-            </div>
-            <div>
-              <img src={FlashbackRightPic2} />
-            </div>
-          </Carousel>
-        </div>
-      </Fade>
-      <Fade bottom duration={1600} delay={1000}>
         <div
           style={{ marginTop: moveRight }}
           id="Flashback__rightcontainermobile"
         >
-          <Carousel infiniteLoop autoPlay interval={5000}>
-            <div>
-              <img src={FlashbackRightPic1} />
-            </div>
-            <div>
-              <img src={FlashbackRightPic2} />
-            </div>
+          <Carousel fade={true} controls={false}>
+            <Carousel.Item key={1} interval={5000}>
+              <div>
+                <img src={FlashbackRightPic1} />
+              </div>
+            </Carousel.Item>
+            <Carousel.Item key={1} interval={5000}>
+              <div>
+                <img src={FlashbackRightPic2} />
+              </div>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      </Fade>
+      <Fade right duration={1600}>
+        <div
+          style={{ marginTop: moveRight }}
+          id="Flashback__rightcontainerdesktop"
+        >
+          <Carousel fade={true} controls={false}>
+            <Carousel.Item key={1} interval={5000}>
+              <div>
+                <img src={FlashbackRightPic1} />
+              </div>
+            </Carousel.Item>
+            <Carousel.Item key={1} interval={5000}>
+              <div>
+                <img src={FlashbackRightPic2} />
+              </div>
+            </Carousel.Item>
           </Carousel>
         </div>
       </Fade>

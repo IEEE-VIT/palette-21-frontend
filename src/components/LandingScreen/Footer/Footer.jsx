@@ -13,7 +13,7 @@ import phoneFooterIcon from "../../../assets/phone-footer-icon.svg";
 
 function Footer() {
   return (
-    <div>
+    <div id="Footer__container">
       <div className="d-none d-md-block d-xs-none d-sm-none d-lg-block">
         <div className="container-fluid footer-bg d-flex flex-row whiteb">
           <div className="col-md-6 col-lg-5 d-flex flex-column justify-content-center align-items-start">
@@ -39,13 +39,25 @@ function Footer() {
             </div>
           </div>
           <div className="col-md-2 d-flex flex-row justify-content-around align-items-center pt-3">
-            <a href="https://www.linkedin.com/company/ieee-vit-vellore">
+            <a
+              href="https://www.linkedin.com/company/ieee-vit-vellore"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={footerInIcon} />
             </a>
-            <a href="https://www.twitter.com/ieeevitvellore">
+            <a
+              href="https://www.twitter.com/ieeevitvellore"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={footerTwitterIcon} />
             </a>
-            <a href="https://instagram.com/ieeevitvellore">
+            <a
+              href="https://instagram.com/ieeevitvellore"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={footerInstaIcon} />
             </a>
           </div>
@@ -53,12 +65,17 @@ function Footer() {
             <div className="col-md-1 col-lg-6"></div>
             <div className="col-md-11 col-lg-6">
               <div className="pb-3">
-                <img src={phoneFooterIcon} className="pr-3" />
-                <span>9560434342</span>
+                <a href="tel:+919560434342">
+                  <img src={phoneFooterIcon} className="pr-3" />
+                </a>
+
+                <span id="Footer__phone">9560434342</span>
               </div>
               <div>
-                <img src={mailFooterIcon} className="pr-3" />
-                contact@ieevit.org
+                <a href="mailto:contact@ieevit.org">
+                  <img src={mailFooterIcon} className="pr-3" />
+                </a>
+                <span id="Footer__email">contact@ieevit.org</span>
               </div>
             </div>
           </div>
@@ -73,12 +90,16 @@ function Footer() {
           <img src={corona} className="pt-8rem" />
           <img src={ieeeLogo} className="pt-10rem" />
           <div className="pb-4 pt-5">
-            <img src={phoneFooterIcon} className="pr-3" />
-            <span>9560434342</span>
+            <a href="tel:+919560434342">
+              <img src={phoneFooterIcon} className="pr-3" />
+            </a>
+            <span id="Footer__phone">9560434342</span>
           </div>
           <div className="pb-5">
-            <img src={mailFooterIcon} className="pr-3" />
-            contact@ieevit.org
+            <a href="mailto:contact@ieevit.org">
+              <img src={mailFooterIcon} className="pr-3" />
+            </a>
+            <span id="Footer__email">contact@ieevit.org</span>
           </div>
         </div>
       </div>

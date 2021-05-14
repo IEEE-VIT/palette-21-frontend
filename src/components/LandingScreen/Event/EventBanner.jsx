@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import spikedCircleTl from "../../../assets/star-judges.svg";
 import judgesText from "../../../assets/judges-text.svg";
 import speakersTextBg from "../../../assets/speakers-text-bg.svg";
+import Fade from "react-reveal";
 
 function EventBanner(props) {
   const speakerName = props.speakerName;
@@ -27,27 +28,28 @@ function EventBanner(props) {
               <div className="col-sm-6 col-md-6 flex-grow-1 d-flex flex-column justify-content-between z-index-mid">
                 <div className="ml-10rem pt-12rem">
                   <span className="red-allcaps">{eventCategory}</span>
-                  <p className="mt-2">
-                    <h1>
-                      <i>
-                        <b>{eventName}</b>
-                      </i>
-                    </h1>
-                  </p>
-                  <h5
-                    style={{ fontWeight: 300 }}
-                    className="mt-4p5 mr-2 line-sp"
-                  >
-                    {eventDesc}
-                  </h5>
+                  <Fade left cascade duration={1600}>
+                    <p className="mt-2">
+                      <h1>
+                        <i>
+                          <b>{eventName}</b>
+                        </i>
+                      </h1>
+                    </p>
+                  </Fade>
+                  <Fade left duration={1600}>
+                    <h5
+                      style={{ fontWeight: 300 }}
+                      className="mt-4p5 mr-2 line-sp"
+                    >
+                      {eventDesc}
+                    </h5>
+                  </Fade>
                 </div>
                 <div className="ml-10rem pt-20rem mb-5r">
                   <h1 className="red-text-bold">
                     <b>{date}</b>
                   </h1>
-                  <h5 style={{ fontWeight: 300 }} className="mt-1 mr-2 line-sp">
-                    Hosted on
-                  </h5>
                 </div>
               </div>
               <div className="col-sm-6 col-md-6 flex-grow-1">
@@ -55,14 +57,19 @@ function EventBanner(props) {
                   <img src={speakersTextBg} className="speakers-text" />
                   <img src={speakerPic} className="speaker-pic" />
                 </div>
-                <div className="z-top-text">
-                  <h1 className="white-text-bold">
-                    <b>{speakerName}</b>
-                  </h1>
-                  <h5 style={{ fontWeight: 300 }} className="mt-1 mr-2 line-sp">
-                    {speakerDesc}
-                  </h5>
-                </div>
+                <Fade right duration={1600}>
+                  <div className="z-top-text">
+                    <h1 className="white-text-bold">
+                      <b>{speakerName}</b>
+                    </h1>
+                    <h5
+                      style={{ fontWeight: 300 }}
+                      className="mt-1 mr-2 line-sp"
+                    >
+                      {speakerDesc}
+                    </h5>
+                  </div>
+                </Fade>
               </div>
             </div>
           </div>
@@ -104,9 +111,6 @@ function EventBanner(props) {
               <h1 className="red-text-bold">
                 <b>{date}</b>
               </h1>
-              <h5 style={{ fontWeight: 300 }} className="mt-1 mr-2 line-sp">
-                Hosted on
-              </h5>
             </div>
           </div>
         </div>

@@ -61,7 +61,9 @@ export default class NavbarComponent extends React.Component {
         {this.state.show || this.state.screenSize < 992 ? (
           <img src={Logo} alt="" id="Logo"></img>
         ) : null}
-        {this.state.screenSize < 991 ? <p>{title}</p> : null}
+        {this.state.screenSize < 991 ? (
+          <p id="Navbar__palettetitle">{title}</p>
+        ) : null}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto ml-auto">

@@ -7,6 +7,12 @@
     border-radius: 6px;
 }
 
+#Navbar__palettetitle {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 0;
+}
+
 @media (max-width: 922px) {
     .NavLinks{
         font-family:"Neue Montreal";

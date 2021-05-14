@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import Testimonial from "./TestimonialInner";
 import testimonialData from "./TestimonialData";
 
 function EventCarousel() {
+  const [windowWidth, setWindowWidth] = useState(0);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWindowWidth(window.innerWidth);
+      console.log(windowWidth);
+    });
+  }, []);
   return (
     <Carousel fade={true} controls={false}>
       {testimonialData.map((item, idx) => {
         return (
-          <Carousel.Item key={idx}>
+          <Carousel.Item key={idx} interval={8000}>
             <div id="Testimonial__item">
               <Testimonial
                 key={idx}

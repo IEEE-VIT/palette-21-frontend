@@ -44,7 +44,7 @@ img.dots{
         top: -45vh;
     }
     #cont{
-        font-size: 2.5vw;
+        font-size: 1.2rem;
     }
     img.dots{
         width:34vw;
@@ -60,7 +60,7 @@ img.dots{
     position: relative;
     top: -25vh;
     overflow-x:hidden;
-    margin-bottom: 8vw;
+    margin-bottom: 0;
 }
 /*Marquee */
 .container{

@@ -21,15 +21,19 @@ const LandingScreen = () => {
     <div id="LandingScreen__container">
       <NavbarComponent />
       <Hero />
-      <About />
-      <div id="LandingScreen__eventthemes">
-        <EventThemes />
-      </div>
-      <EventCarousel />
       <Fade bottom duration={1000}>
-        <Flashback />
+        <About />
       </Fade>
-      <TestimonialCarousel />
+      <Fade bottom duration={1000}>
+        <div id="LandingScreen__eventthemes">
+          <EventThemes />
+        </div>
+      </Fade>
+      <EventCarousel />
+      <Flashback />
+      <Fade bottom duration={1000}>
+        <TestimonialCarousel />
+      </Fade>
       <Fade bottom duration={1000}>
         <Sponsors />
       </Fade>
@@ -41,9 +45,7 @@ const LandingScreen = () => {
         <Register />
       </Fade>
       <Faq />
-      <Fade bottom duration={1000}>
-        <Covid />
-      </Fade>
+      <Covid />
       <Footer />
     </div>
   );

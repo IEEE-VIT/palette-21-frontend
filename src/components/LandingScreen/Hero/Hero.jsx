@@ -18,6 +18,8 @@ const useStyles = makeStyles(() => ({
     width: "12.56rem",
     height: "3.3rem",
     fontSize: "1.11rem",
+    borderRadius: "7px",
+    fontFamily: "NeueMontreal-Regular",
   },
   caption: {
     fontWeight: "400",
@@ -43,7 +45,9 @@ export default function Hero() {
             <Typography variant="h2" id="palette21">
               {title}
             </Typography>
-            <Typography className={classes.caption}>{caption}</Typography>
+            <Typography id="Hero__caption" className={classes.caption}>
+              {caption}
+            </Typography>
           </div>
           <div id="bl2">
             <div className="inline-block block-l">

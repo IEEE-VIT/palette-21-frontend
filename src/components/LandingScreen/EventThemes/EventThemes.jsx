@@ -36,7 +36,10 @@ function EventThemes(props) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <div className="container-fluid headcont whiteb">
+    <div
+      id="EventThemes__container"
+      className="container-fluid headcont whiteb"
+    >
       <div className="img-arr d-flex">
         <img src={spikedCircleTr} className="img-arr-img-tr" />
         <img src={spikedCircleBl} className="img-arr-img-bl" />

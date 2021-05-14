@@ -16,6 +16,29 @@ code {
 }
 
 @font-face {
-  font-family: 'NeueMontreal';
-  src: local('NeueMontreal'), url(./assets/fonts/NeueMontreal-Regular.otf) format('opentype');
+  font-family: 'NeueMontreal-Bold';
+  src: local('NeueMontreal-Bold'), url(./assets/fonts/NeueMontreal-Bold.otf) format('opentype');
 }
+
+@font-face {
+  font-family: 'NeueMontreal-Regular';
+  src: local('NeueMontreal-Regular'), url(./assets/fonts/NeueMontreal-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'NeueMontreal-Light';
+  src: local('NeueMontreal-Light'), url(./assets/fonts/NeueMontreal-Light.otf) format('opentype');
+}
+
+
+@font-face {
+  font-family: 'NeueMontreal-BoldItalic';
+  src: local('NeueMontreal-BoldItalic'), url(./assets/fonts/NeueMontreal-BoldItalic.otf) format('opentype');
+}
+
+
+@font-face {
+  font-family: 'NeueMontreal-Italic';
+  src: local('NeueMontreal-Italic'), url(./assets/fonts/NeueMontreal-Italic.otf) format('opentype');
+}
+

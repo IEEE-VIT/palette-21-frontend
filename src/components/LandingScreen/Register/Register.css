@@ -6,6 +6,7 @@
     width: 100%;
     font-size: 1.05rem;
     box-sizing: border-box;
+    font-family: NeueMontreal-Regular;
     z-index: 2;
 }
 .Register__register-body {
@@ -15,6 +16,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: NeueMontreal-Regular;
     position: relative;
     overflow : hidden;
     padding : 0 20px;
@@ -24,8 +26,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
-    width: 400px;
+    font-family: NeueMontreal-Regular;
+    font-size: 0.95rem;
+    width: 300px;
     padding : 10px 5px;
     font-weight: 400;
     color : white;
@@ -57,6 +60,7 @@
 .Register__register-heading{
     font-size: 2.4rem;
     margin-bottom:5vw;
+    font-family: NeueMontreal-Regular;
     font-weight: 500;
     z-index : -1;
 }
@@ -117,7 +121,7 @@
     .Register__btn.Register__register {
         width: 300px;
         padding : 8px 3px;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 0.97rem;
         color : white;
         margin-bottom: 20px;
@@ -137,7 +141,7 @@
       .Register__btn.Register__register {
         width: 250px;
         padding : 8px 0px;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 0.82rem;
         color : white;
         margin-bottom: 20px;

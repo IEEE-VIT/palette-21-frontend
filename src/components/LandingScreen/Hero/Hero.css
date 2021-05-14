@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    font-family: NeueMontreal-Regular;
 }
 Row{
     height:100vh;
@@ -42,8 +43,12 @@ Row{
 
 #palette21{
     font-weight: 700;
-    font-style: italic;
+    font-family: NeueMontreal-BoldItalic;
     color:#ffffff;
+}
+
+#Hero__caption {
+    font-family: NeueMontreal-Italic;
 }
 
 .inline-block{

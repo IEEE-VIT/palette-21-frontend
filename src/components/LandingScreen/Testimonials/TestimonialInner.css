@@ -1,5 +1,6 @@
 #Testimonial__item .testi-section-bg {
     background: linear-gradient(180deg, #2F33ED 0%, #171AB7 100%);
+    font-family: NeueMontreal-Regular;
 }
 
 #Testimonial__item .testi-section-bg .img-arr-img-tr {
@@ -8,6 +9,21 @@
     top: 1.3rem;
     right: 0rem;
 }
+
+#Testimonial__item .winner-desc h1{
+    font-family: NeueMontreal-Regular;
+}
+#Testimonial__item .winner-desc h3{
+    font-family: NeueMontreal-Regular;
+    font-size: 1.3rem;
+}
+#Testimonial__item .winner-desc-sm h1{
+    font-family: NeueMontreal-Regular;
+}
+#Testimonial__item .winner-desc-sm h3{
+    font-family: NeueMontreal-Regular;
+}
+
 
 #Testimonial__item .testi-section-bg .img-arr-img-bl {
     position: absolute;
@@ -23,11 +39,13 @@
 
 #Testimonial__item .winner-desc {
     padding-right: 5vw;
+    font-family: NeueMontreal-Regular;
 }
 
 #Testimonial__item .winner-quote {
     padding-right: 2vw;
     position: relative;
+    font-family: NeueMontreal-Regular;
 }
 
 #Testimonial__item .winner-quote .quote-mark {
@@ -96,8 +114,10 @@
 @media screen and (max-width : 520px) {
     #Testimonial__item .winner-desc-sm h1{
         font-size: 1.75rem !important;
+        font-family: NeueMontreal-Regular;
     }
     #Testimonial__item .winner-desc-sm h3{
         font-size: 1.35rem !important;
+        font-family: NeueMontreal-Regular;
     }
 }

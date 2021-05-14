@@ -36,6 +36,7 @@
 #Flashback__leftcontainer h4 {
     font-size: 1.7rem !important;
     font-weight: 600;
+    font-family: NeueMontreal-Regular;
 }
 
 #Flashback__leftcontainer p {
@@ -43,6 +44,7 @@
     margin-top: 80px;
     margin-bottom: 90px;
     font-weight: normal;
+    font-family: NeueMontreal-Regular;
 }
 
 #Flashback__leftcontainer img {

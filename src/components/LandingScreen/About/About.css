@@ -23,6 +23,7 @@ img.dots{
     font-size:6vh;
     font-style: italic;
     padding: 3.5vh;
+    font-family: NeueMontreal-Italic;
 }
 
 #palettelogo{
@@ -35,6 +36,7 @@ img.dots{
     height:fit-content;
     width: fit-content;
     margin: auto;
+    font-family: NeueMontreal-Regular;
 }
 
 
@@ -61,6 +63,7 @@ img.dots{
     top: -25vh;
     overflow-x:hidden;
     margin-bottom: 0;
+    font-family: NeueMontreal-Italic;
 }
 /*Marquee */
 .container{

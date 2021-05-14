@@ -11,12 +11,14 @@
     padding-top : 30px;
     padding-left : 50px;
     width:70vw;
-    font-size:1.7rem;
+    font-weight: lighter;
+    font-size:1.6rem;
+    font-family: NeueMontreal-Light;
 }
 .brand-head{
     font-size: 5rem;
-    font-weight: bolder;
     line-height: normal;
+    font-family: NeueMontreal-Bold;
 }
 
 #brand-img {

@@ -1,10 +1,14 @@
 .main-div{
     margin:100px
 }
+.text-center {
+    font-family: NeueMontreal-Regular;
+}
 .faq-heading{
     text-align: center;
     font-size: 1.7rem;
     font-weight: 600;
+    font-family: NeueMontreal-Regular;
 }
 .faq-nav{
     width:100%;
@@ -26,17 +30,20 @@
     padding:2vh;
     font-size:2.4vh;
     font-weight: 500;
+    font-family: NeueMontreal-Regular;
     padding-left: 4vh;
 }
 .question{
     height:fit-content;
     margin: auto;  
     font-size: 1.1rem;
+    font-family: NeueMontreal-Regular;
     font-weight:500;
 }
 .answer{
     padding: 2.5vh;
     font-size: 1.05rem;
+    font-family: NeueMontreal-Regular;
     font-weight: normal;
     opacity: 0.9;
 }

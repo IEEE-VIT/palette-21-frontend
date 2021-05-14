@@ -1,21 +1,23 @@
 
 .NavLinks{
-    font-family:"Neue Montreal";
+    font-family:NeueMontreal-Regular;
     font-weight: 700;
     padding:0px 4.5px ;
-    margin:0px 2.5px;
+    margin:0px 20px;
     border-radius: 6px;
 }
 
 #Navbar__palettetitle {
+    padding : 30px 0;
     font-size: 1.15rem;
     font-weight: 500;
+    font-family: NeueMontreal-Regular;
     margin: 0;
 }
 
 @media (max-width: 922px) {
     .NavLinks{
-        font-family:"Neue Montreal";
+        font-family: NeueMontreal-Regular;
         font-weight: 700;
         width: auto ;
         margin:0.4vh 0vh;

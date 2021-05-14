@@ -2,8 +2,8 @@ import { Grid, Hidden } from "@material-ui/core";
 import React from "react";
 import BasicDetailsBanner from "./BasicDetailsBanner";
 import BasicDetailsForm from "./BasicDetailsForm";
-
-export default function BasicDeatilsPage() {
+import PropTypes from "prop-types";
+export default function BasicDeatilsPage(props) {
   return (
     <div>
       <Grid container>
@@ -13,9 +13,13 @@ export default function BasicDeatilsPage() {
           </Grid>
         </Hidden>
         <Grid item xs={12} md={6}>
-          <BasicDetailsForm />
+          <BasicDetailsForm moveNext={props.moveNext} />
         </Grid>
       </Grid>
     </div>
   );
 }
+
+BasicDeatilsPage.PropTypes = {
+  moveNext: PropTypes.func,
+};

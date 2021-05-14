@@ -1,7 +1,7 @@
 import { Button, makeStyles, Typography, Icon } from "@material-ui/core";
 import PropTypes from "prop-types";
 import { React, useState } from "react";
-import figmaImage from "../assets/basicDetails/figma.svg";
+import figmaImage from "../../assets/basicDetails/figma.svg";
 
 const useStyles = makeStyles({
   smallText: {
@@ -46,6 +46,7 @@ export default function GroupedButton(props) {
 
   const handleClick = () => {
     setIsSelected(!isSelected);
+    props.handleSelection(props.text);
   };
 
   const enableIcon = (iconName) => {
@@ -103,6 +104,6 @@ export default function GroupedButton(props) {
 
 GroupedButton.propTypes = {
   text: PropTypes.string,
-  isSelected: PropTypes.bool,
   iconName: PropTypes.string,
+  handleSelection: PropTypes.func,
 };

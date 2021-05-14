@@ -1,7 +1,7 @@
-import { Button, Grid } from "@material-ui/core";
+import { Button, Grid, Box } from "@material-ui/core";
 import { React, useState } from "react";
+import TopHeader from "../../components/TopHeader/TopHeader";
 import BasicDeatilsPage from "./BasicDetailsPage/BasicDeatilsPage";
-import BasicTeamForm from "./BasicDetailsPage/BasicTeamForm";
 import UserFormCompletionScreen from "./FormHelpers/UserFormCompletionScreen";
 import CreateTeamForm from "./TeamFormation/CreateTeamForm";
 import TeamFormationForm from "./TeamFormation/TeamForm";
@@ -16,7 +16,7 @@ export default function UserFormScreen() {
   const switchPage = (input) => {
     switch (input) {
       case "userBasicDetails":
-        return <BasicDeatilsPage />;
+        return <BasicDeatilsPage moveNext={setPage} />;
       case "createTeamForm":
         return <CreateTeamForm />;
       case "teamFormation":
@@ -28,7 +28,11 @@ export default function UserFormScreen() {
   return (
     <div>
       <Grid container direction="column">
-        <Grid item>Header</Grid>
+        <Grid item>
+          <Box p={{ xs: 1, md: 4 }}>
+            <TopHeader />
+          </Box>
+        </Grid>
         <Grid item>
           <Grid
             container

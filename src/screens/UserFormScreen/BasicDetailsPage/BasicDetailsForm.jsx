@@ -11,9 +11,9 @@ import {
   MenuItem,
   Typography,
 } from "@material-ui/core";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SendIcon from "@material-ui/icons/Send";
-import GroupedButton from "../../../components/groupButton";
+import GroupedButton from "../../../components/GroupedButton/groupButton";
 import NumberFormat from "react-number-format";
 import PropTypes from "prop-types";
 
@@ -81,6 +81,7 @@ function NumberFormatCustom(props) {
       }}
       isNumericString
       prefix="# "
+      allowLeadingZeros={false}
       allowNegative={false}
       isAllowed={withValueLimit}
     />
@@ -93,16 +94,100 @@ NumberFormatCustom.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-export default function BasicDetailsForm() {
+export default function BasicDetailsForm(props) {
   const classes = useStyles();
-  const [age, setAge] = React.useState("");
-  const handleChange = (event) => {
-    setAge(event.target.value);
+  const [hearUs, setHearUs] = useState("");
+  const [isValidForm, setIsValidForm] = useState(false);
+  const [discordUsername, setDiscordUsername] = useState("");
+  const [discordHash, setDiscordHash] = useState("");
+  const [selectedSkills, setSelectedSkills] = useState([]);
+  const [selectedTools, setSelectedTools] = useState([]);
+
+  useEffect(() => {
+    checkValidation();
+  }, [hearUs, discordHash, discordUsername, selectedSkills, selectedTools]);
+
+  useEffect(() => {
+    console.log("Initialise Call");
+  }, []);
+
+  const handleSelectedSkillChange = (input) => {
+    if (selectedSkills.includes(input)) {
+      const index = selectedSkills.indexOf(input);
+      if (index > -1) {
+        selectedSkills.splice(index, 1);
+      }
+    } else {
+      selectedSkills.push(input);
+      setSelectedSkills(selectedSkills);
+    }
+
+    console.log(selectedSkills);
   };
+
+  const handleSelectedToolChange = (input) => {
+    if (selectedTools.includes(input)) {
+      const index = selectedTools.indexOf(input);
+      if (index > -1) {
+        selectedTools.splice(index, 1);
+      }
+    } else {
+      selectedTools.push(input);
+      setSelectedTools(selectedTools);
+    }
+    console.log(selectedTools);
+  };
+
+  const handleHearUsSelection = (event) => {
+    setHearUs(event.target.value);
+  };
+
+  const handleNameChange = (event) => {
+    setDiscordUsername(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const handleHashChange = (event) => {
+    setDiscordHash(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const checkValidation = () => {
+    console.log("This is from checkValidation", hearUs);
+    if (
+      selectedSkills.length !== 0 &&
+      selectedTools.length !== 0 &&
+      hearUs !== "none" &&
+      discordUsername !== "" &&
+      discordHash !== ""
+    ) {
+      setIsValidForm(true);
+    } else {
+      setIsValidForm(false);
+    }
+  };
+
+  const buttonNext = () => {
+    props.moveNext("teamFormation");
+  };
+
+  const tools = [
+    "Figma",
+    "Sketch",
+    "Marvel",
+    "Adobe XD",
+    "Illustrator",
+    "After Effects",
+    "Webflow",
+    "Photoshop",
+    "Protopie",
+    "Framer",
+    "Balsamiq",
+  ];
 
   return (
     <div>
-      <Box m={4} mx={3} mt={10}>
+      <Box m={4} mx={{ xs: 3, md: 15 }} mt={10}>
         <Paper class={classes.paper} variant="elevation" elevation={10}>
           <Box p={5}>
             <Grid container direction="column">
@@ -126,7 +211,8 @@ export default function BasicDetailsForm() {
                             required
                             label="Discord Hash"
                             placeholder="#2424"
-                            hint="lmao"
+                            hint="#2424"
+                            onChange={handleHashChange}
                             InputProps={{
                               disableUnderline: true,
                               className: classes.inputFields,
@@ -146,6 +232,7 @@ export default function BasicDetailsForm() {
                             id="standard-required"
                             label="Discord Username"
                             placeholder="design.melon"
+                            onChange={handleNameChange}
                             InputProps={{
                               disableUnderline: true,
                               className: classes.inputFields,
@@ -173,19 +260,47 @@ export default function BasicDetailsForm() {
                 <Box mt={2}>
                   <Grid container direction="row" spacing={1}>
                     <Grid item>
-                      <GroupedButton text="Branding" isSelected="false" />
+                      <GroupedButton
+                        text="Branding"
+                        isSelected="false"
+                        handleSelection={handleSelectedSkillChange}
+                      />
                     </Grid>
                     <Grid item>
-                      <GroupedButton text="Marketing" />
+                      <GroupedButton
+                        text="Marketing"
+                        handleSelection={handleSelectedSkillChange}
+                      />
                     </Grid>
                     <Grid item>
-                      <GroupedButton text="VFX" />
+                      <GroupedButton
+                        text="Motion Graphics"
+                        handleSelection={handleSelectedSkillChange}
+                      />
                     </Grid>
                     <Grid item>
-                      <GroupedButton text="UI/UX" />
+                      <GroupedButton
+                        text="UI/UX"
+                        handleSelection={handleSelectedSkillChange}
+                      />
                     </Grid>
                     <Grid item>
-                      <GroupedButton text="Graphic" />
+                      <GroupedButton
+                        text="Graphic Design"
+                        handleSelection={handleSelectedSkillChange}
+                      />
+                    </Grid>
+                    <Grid item>
+                      <GroupedButton
+                        text="Interaction Design"
+                        handleSelection={handleSelectedSkillChange}
+                      />
+                    </Grid>
+                    <Grid item>
+                      <GroupedButton
+                        text="Visual Design"
+                        handleSelection={handleSelectedSkillChange}
+                      />
                     </Grid>
                   </Grid>
                 </Box>
@@ -200,25 +315,18 @@ export default function BasicDetailsForm() {
               <Grid item>
                 <Box mt={2}>
                   <Grid container direction="row" spacing={1}>
-                    <Grid item>
-                      <GroupedButton
-                        text="Figma"
-                        isSelected="false"
-                        iconName="figmaIcon"
-                      />
-                    </Grid>
-                    <Grid item>
-                      <GroupedButton text="Sketch" iconName="figmaIcon" />
-                    </Grid>
-                    <Grid item>
-                      <GroupedButton text="Graphic" iconName="figmaIcon" />
-                    </Grid>
-                    <Grid item>
-                      <GroupedButton text="Framer" iconName="figmaIcon" />
-                    </Grid>
-                    <Grid item>
-                      <GroupedButton text="Unknown" iconName="figmaIcon" />
-                    </Grid>
+                    {tools.map((item, index) => {
+                      return (
+                        <Grid item key={index}>
+                          <GroupedButton
+                            text={item}
+                            isSelected="false"
+                            iconName={item + "icon"}
+                            handleSelection={handleSelectedSkillChange}
+                          />
+                        </Grid>
+                      );
+                    })}
                   </Grid>
                 </Box>
               </Grid>
@@ -231,16 +339,16 @@ export default function BasicDetailsForm() {
                   >
                     <InputLabel>How did you hear about us?</InputLabel>
                     <Select
-                      value={age}
-                      onChange={handleChange}
+                      value={hearUs}
+                      onChange={handleHearUsSelection}
                       label="How did you hear about us?"
                     >
-                      <MenuItem value="">
+                      <MenuItem value={"none"}>
                         <em>None</em>
                       </MenuItem>
-                      <MenuItem value={10}>Twitter</MenuItem>
-                      <MenuItem value={20}>Instagram</MenuItem>
-                      <MenuItem value={30}>Friend</MenuItem>
+                      <MenuItem value={"twitter"}>Twitter</MenuItem>
+                      <MenuItem value={"instagram"}>Instagram</MenuItem>
+                      <MenuItem value={"friend"}>Friend</MenuItem>
                     </Select>
                   </FormControl>
                 </Box>
@@ -248,7 +356,11 @@ export default function BasicDetailsForm() {
               <Grid item>
                 <Box mt={3}>
                   <Button
+                    disabled={!isValidForm}
                     className={classes.button}
+                    onClick={() => {
+                      buttonNext();
+                    }}
                     variant="contained"
                     color="primary"
                     endIcon={<SendIcon />}
@@ -264,3 +376,7 @@ export default function BasicDetailsForm() {
     </div>
   );
 }
+
+BasicDetailsForm.PropTypes = {
+  moveNext: PropTypes.func,
+};

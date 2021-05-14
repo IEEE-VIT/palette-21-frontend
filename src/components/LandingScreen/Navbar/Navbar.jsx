@@ -21,7 +21,7 @@ export default class NavbarComponent extends React.Component {
 
   componentDidMount() {
     this.listener = document.addEventListener("scroll", () => {
-      if (window.scrollY > screen.availHeight * 0.9) {
+      if (window.scrollY > screen.availHeight * 0.81) {
         this.setState({ status: "scrolled", show: true });
       } else {
         if (this.state.status !== "top") {
@@ -42,6 +42,7 @@ export default class NavbarComponent extends React.Component {
     var title = "Palette'21";
     return (
       <Navbar
+        id="Navbar__container"
         style={{
           backgroundColor:
             this.state.screenSize > 991
@@ -60,7 +61,9 @@ export default class NavbarComponent extends React.Component {
       >
         {this.state.show || this.state.screenSize < 992 ? (
           <img src={Logo} alt="" id="Logo"></img>
-        ) : null}
+        ) : (
+          <img style={{ opacity: 0 }} src={Logo} alt="" id="Logo"></img>
+        )}
         {this.state.screenSize < 991 ? (
           <p id="Navbar__palettetitle">{title}</p>
         ) : null}
@@ -95,7 +98,7 @@ export default class NavbarComponent extends React.Component {
             </div>
             <div className="NavLinks">
               <Nav.Link
-                href="#Timeline"
+                href="#Past"
                 style={{
                   color:
                     this.state.status === "top" && this.state.screenSize > 991
@@ -103,7 +106,7 @@ export default class NavbarComponent extends React.Component {
                       : "black",
                 }}
               >
-                Timeline
+                Past
               </Nav.Link>
             </div>
             <div className="NavLinks">
@@ -121,6 +124,17 @@ export default class NavbarComponent extends React.Component {
             </div>
             <div className="NavLinks">
               <Nav.Link
+                className="nav-link"
+                href="#Donate"
+                style={{
+                  color: this.state.status === "top" ? "white" : "#4329E8",
+                }}
+              >
+                Donate now
+              </Nav.Link>
+            </div>
+            <div className="NavLinks">
+              <Nav.Link
                 href="#ContactUs"
                 style={{
                   color:
@@ -132,17 +146,6 @@ export default class NavbarComponent extends React.Component {
                 Contact Us
               </Nav.Link>
             </div>
-            {this.state.show ? (
-              <div className="NavLinks">
-                <a
-                  className="nav-link"
-                  href="#Donate"
-                  style={{ color: "#4329E8" }}
-                >
-                  Donate now
-                </a>
-              </div>
-            ) : null}
           </Nav>
           {this.state.screenSize < 992 ? (
             <div className="NavLinks  Reg">
@@ -151,6 +154,9 @@ export default class NavbarComponent extends React.Component {
           ) : (
             <Button
               variant="outlined"
+              onClick={() => {
+                window.location.replace("/#Register");
+              }}
               style={{
                 color: this.state.status === "top" ? "white" : "#4329E8",
                 borderColor: this.state.status === "top" ? "white" : "#4329E8",

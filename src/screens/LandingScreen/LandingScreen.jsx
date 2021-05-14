@@ -18,7 +18,12 @@ import Footer from "../../components/LandingScreen/Footer/Footer";
 
 const LandingScreen = () => {
   return (
-    <div id="LandingScreen__container">
+    <div
+      data-spy="scroll"
+      data-target="#Navbar__container"
+      data-offset="0"
+      id="LandingScreen__container"
+    >
       <NavbarComponent />
       <Hero />
       <Fade bottom duration={1000}>
@@ -29,8 +34,12 @@ const LandingScreen = () => {
           <EventThemes />
         </div>
       </Fade>
-      <EventCarousel />
-      <Flashback />
+      <div id="Speakers">
+        <EventCarousel />
+      </div>
+      <div id="Past">
+        <Flashback />
+      </div>
       <Fade bottom duration={1000}>
         <TestimonialCarousel />
       </Fade>
@@ -42,11 +51,17 @@ const LandingScreen = () => {
         <Brand />
       </Fade>
       <Fade bottom duration={1000}>
-        <Register />
+        <div id="Register">
+          <Register />
+        </div>
       </Fade>
       <Faq />
-      <Covid />
-      <Footer />
+      <div id="Donate">
+        <Covid />
+      </div>
+      <div id="ContactUs">
+        <Footer />
+      </div>
     </div>
   );
 };

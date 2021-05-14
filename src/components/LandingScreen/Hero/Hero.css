@@ -5,6 +5,7 @@
     background-size: cover;
     overflow: hidden;
     font-family: NeueMontreal-Regular;
+    margin-top : -3px;
 }
 Row{
     height:100vh;

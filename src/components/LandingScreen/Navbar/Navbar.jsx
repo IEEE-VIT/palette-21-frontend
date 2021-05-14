@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import Scrollspy from "react-scrollspy";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "@material-ui/core/Button";
@@ -70,82 +71,116 @@ export default class NavbarComponent extends React.Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto ml-auto">
-            <div className="NavLinks">
-              <Nav.Link
-                href="#about-container"
-                style={{
-                  color:
-                    this.state.status === "top" && this.state.screenSize > 991
-                      ? "white"
-                      : "black",
-                }}
+            <Scrollspy
+              style={{ display: "flex", flexDirection: "row" }}
+              items={[
+                "about-container",
+                "Speakers",
+                "Past",
+                "Sponsors",
+                "FAQs",
+                "Donate",
+                "ContactUs",
+              ]}
+              offset={-10}
+              currentClassName="active"
+            >
+              <div
+                className={
+                  this.state.status === "top" && this.state.screenSize > 991
+                    ? "NavLinks about_workaround"
+                    : "NavLinks"
+                }
               >
-                About
-              </Nav.Link>
-            </div>
-            <div className="NavLinks">
-              <Nav.Link
-                href="#Speakers"
-                style={{
-                  color:
-                    this.state.status === "top" && this.state.screenSize > 991
-                      ? "white"
-                      : "black",
-                }}
-              >
-                Speakers
-              </Nav.Link>
-            </div>
-            <div className="NavLinks">
-              <Nav.Link
-                href="#Past"
-                style={{
-                  color:
-                    this.state.status === "top" && this.state.screenSize > 991
-                      ? "white"
-                      : "black",
-                }}
-              >
-                Past
-              </Nav.Link>
-            </div>
-            <div className="NavLinks">
-              <Nav.Link
-                href="#FAQs"
-                style={{
-                  color:
-                    this.state.status === "top" && this.state.screenSize > 991
-                      ? "white"
-                      : "black",
-                }}
-              >
-                FAQs
-              </Nav.Link>
-            </div>
-            <div className="NavLinks">
-              <Nav.Link
-                className="nav-link"
-                href="#Donate"
-                style={{
-                  color: this.state.status === "top" ? "white" : "#4329E8",
-                }}
-              >
-                Donate now
-              </Nav.Link>
-            </div>
-            <div className="NavLinks">
-              <Nav.Link
-                href="#ContactUs"
-                style={{
-                  color:
-                    this.state.status === "top" && this.state.screenSize > 991
-                      ? "white"
-                      : "black",
-                }}
-              >
-                Contact Us
-              </Nav.Link>
-            </div>
+                <Nav.Link
+                  href="#about-container"
+                  style={{
+                    color:
+                      this.state.status === "top" && this.state.screenSize > 991
+                        ? "white"
+                        : "black",
+                  }}
+                >
+                  About
+                </Nav.Link>
+              </div>
+              <div className="NavLinks">
+                <Nav.Link
+                  href="#Speakers"
+                  style={{
+                    color:
+                      this.state.status === "top" && this.state.screenSize > 991
+                        ? "white"
+                        : "black",
+                  }}
+                >
+                  Speakers
+                </Nav.Link>
+              </div>
+              <div className="NavLinks">
+                <Nav.Link
+                  href="#Past"
+                  style={{
+                    color:
+                      this.state.status === "top" && this.state.screenSize > 991
+                        ? "white"
+                        : "black",
+                  }}
+                >
+                  Past
+                </Nav.Link>
+              </div>
+              <div className="NavLinks">
+                <Nav.Link
+                  href="#Sponsors"
+                  style={{
+                    color:
+                      this.state.status === "top" && this.state.screenSize > 991
+                        ? "white"
+                        : "black",
+                  }}
+                >
+                  Sponsors
+                </Nav.Link>
+              </div>
+              <div className="NavLinks">
+                <Nav.Link
+                  href="#FAQs"
+                  style={{
+                    color:
+                      this.state.status === "top" && this.state.screenSize > 991
+                        ? "white"
+                        : "black",
+                  }}
+                >
+                  FAQs
+                </Nav.Link>
+              </div>
+              <div className="NavLinks">
+                <Nav.Link
+                  className="nav-link"
+                  href="#Donate"
+                  style={{
+                    color: this.state.status === "top" ? "white" : "black",
+                  }}
+                >
+                  Donate now
+                </Nav.Link>
+              </div>
+              <div className="NavLinks">
+                <Nav.Link
+                  href="#ContactUs"
+                  style={{
+                    color:
+                      this.state.status === "top" && this.state.screenSize > 991
+                        ? "white"
+                        : "black",
+                  }}
+                >
+                  Contact Us
+                </Nav.Link>
+              </div>
+            </Scrollspy>
           </Nav>
           {this.state.screenSize < 992 ? (
             <div className="NavLinks  Reg">

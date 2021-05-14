@@ -44,7 +44,9 @@ const LandingScreen = () => {
         <TestimonialCarousel />
       </Fade>
       <Fade bottom duration={1000}>
-        <Sponsors />
+        <div id="Sponsors">
+          <Sponsors />
+        </div>
       </Fade>
       <Prizes />
       <Fade bottom duration={1000}>

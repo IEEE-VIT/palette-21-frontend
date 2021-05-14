@@ -1,32 +1,39 @@
-
-.NavLinks{
-    font-family:NeueMontreal-Regular;
-    font-weight: 700;
-    padding:0px 10px ;
-    margin:0px 2.5px;
-    border-radius: 6px;
+.NavLinks {
+  font-family: NeueMontreal-Regular;
+  font-weight: 700;
+  padding: 0px 10px;
+  margin: 0px 2.5px;
+  border-radius: 6px;
 }
 
 #Navbar__palettetitle {
-    font-size: 1.15rem;
-    font-weight: 500;
-    margin: 0;
-    font-family: NeueMontreal-Regular;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin: 0;
+  font-family: NeueMontreal-Regular;
 }
 
 @media (max-width: 922px) {
-    .NavLinks{
-        font-family: NeueMontreal-Regular;
-        font-weight: 700;
-        width: auto ;
-        margin:0.4vh 0vh;
-        border-radius: 0px;
-    }
-    .Reg{
-    background-color: rgba(67, 41, 232, 1);   
-    padding: .5rem 1rem;
-    }
-    .nav-link{
-        color:black;
-    }
+  .NavLinks {
+    font-family: NeueMontreal-Regular;
+    font-weight: 700;
+    width: auto;
+    margin: 0.4vh 0vh;
+    border-radius: 0px;
+  }
+  .Reg {
+    background-color: rgba(67, 41, 232, 1);
+    padding: 0.5rem 1rem;
+  }
+  .nav-link {
+    color: black;
+  }
+}
+
+.active a {
+  color: rgba(67, 41, 232, 1) !important;
+}
+
+.about_workaround a {
+  color: white !important;
 }

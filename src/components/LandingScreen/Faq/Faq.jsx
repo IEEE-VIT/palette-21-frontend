@@ -142,102 +142,22 @@ const Faq = () => {
             <p className="faq-heading">FAQ</p>
             <br />
             <Fade bottom duration={1600} cascade>
-              <Row>
-                <Col xs={12} className="faq-question">
-                  <ContextAwareToggle eventKey="2">
-                    {questions[0].question}
-                  </ContextAwareToggle>
-                  <Accordion.Collapse eventKey="2">
-                    <Card.Body style={{ padding: 10 }} className="answer">
-                      {questions[0].answer}
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} className="faq-question">
-                  <ContextAwareToggle eventKey="1">
-                    {questions[1].question}
-                  </ContextAwareToggle>
-                  <Accordion.Collapse eventKey="1">
-                    <Card.Body style={{ padding: 10 }} className="answer">
-                      {questions[1].answer}
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} className="faq-question">
-                  <ContextAwareToggle eventKey="3">
-                    {questions[2].question}
-                  </ContextAwareToggle>
-                  <Accordion.Collapse eventKey="3">
-                    <Card.Body style={{ padding: 10 }} className="answer">
-                      {questions[2].answer}
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} className="faq-question">
-                  <ContextAwareToggle eventKey="4">
-                    {questions[3].question}
-                  </ContextAwareToggle>
-                  <Accordion.Collapse eventKey="4">
-                    <Card.Body style={{ padding: 10 }} className="answer">
-                      {questions[3].answer}
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} className="faq-question">
-                  <ContextAwareToggle eventKey="5">
-                    {questions[4].question}
-                  </ContextAwareToggle>
-                  <Accordion.Collapse eventKey="5">
-                    <Card.Body style={{ padding: 10 }} className="answer">
-                      {questions[4].answer}
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} className="faq-question">
-                  <ContextAwareToggle eventKey="6">
-                    {questions[5].question}
-                  </ContextAwareToggle>
-                  <Accordion.Collapse eventKey="6">
-                    <Card.Body style={{ padding: 10 }} className="answer">
-                      {questions[5].answer}
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} className="faq-question">
-                  <ContextAwareToggle eventKey="7">
-                    {questions[6].question}
-                  </ContextAwareToggle>
-                  <Accordion.Collapse eventKey="7">
-                    <Card.Body style={{ padding: 10 }} className="answer">
-                      {questions[6].answer}
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} className="faq-question">
-                  <ContextAwareToggle eventKey="8">
-                    {questions[7].question}
-                  </ContextAwareToggle>
-                  <Accordion.Collapse eventKey="8">
-                    <Card.Body style={{ padding: 10 }} className="answer">
-                      {questions[7].answer}
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Col>
-              </Row>
+              {questions.map((item, index) => {
+                return (
+                  <Row key={index}>
+                    <Col xs={12} className="faq-question">
+                      <ContextAwareToggle eventKey={index + 1}>
+                        {item.question}
+                        <Accordion.Collapse eventKey={index + 1}>
+                          <Card.Body style={{ padding: 10 }} className="answer">
+                            {item.answer}
+                          </Card.Body>
+                        </Accordion.Collapse>
+                      </ContextAwareToggle>
+                    </Col>
+                  </Row>
+                );
+              })}
               <br />
               <br />
               <Row>

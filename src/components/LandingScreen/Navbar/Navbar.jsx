@@ -43,6 +43,7 @@ export default class NavbarComponent extends React.Component {
     var title = "Palette'21";
     return (
       <Navbar
+        collapseOnSelect={true}
         id="Navbar__container"
         style={{
           backgroundColor:
@@ -59,6 +60,7 @@ export default class NavbarComponent extends React.Component {
         }}
         expand="lg"
         fixed="top"
+        className="justify-content-md-center"
       >
         {this.state.show || this.state.screenSize < 992 ? (
           <img src={Logo} alt="" id="Logo"></img>
@@ -70,9 +72,8 @@ export default class NavbarComponent extends React.Component {
         ) : null}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto ml-auto">
+          <Nav className="mr-auto ml-auto mt-2">
             <Scrollspy
-              style={{ display: "flex", flexDirection: "row" }}
               items={[
                 "about-container",
                 "Speakers",
@@ -84,6 +85,7 @@ export default class NavbarComponent extends React.Component {
               ]}
               offset={-10}
               currentClassName="active"
+              className="NavRow"
             >
               <div
                 className={
@@ -161,7 +163,10 @@ export default class NavbarComponent extends React.Component {
                   className="nav-link"
                   href="#Donate"
                   style={{
-                    color: this.state.status === "top" ? "white" : "black",
+                    color:
+                      this.state.status === "top" && this.state.screenSize > 991
+                        ? "white"
+                        : "black",
                   }}
                 >
                   Donate now
@@ -183,11 +188,14 @@ export default class NavbarComponent extends React.Component {
             </Scrollspy>
           </Nav>
           {this.state.screenSize < 992 ? (
-            <div className="NavLinks  Reg">
-              <a href="#Register">Register Now</a>
+            <div>
+              {/* <a className="text" href="#Register">
+                Register Now
+              </a> */}
             </div>
           ) : (
             <Button
+              className="Reg"
               variant="outlined"
               onClick={() => {
                 window.location.replace("/#Register");

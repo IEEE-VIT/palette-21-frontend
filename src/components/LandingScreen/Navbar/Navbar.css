@@ -18,7 +18,11 @@
   flex-direction: row;
   padding: 0px;
 }
-
+@media screen and (max-width : 992px) {
+  #Navbar__container {
+    justify-content: space-between !important;
+  }
+}
 @media (max-width: 922px) {
   .NavLinks {
     font-family: NeueMontreal-Regular;

@@ -69,7 +69,7 @@ export default class NavbarComponent extends React.Component {
         ) : (
           <img style={{ opacity: 0 }} src={Logo} alt="" id="Logo"></img>
         )}
-        {this.state.screenSize < 991 ? (
+        {this.state.screenSize < 992 ? (
           <p id="Navbar__palettetitle">{title}</p>
         ) : null}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

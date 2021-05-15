@@ -11,7 +11,7 @@ Row{
     height:100vh;
 }
 .bkgd1{
-    height:100vh;
+    height:102vh;
     width: fit-content;
     overflow: hidden;
 }
@@ -94,7 +94,7 @@ p{
 }
 
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
     .bkgd1{
       width: 100vw;
       height: fit-content ;

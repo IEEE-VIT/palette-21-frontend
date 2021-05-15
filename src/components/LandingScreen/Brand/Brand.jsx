@@ -7,14 +7,14 @@ import Fade from "react-reveal/Fade";
 const Brand = () => {
   return (
     <div className="main-brand-div">
-      <Fade bottom cascade duration={1600} delay={1000}>
+      <Fade bottom cascade duration={1000} delay={500}>
         <div className="brand-content">
           <div className="brand-head">Let your creative juices flow</div>
           <br />
           <p>The one of its kind Design Hack</p>
         </div>
       </Fade>
-      <Fade right duration={1600} delay={1000}>
+      <Fade right duration={1000} delay={500}>
         <img src={brandimg} id="brand-img" />
         <img src={brandimgbigger} id="brand-img-bigger" />
       </Fade>

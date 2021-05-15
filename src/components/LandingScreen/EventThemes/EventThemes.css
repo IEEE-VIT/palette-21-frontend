@@ -1,134 +1,189 @@
 #EventThemes__container {
-    font-family: NeueMontreal-Regular;
-}
-.mt-5r {
-    margin-top: 5rem !important;
-}
-
-.mt-2p6 {
-    margin-top: 2.6rem !important;
+    font-family : NeueMontreal-Regular;
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+    height : 100vh;
+    width : 100vw;
 }
 
-.mt-8rbig {
-    margin-top: 8rem !important;
-}
-
-.pt-8rem {
-    padding-top: 8rem !important;
-}
-
-.pt-8rem-pb-5rem {
-    padding-top: 8rem !important;
-    padding-bottom: 5rem !important;
-}
-
-.mr-5r {
-    margin-right: 5rem !important;
-}
-
-.mb-5r {
-    margin-bottom: 5rem !important;
-}
-
-.pb-5r {
-    padding-bottom: 5rem !important;
-}
-
-.pr-1p5 {
-    padding-right: 0.6rem !important;
-}
-
-.pl-1p5 {
-    padding-left: 0.6rem !important;
-}
-
-.pt-10rem {
-    padding-top: 10rem !important;
-}
-
-.pt-15rem {
-    padding-top: 15rem !important;
-}
-
-.mr-10rm {
-    margin-right: 6rem;
-}
-
-.line-sp {
-    line-height: 1.63;
-}
-
-.headcont {
-    background-image: linear-gradient(#4828C6, #2E1397);
-}
-
-.img-arr {
+#EventThemes__leftcontainer {
+    background: linear-gradient(180deg, #4821E6 0%, #361AA5 100%);
+    width : 50vw;
+    height : 100%;
     position: relative;
-    overflow: hidden;
-    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.img-arr-img-tr {
+#EventThemes__leftcontainer img:nth-child(1) {
     position: absolute;
-    opacity: 0.21;
-    top: -10rem;
-    right: -3rem;
+    top : 30px;
+    left: 20px;
+    width :100px;
+    height : auto;
+    z-index: 1;
 }
 
-.img-arr-img-bl {
+#EventThemes__leftcontainer img:nth-child(2) {
+    width  :400px;
+    height : auto;
+    z-index: 2;
+}
+
+#EventThemes__leftcontainer img:nth-child(3) {
     position: absolute;
-    opacity: 0.21;
-    bottom: -5rem;
-    left: -3rem;
+    bottom : 30px;
+    right: 20px;
+    width : 100px;
+    height : auto;
+    z-index: 1;
 }
 
-@media only screen and (max-width: 768px) {
-    .img-arr-img-tr {
-        opacity: 0;
+#EventThemes__rightcontainer {
+    padding: 20px 30px;
+    width : 50vw;
+    height : 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#EventThemes__rightcontainer-heading {
+    font-family: NeueMontreal-Italic;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: -20px;
+}
+
+#EventThemes__rightcontainer-content {
+    font-family: NeueMontreal-Regular;
+    font-weight: 400;
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+#EventThemes__rightcontainer-theme {
+    font-family: NeueMontreal-Bold;
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+#EventThemes__rightcontainer-quote {
+    font-family: NeueMontreal-Regular;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width : 1027px) {
+    #EventThemes__leftcontainer img:nth-child(1) {
+        top : 25px;
+        left: 17px;
+        width :90px;
     }
-    .img-arr-img-bl {
-        opacity: 0;
+    
+    #EventThemes__leftcontainer img:nth-child(2) {
+        width  :320px;
+        height : auto;
+    }
+    
+    #EventThemes__leftcontainer img:nth-child(3) {
+        position: absolute;
+        bottom : 25px;
+        right: 17px;
+        width : 90px;
+    }
+    #EventThemes__rightcontainer-heading {
+        font-size: 1.8rem;
+        margin-top: -20px;
+    }
+    
+    #EventThemes__rightcontainer-content {
+        margin-top: 30px;
+        font-size: 1.2rem;
+    }
+    
+    #EventThemes__rightcontainer-theme {
+        font-family: NeueMontreal-Bold;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    
+    #EventThemes__rightcontainer-quote {
+        font-family: NeueMontreal-Regular;
+        font-weight: 400;
+        font-size: 1.3rem;
     }
 }
 
-.flex-grow-1 {
-    flex-grow: 1;
+@media screen and (max-width : 769px) {
+    #EventThemes__leftcontainer img:nth-child(2) {
+        width  :220px;
+    }
+    #EventThemes__rightcontainer-heading {
+        font-size: 1.5rem;
+        margin-top: -20px;
+    }
+    
+    #EventThemes__rightcontainer-content {
+        margin-top: 30px;
+        font-size: 1.1rem;
+    }
+    
+    #EventThemes__rightcontainer-theme {
+        font-family: NeueMontreal-Bold;
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+    
+    #EventThemes__rightcontainer-quote {
+        font-family: NeueMontreal-Regular;
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
 }
 
-.flex-none {
-    flex: none !important;
-}
+@media screen and (max-width : 565px) {
+    #EventThemes__container {
+        flex-direction: column;
+        height : fit-content;
+    }
+    #EventThemes__leftcontainer {
+        width : 100vw;
+    }
+    #EventThemes__rightcontainer {
+        width : 100vw;
+        padding: 30px 30px;
+    }
+    #EventThemes__leftcontainer img:nth-child(1) {
+        top : 10px;
+        left: 10px;
+        width :80px;
+    }
+    
+    #EventThemes__leftcontainer img:nth-child(2) {
+        width  :200px;
+        height : auto;
+    }
+    
+    #EventThemes__leftcontainer img:nth-child(3) {
+        position: absolute;
+        bottom : 10px;
+        right: 10px;
+        width : 80px;
+    }
 
-.whiteb {
-    color: white;
+    #EventThemes__rightcontainer-heading {
+        margin-top : 30px;
+    }
+    
+    #EventThemes__rightcontainer-theme {
+    margin-top : 30px;
+    }
+    
+    #EventThemes__rightcontainer-quote {
+        margin-top: 20px;
+    }
 }
-
-.big-head {
-    font-size: 3rem;
-    font-weight: 500;
-}
-
-.big-head-subt {
-    font-weight: 300;
-}
-
-.bg-selec-itm {
-    background: rgba(255, 255, 255, 0.25);
-}
-
-.mar-items {
-    margin-right: 1.5rem !important;
-    margin-bottom: 2rem !important;
-    cursor: pointer;
-    font-size: 21px;
-}
-
-.bord-radius {
-    border-radius: 6px;
-}
-
-.container-fluid {
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-}
-

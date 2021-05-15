@@ -6,7 +6,7 @@ import Fade from "react-reveal";
 
 function EventCarousel() {
   return (
-    <Fade bottom duration={1600}>
+    <Fade bottom duration={1000}>
       <Carousel fade={true} controls={false}>
         {eventData.map((item, idx) => {
           return (

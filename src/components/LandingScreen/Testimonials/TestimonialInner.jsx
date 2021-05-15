@@ -24,7 +24,7 @@ function Testimonial(props) {
           <div className="testimonial-title-text">
             <h2>Testimonials</h2>
           </div>
-          <Fade left duration={1800}>
+          <Fade left duration={1000}>
             <div className="pt-5 d-flex flex-column align-items-center">
               <img src={winnerPic} className="winner-pic-big" />
               <div className="pt-5 winner-desc">
@@ -35,7 +35,7 @@ function Testimonial(props) {
               </div>
             </div>
           </Fade>
-          <Fade right duration={1800}>
+          <Fade right duration={1000}>
             <div className="p-5 d-flex flex-column align-items-start justify-content-center">
               <div className="winner-quote">
                 <img src={quoteMark} className="quote-mark" />
@@ -51,12 +51,12 @@ function Testimonial(props) {
             <h2>Testimonials</h2>
           </div>
           <img src={spikedCircleTl} className="img-arr-img-tl-sm" />
-          <Fade left duration={1800}>
+          <Fade left duration={1000}>
             <div className="pt-5 d-flex flex-column align-items-center">
               <img src={winnerPic} className="winner-pic-sm" />
             </div>
           </Fade>
-          <Fade right cascade duration={1800}>
+          <Fade right cascade duration={1000}>
             <div className="p-5 d-flex flex-column align-items-start justify-content-center">
               <div className="winner-quote">
                 <img src={quoteMark} className="quote-mark-sm" />

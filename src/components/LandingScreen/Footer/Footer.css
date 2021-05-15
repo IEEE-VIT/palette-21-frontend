@@ -13,14 +13,12 @@
 .palette-desc-left h1 {
     font-size: 5.5rem;
     font-family: NeueMontreal-BoldItalic;
-    font-style: italic;
     font-weight: 700;
 }
 
 .palette-desc-left h3 {
     padding-top: 0.6rem;
-    font-family: NeueMontreal-Italic;
-    font-style: italic;
+    font-family: NeueMontreal-Regular;
 }
 
 .palette-desc-right {
@@ -30,14 +28,12 @@
 .palette-desc-right h1 {
     font-size: 5.5rem;
     font-family: NeueMontreal-BoldItalic;
-    font-style: italic;
     font-weight: 700;
 }
 
 .palette-desc-right h3 {
     padding-top: 0.6rem;
-    font-family: NeueMontreal-Italic;
-    font-style: italic;
+    font-family: NeueMontreal-Regular;
 }
 
 .footer-bg-2 {
@@ -68,14 +64,12 @@
 .palette-desc-right-sm h1 {
     font-size: 3.5rem;
     font-family: NeueMontreal-BoldItalic;
-    font-style: italic;
     font-weight: 700;
 }
 
 .palette-desc-right-sm h3 {
     padding-top: 0.6rem;
-    font-family: NeueMontreal-Italic;
-    font-style: italic;
+    font-family: NeueMontreal-Regular;
 }
 
 #Footer__phone , #Footer__email {

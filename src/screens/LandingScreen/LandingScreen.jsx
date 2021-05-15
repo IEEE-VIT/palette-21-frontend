@@ -28,10 +28,10 @@ const LandingScreen = () => {
       <div id="Hero">
         <Hero />
       </div>
-      <Fade bottom duration={1000}>
+      <Fade bottom duration={500}>
         <About />
       </Fade>
-      <Fade bottom duration={1000}>
+      <Fade bottom duration={500}>
         <div id="LandingScreen__eventthemes">
           <EventThemes />
         </div>
@@ -42,19 +42,19 @@ const LandingScreen = () => {
       <div id="Past">
         <Flashback />
       </div>
-      <Fade bottom duration={1000}>
+      <Fade bottom duration={500}>
         <TestimonialCarousel />
       </Fade>
-      <Fade bottom duration={1000}>
+      <Fade bottom duration={500}>
         <div id="Sponsors">
           <Sponsors />
         </div>
       </Fade>
       <Prizes />
-      <Fade bottom duration={1000}>
+      <Fade bottom duration={500}>
         <Brand />
       </Fade>
-      <Fade bottom duration={1000}>
+      <Fade bottom duration={500}>
         <div id="Register">
           <Register />
         </div>

@@ -1,3 +1,139 @@
+/*Including old eventhemes styles here as some overlap*/
+.mt-5r {
+    margin-top: 5rem !important;
+}
+
+.mt-2p6 {
+    margin-top: 2.6rem !important;
+}
+
+.mt-8rbig {
+    margin-top: 8rem !important;
+}
+
+.pt-8rem {
+    padding-top: 8rem !important;
+}
+
+.pt-8rem-pb-5rem {
+    padding-top: 8rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.mr-5r {
+    margin-right: 5rem !important;
+}
+
+.mb-5r {
+    margin-bottom: 5rem !important;
+}
+
+.pb-5r {
+    padding-bottom: 5rem !important;
+}
+
+.pr-1p5 {
+    padding-right: 0.6rem !important;
+}
+
+.pl-1p5 {
+    padding-left: 0.6rem !important;
+}
+
+.pt-10rem {
+    padding-top: 10rem !important;
+}
+
+.pt-15rem {
+    padding-top: 15rem !important;
+}
+
+.mr-10rm {
+    margin-right: 6rem;
+}
+
+.line-sp {
+    line-height: 1.63;
+}
+
+.headcont {
+    background-image: linear-gradient(#4828C6, #2E1397);
+}
+
+.img-arr {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.img-arr-img-tr {
+    position: absolute;
+    opacity: 0.21;
+    top: -10rem;
+    right: -3rem;
+}
+
+.img-arr-img-bl {
+    position: absolute;
+    opacity: 0.21;
+    bottom: -5rem;
+    left: -3rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .img-arr-img-tr {
+        opacity: 0;
+    }
+    .img-arr-img-bl {
+        opacity: 0;
+    }
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-none {
+    flex: none !important;
+}
+
+.whiteb {
+    color: white;
+}
+
+.big-head {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.big-head-subt {
+    font-weight: 300;
+}
+
+.bg-selec-itm {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.mar-items {
+    margin-right: 1.5rem !important;
+    margin-bottom: 2rem !important;
+    cursor: pointer;
+    font-size: 21px;
+}
+
+.bord-radius {
+    border-radius: 6px;
+}
+
+.container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+
+
+/*END*/
+
 #EventCarousel__item {
     font-family: NeueMontreal-Regular;
 }

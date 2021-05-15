@@ -21,7 +21,7 @@ function Footer() {
           <div className="col-md-6 col-lg-5 d-flex flex-column justify-content-center align-items-start">
             <div className="palette-desc-left">
               <h1>Palette&apos;21</h1>
-              <h3>Designathon-some catchy line</h3>
+              <h3>Prototype your imagination</h3>
             </div>
           </div>
           <div className="col-md-6 col-lg-2 d-flex flex-column justify-content-center align-items-center">
@@ -30,7 +30,7 @@ function Footer() {
           <div className="col-lg-5 col-md-0 d-flex flex-column justify-content-center align-items-end">
             <div className="palette-desc-right">
               <h1>Palette&apos;21</h1>
-              <h3>Designathon-some catchy line</h3>
+              <h3>Prototype your imagination</h3>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@ function Footer() {
         <div className="container-fluid footer-bg-sm d-flex flex-column justify-content-center align-items-center whiteb">
           <div className="palette-desc-right-sm">
             <h1>Palette&apos;21</h1>
-            <h3>Designathon-some catchy line</h3>
+            <h3>Prototype your imagination</h3>
           </div>
           <img src={corona} className="pt-8rem" />
           <a href="https://ieeevit.org/" target="_blank" rel="noreferrer">

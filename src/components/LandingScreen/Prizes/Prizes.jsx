@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 const Prizes = () => {
   return (
     <div className="prizes-div">
-      <Fade bottom duration={1600} delay={1000}>
+      <Fade bottom duration={1000} delay={500}>
         <p className="prizes-heading">Prizes will be anounced soon!</p>
         <p className="prizes-content">
           We are currently in the process of counting money :)

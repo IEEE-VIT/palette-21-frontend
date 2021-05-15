@@ -14,14 +14,14 @@ export default function About() {
     <div id="about-container">
       <img src={dots} alt="" className="dots"></img>
       <div className="content1">
-        <Fade left duration={1600} delay={1200}>
+        <Fade left duration={1000} delay={500}>
           <Typography variant="h2" id="about">
             About
           </Typography>
         </Fade>
         <Row>
           <Col className="cont" xs={12} lg={6}>
-            <Fade left duration={1600} delay={1200}>
+            <Fade left duration={1000} delay={500}>
               <Typography id="cont">
                 Palette ‘21 is the 4th edition of the distinguished
                 design-a-thon conducted yearly by IEEE VIT. While the last three
@@ -32,7 +32,7 @@ export default function About() {
             </Fade>
           </Col>
           <Col xs={12} lg={6}>
-            <Fade right duration={1600} delay={1200}>
+            <Fade right duration={1000} delay={500}>
               <div id="logo">
                 <img src={Palette} alt="Palette" id="paletteLogo"></img>
               </div>
@@ -40,7 +40,7 @@ export default function About() {
           </Col>
         </Row>
       </div>
-      <Fade bottom duration={1600} delay={1200}>
+      <Fade bottom duration={1000} delay={500}>
         <div className="marquee">
           <div className="container r1">
             <span className="chld" id="ch1">

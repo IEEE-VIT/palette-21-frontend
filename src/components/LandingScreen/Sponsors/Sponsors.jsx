@@ -12,7 +12,7 @@ import Fade from "react-reveal/Fade";
 export default function Sponsors() {
   return (
     <div id="Sponsors__container">
-      <Fade bottom cascade duration={1600} delay={1000}>
+      <Fade bottom cascade duration={1000} delay={500}>
         <p id="Sponsors__heading">Meet our Sponsors</p>
         <div id="Sponsors__logos">
           <a href="https://www.sketch.com/" target="_blank" rel="noreferrer">

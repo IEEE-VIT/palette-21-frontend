@@ -11,14 +11,14 @@ import Fade from "react-reveal/Fade";
 const Register = () => {
   return (
     <div className="Register__register-body">
-      <Fade right delay={1600} duration={1600}>
+      <Fade right delay={500} duration={1000}>
         <img src={StarOne} className="Register__star-one" />
       </Fade>
       <img className="Register__illus-one" src={Illustration} />
-      <Fade left delay={1000} duration={1600}>
+      <Fade left delay={500} duration={1000}>
         <img src={StarTwo} className="Register__star-two" />
       </Fade>
-      <Fade bottom cascade delay={1000} duration={1600}>
+      <Fade bottom cascade delay={500} duration={1000}>
         <p className="Register__register-heading">
           Register yourself for palette{" "}
           <span style={{ whiteSpace: "nowrap" }}>2021!</span>

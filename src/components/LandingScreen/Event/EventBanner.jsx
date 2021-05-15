@@ -28,7 +28,7 @@ function EventBanner(props) {
               <div className="col-sm-6 col-md-6 flex-grow-1 d-flex flex-column justify-content-between z-index-mid">
                 <div className="ml-10rem pt-12rem">
                   <span className="red-allcaps">{eventCategory}</span>
-                  <Fade left cascade duration={1600}>
+                  <Fade left cascade duration={1000}>
                     <p className="mt-2">
                       <h1>
                         <i>
@@ -37,7 +37,7 @@ function EventBanner(props) {
                       </h1>
                     </p>
                   </Fade>
-                  <Fade left duration={1600}>
+                  <Fade left duration={1000}>
                     <h5
                       style={{ fontWeight: 300 }}
                       className="mt-4p5 mr-2 line-sp"
@@ -57,7 +57,7 @@ function EventBanner(props) {
                   <img src={speakersTextBg} className="speakers-text" />
                   <img src={speakerPic} className="speaker-pic" />
                 </div>
-                <Fade right duration={1600}>
+                <Fade right duration={1000}>
                   <div className="z-top-text">
                     <h1 className="white-text-bold">
                       <b>{speakerName}</b>

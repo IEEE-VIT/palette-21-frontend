@@ -18,7 +18,7 @@ const Flashback = () => {
         setMoveRight(event.nativeEvent.srcElement.scrollTop);
       }}
     >
-      <Fade bottom cascade duration={1600}>
+      <Fade bottom cascade duration={1000}>
         <div id="Flashback__leftcontainer">
           <h4>Glimpses from our past Palette events</h4>
           <p>

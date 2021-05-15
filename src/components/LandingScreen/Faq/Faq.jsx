@@ -141,7 +141,7 @@ const Faq = () => {
             <br />
             <p className="faq-heading">FAQ</p>
             <br />
-            <Fade bottom duration={1600} cascade>
+            <Fade bottom duration={1000} cascade>
               {questions.map((item, index) => {
                 return (
                   <Row key={index}>

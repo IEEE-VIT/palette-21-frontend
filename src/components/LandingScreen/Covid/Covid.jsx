@@ -26,7 +26,7 @@ const Covid = () => {
               </a>
             </div>
             <p id="Covid__donationinfo">
-              All donations will go to <span>Keto.org</span>
+              All donations will go to <span>Ketto.org</span>
             </p>
           </div>
         </div>

@@ -1,7 +1,7 @@
 .NavLinks {
   font-family: NeueMontreal-Regular;
   font-weight: 700;
-  padding: 0px 10px;
+  padding: 0px 0px;
   margin: 0px 2.5px;
   border-radius: 6px;
 }
@@ -11,6 +11,12 @@
   font-weight: 500;
   margin: 0;
   font-family: NeueMontreal-Regular;
+}
+
+.NavRow {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
 }
 
 @media (max-width: 922px) {
@@ -23,10 +29,18 @@
   }
   .Reg {
     background-color: rgba(67, 41, 232, 1);
+    color: white;
     padding: 0.5rem 1rem;
+  }
+  .text {
+    color: white;;
   }
   .nav-link {
     color: black;
+  }
+  .NavRow {
+    display: flex;
+    flex-direction: column;
   }
 }
 

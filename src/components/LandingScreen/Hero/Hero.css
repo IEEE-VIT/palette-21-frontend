@@ -49,7 +49,7 @@ Row{
 }
 
 #Hero__caption {
-    font-family: NeueMontreal-Italic;
+    font-family: NeueMontreal-Regular;
 }
 
 .inline-block{
@@ -63,7 +63,12 @@ Row{
     width:10vw;
 }
 #reg-date{
+    margin-top : 20px;
     width:17vw;
+}
+#reg-date-mobile{
+    margin-top : 20px;
+    display: none;
 }
 
 .block-l{
@@ -111,6 +116,9 @@ p{
         width:8rem;
     }
     #reg-date{
+        width:12rem;
+    }
+    #reg-date-mobile {
         width:12rem;
     }
 

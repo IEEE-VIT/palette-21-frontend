@@ -61,7 +61,9 @@ export default class NavbarComponent extends React.Component {
         fixed="top"
       >
         {this.state.show || this.state.screenSize < 992 ? (
-          <img src={Logo} alt="" id="Logo"></img>
+          <a href="#Hero">
+            <img src={Logo} alt="" id="Logo"></img>
+          </a>
         ) : (
           <img style={{ opacity: 0 }} src={Logo} alt="" id="Logo"></img>
         )}

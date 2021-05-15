@@ -20,10 +20,11 @@ const Flashback = () => {
     >
       <Fade bottom cascade duration={1600}>
         <div id="Flashback__leftcontainer">
-          <h4>These are few glimpses from our past editions of Palette</h4>
+          <h4>Glimpses from our past Palette events</h4>
           <p>
-            Palette ‘21 is the 4th edition of the prestigious design-a-thon
-            conducted yearly by IEEE VIT.{" "}
+            Mind Blowing Designs, talented Minds, insightful conversations with
+            Industry experts - all under the same roof at previous editions of
+            Palette.{" "}
           </p>
           <img src={FlashbackLeftPic1} />
           <img src={FlashbackLeftPic2} />

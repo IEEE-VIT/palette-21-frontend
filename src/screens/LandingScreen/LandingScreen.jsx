@@ -25,7 +25,9 @@ const LandingScreen = () => {
       id="LandingScreen__container"
     >
       <NavbarComponent />
-      <Hero />
+      <div id="Hero">
+        <Hero />
+      </div>
       <Fade bottom duration={1000}>
         <About />
       </Fade>

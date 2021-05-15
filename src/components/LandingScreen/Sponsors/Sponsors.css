@@ -7,7 +7,7 @@
 }
 
 .Sponsors__smallerlogo {
-    width : 140px !important;
+    width : 120px !important;
 }
 
 #Sponsors__logos img:hover {
@@ -17,7 +17,7 @@
 
 #Sponsors__container{
     height : 100vh;
-    background-image : linear-gradient(#FDAD00 0%, #F77A0F 100%);
+    background-image:linear-gradient(180deg, #020202 0%, #000000 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,5 +77,16 @@
     }
     .Sponsors__smallerlogo {
         width : 96px !important;
+    }
+}
+
+@media screen and (max-width : 350px) {
+    #Sponsors__heading {
+        font-size: 1.8rem;
+        margin-top : 30px;
+    }
+    #Sponsors__logos img {
+        width : 70px;
+        margin : 15px 15px;
     }
 }

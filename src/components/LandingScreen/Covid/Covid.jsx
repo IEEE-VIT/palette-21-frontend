@@ -25,6 +25,9 @@ const Covid = () => {
                 </p>
               </a>
             </div>
+            <p id="Covid__donationinfo">
+              All donations will go to <span>Keto.org</span>
+            </p>
           </div>
         </div>
         <img src={CovidRelief} className="covid-relief" />

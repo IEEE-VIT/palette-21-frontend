@@ -83,6 +83,31 @@
     font-size: 1.05rem;
 }
 
+#Footer__socialicons {
+    display: flex;
+    flex-direction: row;
+}
+
+#Footer__socialicons img {
+    width : 30px;
+    height : 30px;
+    margin : 0px 10px;
+}
+
+#Footer__phonediv , #Footer__maildiv {
+    white-space: nowrap;
+}
+
+@media screen and (max-width : 1137px) {
+    #Footer__container .pb-3{
+        width : fit-content;
+    }
+    
+    #Footer__container .col-md-11.col-lg-6 {
+        width : fit-content;
+    }
+}
+
 @media screen and (max-width : 768px){
     #Footer__phone , #Footer__email {
         font-size: 1.2rem;

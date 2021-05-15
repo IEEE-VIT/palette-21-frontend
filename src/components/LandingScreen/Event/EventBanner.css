@@ -40,14 +40,14 @@
 
 #EventCarousel__item .img-arr-judges-topr {
     position: absolute;
-    opacity: 0.77;
+    opacity: 0.2;
     top: 10rem;
     right: 5rem;
 }
 
 #EventCarousel__item .img-arr-judges-topr-sm {
     position: absolute;
-    opacity: 0.77;
+    opacity: 0.2;
     top: 5vh;
     left: 5vh;
 }

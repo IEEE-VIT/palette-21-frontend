@@ -8,6 +8,8 @@ import ieeeLogo from "../../../assets/ieee-logo-footer.svg";
 import footerInIcon from "../../../assets/footer-linkedin.svg";
 import footerTwitterIcon from "../../../assets/footer-twitter.svg";
 import footerInstaIcon from "../../../assets/footer-insta.svg";
+import footerFbIcon from "../../../assets/facebook.svg";
+import footerWebsiteIcon from "../../../assets/websitelogo.svg";
 import mailFooterIcon from "../../../assets/mail-footer-icon.svg";
 import phoneFooterIcon from "../../../assets/phone-footer-icon.svg";
 
@@ -35,10 +37,15 @@ function Footer() {
         <div className="container-fluid footer-bg-2 d-flex flex-row justify-content-between align-items-start whiteb">
           <div className="col-md-5 d-flex flex-column justify-content-start align-items-start">
             <div className="palette-desc-left">
-              <img src={ieeeLogo} />
+              <a href="https://ieeevit.org/" target="_blank" rel="noreferrer">
+                <img src={ieeeLogo} />
+              </a>
             </div>
           </div>
-          <div className="col-md-2 d-flex flex-row justify-content-around align-items-center pt-3">
+          <div
+            id="Footer__socialicons"
+            className="col-md-2 d-flex flex-row justify-content-around align-items-center pt-3"
+          >
             <a
               href="https://www.linkedin.com/company/ieee-vit-vellore"
               target="_blank"
@@ -60,22 +67,32 @@ function Footer() {
             >
               <img src={footerInstaIcon} />
             </a>
+            <a
+              href="https://facebook.com/IEEEVIT"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={footerFbIcon} />
+            </a>
+            <a href="https://ieeevit.org/" target="_blank" rel="noreferrer">
+              <img src={footerWebsiteIcon} />
+            </a>
           </div>
           <div className="col-md-5 d-flex flex-column justify-content-start align-items-end">
             <div className="col-md-1 col-lg-6"></div>
             <div className="col-md-11 col-lg-6">
-              <div className="pb-3">
-                <a href="tel:+919560434342">
+              <div id="Footer__phonediv" className="pb-3">
+                <a href="tel:+919977955466">
                   <img src={phoneFooterIcon} className="pr-3" />
                 </a>
 
-                <span id="Footer__phone">9560434342</span>
+                <span id="Footer__phone">+91 9977955466</span>
               </div>
-              <div>
-                <a href="mailto:contact@ieevit.org">
+              <div id="Footer__maildiv">
+                <a href="mailto:contact@ieeevit.org">
                   <img src={mailFooterIcon} className="pr-3" />
                 </a>
-                <span id="Footer__email">contact@ieevit.org</span>
+                <span id="Footer__email">contact@ieeevit.org</span>
               </div>
             </div>
           </div>
@@ -88,18 +105,20 @@ function Footer() {
             <h3>Designathon-some catchy line</h3>
           </div>
           <img src={corona} className="pt-8rem" />
-          <img src={ieeeLogo} className="pt-10rem" />
-          <div className="pb-4 pt-5">
-            <a href="tel:+919560434342">
+          <a href="https://ieeevit.org/" target="_blank" rel="noreferrer">
+            <img src={ieeeLogo} className="pt-10rem" />
+          </a>
+          <div id="Footer__phonediv" className="pb-4 pt-5">
+            <a href="tel:+919977955466">
               <img src={phoneFooterIcon} className="pr-3" />
             </a>
-            <span id="Footer__phone">9560434342</span>
+            <span id="Footer__phone">+91 9977955466</span>
           </div>
-          <div className="pb-5">
-            <a href="mailto:contact@ieevit.org">
+          <div id="Footer__maildiv" className="pb-5">
+            <a href="mailto:contact@ieeevit.org">
               <img src={mailFooterIcon} className="pr-3" />
             </a>
-            <span id="Footer__email">contact@ieevit.org</span>
+            <span id="Footer__email">contact@ieeevit.org</span>
           </div>
         </div>
       </div>

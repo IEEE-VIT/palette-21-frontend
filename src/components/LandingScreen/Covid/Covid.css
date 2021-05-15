@@ -31,9 +31,21 @@
 
 #Covid__updatediv {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#Covid__donationinfo {
+    font-family: NeueMontreal-Regular;
+    opacity : 0.7;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    margin-top : 20px;
+}
+
+#Covid__donationinfo span {
+    font-family: NeueMontreal-Bold;
 }
 
 #Covid__updatediv div:nth-child(1) {
@@ -157,6 +169,10 @@
         margin-bottom: 20px;
         max-width: fit-content;
     }
+    #Covid__updatediv {
+        align-items: center;
+    }
+    
 }
 
 @media screen and (max-width : 607px) {

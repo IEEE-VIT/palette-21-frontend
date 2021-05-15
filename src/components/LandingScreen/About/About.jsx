@@ -23,12 +23,11 @@ export default function About() {
           <Col className="cont" xs={12} lg={6}>
             <Fade left duration={1600} delay={1200}>
               <Typography id="cont">
-                Palette ‘21 is the 4th edition of the prestigious design-a-thon
-                conducted yearly by IEEE VIT. While the last three editions
-                witnessed amazing graphic designs and web designs, this year it
-                is a 48 hour long design hack based entirely on the concepts of
-                UI & UX. We strongly believe in the saying “Design is not how it
-                looks
+                Palette ‘21 is the 4th edition of the distinguished
+                design-a-thon conducted yearly by IEEE VIT. While the last three
+                editions witnessed amazing graphic designs , web and app
+                designs, this year we are back with a fun 48 hour long design
+                hack based entirely on the concepts of UI & UX.
               </Typography>
             </Fade>
           </Col>
@@ -62,17 +61,17 @@ export default function About() {
             <span className="chld" id="ch6">
               BUSINESS
             </span>
-          </div>
-          <div className="container r2">
             <span className="chld" id="ch7">
-              BUSINESS
+              BRANDING
             </span>
             <span className="chld" id="ch8">
-              UI/UX
+              STRATEGY
             </span>
             <span className="chld" id="ch9">
-              PRODUCTION
+              BUSINESS
             </span>
+          </div>
+          <div className="container r2">
             <span className="chld" id="ch10">
               BUSINESS
             </span>
@@ -80,6 +79,24 @@ export default function About() {
               UI/UX
             </span>
             <span className="chld" id="ch12">
+              PRODUCTION
+            </span>
+            <span className="chld" id="ch13">
+              BUSINESS
+            </span>
+            <span className="chld" id="ch14">
+              UI/UX
+            </span>
+            <span className="chld" id="ch15">
+              PRODUCTION
+            </span>
+            <span className="chld" id="ch16">
+              BUSINESS
+            </span>
+            <span className="chld" id="ch17">
+              UI/UX
+            </span>
+            <span className="chld" id="ch18">
               PRODUCTION
             </span>
           </div>

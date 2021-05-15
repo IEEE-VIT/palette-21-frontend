@@ -63,16 +63,17 @@ img.dots{
     top: -25vh;
     overflow-x:hidden;
     margin-bottom: 0;
-    font-family: NeueMontreal-Italic;
+    font-family: NeueMontreal-BoldItalic;
 }
 /*Marquee */
-.container{
+.marquee .container{
   margin: 0%;
   padding: 0%;
-  font-family: "Neue Montreal";
+  font-family: NeueMontreal-BoldItalic;
   font-size: 11vh;
   font-weight: 900;
   font-style: italic;
+  white-space: nowrap ;
 }
 
 
@@ -88,11 +89,11 @@ img.dots{
     }
 }
 
-.r1{
+.marquee .r1{
     -webkit-animation: Slde 15s linear infinite reverse;
     animation: Slde 15s linear infinite reverse;
 }
-.r2{
+.marquee .r2{
     -webkit-animation: Slde 15s linear infinite;
     animation: Slde 15s linear infinite;
 }

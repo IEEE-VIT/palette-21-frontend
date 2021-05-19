@@ -1,5 +1,5 @@
 import speakerEv1 from "../../../assets/speaker-ev-1.png";
-//import speakerEv2 from "../../../assets/speaker-ev-2.png";
+import speakerEv2 from "../../../assets/speaker-ev-2.png";
 import speakerEv3 from "../../../assets/speaker-ev-3.png";
 
 const eventData = [
@@ -12,7 +12,6 @@ const eventData = [
     eventCategory: "DESIGN TALKS",
     eventDesc: "",
   },
-  /*
   {
     date: "28th May 2021",
     speakerName: "Aditi Sharma",
@@ -20,9 +19,8 @@ const eventData = [
     speakerPic: speakerEv2,
     eventName: "Designing for the next billion generation",
     eventCategory: "DESIGN TALKS",
-    eventDesc:
-      "Convallis turpis ellat tempus, viverra aliquet. Nul lam num aucter sit ipsum malesuada a, duis volutpat.",
-  },*/
+    eventDesc: "",
+  },
   {
     date: "27th May 2021",
     speakerName: "Salman Amir",

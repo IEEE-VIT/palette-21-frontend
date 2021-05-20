@@ -73,6 +73,9 @@ export default function Hero() {
             color="secondary"
             size="large"
             className={classes.signinButton}
+            onClick={() => {
+              window.location.replace("/#Register");
+            }}
           >
             REGISTER NOW
           </Button>

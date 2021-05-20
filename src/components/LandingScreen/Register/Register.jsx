@@ -25,11 +25,24 @@ const Register = () => {
         </p>
         <br />
         <div id="Register__register-btns">
-          <button className="Register__btn Register__register">
+          <button
+            className="Register__btn Register__register"
+            onClick={() => {
+              const url = process.env.REACT_APP_OAUTH_URL + "/auth/google";
+              window.open(url, "_self");
+            }}
+          >
             <img src={google} />
             CONTINUE WITH GOOGLE
           </button>
-          <button className="Register__btn Register__register">
+          <button
+            className="Register__btn Register__register"
+            onClick={() => {
+              const url =
+                "https://www.figma.com/oauth?client_id=cKpPiJvmHHgpYSxbrSgz3s&redirect_uri=http://localhost:3000/successfulAuth&scope=file_read&state=abc&response_type=code";
+              window.open(url, "_self");
+            }}
+          >
             <img src={figma} />
             CONTINUE WITH FIGMA
           </button>

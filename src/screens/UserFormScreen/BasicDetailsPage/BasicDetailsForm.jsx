@@ -13,6 +13,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import SendIcon from "@material-ui/icons/Send";
 import GroupedButton from "../../../components/GroupedButton/groupButton";
@@ -107,6 +108,7 @@ export default function BasicDetailsForm(props) {
   const [selectedTools, setSelectedTools] = useState([]);
   const [cookies] = useCookies(["token"]);
   const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     checkValidation();
@@ -114,6 +116,22 @@ export default function BasicDetailsForm(props) {
 
   useEffect(() => {
     console.log("Initialise Call");
+    const regPortal = new api(cookies.token, process.env.REACT_APP_BACKEND_API);
+    regPortal
+      .didFillForm()
+      .then((result) => {
+        console.log(result.data);
+        const apiData = result.data;
+        if (apiData.data.round0 && !apiData.data.teamFormed) {
+          console.log("props hag raha hai bro");
+          props.moveNext("teamFormation");
+        } else if (apiData.data.round0) {
+          history.push("/");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   const handleSelectedSkillChange = (input) => {
@@ -181,11 +199,11 @@ export default function BasicDetailsForm(props) {
     };
     console.log(data);
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      props.moveNext("teamFormation");
-    }, 2000);
-    // callApi(data);
+    // setTimeout(() => {
+    //   setLoading(false);
+    //   props.moveNext("teamFormation");
+    // }, 2000);
+    callApi(data);
   };
 
   const callApi = (data) => {
@@ -197,9 +215,11 @@ export default function BasicDetailsForm(props) {
       .userForm(data)
       .then((result) => {
         console.log(result);
+        props.moveNext("teamFormation");
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
   };
 

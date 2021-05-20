@@ -115,9 +115,10 @@ export default function CreateTeamForm() {
     console.log(data);
     setCreateLoading(true);
     setTeamCodeValid(false);
-    setTimeout(() => {
-      setCreateLoading(false);
-    }, 2000);
+    // setTimeout(() => {
+    //   setCreateLoading(false);
+    // }, 2000);
+    createTeamApi(data);
   };
 
   const handleJoinTeam = () => {
@@ -127,9 +128,10 @@ export default function CreateTeamForm() {
     console.log(data);
     setCodeLoading(true);
     setTeamNameValid(false);
-    setTimeout(() => {
-      setCodeLoading(false);
-    }, 2000);
+    // setTimeout(() => {
+    //   setCodeLoading(false);
+    // }, 2000);
+    joinTeamApi(data);
   };
 
   const createTeamApi = (data) => {
@@ -140,6 +142,7 @@ export default function CreateTeamForm() {
       })
       .catch((error) => {
         console.log(error);
+        setCreateLoading(false);
       });
   };
 
@@ -151,6 +154,7 @@ export default function CreateTeamForm() {
       })
       .catch((error) => {
         console.log(error);
+        createTeamApi(false);
       });
   };
 

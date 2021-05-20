@@ -24,7 +24,11 @@ class regPortalApi {
     return result;
   }
   async didFillForm() {
-    const result = await axios.get("user/filledRound0", this.configs);
+    const result = await axios.get("/user/filledRound0", this.configs);
+    return result;
+  }
+  async getProfile() {
+    const result = await axios.get("/dashboard/profile", this.configs);
     return result;
   }
 }

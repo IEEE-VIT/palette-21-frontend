@@ -4,6 +4,7 @@ import LandingScreen from "./screens/LandingScreen/LandingScreen";
 import LoginScreen from "./screens/LoginScreen/LoginScreen";
 import play from "./screens/Playground/play";
 import UserFormScreen from "./screens/UserFormScreen/UserFormScreen";
+import SuccesfulAuth from "./screens/successfulAuth";
 
 const AppRouter = () => {
   return (
@@ -14,6 +15,7 @@ const AppRouter = () => {
           <Route exact path="/login" component={LoginScreen} />
           <Route exact path="/play" component={play} />
           <Route exact path="/userForm" component={UserFormScreen} />
+          <Route exact path="/successfulAuth" component={SuccesfulAuth} />
         </Switch>
       </BrowserRouter>
     </div>

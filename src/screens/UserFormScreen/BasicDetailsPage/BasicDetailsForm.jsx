@@ -11,6 +11,7 @@ import {
   MenuItem,
   CircularProgress,
   Typography,
+  useTheme,
 } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
@@ -19,49 +20,6 @@ import GroupedButton from "../../../components/GroupedButton/groupButton";
 import NumberFormat from "react-number-format";
 import PropTypes from "prop-types";
 import api from "../../../api/regPortal";
-
-const useStyles = makeStyles({
-  paper: {
-    backgroundColor: "#1D1D1D",
-    color: "#FFFF",
-    borderRadius: 12,
-  },
-  miniButton: {
-    maxWidth: "20px",
-    madHeight: "30px",
-  },
-  outlinePaper: {
-    backgroundColor: "#1D1D1D",
-    borderColor: "#694FEF",
-    color: "#FFFF",
-  },
-  bg: {
-    background: "#FFF",
-  },
-  inputFields: {
-    color: "#FFF",
-  },
-  formControl: {
-    // minWidth: 400,
-  },
-  smallText: {
-    fontSize: "0.7rem",
-  },
-  labelRoot: {
-    fontSize: "0.7rem",
-  },
-  labelRoot2: {
-    fontSize: "0.67rem",
-  },
-  helperTitle: {
-    color: "#999999",
-  },
-  button: {
-    padding: "10px",
-    paddingLeft: "25px",
-    paddingRight: "25px",
-  },
-});
 
 function NumberFormatCustom(props) {
   const { inputRef, onChange, ...other } = props;
@@ -98,6 +56,41 @@ NumberFormatCustom.propTypes = {
 };
 
 export default function BasicDetailsForm(props) {
+  const theme = useTheme();
+  const useStyles = makeStyles({
+    paper: theme.custom.paper,
+    miniButton: {
+      maxWidth: "20px",
+      madHeight: "30px",
+    },
+    outlinePaper: theme.custom.outlinePaper,
+    bg: {
+      background: "#FFF",
+    },
+    inputFields: {
+      color: "#FFF",
+    },
+    formControl: {
+      // minWidth: 400,
+    },
+    smallText: {
+      fontSize: "0.7rem",
+    },
+    labelRoot: {
+      fontSize: "0.7rem",
+    },
+    labelRoot2: {
+      fontSize: "0.67rem",
+    },
+    helperTitle: {
+      color: "#999999",
+    },
+    button: {
+      padding: "10px",
+      paddingLeft: "25px",
+      paddingRight: "25px",
+    },
+  });
   const classes = useStyles();
   const [hearUs, setHearUs] = useState("");
   const [isValidForm, setIsValidForm] = useState(false);

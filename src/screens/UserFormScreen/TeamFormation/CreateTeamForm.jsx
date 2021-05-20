@@ -8,6 +8,7 @@ import {
   Switch,
   Typography,
   Divider,
+  useTheme,
   CircularProgress,
 } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
@@ -17,23 +18,6 @@ import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import api from "../../../api/regPortal";
 
-const useStyles = makeStyles({
-  paper: {
-    backgroundColor: "#1D1D1D",
-    color: "#FFFF",
-    borderRadius: 12,
-  },
-  outlinePaper: {
-    backgroundColor: "#1D1D1D",
-    borderColor: "#694FEF",
-    color: "#FFFF",
-  },
-  button: {
-    padding: "10px",
-    paddingLeft: "25px",
-    paddingRight: "25px",
-  },
-});
 const AntSwitch = withStyles((theme) => ({
   root: {
     width: 45,
@@ -69,6 +53,16 @@ const AntSwitch = withStyles((theme) => ({
 }))(Switch);
 
 export default function CreateTeamForm() {
+  const theme = useTheme();
+  const useStyles = makeStyles({
+    paper: theme.custom.paper,
+    outlinePaper: theme.custom.outlinePaper,
+    button: {
+      padding: "10px",
+      paddingLeft: "25px",
+      paddingRight: "25px",
+    },
+  });
   const [cookies] = useCookies(["token"]);
   const regPortalApi = new api(
     cookies.token,

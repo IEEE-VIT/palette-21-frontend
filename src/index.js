@@ -3,39 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import { CookiesProvider } from "react-cookie";
 
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: ["Inter"].join(","),
-  },
-  palette: {
-    type: "dark",
-    background: {
-      default: "#141414",
-    },
-    primary: {
-      main: "#563AE8",
-      contrastText: "#fff",
-    },
-    secondary: {
-      main: "#FFF",
-      contrastText: "#fff",
-    },
-  },
-});
-
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <React.StrictMode>
-      <CookiesProvider>
-        <App />
-      </CookiesProvider>
-    </React.StrictMode>
-  </ThemeProvider>,
+  <React.StrictMode>
+    <CookiesProvider>
+      <App />
+    </CookiesProvider>
+  </React.StrictMode>,
   document.getElementById("root")
 );
 

@@ -9,7 +9,7 @@ import api from "../../api/regPortal";
 import { useHistory } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
-export default function UserFormScreen() {
+export default function UserFormScreen(props) {
   const [screen, setScreen] = useState("userBasicDetails");
   const [name, setName] = useState("Epic Designer");
   const [img, setImage] = useState("");
@@ -57,7 +57,11 @@ export default function UserFormScreen() {
       <Grid container direction="column">
         <Grid item>
           <Box p={{ xs: 1, md: 4 }}>
-            <TopHeader name={name} img={img} />
+            <TopHeader
+              name={name}
+              img={img}
+              toggleDarkTheme={props.toggleTheme}
+            />
           </Box>
         </Grid>
         <Grid item>

@@ -60,7 +60,7 @@ export default function BasicTeamForm() {
                   </Grid>
                   <Grid item>
                     <Typography vairant="caption">
-                      You will sttill be able to join team later.{" "}
+                      You will still be able to join team later.{" "}
                     </Typography>
                   </Grid>
                 </Grid>

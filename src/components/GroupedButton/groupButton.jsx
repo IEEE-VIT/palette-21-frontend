@@ -1,46 +1,53 @@
-import { Button, makeStyles, Typography, Icon } from "@material-ui/core";
+import {
+  Button,
+  makeStyles,
+  Typography,
+  Icon,
+  useTheme,
+} from "@material-ui/core";
 import PropTypes from "prop-types";
 import { React, useState } from "react";
 import figmaImage from "../../assets/basicDetails/figma.svg";
 
-const useStyles = makeStyles({
-  smallText: {
-    fontSize: "0.8rem",
-    textTransform: "none",
-  },
-  disabledButton: {
-    paddingTop: "5px",
-    paddingBottom: "5px",
-    background: "#292929",
-    color: "#C2C2C2",
-    "&:hover": {
-      backgroundColor: "#FFF",
-      color: "#694FEF",
-    },
-  },
-  focusedButton: {
-    paddingTop: "5px",
-    paddingBottom: "5px",
-  },
-  iconButtonFocused: {
-    paddingTop: "0px",
-    paddingBottom: "0px",
-  },
-  iconButtonDisabled: {
-    paddingTop: "0px",
-    paddingBottom: "0px",
-    background: "#292929",
-    color: "#C2C2C2",
-    "&:hover": {
-      backgroundColor: "#FFF",
-      color: "#694FEF",
-    },
-  },
-  iconSettings: {
-    display: "inline",
-  },
-});
 export default function GroupedButton(props) {
+  const theme = useTheme();
+  const useStyles = makeStyles({
+    smallText: {
+      fontSize: "0.8rem",
+      textTransform: "none",
+    },
+    disabledButton: {
+      paddingTop: "5px",
+      paddingBottom: "5px",
+      background: theme.custom.disabledButton,
+      color: theme.custom.groupedButtonText,
+      "&:hover": {
+        backgroundColor: "#FFF",
+        color: "#694FEF",
+      },
+    },
+    focusedButton: {
+      paddingTop: "5px",
+      paddingBottom: "5px",
+    },
+    iconButtonFocused: {
+      paddingTop: "0px",
+      paddingBottom: "0px",
+    },
+    iconButtonDisabled: {
+      paddingTop: "0px",
+      paddingBottom: "0px",
+      background: theme.custom.disabledButton,
+      color: theme.custom.groupedButtonText,
+      "&:hover": {
+        backgroundColor: "#FFF",
+        color: "#694FEF",
+      },
+    },
+    iconSettings: {
+      display: "inline",
+    },
+  });
   const classes = useStyles();
   const [isSelected, setIsSelected] = useState(false);
 
@@ -67,6 +74,7 @@ export default function GroupedButton(props) {
     <div>
       {props.iconName != null ? (
         <Button
+          disableElevation={true}
           classes={{
             startIcon: classes.iconSettings,
           }}
@@ -85,6 +93,7 @@ export default function GroupedButton(props) {
         </Button>
       ) : (
         <Button
+          disableElevation={true}
           variant="contained"
           size="small"
           color={isSelected ? "primary" : "default"}

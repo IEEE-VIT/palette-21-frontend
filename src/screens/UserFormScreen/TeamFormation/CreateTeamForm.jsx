@@ -10,9 +10,11 @@ import {
   Divider,
 } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
-import React from "react";
+import React, { useState } from "react";
+import { useCookies } from "react-cookie";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
+import api from "../../../api/regPortal";
 
 const useStyles = makeStyles({
   paper: {
@@ -66,15 +68,79 @@ const AntSwitch = withStyles((theme) => ({
 }))(Switch);
 
 export default function CreateTeamForm() {
-  const [state, setState] = React.useState({
-    checkedA: true,
-    checkedB: true,
-    checkedC: false,
+  const [cookies] = useCookies(["token"]);
+  const regPortalApi = new api(
+    cookies.token,
+    process.env.REACT_APP_BACKEND_API
+  );
+  const [state, setState] = useState({
+    checkedA: false,
   });
+
+  const [teamName, setTeamName] = useState("");
+  const [teamCode, setTeamCode] = useState("");
+  const [isTeamNameValid, setTeamNameValid] = useState(false);
+  const [isTeamCodeValid, setTeamCodeValid] = useState(false);
 
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
+
+  const handleTeamName = (event) => {
+    setTeamName(event.target.value);
+    if (event.target.value != "") {
+      setTeamNameValid(true);
+    } else {
+      setTeamNameValid(false);
+    }
+  };
+
+  const handleTeamCode = (event) => {
+    setTeamCode(event.target.value);
+    if (event.target.value != "") {
+      setTeamCodeValid(true);
+    } else {
+      setTeamNameValid(false);
+    }
+  };
+
+  const handleCreateTeam = () => {
+    const data = {
+      teamName,
+      needTeam: state.checkedA,
+    };
+    console.log(data);
+  };
+
+  const handleJoinTeam = () => {
+    const data = {
+      teamCode,
+    };
+    console.log(data);
+  };
+
+  const createTeamApi = (data) => {
+    regPortalApi
+      .createTeam(data)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const joinTeamApi = (data) => {
+    regPortalApi
+      .joinTeam(data)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const classes = useStyles();
   return (
     <Box m={4} mx={2} mt={10}>
@@ -103,6 +169,7 @@ export default function CreateTeamForm() {
                     <TextField
                       color="secondary"
                       required
+                      onChange={handleTeamName}
                       label="Team Name"
                       placeholder="DesignPals"
                       hint="DesignPals"
@@ -131,8 +198,12 @@ export default function CreateTeamForm() {
                 >
                   <Grid item>
                     <Button
+                      disabled={!isTeamNameValid}
                       variant="contained"
                       color="primary"
+                      onClick={() => {
+                        handleCreateTeam();
+                      }}
                       className={classes.button}
                     >
                       Create Team
@@ -149,9 +220,9 @@ export default function CreateTeamForm() {
                       >
                         <Grid item>
                           <AntSwitch
-                            checked={state.checkedC}
+                            checked={state.checkedA}
                             onChange={handleChange}
-                            name="checkedC"
+                            name="checkedA"
                           />
                         </Grid>
                         <Grid item>Looking for teammates</Grid>
@@ -189,6 +260,7 @@ export default function CreateTeamForm() {
                     <TextField
                       color="secondary"
                       required
+                      onChange={handleTeamCode}
                       label="Enter team code"
                       placeholder="SSE-213"
                       hint="SSEE-213"
@@ -211,6 +283,10 @@ export default function CreateTeamForm() {
                 <Button
                   variant="contained"
                   color="primary"
+                  disabled={!isTeamCodeValid}
+                  onClick={() => {
+                    handleJoinTeam();
+                  }}
                   className={classes.button}
                   endIcon={<ArrowRightIcon />}
                 >

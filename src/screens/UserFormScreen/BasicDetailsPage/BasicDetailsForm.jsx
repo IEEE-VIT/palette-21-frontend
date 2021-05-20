@@ -12,10 +12,12 @@ import {
   Typography,
 } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
+import { useCookies } from "react-cookie";
 import SendIcon from "@material-ui/icons/Send";
 import GroupedButton from "../../../components/GroupedButton/groupButton";
 import NumberFormat from "react-number-format";
 import PropTypes from "prop-types";
+import api from "../../../api/regPortal";
 
 const useStyles = makeStyles({
   paper: {
@@ -102,6 +104,7 @@ export default function BasicDetailsForm(props) {
   const [discordHash, setDiscordHash] = useState("");
   const [selectedSkills, setSelectedSkills] = useState([]);
   const [selectedTools, setSelectedTools] = useState([]);
+  const [cookies] = useCookies(["token"]);
 
   useEffect(() => {
     checkValidation();
@@ -157,7 +160,7 @@ export default function BasicDetailsForm(props) {
     if (
       selectedSkills.length !== 0 &&
       selectedTools.length !== 0 &&
-      hearUs !== "none" &&
+      hearUs !== "" &&
       discordUsername !== "" &&
       discordHash !== ""
     ) {
@@ -168,21 +171,43 @@ export default function BasicDetailsForm(props) {
   };
 
   const buttonNext = () => {
-    props.moveNext("teamFormation");
+    const data = {
+      discordHandle: discordUsername + "#" + discordHash,
+      skills: selectedSkills,
+      tools: selectedTools,
+      outreach: hearUs,
+    };
+    console.log(data);
+    callApi(data);
+    // props.moveNext("teamFormation");
+  };
+
+  const callApi = (data) => {
+    const regPortalApi = new api(
+      cookies.token,
+      process.env.REACT_APP_BACKEND_API
+    );
+    regPortalApi
+      .userForm(data)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const tools = [
     "Figma",
     "Sketch",
-    "Marvel",
     "Adobe XD",
     "Illustrator",
     "After Effects",
     "Webflow",
-    "Photoshop",
+    "Principle",
     "Protopie",
     "Framer",
-    "Balsamiq",
+    "Invision",
   ];
 
   return (
@@ -274,7 +299,7 @@ export default function BasicDetailsForm(props) {
                     </Grid>
                     <Grid item>
                       <GroupedButton
-                        text="Motion Graphics"
+                        text="VFX"
                         handleSelection={handleSelectedSkillChange}
                       />
                     </Grid>
@@ -322,7 +347,7 @@ export default function BasicDetailsForm(props) {
                             text={item}
                             isSelected="false"
                             iconName={item + "icon"}
-                            handleSelection={handleSelectedSkillChange}
+                            handleSelection={handleSelectedToolChange}
                           />
                         </Grid>
                       );
@@ -343,12 +368,18 @@ export default function BasicDetailsForm(props) {
                       onChange={handleHearUsSelection}
                       label="How did you hear about us?"
                     >
-                      <MenuItem value={"none"}>
+                      <MenuItem value="">
                         <em>None</em>
                       </MenuItem>
-                      <MenuItem value={"twitter"}>Twitter</MenuItem>
-                      <MenuItem value={"instagram"}>Instagram</MenuItem>
-                      <MenuItem value={"friend"}>Friend</MenuItem>
+                      <MenuItem value={"Twitter"}>Twitter</MenuItem>
+                      <MenuItem value={"Instagram"}>Instagram</MenuItem>
+                      <MenuItem value={"Facebook"}>Facebook</MenuItem>
+                      <MenuItem value={"Linkedin"}>Linkedin</MenuItem>
+                      <MenuItem value={"Email"}>Email</MenuItem>
+                      <MenuItem value={"Discord"}>Discord</MenuItem>
+                      <MenuItem value={"Slack"}>Slack</MenuItem>
+                      <MenuItem value={"Reddit"}>Reddit</MenuItem>
+                      <MenuItem value={"Word of Mouth"}>Word of Mouth</MenuItem>
                     </Select>
                   </FormControl>
                 </Box>

@@ -9,6 +9,7 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  CircularProgress,
   Typography,
 } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
@@ -105,6 +106,7 @@ export default function BasicDetailsForm(props) {
   const [selectedSkills, setSelectedSkills] = useState([]);
   const [selectedTools, setSelectedTools] = useState([]);
   const [cookies] = useCookies(["token"]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     checkValidation();
@@ -178,8 +180,12 @@ export default function BasicDetailsForm(props) {
       outreach: hearUs,
     };
     console.log(data);
-    callApi(data);
-    // props.moveNext("teamFormation");
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      props.moveNext("teamFormation");
+    }, 2000);
+    // callApi(data);
   };
 
   const callApi = (data) => {
@@ -386,18 +392,22 @@ export default function BasicDetailsForm(props) {
               </Grid>
               <Grid item>
                 <Box mt={3}>
-                  <Button
-                    disabled={!isValidForm}
-                    className={classes.button}
-                    onClick={() => {
-                      buttonNext();
-                    }}
-                    variant="contained"
-                    color="primary"
-                    endIcon={<SendIcon />}
-                  >
-                    Save and Next
-                  </Button>
+                  {loading ? (
+                    <CircularProgress />
+                  ) : (
+                    <Button
+                      disabled={!isValidForm}
+                      className={classes.button}
+                      onClick={() => {
+                        buttonNext();
+                      }}
+                      variant="contained"
+                      color="primary"
+                      endIcon={<SendIcon />}
+                    >
+                      Save and Next
+                    </Button>
+                  )}
                 </Box>
               </Grid>
             </Grid>

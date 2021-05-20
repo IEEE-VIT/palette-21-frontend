@@ -8,6 +8,7 @@ import {
   Switch,
   Typography,
   Divider,
+  CircularProgress,
 } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import React, { useState } from "react";
@@ -81,6 +82,8 @@ export default function CreateTeamForm() {
   const [teamCode, setTeamCode] = useState("");
   const [isTeamNameValid, setTeamNameValid] = useState(false);
   const [isTeamCodeValid, setTeamCodeValid] = useState(false);
+  const [codeLoading, setCodeLoading] = useState(false);
+  const [createLoading, setCreateLoading] = useState(false);
 
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
@@ -110,6 +113,11 @@ export default function CreateTeamForm() {
       needTeam: state.checkedA,
     };
     console.log(data);
+    setCreateLoading(true);
+    setTeamCodeValid(false);
+    setTimeout(() => {
+      setCreateLoading(false);
+    }, 2000);
   };
 
   const handleJoinTeam = () => {
@@ -117,6 +125,11 @@ export default function CreateTeamForm() {
       teamCode,
     };
     console.log(data);
+    setCodeLoading(true);
+    setTeamNameValid(false);
+    setTimeout(() => {
+      setCodeLoading(false);
+    }, 2000);
   };
 
   const createTeamApi = (data) => {
@@ -197,17 +210,21 @@ export default function CreateTeamForm() {
                   spacing={2}
                 >
                   <Grid item>
-                    <Button
-                      disabled={!isTeamNameValid}
-                      variant="contained"
-                      color="primary"
-                      onClick={() => {
-                        handleCreateTeam();
-                      }}
-                      className={classes.button}
-                    >
-                      Create Team
-                    </Button>
+                    {createLoading ? (
+                      <CircularProgress />
+                    ) : (
+                      <Button
+                        disabled={!isTeamNameValid}
+                        variant="contained"
+                        color="primary"
+                        onClick={() => {
+                          handleCreateTeam();
+                        }}
+                        className={classes.button}
+                      >
+                        Create Team
+                      </Button>
+                    )}
                   </Grid>
                   <Grid item>
                     <Typography component="div">
@@ -280,18 +297,22 @@ export default function CreateTeamForm() {
             </Grid>
             <Grid item>
               <Box my={2}>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  disabled={!isTeamCodeValid}
-                  onClick={() => {
-                    handleJoinTeam();
-                  }}
-                  className={classes.button}
-                  endIcon={<ArrowRightIcon />}
-                >
-                  Save and Next
-                </Button>
+                {codeLoading ? (
+                  <CircularProgress />
+                ) : (
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    disabled={!isTeamCodeValid}
+                    onClick={() => {
+                      handleJoinTeam();
+                    }}
+                    className={classes.button}
+                    endIcon={<ArrowRightIcon />}
+                  >
+                    Save and Next
+                  </Button>
+                )}
               </Box>
             </Grid>
           </Grid>

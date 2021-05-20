@@ -1,17 +1,44 @@
 import { Button, Grid, Box } from "@material-ui/core";
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import TopHeader from "../../components/TopHeader/TopHeader";
 import BasicDeatilsPage from "./BasicDetailsPage/BasicDeatilsPage";
 import UserFormCompletionScreen from "./FormHelpers/UserFormCompletionScreen";
 import CreateTeamForm from "./TeamFormation/CreateTeamForm";
 import TeamFormationForm from "./TeamFormation/TeamForm";
+import api from "../../api/regPortal";
+import { useHistory } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 export default function UserFormScreen() {
   const [screen, setScreen] = useState("userBasicDetails");
+  const [name, setName] = useState("Epic Designer");
+  const [img, setImage] = useState("");
+  const [cookies] = useCookies(["token"]);
+  const history = useHistory();
 
   const setPage = (input) => {
     setScreen(input);
   };
+
+  useEffect(() => {
+    const regPortal = new api(cookies.token, process.env.REACT_APP_BACKEND_API);
+    regPortal
+      .didFillForm()
+      .then((result) => {
+        console.log(result.data);
+        const apiData = result.data;
+        if (apiData.data.round0 && !apiData.data.teamFormed) {
+          switchPage("teamFormation");
+        } else if (apiData.data.round0) {
+          history.push("/");
+        }
+        setName(apiData.data.name);
+        setImage(apiData.data.userImg);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const switchPage = (input) => {
     switch (input) {
@@ -30,7 +57,7 @@ export default function UserFormScreen() {
       <Grid container direction="column">
         <Grid item>
           <Box p={{ xs: 1, md: 4 }}>
-            <TopHeader />
+            <TopHeader name={name} img={img} />
           </Box>
         </Grid>
         <Grid item>

@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 const axios = require("axios");
 
 export default function successfulAuth() {
-  const [cookies, setCookies] = useCookies(["token"]);
+  const [, setCookies] = useCookies(["token"]);
   const history = useHistory();
   useEffect(() => {
     let search = window.location.search;
@@ -36,6 +36,7 @@ export default function successfulAuth() {
       })
       .catch((err) => {
         console.log("Figma auth error", err);
+        history.push("/");
       });
   };
   return <div>Logging you in.....</div>;

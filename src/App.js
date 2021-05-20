@@ -78,22 +78,22 @@ const AppRouter = () => {
   };
   return (
     <div>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={LandingScreen} />
-            <Route exact path="/login" component={LoginScreen} />
-            <Route exact path="/play" component={play} />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={LandingScreen} />
+          <Route exact path="/login" component={LoginScreen} />
+          <Route exact path="/play" component={play} />
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
             <Route
               exact
               path="/userForm"
               component={() => <UserFormScreen toggleTheme={toggleDarkTheme} />}
             />
             <Route exact path="/successfulAuth" component={SuccesfulAuth} />
-          </Switch>
-        </BrowserRouter>
-      </ThemeProvider>
+          </ThemeProvider>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 };

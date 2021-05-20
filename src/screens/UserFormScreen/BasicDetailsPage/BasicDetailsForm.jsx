@@ -279,6 +279,7 @@ export default function BasicDetailsForm(props) {
                 <Box mt={3}>
                   <Typography variant="body2" className={classes.helperTitle}>
                     Choose Skills
+                    <br /> Max 4 skills
                   </Typography>
                 </Box>
               </Grid>
@@ -334,7 +335,7 @@ export default function BasicDetailsForm(props) {
               <Grid item>
                 <Box mt={3}>
                   <Typography variant="body2" className={classes.helperTitle}>
-                    Choose tools you use
+                    Choose tools you use <br /> Max 4 tools
                   </Typography>
                 </Box>
               </Grid>

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from "react";
 import "./Register.css";
 import StarOne from "../../../assets/regStar1.png";
@@ -38,8 +39,7 @@ const Register = () => {
           <button
             className="Register__btn Register__register"
             onClick={() => {
-              const url =
-                "https://www.figma.com/oauth?client_id=cKpPiJvmHHgpYSxbrSgz3s&redirect_uri=http://localhost:3000/successfulAuth&scope=file_read&state=abc&response_type=code";
+              const url = `https://www.figma.com/oauth?client_id=cKpPiJvmHHgpYSxbrSgz3s&redirect_uri=${process.env.REACT_APP_FIGMA_CALLBACK}&scope=file_read&state=abc&response_type=code`;
               window.open(url, "_self");
             }}
           >

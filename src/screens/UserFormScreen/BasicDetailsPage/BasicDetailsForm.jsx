@@ -121,15 +121,13 @@ export default function BasicDetailsForm(props) {
     } else {
       if (selectedSkills.length == 3) {
         selectedSkills.push(input);
-        setSelectedTools(selectedSkills);
+        setSelectedSkills(selectedSkills);
         setSkillsDisable(true);
       } else {
         selectedSkills.push(input);
         setSelectedSkills(selectedSkills);
       }
     }
-
-    console.log(selectedSkills);
   };
 
   const handleSelectedToolChange = (input) => {
@@ -149,6 +147,7 @@ export default function BasicDetailsForm(props) {
         setSelectedTools(selectedTools);
       }
     }
+    console.log(selectedTools);
   };
 
   const handleHearUsSelection = (event) => {
@@ -232,9 +231,9 @@ export default function BasicDetailsForm(props) {
     "Marketing",
     "VFX",
     "UI/UX",
-    "Graphic Design",
     "Interaction Design",
     "Visual Design",
+    "Graphic Design",
   ];
 
   return (

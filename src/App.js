@@ -81,9 +81,13 @@ const AppRouter = () => {
     <div>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={LandingScreen} />
-          <Route exact path="/login" component={LoginScreen} />
           <ThemeProvider theme={theme}>
+            <Route
+              exact
+              path="/"
+              component={() => <LandingScreen toggleTheme={toggleDarkTheme} />}
+            />
+            <Route exact path="/login" component={LoginScreen} />
             <CssBaseline />
             <Route
               exact

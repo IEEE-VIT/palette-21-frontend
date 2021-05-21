@@ -1,9 +1,10 @@
+/* eslint-disable no-undef */
 import { Grid, Box, useTheme } from "@material-ui/core";
 import { React, useState, useEffect } from "react";
 import TopHeader from "../../components/TopHeader/TopHeader";
 import BasicDeatilsPage from "./BasicDetailsPage/BasicDeatilsPage";
 import UserFormCompletionScreen from "./FormHelpers/UserFormCompletionScreen";
-import TeamFormationForm from "./TeamFormation/TeamForm";
+import CreateTeamForm from "./TeamFormation/CreateTeamForm";
 import api from "../../api/regPortal";
 import { useHistory } from "react-router-dom";
 import { useCookies } from "react-cookie";
@@ -23,7 +24,15 @@ export default function UserFormScreen(props) {
   };
 
   useEffect(() => {
-    // eslint-disable-next-line no-undef
+    if (cookies.token === undefined) {
+      return history.push("/");
+    }
+    const imgUrl = localStorage.getItem("userImage");
+    const userName = localStorage.getItem("userName");
+    if ((imgUrl === null) | (userName === null)) {
+      setName(userName);
+      setImage(imgUrl);
+    }
     const regPortal = new api(cookies.token, process.env.REACT_APP_BACKEND_API);
     regPortal
       .didFillForm()
@@ -31,10 +40,12 @@ export default function UserFormScreen(props) {
         console.log(result.data);
         const apiData = result.data;
         if (apiData.data.round0 && !apiData.data.teamFormed) {
-          switchPage("teamFormation");
+          setPage("teamFormation");
         } else if (apiData.data.round0) {
           history.push("/");
         }
+        localStorage.setItem("userImage", apiData.data.userImg);
+        localStorage.setItem("userName", apiData.data.name);
         setName(apiData.data.name);
         setImage(apiData.data.userImg);
       })
@@ -50,10 +61,9 @@ export default function UserFormScreen(props) {
         return <BasicDeatilsPage moveNext={setPage} />;
       case "teamFormation":
         if (activity != 2) setActivity(2);
-        return <TeamFormationForm />;
+        return <CreateTeamForm moveNext={setPage} />;
       case "userRegCompletionScreen":
         if (activity != 3) setActivity(3);
-        setActivity(3);
         return <UserFormCompletionScreen />;
     }
   };
@@ -102,51 +112,6 @@ export default function UserFormScreen(props) {
               activeStep={activity}
             />
           </Box>
-          {/* <Grid
-            container
-            direction="row"
-            justify="space-evenly"
-            alignItems="center"
-          >
-            <Grid item>
-              <Button variant="contained" color="primary">
-                Register
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => {
-                  setPage("userBasicDetails");
-                }}
-              >
-                Basic Details
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => {
-                  setPage("teamFormation");
-                }}
-              >
-                Team Formation
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => {
-                  setPage("userRegCompletionScreen");
-                }}
-              >
-                Ready
-              </Button>
-            </Grid>
-          </Grid> */}
         </Grid>
         <Grid item>{switchPage(screen)}</Grid>
       </Grid>

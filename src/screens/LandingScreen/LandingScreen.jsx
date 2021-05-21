@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import "./LandingScreen.css";
 import Flashback from "../../components/LandingScreen/Flashback/Flashback";
 import Sponsors from "../../components/LandingScreen/Sponsors/Sponsors";
@@ -15,8 +16,22 @@ import EventThemes from "../../components/LandingScreen/EventThemes/EventThemes"
 import EventCarousel from "../../components/LandingScreen/Event/EventCarouselSection";
 import TestimonialCarousel from "../../components/LandingScreen/Testimonials/TestimonialCarousel";
 import Footer from "../../components/LandingScreen/Footer/Footer";
+import { useCookies } from "react-cookie";
+import { useTheme } from "@material-ui/core";
+import PropTypes from "prop-types";
 
-const LandingScreen = () => {
+const LandingScreen = (props) => {
+  const [cookies] = useCookies(["token"]);
+  const history = useHistory();
+  const theme = useTheme();
+  useEffect(() => {
+    if (theme.palette.type === "dark") {
+      props.toggleTheme();
+    }
+    if (cookies.token !== undefined) {
+      history.push("/dashboard");
+    }
+  }, []);
   return (
     <div
       data-spy="scroll"
@@ -69,4 +84,9 @@ const LandingScreen = () => {
     </div>
   );
 };
+
 export default LandingScreen;
+
+LandingScreen.propTypes = {
+  toggleTheme: PropTypes.func,
+};

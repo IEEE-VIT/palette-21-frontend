@@ -1,8 +1,9 @@
 import { Grid } from "@material-ui/core";
 import React from "react";
 import CreateTeamForm from "./CreateTeamForm";
+import PropTypes from "prop-types";
 
-export default function TeamFormationForm() {
+export default function TeamFormationForm(props) {
   return (
     <Grid
       container
@@ -12,8 +13,12 @@ export default function TeamFormationForm() {
       style={{ minHeight: "80vh" }}
     >
       <Grid item xs={12} md={6}>
-        <CreateTeamForm />
+        <CreateTeamForm moveNext={props.moveNext} />
       </Grid>
     </Grid>
   );
 }
+
+TeamFormationForm.propTypes = {
+  moveNext: PropTypes.func,
+};

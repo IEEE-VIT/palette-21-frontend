@@ -67,7 +67,6 @@ export default function GroupedButton(props) {
   };
 
   const enableIcon = (iconName) => {
-    console.log("icon name", iconName);
     switch (iconName) {
       case "Figma":
         return iconGenerator(figmaImage);

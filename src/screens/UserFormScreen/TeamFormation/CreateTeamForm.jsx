@@ -17,6 +17,7 @@ import { useCookies } from "react-cookie";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import api from "../../../api/regPortal";
+import PropTypes from "prop-types";
 
 const AntSwitch = withStyles((theme) => ({
   root: {
@@ -52,7 +53,7 @@ const AntSwitch = withStyles((theme) => ({
   checked: {},
 }))(Switch);
 
-export default function CreateTeamForm() {
+export default function CreateTeamForm(props) {
   const theme = useTheme();
   const useStyles = makeStyles({
     paper: theme.custom.paper,
@@ -130,10 +131,12 @@ export default function CreateTeamForm() {
   };
 
   const createTeamApi = (data) => {
+    // props.moveNext("userRegCompletionScreen");
     regPortalApi
       .createTeam(data)
       .then((result) => {
         console.log(result);
+        props.moveNext("userRegCompletionScreen");
       })
       .catch((error) => {
         console.log(error);
@@ -146,6 +149,7 @@ export default function CreateTeamForm() {
       .joinTeam(data)
       .then((result) => {
         console.log(result);
+        props.moveNext("userRegCompletionScreen");
       })
       .catch((error) => {
         console.log(error);
@@ -320,3 +324,7 @@ export default function CreateTeamForm() {
     </Box>
   );
 }
+
+CreateTeamForm.propTypes = {
+  moveNext: PropTypes.func,
+};

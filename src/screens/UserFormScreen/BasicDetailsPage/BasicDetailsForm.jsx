@@ -184,6 +184,7 @@ export default function BasicDetailsForm(props) {
   const callApi = (data) => {
     const regPortalApi = new api(
       cookies.token,
+      // eslint-disable-next-line no-undef
       process.env.REACT_APP_BACKEND_API
     );
     regPortalApi
@@ -348,7 +349,7 @@ export default function BasicDetailsForm(props) {
                           <GroupedButton
                             text={item}
                             isSelected="false"
-                            iconName={item + "icon"}
+                            iconName={item}
                             handleSelection={handleSelectedToolChange}
                           />
                         </Grid>
@@ -414,6 +415,6 @@ export default function BasicDetailsForm(props) {
   );
 }
 
-BasicDetailsForm.PropTypes = {
+BasicDetailsForm.propTypes = {
   moveNext: PropTypes.func,
 };

@@ -28,6 +28,7 @@ export default function successfulAuth() {
       redirectUri: "http://localhost:3000/successfulAuth",
     };
     axios
+      // eslint-disable-next-line no-undef
       .post(process.env.REACT_APP_OAUTH_URL + "/auth/figma", data)
       .then((result) => {
         console.log("Figma Token", result.data.data.token);

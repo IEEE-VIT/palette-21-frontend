@@ -20,6 +20,6 @@ export default function BasicDeatilsPage(props) {
   );
 }
 
-BasicDeatilsPage.PropTypes = {
+BasicDeatilsPage.propTypes = {
   moveNext: PropTypes.func,
 };

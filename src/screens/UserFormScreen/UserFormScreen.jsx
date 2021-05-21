@@ -1,14 +1,14 @@
-import { Button, Grid, Box, useTheme } from "@material-ui/core";
+import { Grid, Box, useTheme } from "@material-ui/core";
 import { React, useState, useEffect } from "react";
 import TopHeader from "../../components/TopHeader/TopHeader";
 import BasicDeatilsPage from "./BasicDetailsPage/BasicDeatilsPage";
 import UserFormCompletionScreen from "./FormHelpers/UserFormCompletionScreen";
-import CreateTeamForm from "./TeamFormation/CreateTeamForm";
 import TeamFormationForm from "./TeamFormation/TeamForm";
 import api from "../../api/regPortal";
 import { useHistory } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import Stepper from "react-stepper-horizontal";
+import PropTypes from "prop-types";
 
 export default function UserFormScreen(props) {
   const [screen, setScreen] = useState("userBasicDetails");
@@ -23,6 +23,7 @@ export default function UserFormScreen(props) {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line no-undef
     const regPortal = new api(cookies.token, process.env.REACT_APP_BACKEND_API);
     regPortal
       .didFillForm()
@@ -152,3 +153,7 @@ export default function UserFormScreen(props) {
     </div>
   );
 }
+
+UserFormScreen.propTypes = {
+  toggleTheme: PropTypes.func,
+};

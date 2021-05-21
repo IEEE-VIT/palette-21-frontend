@@ -8,6 +8,16 @@ import {
 import PropTypes from "prop-types";
 import { React, useState } from "react";
 import figmaImage from "../../assets/basicDetails/figma.svg";
+// import figmaImage from "../../assets/basicDetails/figma.svg";
+import adobeXdImage from "../../assets/basicDetails/adovexd.svg";
+import invisionImage from "../../assets/basicDetails/invision.svg";
+import principleImage from "../../assets/basicDetails/principle.svg";
+import protopieImage from "../../assets/basicDetails/protopie.svg";
+import adobeIllustratorImage from "../../assets/basicDetails/illuustrator.svg";
+import webflowImage from "../../assets/basicDetails/webflow.svg";
+import sketchImage from "../../assets/basicDetails/sketch.svg";
+import framerImage from "../../assets/basicDetails/framer.svg";
+import aeImage from "../../assets/basicDetails/afterEffects.svg";
 
 export default function GroupedButton(props) {
   const theme = useTheme();
@@ -57,19 +67,41 @@ export default function GroupedButton(props) {
   };
 
   const enableIcon = (iconName) => {
+    console.log("icon name", iconName);
     switch (iconName) {
-      case "figmaIcon":
-        return figmaIcon;
+      case "Figma":
+        return iconGenerator(figmaImage);
+      case "Protopie":
+        return iconGenerator(protopieImage);
+      case "Principle":
+        return iconGenerator(principleImage);
+      case "Invision":
+        return iconGenerator(invisionImage);
+      case "Sketch":
+        return iconGenerator(sketchImage);
+      case "Adobe XD":
+        return iconGenerator(adobeXdImage);
+      case "Illustrator":
+        return iconGenerator(adobeIllustratorImage);
+      case "After Effects":
+        return iconGenerator(aeImage);
+      case "Webflow":
+        return iconGenerator(webflowImage);
+      case "Framer":
+        return iconGenerator(framerImage);
       default:
-        return figmaIcon;
+        return iconGenerator(figmaImage);
     }
   };
 
-  const figmaIcon = (
-    <Icon className={classes.iconSettings}>
-      <img alt="icons" src={figmaImage} />
-    </Icon>
-  );
+  const iconGenerator = (image) => {
+    return (
+      <Icon className={classes.iconSettings}>
+        <img alt="icons" src={image} />
+      </Icon>
+    );
+  };
+
   return (
     <div>
       {props.iconName != null ? (

@@ -66,6 +66,7 @@ export default function CreateTeamForm() {
   const [cookies] = useCookies(["token"]);
   const regPortalApi = new api(
     cookies.token,
+    // eslint-disable-next-line no-undef
     process.env.REACT_APP_BACKEND_API
   );
   const [state, setState] = useState({

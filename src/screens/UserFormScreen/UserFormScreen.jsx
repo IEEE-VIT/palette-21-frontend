@@ -1,4 +1,4 @@
-import { Button, Grid, Box } from "@material-ui/core";
+import { Button, Grid, Box, useTheme } from "@material-ui/core";
 import { React, useState, useEffect } from "react";
 import TopHeader from "../../components/TopHeader/TopHeader";
 import BasicDeatilsPage from "./BasicDetailsPage/BasicDeatilsPage";
@@ -8,12 +8,14 @@ import TeamFormationForm from "./TeamFormation/TeamForm";
 import api from "../../api/regPortal";
 import { useHistory } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import Stepper from "react-stepper-horizontal";
 
 export default function UserFormScreen(props) {
   const [screen, setScreen] = useState("userBasicDetails");
   const [name, setName] = useState("Epic Designer");
   const [img, setImage] = useState("");
   const [cookies] = useCookies(["token"]);
+  const [activity, setActivity] = useState(1);
   const history = useHistory();
 
   const setPage = (input) => {
@@ -43,15 +45,19 @@ export default function UserFormScreen(props) {
   const switchPage = (input) => {
     switch (input) {
       case "userBasicDetails":
+        if (activity != 1) setActivity(1);
         return <BasicDeatilsPage moveNext={setPage} />;
-      case "createTeamForm":
-        return <CreateTeamForm />;
       case "teamFormation":
+        if (activity != 2) setActivity(2);
         return <TeamFormationForm />;
       case "userRegCompletionScreen":
+        if (activity != 3) setActivity(3);
+        setActivity(3);
         return <UserFormCompletionScreen />;
     }
   };
+  const mediaQuery = window.matchMedia("(min-width: 480px)");
+  const theme = useTheme();
   return (
     <div>
       <Grid container direction="column">
@@ -65,7 +71,37 @@ export default function UserFormScreen(props) {
           </Box>
         </Grid>
         <Grid item>
-          <Grid
+          <Box px={{ xs: 1, md: 0 }}>
+            <Stepper
+              titleFontSize={mediaQuery.matches ? 16 : 12}
+              activeColor="#D5D4E3"
+              defaultColor="#7A7A7A"
+              activeBorderColor="#563AE8"
+              completeBarColor="#563AE8"
+              completeColor="#563AE8"
+              completeTitleColor="#563AE8"
+              activeTitleColor={
+                theme.palette.type === "light" ? "#000" : "#FFF"
+              }
+              completeBorderColor="#FFF"
+              circleFontColor=""
+              defaultBorderWidth="120px"
+              size={40}
+              circleTop={10}
+              steps={[
+                { title: "Register" },
+                {
+                  title: "Basic Details",
+                },
+                {
+                  title: "Team Formation",
+                },
+                { title: "Ready to shift pixels" },
+              ]}
+              activeStep={activity}
+            />
+          </Box>
+          {/* <Grid
             container
             direction="row"
             justify="space-evenly"
@@ -109,7 +145,7 @@ export default function UserFormScreen(props) {
                 Ready
               </Button>
             </Grid>
-          </Grid>
+          </Grid> */}
         </Grid>
         <Grid item>{switchPage(screen)}</Grid>
       </Grid>

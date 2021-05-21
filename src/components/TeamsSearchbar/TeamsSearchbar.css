@@ -1,0 +1,60 @@
+#TeamsSearchbar__container {
+    background-color: transparent ;
+    border: 1px solid rgba(122, 122, 122, 1);
+    padding: 10px 15px;
+    width : 500px;
+    display: flex;
+    flex-direction: row;
+    margin-left : 30px;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+#TeamsSearchbar__container input {
+    background-color: transparent;
+    width: 92%;
+    outline: none;
+    border : none;
+}
+#TeamsSearchbar__container input:focus {
+    outline: none;
+    color:  white;
+}
+#TeamsSearchbar__container i {
+    cursor: pointer;
+}
+
+@media screen and (max-width : 1325px) {
+    #TeamsSearchbar__container {
+        width : 450px;
+    }
+}
+
+@media screen and (max-width : 1176px) {
+    #TeamsSearchbar__container {
+        width : 350px;
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    #TeamsSearchbar__container {
+        width : 300px;
+    }
+}
+
+@media screen and (max-width : 900px) {
+    #TeamsSearchbar__container {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width : 440px;
+        margin-left: 0 ;
+    }
+    #TeamsSearchbar__container.TeamsSearchbar__mobnone {
+        display: none;
+    }
+}
+
+@media screen and (max-width : 530px) {
+    #TeamsSearchbar__container {
+        width : 95%;
+    }
+}

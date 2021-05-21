@@ -1,0 +1,13 @@
+#BottomNavbar__container {
+    display :none;
+    background-color: cornflowerblue;
+    height : 50px;
+    width : 100%;
+    position: fixed;
+    bottom: 0;
+}
+@media screen and (max-width:943px) {
+    #BottomNavbar__container {
+        display: flex;
+    }
+}

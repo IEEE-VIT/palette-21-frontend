@@ -3,42 +3,53 @@ html {
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+.nodisp {
+  display: none;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 @font-face {
-  font-family: 'NeueMontreal-Bold';
-  src: local('NeueMontreal-Bold'), url(./assets/fonts/NeueMontreal-Bold.otf) format('opentype');
+  font-family: "NeueMontreal-Bold";
+  src: local("NeueMontreal-Bold"),
+    url(./assets/fonts/NeueMontreal-Bold.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'NeueMontreal-Regular';
-  src: local('NeueMontreal-Regular'), url(./assets/fonts/NeueMontreal-Regular.otf) format('opentype');
+  font-family: "NeueMontreal-Regular";
+  src: local("NeueMontreal-Regular"),
+    url(./assets/fonts/NeueMontreal-Regular.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'NeueMontreal-Light';
-  src: local('NeueMontreal-Light'), url(./assets/fonts/NeueMontreal-Light.otf) format('opentype');
+  font-family: "NeueMontreal-Light";
+  src: local("NeueMontreal-Light"),
+    url(./assets/fonts/NeueMontreal-Light.otf) format("opentype");
 }
-
 
 @font-face {
-  font-family: 'NeueMontreal-BoldItalic';
-  src: local('NeueMontreal-BoldItalic'), url(./assets/fonts/NeueMontreal-BoldItalic.otf) format('opentype');
+  font-family: "NeueMontreal-BoldItalic";
+  src: local("NeueMontreal-BoldItalic"),
+    url(./assets/fonts/NeueMontreal-BoldItalic.otf) format("opentype");
 }
-
 
 @font-face {
-  font-family: 'NeueMontreal-Italic';
-  src: local('NeueMontreal-Italic'), url(./assets/fonts/NeueMontreal-Italic.otf) format('opentype');
+  font-family: "NeueMontreal-Italic";
+  src: local("NeueMontreal-Italic"),
+    url(./assets/fonts/NeueMontreal-Italic.otf) format("opentype");
 }
-

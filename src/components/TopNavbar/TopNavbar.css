@@ -1,0 +1,115 @@
+#TopNavbar__container {
+    width:100vw;
+    height : 70px;
+    padding-left:300px;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#TopNavbar__title {
+    font-weight: 620;
+    font-size: 1.32rem;
+    margin-left: 25px;
+    letter-spacing: 1.3px;
+}
+
+#TopNavbar__profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right : 7px;
+    width : 350px;
+    justify-content: space-around;
+}
+
+#TopNavbar__profile h2 {
+    font-weight: 580;
+    font-size: 1.1rem;
+    margin-left: 25px;
+    letter-spacing: 1.3px;
+}
+
+#TopNavbar__profile img {
+    width : 47px;
+    height :47px;
+    border-radius: 50%;
+    padding : 1px;
+    border : 3px solid #563AE8;
+}
+
+@media screen and (max-width:1024px) {
+    #TopNavbar__container {
+        padding-left : 250px;
+    }
+}
+@media screen and (max-width:943px) {
+    #TopNavbar__container {
+        padding-left : 0;
+    }
+    #TopNavbar__title {
+       font-weight: 620;
+        font-size: 1.24rem; 
+    }
+    #TopNavbar__profile h2 {
+        font-weight: 580;
+        font-size: 1rem;
+        margin-left: 25px;
+    }
+    #TopNavbar__profile img {
+        width : 46px;
+        height :46px;
+    }
+}
+
+@media screen and (max-width : 650px) {
+    #TopNavbar__profile {
+        width : 270px;
+    }
+}
+
+@media screen and (max-width : 426px) {
+    #TopNavbar__profile {
+        width : 100%;
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+    #TopNavbar__profile img {
+        margin-left : 3px;
+    }
+    #TopNavbar__profile h2 {
+        font-weight: 500;
+        font-size: 1rem;
+        margin-left: 80px;
+        letter-spacing: 1.1px;
+    }
+    #TopNavbar__container {
+        flex-direction: column-reverse;
+        height: 120px;
+        padding-top: 20px;
+    }
+    #TopNavbar__title {
+        align-self: flex-start;
+    }
+}
+@media screen and (max-width : 561px) {
+    #TopNavbar__title {
+        font-weight: 600;
+        font-size: 1.33rem;
+        margin-left: 25px;
+        letter-spacing: 1.2px;
+    }
+    
+}
+
+@media screen and (max-width :321px) {
+    #TopNavbar__profile h2 {
+        font-size: 1rem;
+        margin-left: 35px;
+    }
+}

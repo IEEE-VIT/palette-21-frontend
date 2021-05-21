@@ -1,0 +1,40 @@
+#TeamsPage__container {
+    width : 100%;
+    height : 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#TeamsPAge__container::-webkit-scrollbar {
+    width: 7px;
+}
+#TeamsPageContainer::-webkit-scrollbar-track {
+    background: #3A3A3A; 
+    border-radius: 10px;
+    
+}
+
+#TeamsPageContainer::-webkit-scrollbar-thumb {
+    background: rgba(86, 58, 232, 1);
+    border-radius: 10px;
+
+  }
+
+#TeamsPage__selfteampage-wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+    width : 98%;
+    padding : 13px 0;
+}
+
+@media screen and (max-width : 426px) {
+    #TeamsPage__selfteampage-wrapper {
+        width : 90%;
+    }
+}

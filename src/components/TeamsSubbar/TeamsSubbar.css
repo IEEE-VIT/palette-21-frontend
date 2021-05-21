@@ -1,0 +1,38 @@
+#TeamsSubbar__container {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width : 90%;
+    align-items: center;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+
+#TeamsSubbar__teammates {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#TeamsSubbar__teammates h3 {
+    font-size: 0.92rem;
+    margin-right: 20px;
+    font-weight: 400;
+}
+
+@media screen and (max-width : 900px) {
+    #TeamsSubbar__container {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    #TeamsSubbar__container {
+        margin-top : 0px;
+        padding-top: 0;
+    }
+}

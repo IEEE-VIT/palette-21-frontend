@@ -1,0 +1,31 @@
+#TeamDetailCollection__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    width : 98%;
+    padding : 10px 30px;
+    justify-content: center;
+}
+
+#TeamDetailCollection__loadmore {
+    display : none;
+  }
+
+@media screen and (max-width : 426px) {
+    #TeamDetailCollection__container {
+        width : 90%;
+        margin-bottom: 10px ;
+        padding : 10px 10px;
+    }
+    #TeamDetailCollection__loadmore {
+        color : rgba(86, 58, 232, 1);
+        font-size: 1rem;
+        margin-bottom: 35px;
+        cursor: pointer;
+        display: block;
+        user-select: none;
+    }
+    
+
+}

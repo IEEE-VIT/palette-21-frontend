@@ -1,4 +1,5 @@
 #EventThemes__container {
+<<<<<<< HEAD
     font-family : NeueMontreal-Regular;
     display : flex;
     flex-direction: row;
@@ -186,4 +187,193 @@
     #EventThemes__rightcontainer-quote {
         margin-top: 20px;
     }
+=======
+  font-family: NeueMontreal-Regular;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#EventThemes__leftcontainer {
+  background: linear-gradient(180deg, #4821e6 0%, #361aa5 100%);
+  width: 50vw;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#EventThemes__leftcontainer img:nth-child(1) {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 100px;
+  height: auto;
+  z-index: 1;
+}
+
+#EventThemes__leftcontainer img:nth-child(2) {
+  width: 400px;
+  height: auto;
+  z-index: 2;
+}
+
+#EventThemes__leftcontainer img:nth-child(3) {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  width: 100px;
+  height: auto;
+  z-index: 1;
+}
+
+#EventThemes__rightcontainer {
+  padding: 20px 30px;
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#EventThemes__rightcontainer-heading {
+  font-family: NeueMontreal-Italic;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: -20px;
+}
+
+#EventThemes__rightcontainer-content {
+  font-family: NeueMontreal-Regular;
+  font-weight: 400;
+  margin-top: 30px;
+  font-size: 1.4rem;
+}
+
+#EventThemes__rightcontainer-theme {
+  font-family: NeueMontreal-Bold;
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+#EventThemes__rightcontainer-quote {
+  font-family: NeueMontreal-Regular;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1027px) {
+  #EventThemes__leftcontainer img:nth-child(1) {
+    top: 25px;
+    left: 17px;
+    width: 90px;
+  }
+
+  #EventThemes__leftcontainer img:nth-child(2) {
+    width: 320px;
+    height: auto;
+  }
+
+  #EventThemes__leftcontainer img:nth-child(3) {
+    position: absolute;
+    bottom: 25px;
+    right: 17px;
+    width: 90px;
+  }
+  #EventThemes__rightcontainer-heading {
+    font-size: 1.8rem;
+    margin-top: -20px;
+  }
+
+  #EventThemes__rightcontainer-content {
+    margin-top: 30px;
+    font-size: 1.2rem;
+  }
+
+  #EventThemes__rightcontainer-theme {
+    font-family: NeueMontreal-Bold;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  #EventThemes__rightcontainer-quote {
+    font-family: NeueMontreal-Regular;
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #EventThemes__leftcontainer img:nth-child(2) {
+    width: 220px;
+  }
+  #EventThemes__rightcontainer-heading {
+    font-size: 1.5rem;
+    margin-top: -20px;
+  }
+
+  #EventThemes__rightcontainer-content {
+    margin-top: 30px;
+    font-size: 1.1rem;
+  }
+
+  #EventThemes__rightcontainer-theme {
+    font-family: NeueMontreal-Bold;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  #EventThemes__rightcontainer-quote {
+    font-family: NeueMontreal-Regular;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  #EventThemes__container {
+    flex-direction: column;
+    height: fit-content;
+  }
+  #EventThemes__leftcontainer {
+    width: 100vw;
+  }
+  #EventThemes__rightcontainer {
+    width: 100vw;
+    padding: 30px 30px;
+  }
+  #EventThemes__leftcontainer img:nth-child(1) {
+    top: 10px;
+    left: 10px;
+    width: 80px;
+  }
+
+  #EventThemes__leftcontainer img:nth-child(2) {
+    width: 200px;
+    height: auto;
+  }
+
+  #EventThemes__leftcontainer img:nth-child(3) {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 80px;
+  }
+
+  #EventThemes__rightcontainer-heading {
+    margin-top: 30px;
+  }
+
+  #EventThemes__rightcontainer-theme {
+    margin-top: 30px;
+  }
+
+  #EventThemes__rightcontainer-quote {
+    margin-top: 20px;
+  }
+>>>>>>> merger: dashboard & reg-Portal
 }

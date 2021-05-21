@@ -1,0 +1,40 @@
+#CountdownTimer__container {
+    position: absolute;
+    bottom: 40px;
+    padding-right : 10px;
+}
+
+#CountdownTimer__container h3{
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+#CountdownTimer__container h3 span{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#CountdownTimer__live {
+    font-size: 1.4rem !important;
+    font-weight: 700;
+}
+
+@media screen and (max-width : 1000px) {
+    #CountdownTimer__container h3{
+        font-size: 0.95rem;
+    }
+    
+    #CountdownTimer__container h3 span{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width : 943px) {
+    #CountdownTimer__container h3{
+        font-size: 0.9rem;
+    }
+    
+    #CountdownTimer__container h3 span{
+        font-size: 0.93rem;
+    }
+}

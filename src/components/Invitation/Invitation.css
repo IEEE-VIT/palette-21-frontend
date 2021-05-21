@@ -1,0 +1,205 @@
+#Invitation__container {
+    width :280px;
+    height : 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    padding : 20px 5px 10px 5px;
+    margin : 0 10px 20px 10px;
+}
+
+#Invitation__container h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+#Invitation__container img {
+    width : 70px;
+    height : 70px;
+    border-radius: 50%;
+}
+
+#Invitation__skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.Invitation__skill {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding : 6px 9px;
+    margin : 5px 5px;
+    border-radius: 5px;
+}
+#Invitation__tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#Invitation__status h4{
+    font-size: 1rem;
+    text-align: center;
+}
+#Invitation__tools img {
+    width : 24px;
+    height: 24px;
+    margin : 2px 5px;
+}
+#Invitation__btn {
+    background-color: rgba(86, 58, 232, 1);
+    width: 70%;
+    border-radius: 6px;
+    padding : 7px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#Invitation__statusbtn {
+    width : 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom : 20px;
+}
+
+#Invitation__status h4 {
+    font-size: 1rem !important;
+    font-weight: normal !important;
+}
+
+
+#Invitation__btn.Invitation__invited  {
+    border : 1px solid #EB482F;
+    background-color: rgba(224, 69, 45, 0.08);
+}
+
+#Invitation__btn.Invitation__invited:hover {
+    box-shadow: 0px 0px 3px 1px rgba(235, 72, 47, 0.5);
+}
+
+#Invitation__btn.Invitation__cancelled {
+    cursor: initial !important;
+}
+
+#Invitation__btn.Invitation__cancelled:hover {
+    box-shadow: none;
+}
+
+#Invitation__btn h4{
+    font-size: 0.91rem;
+    font-weight: 500;
+    color : rgba(255, 255, 255, 1);
+    margin : 0;
+}
+
+#Invitation__btn.Invitation__invited h4 {
+    color : rgba(235, 72, 47, 1);
+}
+
+#Invitation__receivedbtngr {
+    display: flex;
+    flex-direction: row;
+    width : 100%;
+    padding: 0px 10px;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+#Invitation__receivedbtngr.Invitation__rejected {
+    padding-bottom: 0;
+}
+
+#Invitation__receivedbtngr.Invitation__rejected h4 {
+    color : rgba(224, 69, 45, 1);
+    font-size: 1rem !important;
+    font-weight: normal !important;
+}
+
+#Invitation__receivedbtngr.Invitation__accepted {
+    padding-bottom: 0;
+}
+
+#Invitation__receivedbtngr.Invitation__accepted h4 {
+    color : rgba(47, 214, 84, 1);
+    font-size: 1rem !important;
+    font-weight: normal !important;
+}
+
+
+#Invitation__receivedaccept {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : white;
+    width: 40%;
+    background-color : rgba(86, 58, 232, 1);
+    margin-right: 10px;
+   padding : 8px 15px;
+   border-radius: 6px;
+   cursor: pointer;
+}
+
+#Invitation__receivedaccept:hover {
+    box-shadow: 0px 0px 3px 1px rgba(86, 58, 232, 0.55);
+}
+
+#Invitation__receivedaccept h4 , #Invitation__receivedreject h4 {
+     font-size: 0.9rem !important;
+    font-weight: normal !important;
+    margin :0;
+}
+#Invitation__receivedreject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : rgba(224, 69, 45, 1);
+    background-color : rgba(224, 69, 45, 0.08);
+    width: 40%;
+    padding : 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid rgba(224, 69, 45, 1);
+}
+
+#Invitation__receivedreject:hover {
+    box-shadow: 0px 0px 3px 1px rgba(224, 69, 45, 0.35);
+}
+
+@media screen and (max-width : 890px) {
+    #Invitation__btn {
+        position: relative;
+       
+    }
+    #Invitation__statusbtn {
+        position: relative;
+        margin-top : 10px;
+    }
+    #Invitation__receivedbtngr  {
+        position: relative;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width : 679px) {
+    #Invitation__container {
+        height : max-content !important;
+    }
+}
+
+@media screen and (max-width : 426px) {
+    #Invitation__receivedaccept h4 , #Invitation__receivedreject h4 {
+        font-size: 0.8rem !important;
+   }
+}

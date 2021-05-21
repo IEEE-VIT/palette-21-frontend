@@ -24,9 +24,9 @@ export default function UserFormScreen(props) {
   };
 
   useEffect(() => {
-    if (cookies.token === undefined) {
-      return history.push("/");
-    }
+    // if (cookies.token === undefined) {
+    //   return history.push("/");
+    // }
     const imgUrl = localStorage.getItem("userImage");
     const userName = localStorage.getItem("userName");
     if ((imgUrl === null) | (userName === null)) {

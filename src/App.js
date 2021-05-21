@@ -6,6 +6,8 @@ import UserFormScreen from "./screens/UserFormScreen/UserFormScreen";
 import SuccesfulAuth from "./screens/successfulAuth";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Dashboard from "./screens/Dashboard/Dashboard";
+import PageNotFound from "./screens/PageNotFound/PageNotFound";
 
 const AppRouter = () => {
   const darkTheme = createMuiTheme({
@@ -95,7 +97,9 @@ const AppRouter = () => {
               component={() => <UserFormScreen toggleTheme={toggleDarkTheme} />}
             />
             <Route exact path="/successfulAuth" component={SuccesfulAuth} />
+            <Route exact path="/dashboard" component={Dashboard} />
           </ThemeProvider>
+          <Route exact component={PageNotFound} />
         </Switch>
       </BrowserRouter>
     </div>

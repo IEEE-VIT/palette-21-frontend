@@ -1,0 +1,28 @@
+#Dashboard__container {
+    width : 100vw;
+    height : 100vh;
+    z-index: -999;
+    padding-left : 300px;
+    padding-top: 70px;
+}
+
+
+@media screen and (max-width:1024px) {
+    #Dashboard__container {
+        padding-left : 250px;
+    }
+}
+
+@media screen and (max-width:943px) {
+    #Dashboard__container {
+        padding-left : 0;
+        padding-bottom: 50px;
+    }
+}
+
+
+@media screen and (max-width : 426px) {
+    #Dashboard__container {
+        padding-top : 120px;
+    }
+}

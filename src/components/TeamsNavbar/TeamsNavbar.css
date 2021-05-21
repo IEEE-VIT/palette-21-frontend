@@ -1,0 +1,33 @@
+#TeamsNavbar__container {
+    width  : 94%;
+    background-color: transparent;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color : #7A7A7A;
+}
+
+.TeamsNavbar__component {
+    width :30%;
+   margin : 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor : pointer;
+    border-radius: 6px;
+}
+
+.TeamsNavbar__component:hover{
+    color : rgba(86, 58, 232, 1);
+}
+
+.TeamsNavbar__component-sel {
+    background-color:rgba(55, 26, 201, 0.16);
+    color : rgba(86, 58, 232, 1);
+}
+
+.TeamsNavbar__component h3 {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+}

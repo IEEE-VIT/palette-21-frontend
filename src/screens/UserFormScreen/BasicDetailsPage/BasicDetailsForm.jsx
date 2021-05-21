@@ -68,7 +68,7 @@ export default function BasicDetailsForm(props) {
       background: "#FFF",
     },
     inputFields: {
-      color: "#FFF",
+      color: theme.custom.textFieldColor,
     },
     formControl: {
       // minWidth: 400,
@@ -100,6 +100,8 @@ export default function BasicDetailsForm(props) {
   const [selectedTools, setSelectedTools] = useState([]);
   const [cookies] = useCookies(["token"]);
   const [loading, setLoading] = useState(false);
+  const [toolsDisable, setToolsDisable] = useState(false);
+  const [skillsDisable, setSkillsDisable] = useState(false);
 
   useEffect(() => {
     checkValidation();
@@ -114,10 +116,17 @@ export default function BasicDetailsForm(props) {
       const index = selectedSkills.indexOf(input);
       if (index > -1) {
         selectedSkills.splice(index, 1);
+        setSkillsDisable(false);
       }
     } else {
-      selectedSkills.push(input);
-      setSelectedSkills(selectedSkills);
+      if (selectedSkills.length == 3) {
+        selectedSkills.push(input);
+        setSelectedTools(selectedSkills);
+        setSkillsDisable(true);
+      } else {
+        selectedSkills.push(input);
+        setSelectedSkills(selectedSkills);
+      }
     }
 
     console.log(selectedSkills);
@@ -128,12 +137,18 @@ export default function BasicDetailsForm(props) {
       const index = selectedTools.indexOf(input);
       if (index > -1) {
         selectedTools.splice(index, 1);
+        setToolsDisable(false);
       }
     } else {
-      selectedTools.push(input);
-      setSelectedTools(selectedTools);
+      if (selectedTools.length == 3) {
+        selectedTools.push(input);
+        setSelectedTools(selectedTools);
+        setToolsDisable(true);
+      } else {
+        selectedTools.push(input);
+        setSelectedTools(selectedTools);
+      }
     }
-    console.log(selectedTools);
   };
 
   const handleHearUsSelection = (event) => {
@@ -212,6 +227,16 @@ export default function BasicDetailsForm(props) {
     "Invision",
   ];
 
+  const skills = [
+    "Branding",
+    "Marketing",
+    "VFX",
+    "UI/UX",
+    "Graphic Design",
+    "Interaction Design",
+    "Visual Design",
+  ];
+
   return (
     <div>
       <Box m={4} mx={{ xs: 3, md: 15 }} mt={10}>
@@ -287,49 +312,19 @@ export default function BasicDetailsForm(props) {
               <Grid item>
                 <Box mt={2}>
                   <Grid container direction="row" spacing={1}>
-                    <Grid item>
-                      <GroupedButton
-                        text="Branding"
-                        isSelected="false"
-                        handleSelection={handleSelectedSkillChange}
-                      />
-                    </Grid>
-                    <Grid item>
-                      <GroupedButton
-                        text="Marketing"
-                        handleSelection={handleSelectedSkillChange}
-                      />
-                    </Grid>
-                    <Grid item>
-                      <GroupedButton
-                        text="VFX"
-                        handleSelection={handleSelectedSkillChange}
-                      />
-                    </Grid>
-                    <Grid item>
-                      <GroupedButton
-                        text="UI/UX"
-                        handleSelection={handleSelectedSkillChange}
-                      />
-                    </Grid>
-                    <Grid item>
-                      <GroupedButton
-                        text="Graphic Design"
-                        handleSelection={handleSelectedSkillChange}
-                      />
-                    </Grid>
-                    <Grid item>
-                      <GroupedButton
-                        text="Interaction Design"
-                        handleSelection={handleSelectedSkillChange}
-                      />
-                    </Grid>
-                    <Grid item>
-                      <GroupedButton
-                        text="Visual Design"
-                        handleSelection={handleSelectedSkillChange}
-                      />
-                    </Grid>
+                    {skills.map((item, index) => {
+                      return (
+                        <Grid item key={index}>
+                          <GroupedButton
+                            text={item}
+                            isSelectable={
+                              !skillsDisable || selectedSkills.includes(item)
+                            }
+                            handleSelection={handleSelectedSkillChange}
+                          />
+                        </Grid>
+                      );
+                    })}
                   </Grid>
                 </Box>
               </Grid>
@@ -347,6 +342,9 @@ export default function BasicDetailsForm(props) {
                       return (
                         <Grid item key={index}>
                           <GroupedButton
+                            isSelectable={
+                              !toolsDisable || selectedTools.includes(item)
+                            }
                             text={item}
                             isSelected="false"
                             iconName={item}

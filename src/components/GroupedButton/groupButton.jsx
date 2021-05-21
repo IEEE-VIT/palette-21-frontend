@@ -106,6 +106,7 @@ export default function GroupedButton(props) {
     <div>
       {props.iconName != null ? (
         <Button
+          disabled={!props.isSelectable}
           disableElevation={true}
           classes={{
             startIcon: classes.iconSettings,
@@ -125,6 +126,7 @@ export default function GroupedButton(props) {
         </Button>
       ) : (
         <Button
+          disabled={!props.isSelectable}
           disableElevation={true}
           variant="contained"
           size="small"
@@ -147,4 +149,5 @@ GroupedButton.propTypes = {
   text: PropTypes.string,
   iconName: PropTypes.string,
   handleSelection: PropTypes.func,
+  isSelectable: PropTypes.bool,
 };

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LandingScreen from "./screens/LandingScreen/LandingScreen";
 import LoginScreen from "./screens/LoginScreen/LoginScreen";
-import play from "./screens/Playground/play";
 import UserFormScreen from "./screens/UserFormScreen/UserFormScreen";
 import SuccesfulAuth from "./screens/successfulAuth";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -40,6 +39,7 @@ const AppRouter = () => {
       },
       disabledButton: "#292929",
       groupedButtonText: "#C2C2C2",
+      textFieldColor: "#FFF",
     },
   });
 
@@ -66,6 +66,7 @@ const AppRouter = () => {
       },
       disabledButton: "#EBEBEB",
       groupedButtonText: "#3D3D3D",
+      textFieldColor: "#000",
     },
   });
 
@@ -82,7 +83,6 @@ const AppRouter = () => {
         <Switch>
           <Route exact path="/" component={LandingScreen} />
           <Route exact path="/login" component={LoginScreen} />
-          <Route exact path="/play" component={play} />
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Route

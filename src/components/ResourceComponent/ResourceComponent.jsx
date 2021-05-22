@@ -3,8 +3,12 @@ import "./ResourceComponent.css";
 import PropTypes from "prop-types";
 
 export default function ResourceComponent(props) {
+  const redirectToResource = () => {
+    window.open(props.url, "_blank");
+  };
   return (
     <div
+      onClick={redirectToResource}
       id="ResourceComponent__container"
       className={
         props.title == "Articles" || props.title == "Illustrations"
@@ -21,4 +25,5 @@ export default function ResourceComponent(props) {
 ResourceComponent.propTypes = {
   bgimg: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };

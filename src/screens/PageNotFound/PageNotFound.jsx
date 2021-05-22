@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./PageNotFound.css";
 import cookie from "react-cookies";
 import nfimg from "../../assets/404image.png";
+import { Button, Typography } from "@material-ui/core";
 
 export default function PageNotFound() {
   const [mode, setMode] = useState("dark");
@@ -31,16 +32,19 @@ export default function PageNotFound() {
             mode == "light" ? "rgba(20, 20, 20, 1)" : "rgba(255, 255, 255, 1)",
         }}
       >
-        The Page you were looking for does not exist!
+        <Typography>
+          This page doesn&apos;t exists!, unlike the design in your head
+        </Typography>
       </p>
-      <p
+      <Button
+        color="primary"
+        variant="contained"
         onClick={() => {
           window.location.assign("/");
         }}
-        id="PageNotFound__link"
       >
         Go back to home page
-      </p>
+      </Button>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import HeroP from "../../../assets/hero-p.svg";
 import HeroS from "../../../assets/hero-star.svg";
 import Event from "../../../assets/Hero-leftimg.svg";
@@ -30,12 +30,12 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function Hero() {
-  const [setWindowWidth] = useState(0);
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWindowWidth(window.innerWidth);
-    });
-  });
+  // const [setWindowWidth] = useState(0);
+  // useEffect(() => {
+  //   window.addEventListener("resize", () => {
+  //     setWindowWidth(window.innerWidth);
+  //   });
+  // });
   const classes = useStyles();
   var title = "Palette'21";
   var caption = "Prototype your imagination";

@@ -1,54 +1,55 @@
 #ModeSlider__container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 18px;
-	margin: 0;
-	transition: background 0.2s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  margin: 0;
+  transition: background 0.2s linear;
 }
 
 #ModeSlider__chk {
-	opacity: 0;
-	position: absolute;
+  opacity: 0;
+  position: absolute;
 }
 
 #ModeSlider__label {
-	border-radius: 50px;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 4px;
-	position: relative;
-	height: 18px;
-	width: 45px;
-	transform: scale(1.5);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  position: relative;
+  height: 18px;
+  width: 45px;
+  transform: scale(1.5);
+  margin-bottom: 0;
 }
 
 #ModeSlider__label #ModeSlider__ball {
-	background-color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	height: 13px;
-	width: 13px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  height: 13px;
+  width: 13px;
 }
 
 #ModeSlider__ball.ModeSlider__moveRight {
-	transform: translateX(29px);
-	transition: transform 0.18s linear;
+  transform: translateX(29px);
+  transition: transform 0.18s linear;
 }
 
 #ModeSlider__ball.ModeSlider__moveLeft {
-	transform: translateX(-29px);
-	transition: transform 0.18s linear;
+  transform: translateX(-29px);
+  transition: transform 0.18s linear;
 }
 
 .fa-moon {
-	color: #FFFFFF;
-    font-size: 9px;
+  color: #ffffff;
+  font-size: 9px;
 }
 
 .fa-sun {
-	color: #FFFFFF;
-    font-size: 9px;
+  color: #ffffff;
+  font-size: 9px;
 }

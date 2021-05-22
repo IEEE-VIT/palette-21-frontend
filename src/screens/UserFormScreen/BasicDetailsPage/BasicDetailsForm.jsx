@@ -26,7 +26,8 @@ function NumberFormatCustom(props) {
   const MAX_VAL = 10000;
   const withValueLimit = (inputObj) => {
     const { value } = inputObj;
-    if (value < MAX_VAL) return inputObj;
+
+    if (value < MAX_VAL && value.toString().length <= 4) return inputObj;
   };
   return (
     <NumberFormat
@@ -42,7 +43,7 @@ function NumberFormatCustom(props) {
       }}
       isNumericString
       prefix="# "
-      allowLeadingZeros={false}
+      allowLeadingZeros={true}
       allowNegative={false}
       isAllowed={withValueLimit}
     />
@@ -263,6 +264,7 @@ export default function BasicDetailsForm(props) {
                             label="Discord Hash"
                             placeholder="#2424"
                             hint="#2424"
+                            // type="number"
                             onChange={handleHashChange}
                             InputProps={{
                               disableUnderline: true,

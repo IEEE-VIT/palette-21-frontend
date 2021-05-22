@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { Grid, Box, useTheme } from "@material-ui/core";
+import { Grid, Box, useTheme, makeStyles, Paper } from "@material-ui/core";
 import { React, useState, useEffect } from "react";
 import TopHeader from "../../components/TopHeader/TopHeader";
 import BasicDeatilsPage from "./BasicDetailsPage/BasicDeatilsPage";
@@ -10,6 +10,7 @@ import { useHistory } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import Stepper from "react-stepper-horizontal";
 import PropTypes from "prop-types";
+import background from "../../assets/basicDetails/regBackground.svg";
 
 export default function UserFormScreen(props) {
   const [screen, setScreen] = useState("userBasicDetails");
@@ -29,7 +30,7 @@ export default function UserFormScreen(props) {
     // }
     const imgUrl = localStorage.getItem("userImage");
     const userName = localStorage.getItem("userName");
-    if ((imgUrl === null) | (userName === null)) {
+    if ((imgUrl !== null) | (userName !== null)) {
       setName(userName);
       setImage(imgUrl);
     }
@@ -69,52 +70,69 @@ export default function UserFormScreen(props) {
   };
   const mediaQuery = window.matchMedia("(min-width: 480px)");
   const theme = useTheme();
+  const useStyles = makeStyles({
+    regCompletedPaper: {
+      backgroundImage: `url(${background})`,
+      backgroundColor: theme.palette.background.default,
+    },
+    normalPaper: {
+      backgroundColor: theme.palette.background.default,
+    },
+  });
+  const classes = useStyles();
   return (
     <div>
-      <Grid container direction="column">
-        <Grid item>
-          <Box p={{ xs: 1, md: 4 }}>
-            <TopHeader
-              name={name}
-              img={img}
-              toggleDarkTheme={props.toggleTheme}
-            />
-          </Box>
+      <Paper
+        className={
+          screen === "userRegCompletionScreen"
+            ? classes.regCompletedPaper
+            : classes.normalPaper
+        }
+      >
+        <Grid container direction="column">
+          <Grid item>
+            <Box p={{ xs: 1, md: 4 }}>
+              <TopHeader
+                name={name}
+                img={img}
+                toggleDarkTheme={props.toggleTheme}
+              />
+            </Box>
+          </Grid>
+          <Grid item>
+            <Box px={{ xs: 1, md: 0 }}>
+              <Stepper
+                titleFontSize={mediaQuery.matches ? 16 : 12}
+                activeColor="#D5D4E3"
+                defaultColor="#7A7A7A"
+                activeBorderColor="#563AE8"
+                completeBarColor="#563AE8"
+                completeColor="#563AE8"
+                completeTitleColor="#563AE8"
+                activeTitleColor={
+                  theme.palette.type === "light" ? "#000" : "#FFF"
+                }
+                completeBorderColor="#FFF"
+                defaultBorderWidth="120px"
+                size={40}
+                circleTop={10}
+                steps={[
+                  { title: "Register" },
+                  {
+                    title: "Basic Details",
+                  },
+                  {
+                    title: "Team Formation",
+                  },
+                  { title: "Ready to shift pixels" },
+                ]}
+                activeStep={activity}
+              />
+            </Box>
+          </Grid>
+          <Grid item>{switchPage(screen)}</Grid>
         </Grid>
-        <Grid item>
-          <Box px={{ xs: 1, md: 0 }}>
-            <Stepper
-              titleFontSize={mediaQuery.matches ? 16 : 12}
-              activeColor="#D5D4E3"
-              defaultColor="#7A7A7A"
-              activeBorderColor="#563AE8"
-              completeBarColor="#563AE8"
-              completeColor="#563AE8"
-              completeTitleColor="#563AE8"
-              activeTitleColor={
-                theme.palette.type === "light" ? "#000" : "#FFF"
-              }
-              completeBorderColor="#FFF"
-              circleFontColor=""
-              defaultBorderWidth="120px"
-              size={40}
-              circleTop={10}
-              steps={[
-                { title: "Register" },
-                {
-                  title: "Basic Details",
-                },
-                {
-                  title: "Team Formation",
-                },
-                { title: "Ready to shift pixels" },
-              ]}
-              activeStep={activity}
-            />
-          </Box>
-        </Grid>
-        <Grid item>{switchPage(screen)}</Grid>
-      </Grid>
+      </Paper>
     </div>
   );
 }

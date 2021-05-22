@@ -126,6 +126,7 @@ export default function CreateTeamForm(props) {
     setTeamNameValid(false);
     // setTimeout(() => {
     //   setCodeLoading(false);
+    //   props.moveNext("userRegCompletionScreen");
     // }, 2000);
     joinTeamApi(data);
   };
@@ -159,169 +160,184 @@ export default function CreateTeamForm(props) {
 
   const classes = useStyles();
   return (
-    <Box m={4} mx={2} mt={10}>
-      <Paper class={classes.paper} variant="elevation" elevation={10}>
-        <Box p={5}>
-          <Grid container direction="column" alignItems="stretch">
-            <Grid item>
-              <Grid container direction="row" spacing={0} alignItems="center">
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      style={{ minHeight: "80vh" }}
+    >
+      <Grid item xs={12} md={6}>
+        <Box m={4} mx={2} mt={10}>
+          <Paper class={classes.paper} variant="elevation" elevation={10}>
+            <Box p={5}>
+              <Grid container direction="column" alignItems="stretch">
                 <Grid item>
-                  <Box mt={1}>
-                    <ArrowBackIosIcon />
+                  <Grid
+                    container
+                    direction="row"
+                    spacing={0}
+                    alignItems="center"
+                  >
+                    <Grid item>
+                      <Box mt={1}>
+                        <ArrowBackIosIcon />
+                      </Box>
+                    </Grid>
+                    <Grid item>BACK</Grid>
+                  </Grid>
+                </Grid>
+                <Grid item>
+                  <Box mt={2}>
+                    <Typography variant="h6">Enter your team name</Typography>
                   </Box>
                 </Grid>
-                <Grid item>BACK</Grid>
-              </Grid>
-            </Grid>
-            <Grid item>
-              <Box mt={2}>
-                <Typography variant="h6">Enter your team name</Typography>
-              </Box>
-            </Grid>
-            <Grid item>
-              <Box my={1}>
-                <Paper variant="outlined" className={classes.outlinePaper}>
-                  <Box mx={2} my={2}>
-                    <TextField
-                      color="secondary"
-                      required
-                      onChange={handleTeamName}
-                      label="Team Name"
-                      placeholder="DesignPals"
-                      hint="DesignPals"
-                      InputProps={{
-                        disableUnderline: true,
-                        className: classes.inputFields,
-                      }}
-                      InputLabelProps={{
-                        classes: {
-                          root: classes.labelRoot,
-                        },
-                      }}
-                    />
+                <Grid item>
+                  <Box my={1}>
+                    <Paper variant="outlined" className={classes.outlinePaper}>
+                      <Box mx={2} my={2}>
+                        <TextField
+                          color="secondary"
+                          required
+                          onChange={handleTeamName}
+                          label="Team Name"
+                          placeholder="DesignPals"
+                          hint="DesignPals"
+                          InputProps={{
+                            disableUnderline: true,
+                            className: classes.inputFields,
+                          }}
+                          InputLabelProps={{
+                            classes: {
+                              root: classes.labelRoot,
+                            },
+                          }}
+                        />
+                      </Box>
+                    </Paper>
                   </Box>
-                </Paper>
-              </Box>
-            </Grid>
-            <Grid item>
-              <Box my={2}>
-                <Grid
-                  container
-                  direction="row"
-                  justify="flex-start"
-                  alignItems="center"
-                  spacing={2}
-                >
-                  <Grid item>
-                    {createLoading ? (
+                </Grid>
+                <Grid item>
+                  <Box my={2}>
+                    <Grid
+                      container
+                      direction="row"
+                      justify="flex-start"
+                      alignItems="center"
+                      spacing={2}
+                    >
+                      <Grid item>
+                        {createLoading ? (
+                          <CircularProgress />
+                        ) : (
+                          <Button
+                            disabled={!isTeamNameValid}
+                            variant="contained"
+                            color="primary"
+                            onClick={() => {
+                              handleCreateTeam();
+                            }}
+                            className={classes.button}
+                          >
+                            Create Team
+                          </Button>
+                        )}
+                      </Grid>
+                      <Grid item>
+                        <Typography component="div">
+                          <Grid
+                            component="label"
+                            container
+                            alignItems="center"
+                            justify="center"
+                            spacing={1}
+                          >
+                            <Grid item>
+                              <AntSwitch
+                                checked={state.checkedA}
+                                onChange={handleChange}
+                                name="checkedA"
+                              />
+                            </Grid>
+                            <Grid item>Looking for teammates</Grid>
+                          </Grid>
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Grid>
+                <Grid item>
+                  <Box my={2}>
+                    <Grid
+                      container
+                      direction="row"
+                      spacing={2}
+                      alignItems="center"
+                      justify="center"
+                    >
+                      <Grid item xs={5}>
+                        <Divider />
+                      </Grid>
+                      <Grid item xs={2}>
+                        <Typography align="center">or</Typography>
+                      </Grid>
+                      <Grid item xs={5}>
+                        <Divider />
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Grid>
+                <Grid item>
+                  <Box my={1}>
+                    <Paper variant="outlined" className={classes.outlinePaper}>
+                      <Box mx={2} my={2}>
+                        <TextField
+                          color="secondary"
+                          required
+                          onChange={handleTeamCode}
+                          label="Enter team code"
+                          placeholder="SSE-213"
+                          hint="SSEE-213"
+                          InputProps={{
+                            disableUnderline: true,
+                            className: classes.inputFields,
+                          }}
+                          InputLabelProps={{
+                            classes: {
+                              root: classes.labelRoot,
+                            },
+                          }}
+                        />
+                      </Box>
+                    </Paper>
+                  </Box>
+                </Grid>
+                <Grid item>
+                  <Box my={2}>
+                    {codeLoading ? (
                       <CircularProgress />
                     ) : (
                       <Button
-                        disabled={!isTeamNameValid}
                         variant="contained"
                         color="primary"
+                        disabled={!isTeamCodeValid}
                         onClick={() => {
-                          handleCreateTeam();
+                          handleJoinTeam();
                         }}
                         className={classes.button}
+                        endIcon={<ArrowRightIcon />}
                       >
-                        Create Team
+                        Save and Next
                       </Button>
                     )}
-                  </Grid>
-                  <Grid item>
-                    <Typography component="div">
-                      <Grid
-                        component="label"
-                        container
-                        alignItems="center"
-                        justify="center"
-                        spacing={1}
-                      >
-                        <Grid item>
-                          <AntSwitch
-                            checked={state.checkedA}
-                            onChange={handleChange}
-                            name="checkedA"
-                          />
-                        </Grid>
-                        <Grid item>Looking for teammates</Grid>
-                      </Grid>
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Box>
-            </Grid>
-            <Grid item>
-              <Box my={2}>
-                <Grid
-                  container
-                  direction="row"
-                  spacing={2}
-                  alignItems="center"
-                  justify="center"
-                >
-                  <Grid item xs={5}>
-                    <Divider />
-                  </Grid>
-                  <Grid item xs={2}>
-                    <Typography align="center">or</Typography>
-                  </Grid>
-                  <Grid item xs={5}>
-                    <Divider />
-                  </Grid>
-                </Grid>
-              </Box>
-            </Grid>
-            <Grid item>
-              <Box my={1}>
-                <Paper variant="outlined" className={classes.outlinePaper}>
-                  <Box mx={2} my={2}>
-                    <TextField
-                      color="secondary"
-                      required
-                      onChange={handleTeamCode}
-                      label="Enter team code"
-                      placeholder="SSE-213"
-                      hint="SSEE-213"
-                      InputProps={{
-                        disableUnderline: true,
-                        className: classes.inputFields,
-                      }}
-                      InputLabelProps={{
-                        classes: {
-                          root: classes.labelRoot,
-                        },
-                      }}
-                    />
                   </Box>
-                </Paper>
-              </Box>
-            </Grid>
-            <Grid item>
-              <Box my={2}>
-                {codeLoading ? (
-                  <CircularProgress />
-                ) : (
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    disabled={!isTeamCodeValid}
-                    onClick={() => {
-                      handleJoinTeam();
-                    }}
-                    className={classes.button}
-                    endIcon={<ArrowRightIcon />}
-                  >
-                    Save and Next
-                  </Button>
-                )}
-              </Box>
-            </Grid>
-          </Grid>
+                </Grid>
+              </Grid>
+            </Box>
+          </Paper>
         </Box>
-      </Paper>
-    </Box>
+      </Grid>
+    </Grid>
   );
 }
 

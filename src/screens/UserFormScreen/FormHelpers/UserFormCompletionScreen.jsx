@@ -1,7 +1,24 @@
-import { Grid, Button, Box } from "@material-ui/core";
+import { Grid, Button, Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import { useHistory } from "react-router-dom";
+
+const useStyles = makeStyles({
+  button: {
+    padding: "10px",
+    textTransform: "none",
+  },
+  textColor: {
+    color: "#563AE8",
+  },
+});
 
 export default function UserFormCompletionScreen() {
+  const classes = useStyles();
+  const history = useHistory();
+
+  const navigate = () => {
+    history.push("/dashboard");
+  };
   return (
     <Grid
       container
@@ -10,10 +27,30 @@ export default function UserFormCompletionScreen() {
       alignItems="center"
       style={{ minHeight: "80vh" }}
     >
-      <Grid item>Yay! you are set to shift pixels</Grid>
+      <Grid item>
+        <div>
+          <Typography style={{ display: "inline-block" }} variant="h6">
+            Yay! you are set to{" "}
+            <Typography
+              style={{ display: "inline-block" }}
+              className={classes.textColor}
+              variant="h6"
+            >
+              shift pixels{" "}
+            </Typography>
+          </Typography>
+        </div>
+      </Grid>
       <Grid item>
         <Box my={10}>
-          <Button variant="contained" color="primary">
+          <Button
+            onClick={() => {
+              navigate();
+            }}
+            className={classes.button}
+            variant="contained"
+            color="primary"
+          >
             Take me to my Dashboard
           </Button>
         </Box>

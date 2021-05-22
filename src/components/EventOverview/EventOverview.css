@@ -295,6 +295,9 @@
 }
 
 @media screen and (max-height: 900px) {
+  #EventOverview__leftdiv {
+    margin-bottom: 100px;
+  }
   #EventOverview__timeline {
     height: 95%;
   }

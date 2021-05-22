@@ -43,7 +43,7 @@ export default function UserFormScreen(props) {
         if (apiData.data.round0 && !apiData.data.teamFormed) {
           setPage("teamFormation");
         } else if (apiData.data.round0) {
-          history.push("/");
+          history.push("/dashboard");
         }
         localStorage.setItem("userImage", apiData.data.userImg);
         localStorage.setItem("userName", apiData.data.name);

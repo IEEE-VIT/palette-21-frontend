@@ -1,11 +1,12 @@
 #TeamsPage__container {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   margin-top: 40px;
+  background-color: inherit;
 }
 
 #TeamsPAge__container::-webkit-scrollbar {

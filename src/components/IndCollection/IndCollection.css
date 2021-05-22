@@ -1,47 +1,45 @@
 #IndCollection__container {
-    display: flex;
-    flex-direction: row;
-    width : 98%;
-    flex-wrap: wrap;
-    padding : 10px 30px;
-    justify-content: center;
-    overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+  justify-content: center;
+  overflow-y: auto;
+  background-color: inherit;
 }
 #IndCollection__loadmore {
-  display : none;
+  display: none;
 }
 /* width */
 ::-webkit-scrollbar {
-    width: 7px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #3A3A3A; 
-    border-radius: 10px;
-    
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgba(86, 58, 232, 1);
-    border-radius: 10px;
+  width: 7px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3a3a3a;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(86, 58, 232, 1);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 426px) {
+  #IndCollection__container {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px 10px;
   }
-  
-  @media screen and (max-width : 426px) {
-    #IndCollection__container {
-        width : 90%;
-        margin-bottom: 10px ;
-        padding : 10px 10px;
-    }
-    #IndCollection__loadmore {
-      display: block;
-      color : rgba(86, 58, 232, 1);
-      font-size: 1rem;
-      margin-bottom: 35px;
-      cursor: pointer;
-      user-select: none;
+  #IndCollection__loadmore {
+    display: block;
+    color: rgba(86, 58, 232, 1);
+    font-size: 1rem;
+    margin-bottom: 35px;
+    cursor: pointer;
+    user-select: none;
   }
-  
 }

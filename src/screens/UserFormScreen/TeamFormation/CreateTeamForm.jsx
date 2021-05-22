@@ -14,7 +14,7 @@ import {
 import { withStyles } from "@material-ui/styles";
 import React, { useState } from "react";
 import { useCookies } from "react-cookie";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+// import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import api from "../../../api/regPortal";
 import PropTypes from "prop-types";
@@ -172,7 +172,7 @@ export default function CreateTeamForm(props) {
           <Paper class={classes.paper} variant="elevation" elevation={10}>
             <Box p={5}>
               <Grid container direction="column" alignItems="stretch">
-                <Grid item>
+                {/* <Grid item>
                   <Grid
                     container
                     direction="row"
@@ -186,7 +186,7 @@ export default function CreateTeamForm(props) {
                     </Grid>
                     <Grid item>BACK</Grid>
                   </Grid>
-                </Grid>
+                </Grid> */}
                 <Grid item>
                   <Box mt={2}>
                     <Typography variant="h6">Enter your team name</Typography>

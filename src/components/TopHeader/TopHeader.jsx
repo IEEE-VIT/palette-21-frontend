@@ -8,7 +8,7 @@ import {
   useTheme,
 } from "@material-ui/core";
 import React, { useState } from "react";
-import paletteLogo from "../../assets/logo.svg";
+import paletteLogo from "../../assets/palette-logo-reg-screen.svg";
 import PropTypes from "prop-types";
 
 const AntSwitch = withStyles((theme) => ({

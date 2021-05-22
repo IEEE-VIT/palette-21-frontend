@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useHistory } from "react-router-dom";
@@ -25,7 +26,7 @@ export default function successfulAuth() {
   const figmaAuthApi = (code) => {
     const data = {
       code,
-      redirectUri: "http://localhost:3000/successfulAuth",
+      redirectUri: process.env.REACT_APP_FIGMA_CALLBACK,
     };
     axios
       // eslint-disable-next-line no-undef

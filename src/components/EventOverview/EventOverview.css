@@ -52,15 +52,24 @@
 }
 
 #EventOverview__timelinesoondiv h3 {
-  font-size: 1.13rem;
+  font-size: 23px;
   font-weight: 500;
   margin-top: 24vh;
+
+  font-family: Inter;
+  font-style: normal;
+  line-height: 28px;
 }
 
 #EventOverview__timelinesoondiv h4 {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin-top: 12px;
+  font-family: Inter;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+  color: #3d3d3d;
 }
 
 #EventOverview__start h3 {

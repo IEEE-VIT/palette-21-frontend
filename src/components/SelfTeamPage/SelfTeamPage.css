@@ -135,12 +135,14 @@
 }
 
 #SelfTeamPage__leave {
-  color: rgba(255, 45, 82, 1);
-  font-size: 0.89rem;
-  font-weight: lighter;
   cursor: pointer;
   margin-top: 18px;
   margin-bottom: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 15px;
+  color: #ff2d52;
 }
 
 @media screen and (max-width: 1175px) {

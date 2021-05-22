@@ -22,8 +22,8 @@ const Flashback = () => {
         <div id="Flashback__leftcontainer">
           <h4>Glimpses from our past Palette events</h4>
           <p>
-            Mind Blowing Designs, talented Minds, insightful conversations with
-            Industry experts - all under the same roof at previous editions of
+            Mind blowing designs, talented minds, insightful conversations with
+            industry experts - all under the same roof at previous editions of
             Palette.{" "}
           </p>
           <img src={FlashbackLeftPic1} />

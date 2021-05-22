@@ -21,7 +21,7 @@ const Register = () => {
       </Fade>
       <Fade bottom cascade delay={500} duration={1000}>
         <p className="Register__register-heading">
-          Register yourself for palette{" "}
+          Register yourself for Palette{" "}
           <span style={{ whiteSpace: "nowrap" }}>2021!</span>
         </p>
         <br />

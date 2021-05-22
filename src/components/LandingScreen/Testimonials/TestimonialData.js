@@ -7,7 +7,7 @@ const testimonialData = [
     winnerAs: "🏆 Winner, Palette’20",
     winnerPic: winner1,
     winnerQuote:
-      "Palette is one of the closest things to my heart. I began my design journey with the 2019 edition and since then it's been a rollercoaster ride. I still can't believe that I was trying to make a logo on Photoshop back then 😂 It has basically laid the foundation for my entire design journey. If it weren't for Palette, I honestly don't know if I would've ever discovered my passion for design and met such amazing people in the domain of design. I'm very grateful for this event ❤️",
+      "Palette is one of the closest things to my heart. I began my design journey with the 2019 edition and since then it's been a rollercoaster ride. I still can't believe that I was trying to make a logo on Photoshop back then 😂 It has basically laid the foundation for my entire design journey. If it weren't for Palette, I honestly don't know if I would've ever discovered my passion for design and met such amazing people in the domain of design. I'm very grateful for this event. ❤️",
   },
   {
     winnerName: "Abiraami Rakshana",

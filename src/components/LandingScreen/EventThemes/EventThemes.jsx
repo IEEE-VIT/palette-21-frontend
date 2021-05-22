@@ -33,7 +33,7 @@ export default function EventThemes() {
           <div>
             <h2 id="EventThemes__rightcontainer-theme">UI/UX</h2>
             <h3 id="EventThemes__rightcontainer-quote">
-              Design is not how it looks, design is how it works
+              Design is not how it looks, design is how it works.
             </h3>
           </div>
         </Fade>

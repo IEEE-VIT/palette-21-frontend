@@ -1,89 +1,103 @@
 #ReviewsPage__container {
-    display: flex;
-    flex-direction: row;
-    width : 100%;
-    height :100%;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
 }
 
 #ReviewsPage__contentcontainer {
-    display: flex;
-    flex-direction: row;
-    height : fit-content;
-    width : 75%;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: 75%;
 }
 
 #ReviewsPage__contentcontainer img {
-    width: 300px;
-    margin-right: 100px;
+  width: 300px;
+  margin-right: 100px;
 }
 
 #ReviewsPage__heading {
-    font-size: 2rem;
-    font-weight: 600;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 33px;
+  line-height: 40px;
+  /* or 121% */
+
+  letter-spacing: 0.25px;
 }
 
 #ReviewsPage__fact {
-    font-size : 1rem;
-    letter-spacing: 1px;
-    font-weight: normal;
+  /* font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: normal; */
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  /* or 26px */
+
+  letter-spacing: 1px;
 }
 
 #ReviewsPage__reviewsooninfo {
-    display : flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 1230px) {
+  #ReviewsPage__contentcontainer img {
+    margin-right: 40px;
+  }
+  #ReviewsPage__contentcontainer {
+    width: 95%;
+  }
+  #ReviewsPage__heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  #ReviewsPage__fact {
+    font-size: 0.95rem;
+    letter-spacing: normal;
+  }
+}
+
+@media screen and (max-width: 542px) {
+  #ReviewsPage__container {
+    width: 98%;
+    align-items: flex-start;
+  }
+  #ReviewsPage__contentcontainer {
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    height: fit-content;
+    padding: 20px 20px;
+  }
+  #ReviewsPage__contentcontainer img {
+    width: 235px;
+    margin-right: 0;
+  }
+  #ReviewsPage__heading {
+    font-size: 1.28rem;
+    text-align: center;
+  }
+  #ReviewsPage__fact {
+    font-size: 0.9rem;
+    font-weight: normal;
+    letter-spacing: normal;
+  }
 }
 
-@media screen and (max-width : 1230px) {
-    #ReviewsPage__contentcontainer img {
-        margin-right: 40px;
-    }
-    #ReviewsPage__contentcontainer {
-        width : 95%;
-    }
-    #ReviewsPage__heading {
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-    #ReviewsPage__fact {
-        font-size : 0.95rem;
-        letter-spacing: normal;
-    }
-}
-
-@media screen and (max-width : 542px) {
-    #ReviewsPage__container {
-        width : 98%;
-        align-items: flex-start;
-    }
-    #ReviewsPage__contentcontainer {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: fit-content;
-        padding : 20px 20px;
-    }
-    #ReviewsPage__contentcontainer img {
-        width: 235px;
-        margin-right: 0;
-    }
-    #ReviewsPage__heading {
-        font-size: 1.28rem;
-        text-align: center;
-    }
-    #ReviewsPage__fact {
-        font-size : 0.9rem;
-        font-weight: normal;
-        letter-spacing: normal;
-    }
-}
-
-@media screen and (max-width : 400px) {
-    #ReviewsPage__contentcontainer img {
-        width: 200px;
-    }
+@media screen and (max-width: 400px) {
+  #ReviewsPage__contentcontainer img {
+    width: 200px;
+  }
 }

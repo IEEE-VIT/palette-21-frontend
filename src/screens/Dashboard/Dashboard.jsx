@@ -19,7 +19,7 @@ export default function Dashboard() {
   const pageTitles = [
     "Palette",
     "Team",
-    "Reviews",
+    "Reviews and Rounds",
     "Guide",
     "Help and Support",
     "Problem Statement",

@@ -1,0 +1,52 @@
+.loading-body {
+  height: 100vh;
+  width: 100vw !important;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.palette-loader-title {
+  display: flex;
+  font-family: NeueMontreal-BoldItalic;
+  font-style: italic;
+  font-size: 120px;
+  line-height: 144px;
+}
+
+.loading-text {
+  display: flex;
+  font-family: NeueMontreal-BoldItalic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #ffffff;
+}
+
+.loading-subtitle {
+  font-family: NeueMontreal-BoldItalic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #494949;
+}
+
+@media only screen and (max-width: 600px) {
+  .palette-loader-title {
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .loading-text {
+    font-size: 24px;
+    line-height: 24px;
+
+    color: #ffffff;
+  }
+}

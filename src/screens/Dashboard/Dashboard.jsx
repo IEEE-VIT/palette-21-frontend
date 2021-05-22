@@ -11,11 +11,13 @@ import ReviewsPage from "../../components/ReviewsPage/ReviewsPage";
 import { userFetch } from "../../utils/DashboardHelperFuncs";
 import ToastContainer from "../../components/Toast/Toast";
 import { toastDark, toastLight } from "../../utils/Toast";
+import LoadingScreen from "../../components/LandingScreen/LoadingScreen/LoadingScreen";
 
 export default function Dashboard() {
   const [userDetails, setUserDetails] = useState([]);
   const [mode, setMode] = useState("");
   const [selectedPage, setSelectedPage] = useState(0);
+  const [pageLoading, setPageLoading] = useState(true);
   const pageTitles = [
     "Palette",
     "Teams",
@@ -29,6 +31,7 @@ export default function Dashboard() {
       userFetch()
         .then((resp) => {
           setUserDetails(resp.data.data);
+          setPageLoading(false);
         })
         .catch(() => {
           var curMode = cookies.load("mode");
@@ -41,6 +44,11 @@ export default function Dashboard() {
       //console.log(`Caught by try/catch ${error}`);
     }
   }, []);
+
+  if (pageLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <div
       id="Dashboard__container"

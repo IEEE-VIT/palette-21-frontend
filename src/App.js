@@ -80,29 +80,27 @@ const AppRouter = () => {
     setTheme(newPaletteType);
   };
   return (
-    <div>
-      <BrowserRouter>
-        <Switch>
-          <ThemeProvider theme={theme}>
-            <Route
-              exact
-              path="/"
-              component={() => <LandingScreen toggleTheme={toggleDarkTheme} />}
-            />
-            <Route exact path="/login" component={LoginScreen} />
-            <CssBaseline />
-            <Route
-              exact
-              path="/userForm"
-              component={() => <UserFormScreen toggleTheme={toggleDarkTheme} />}
-            />
-            <Route exact path="/successfulAuth" component={SuccesfulAuth} />
-            <Route exact path="/dashboard" component={Dashboard} />
-          </ThemeProvider>
-          <Route exact component={PageNotFound} />
-        </Switch>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <ThemeProvider theme={theme}>
+          <Route
+            exact
+            path="/"
+            component={() => <LandingScreen toggleTheme={toggleDarkTheme} />}
+          />
+          <Route exact path="/login" component={LoginScreen} />
+          <CssBaseline />
+          <Route
+            exact
+            path="/userForm"
+            component={() => <UserFormScreen toggleTheme={toggleDarkTheme} />}
+          />
+          <Route exact path="/successfulAuth" component={SuccesfulAuth} />
+          <Route exact path="/dashboard" component={Dashboard} />
+        </ThemeProvider>
+        <Route exact component={PageNotFound} />
+      </Switch>
+    </BrowserRouter>
   );
 };
 

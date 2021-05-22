@@ -41,15 +41,18 @@ export default function SideNavbar(props) {
             <h3>Code copied</h3>
           )}
           {!copied ? (
-            <i className="fas fa-clone"></i>
+            <i style={{ marginLeft: "8px" }} className="fas fa-clone"></i>
           ) : (
-            <i className="fas fa-check-circle"></i>
+            <i
+              style={{ marginLeft: "8px" }}
+              className="fas fa-check-circle"
+            ></i>
           )}
         </div>
       </CopyToClipboard>
       <div id="SideNavbar__generator" onClick={() => props.setSelectedPage(5)}>
         <i className="fas fa-palette"></i>
-        <h3>Problem Generator</h3>
+        <div className="SideNavbar__generator_text">Problem Generator</div>
       </div>
       <SideNavbarPage
         mode={props.mode}

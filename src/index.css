@@ -53,3 +53,8 @@ code {
   src: local("NeueMontreal-Italic"),
     url(./assets/fonts/NeueMontreal-Italic.otf) format("opentype");
 }
+
+h3 {
+  /* padding: 0; */
+  margin-bottom: 0 !important;
+}

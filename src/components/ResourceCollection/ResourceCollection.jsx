@@ -9,10 +9,10 @@ import img4 from "../../assets/pattern4.png";
 export default function ResourceCollection() {
   return (
     <div id="ResourceCollection__container">
-      <ResourceComponent bgimg={img1} title="Design Process" />
-      <ResourceComponent bgimg={img2} title="Articles" />
-      <ResourceComponent bgimg={img3} title="Branding" />
-      <ResourceComponent bgimg={img4} title="Illustrations" />
+      <ResourceComponent bgimg={img1} title="Design Principles" />
+      <ResourceComponent bgimg={img2} title="Assets" />
+      <ResourceComponent bgimg={img3} title="UI/UX Basics" />
+      <ResourceComponent bgimg={img4} title="Branding and Pitch" />
     </div>
   );
 }

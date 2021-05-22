@@ -1,148 +1,202 @@
 #SideNavbar__container {
-    width : 300px;
-    height : 100vh;
-    position: fixed;
-    z-index: 3;
-    left:0;
-    top:0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 38.5px;
 }
 
 #SideNavbar__teamcode {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: 1px solid #563AE8;
-    color : #563AE8;
-    font-weight: 500 !important;
-    font-size: 0.8rem;
-    margin-top: 10px;
-    padding: 3px 15px;
-    border-radius: 5px;
-    justify-content: center;
-    width : 76%;
-    height : 60px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #563ae8;
+  color: #563ae8;
+  font-weight: 500 !important;
+  font-size: 0.8rem;
+  /* margin-top: 10px;
+  padding: 3px 15px; */
+  padding: 2rem 0;
+  border-radius: 5px;
+  justify-content: center;
+  cursor: pointer;
+  width: 250px;
+  height: 48px;
+  margin-bottom: 4px;
 }
 
 #SideNavbar__teamcode:hover {
-    box-shadow: 0 0 5px 1px #563AE8;
+  box-shadow: 0 0 5px 1px #563ae8;
 }
 
 #SideNavbar__teamcode.SideNavbar__copied {
-    cursor: initial;
-    border: 1px solid rgba(77, 220, 74, 1);
-    color :rgba(77, 220, 74, 1);
+  cursor: initial;
+  border: 1px solid rgba(77, 220, 74, 1);
+  color: rgba(77, 220, 74, 1);
 }
 
 #SideNavbar__teamcode.SideNavbar__copied:hover {
-    box-shadow: 0 0  0 0;
+  box-shadow: 0 0 0 0;
 }
 
-#SideNavbar__teamcode h3{
-    margin-right: 15px;
-    font-weight: 550 !important;
-    font-size: 1rem !important;
+#SideNavbar__teamcode h3 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  text-align: center;
+  letter-spacing: 0.4px;
+
+  /* Primary */
+
+  /* color: #563ae8; */
+
+  /* margin-right: 15px; */
+
+  /* font-weight: 550 !important;
+  font-size: 1rem !important; */
 }
 
 #SideNavbar__generator {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #563AE8;
-    border: 1px solid #563AE8;
-    color : #ffffff;
-    margin-top: 10px;
-    padding: 3px 15px;
-    border-radius: 5px;
-    justify-content: center;
-    width : 76%;
-    height : 60px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 23px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #563ae8;
+  border: 1px solid #563ae8;
+  color: #ffffff;
+  /* margin-top: 10px; */
+  /* padding: 3px 15px; */
+  padding: 2rem 0;
+  border-radius: 5px;
+  justify-content: center;
+  /* width: 76%; */
+  /* height: 60px; */
+  cursor: pointer;
+  /* margin-top: 20px;
+  margin-bottom: 23px; */
+  margin: 16px 0;
+  width: 250px;
+  height: 56px;
+}
+
+.SideNavbar__generator_text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 145%;
+  /* or 23px */
+
+  letter-spacing: 0.5px;
 }
 
 #SideNavbar__generator h3 {
-    font-weight: 550 !important;
-    font-size: 1rem !important;
+  font-weight: 550 !important;
+  font-size: 1rem !important;
 }
 
 #SideNavbar__generator:hover {
-    box-shadow: 0 0 5px 1px #563AE8;
+  box-shadow: 0 0 5px 1px #563ae8;
 }
 
-#SideNavbar__generator i{
-    margin-right: 15px;
-    font-size: 1.3rem;
+#SideNavbar__generator i {
+  margin-right: 15px;
+  font-size: 1.3rem;
 }
 
 #SideNavbar__heading {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #7A7A7A;
-    margin-bottom: 0;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  letter-spacing: 0.15px;
+
+  /* Grey/Medium */
+
+  color: #7a7a7a;
+  /* margin-bottom: 0; */
 }
 #SideNavbar__teamname {
-    margin-top: 9px;
-    font-weight: 600;
-    font-size: 1.3rem;
+  /* margin-top: 9px;
+  font-weight: 600;
+  font-size: 1.3rem; */
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 28px;
+  /* identical to box height, or 122% */
+
+  /* Black */
+
+  margin-bottom: 16px;
+
+  color: #141414;
 }
 
-@media screen and (max-width:1024px) {
-    #SideNavbar__container {
-        width : 250px;
-    }
-    #SideNavbar__generator {
-        padding: 3px 10px;
-        width : 85%;
-    }
-    
-    #SideNavbar__generator h3 {
-        font-weight: 500 !important;
-        font-size: 0.95rem !important;
-    }
-    
-    #SideNavbar__generator i{
-        margin-right: 10px;
-        font-size: 1.2rem;
-    }
-    #SideNavbar__teamcode {
-        font-size: 0.8rem;
-        margin-top: 10px;
-        padding: 3px 10px;
-        width : 85%;
-    }
+@media screen and (max-width: 1024px) {
+  #SideNavbar__container {
+    width: 250px;
+  }
+  #SideNavbar__generator {
+    padding: 3px 10px;
+    width: 85%;
+  }
+
+  #SideNavbar__generator h3 {
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+  }
+
+  #SideNavbar__generator i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+  #SideNavbar__teamcode {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    padding: 3px 10px;
+    width: 85%;
+    margin-bottom: 1rem;
+  }
 }
 
-@media screen and (max-width:943px) {
-    #SideNavbar__container {
-        display: none;
-    }
+@media screen and (max-width: 943px) {
+  #SideNavbar__container {
+    display: none;
+  }
 }
 
-@media screen and (max-height : 658px) {
-    #SideNavbar__teamname {
-        margin-top: 7px;
-        font-size: 1.2rem;
-    }
-    #SideNavbar__teamcode {
-        font-size: 0.85rem;
-        margin-top: 8px;
-        font-weight: normal;
-        padding: 3px 10px;
-        height : 57px;
-    }
-    
-    #SideNavbar__generator {
-        margin-top: 8px;
-        padding: 3px 10px;
-        height : 57px;
-        cursor: pointer;
-        margin-top: 18px;
-        margin-bottom: 8px;
-    }
+@media screen and (max-height: 658px) {
+  #SideNavbar__teamname {
+    margin-top: 7px;
+    font-size: 1.2rem;
+  }
+  #SideNavbar__teamcode {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    font-weight: normal;
+    padding: 3px 10px;
+    height: 57px;
+  }
+
+  #SideNavbar__generator {
+    margin-top: 8px;
+    padding: 3px 10px;
+    height: 57px;
+    cursor: pointer;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
 }

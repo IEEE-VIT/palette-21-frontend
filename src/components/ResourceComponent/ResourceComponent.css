@@ -1,60 +1,62 @@
 #ResourceComponent__container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width : 47.5%;
-    height: 50%;
-    margin-bottom : 3.7%;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-right: 4%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* width: 47.5%; */
+  width: 46%;
+  height: 50%;
+  margin-bottom: 3.7%;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 4%;
 }
 #ResourceComponent__container.ResourceComponent__lessmargin {
-    margin-right: 0;
+  margin-right: 0;
 }
 #ResourceComponent__container img {
-    border-radius: 5px;
-    width : 100%;
-    height: 100%;
+  border-radius: 5px;
+  width: 100%;
+  /* margin: 0 0.5rem; */
+  height: 100%;
 }
 #ResourceComponent__container h3 {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1025px) {
+  #ResourceComponent__container h3 {
     position: absolute;
-    font-size: 1.1rem;
+    font-size: 24px;
     font-weight: 600;
+  }
 }
 
-@media screen and (max-width : 1025px) {
-    #ResourceComponent__container h3 {
-        position: absolute;
-        font-size: 1.1rem;
-        font-weight: 600;
-    }
+@media screen and (max-width: 943px) {
+  #ResourceComponent__container h3 {
+    font-size: 22px;
+  }
 }
 
-@media screen and (max-width : 943px) {
-    #ResourceComponent__container h3 {
-        font-size: 1rem;
-    }
+@media screen and (max-width: 561px) {
+  #ResourceComponent__container h3 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  #ResourceComponent__container {
+    width: 48%;
+    height: 100px;
+  }
 }
 
-@media screen and (max-width :561px) {
-    #ResourceComponent__container h3 {
-        font-size: 1.1rem;
-        font-weight: 600
-    }
-    #ResourceComponent__container {
-        width : 48%;
-        height: 100px;
-    }
-}
-
-@media screen and (max-width : 423px) {
-    #ResourceComponent__container {
-        width : 90%;
-        height: 130px;
-        margin-right : 0;
-    }
+@media screen and (max-width: 423px) {
+  #ResourceComponent__container {
+    width: 90%;
+    height: 130px;
+    margin-right: 0;
+  }
 }

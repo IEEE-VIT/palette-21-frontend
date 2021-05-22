@@ -1,34 +1,34 @@
 #SideNavbarPage__container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-weight: 500 !important;
-    font-size: 0.89rem !important;
-    margin-top: 13px;
-    padding: 3px 18px;
-    justify-content: flex-start;
-    width : 90%;
-    height : 60px;
-    cursor: pointer;
-    color:  #7A7A7A;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500 !important;
+  font-size: 0.89rem !important;
+  margin-top: 13px;
+  padding: 3px 18px;
+  justify-content: flex-start;
+  width: 90%;
+  height: 60px;
+  cursor: pointer;
+  color: #7a7a7a;
 }
 
 #SideNavbarPage__container h3 {
-    font-weight: 500 !important;
-    font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
 }
 
 #SideNavbarPage__container:hover {
-    background-color: #F2EFFD !important;
-    color: #563AE8 !important;
+  background-color: #f2effd !important;
+  color: #563ae8 !important;
 }
 
 #SideNavbarPage__container.dark:hover {
-    background-color: #191725 !important;
-    color: #563AE8 !important;
+  background-color: #191725 !important;
+  color: #563ae8 !important;
 }
 
 #SideNavbarPage__container i {
-    font-size: 1.15rem !important;
-    margin-right : 20px !important;
+  font-size: 1.15rem !important;
+  margin-right: 20px !important;
 }

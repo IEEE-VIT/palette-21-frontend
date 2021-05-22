@@ -57,41 +57,42 @@ export default function InvitationCollection({
         display: selectedComp == 1 ? "flex" : "none",
       }}
     >
-      {usersDets.map((k) => {
-        if (selectedInvitationComp == 0 && k.sentTo) {
-          return (
-            <Invitation
-              key={k.sentTo._id}
-              mode={mode}
-              name={k.sentTo.name}
-              imgUrl={k.sentTo.userImg}
-              skills={k.sentTo.skills}
-              tools={k.sentTo.tools}
-              inviteFunc={() => {}}
-              selectedInvitationComp={selectedInvitationComp}
-              status={k.status}
-              userId={k.sentTo._id}
-              teamId={k.teamId}
-            />
-          );
-        } else if (selectedInvitationComp == 1 && k.sentBy) {
-          return (
-            <Invitation
-              key={k.sentBy._id}
-              mode={mode}
-              name={k.sentBy.name}
-              imgUrl={k.sentBy.userImg}
-              skills={k.sentBy.skills}
-              tools={k.sentBy.tools}
-              status={k.status}
-              inviteFunc={() => {}}
-              selectedInvitationComp={selectedInvitationComp}
-              userId={k.sentBy._id}
-              teamId={k.teamId}
-            />
-          );
-        }
-      })}
+      {usersDets.length !== 0 &&
+        usersDets.map((k) => {
+          if (selectedInvitationComp == 0 && k.sentTo) {
+            return (
+              <Invitation
+                key={k.sentTo._id}
+                mode={mode}
+                name={k.sentTo.name}
+                imgUrl={k.sentTo.userImg}
+                skills={k.sentTo.skills}
+                tools={k.sentTo.tools}
+                inviteFunc={() => {}}
+                selectedInvitationComp={selectedInvitationComp}
+                status={k.status}
+                userId={k.sentTo._id}
+                teamId={k.teamId}
+              />
+            );
+          } else if (selectedInvitationComp == 1 && k.sentBy) {
+            return (
+              <Invitation
+                key={k.sentBy._id}
+                mode={mode}
+                name={k.sentBy.name}
+                imgUrl={k.sentBy.userImg}
+                skills={k.sentBy.skills}
+                tools={k.sentBy.tools}
+                status={k.status}
+                inviteFunc={() => {}}
+                selectedInvitationComp={selectedInvitationComp}
+                userId={k.sentBy._id}
+                teamId={k.teamId}
+              />
+            );
+          }
+        })}
     </div>
   );
 }

@@ -20,7 +20,7 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 #Invitation__skills {
@@ -29,7 +29,7 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .Invitation__skill {
   font-size: 0.9rem;

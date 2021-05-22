@@ -92,7 +92,10 @@ export default function TeamsSearchbar({
       <i
         className="fa fa-search"
         aria-hidden="true"
-        style={{ display: selectedComp == 2 ? "none" : "flex" }}
+        style={{
+          display: selectedComp == 2 ? "none" : "flex",
+          alignItems: "center",
+        }}
         onClick={() => {
           searchFunc();
         }}

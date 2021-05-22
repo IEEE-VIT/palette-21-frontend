@@ -21,7 +21,7 @@ export default function Dashboard() {
     "Team",
     "Reviews",
     "Guide",
-    "Help",
+    "Help and Support",
     "Problem Statement",
   ];
   useEffect(() => {

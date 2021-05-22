@@ -28,6 +28,7 @@ export default function SupportPage({ mode, selectedPage }) {
         <img src={despairimg} />
         <div id="SupportPage__helpinfo">
           <p
+            className="font_p"
             style={{
               color:
                 mode == "light"
@@ -45,9 +46,12 @@ export default function SupportPage({ mode, selectedPage }) {
                 window.open("http://palette-discord.ieeevit.org/", "_blank");
               }}
             >
-              <p>Open a ticket on discord</p>
+              <p className="font_p" style={{ marginBottom: "0" }}>
+                Open a ticket on discord
+              </p>
             </div>
             <p
+              className="font_p"
               style={{
                 color:
                   mode == "light"
@@ -55,6 +59,7 @@ export default function SupportPage({ mode, selectedPage }) {
                     : "rgba(255, 255, 255, 0.7)",
               }}
             >
+              <br />
               We will reach out to you as soon as possible
             </p>
           </div>
@@ -62,6 +67,7 @@ export default function SupportPage({ mode, selectedPage }) {
       </div>
       <div id="SupportPage__socialinfo">
         <p
+          className="font_p"
           style={{
             color:
               mode == "light"

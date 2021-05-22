@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Invitation.css";
 import PropTypes from "prop-types";
 import figma from "../../assets/figma.svg";
@@ -19,7 +19,7 @@ import {
   rejectInvite,
   acceptInvite,
 } from "../../utils/DashboardHelperFuncs";
-import { useEffect } from "react/cjs/react.development";
+
 export default function Invitation({
   mode,
   name,

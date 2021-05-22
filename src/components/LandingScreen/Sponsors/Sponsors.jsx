@@ -7,8 +7,9 @@ import github from "../../../assets/github.jpg";
 import rosenfeld from "../../../assets/rosenfeld.png";
 import sketch from "../../../assets/sketch.png";
 import streamyard from "../../../assets/streamyard.png";
-import icons8 from "../../../assets/icons8.png";
-import unbearable from "../../../assets/unbearable.jpg";
+import icons8 from "../../../assets/icons8.svg";
+import unbearable from "../../../assets/unbearable.svg";
+import CP from "../../../assets/CP.svg";
 
 import Fade from "react-reveal/Fade";
 
@@ -22,7 +23,7 @@ export default function Sponsors() {
             <img src={divami} className="Sponsors__smallerlogo" />
           </a>
           <a href="https://circleone.in/" target="_blank" rel="noreferrer">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQGubYND6EYkQA/company-logo_200_200/0/1519931645666?e=1629936000&v=beta&t=c7HbuIg5Puy1GBMUFPnLH3a7hhYduyE3HsQdHwQlIzk" />
+            <img src={CP} />
           </a>
           <a href="https://www.accioibis.com/" target="_blank" rel="noreferrer">
             <img src={acciolbis} />

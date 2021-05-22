@@ -193,15 +193,11 @@ export default function Invitation({
                   .then(() => {
                     var curMode = cookies.load("mode");
                     curMode == "light"
-                      ? toastDark(
-                          "Successfully Accepted the request! Reloading Page in 5 secs!"
-                        )
-                      : toastLight(
-                          "Successfully Accepted the request! Reloading Page in 5 secs!"
-                        );
+                      ? toastDark("Successfully Accepted the request!")
+                      : toastLight("Successfully Accepted the request!");
                     setTimeout(() => {
                       window.location.reload();
-                    }, 6000);
+                    }, 1000);
                   })
                   .catch(() => {
                     var curMode = cookies.load("mode");

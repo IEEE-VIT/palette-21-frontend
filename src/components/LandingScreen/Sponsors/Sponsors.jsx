@@ -7,6 +7,9 @@ import github from "../../../assets/github.jpg";
 import rosenfeld from "../../../assets/rosenfeld.png";
 import sketch from "../../../assets/sketch.png";
 import streamyard from "../../../assets/streamyard.png";
+import icons8 from "../../../assets/icons8.png";
+import unbearable from "../../../assets/unbearable.jpg";
+
 import Fade from "react-reveal/Fade";
 
 export default function Sponsors() {
@@ -15,30 +18,46 @@ export default function Sponsors() {
       <Fade bottom cascade duration={1000} delay={500}>
         <p id="Sponsors__heading">Meet our Sponsors</p>
         <div id="Sponsors__logos">
-          <a href="https://www.sketch.com/" target="_blank" rel="noreferrer">
-            <img src={sketch} />
+          <a href="https://www.divami.com/" target="_blank" rel="noreferrer">
+            <img src={divami} className="Sponsors__smallerlogo" />
+          </a>
+          <a href="https://circleone.in/" target="_blank" rel="noreferrer">
+            <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQGubYND6EYkQA/company-logo_200_200/0/1519931645666?e=1629936000&v=beta&t=c7HbuIg5Puy1GBMUFPnLH3a7hhYduyE3HsQdHwQlIzk" />
           </a>
           <a href="https://www.accioibis.com/" target="_blank" rel="noreferrer">
             <img src={acciolbis} />
           </a>
+          <a
+            href="https://instagram.com/unbearable.in/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={unbearable} />
+          </a>
+          <a href="https://www.github.com/" target="_blank" rel="noreferrer">
+            <img src={github} />
+          </a>
+
+          <a href="https://icons8.com/" target="_blank" rel="noreferrer">
+            <img src={icons8} />
+          </a>
+
+          <a href="https://www.sketch.com/" target="_blank" rel="noreferrer">
+            <img src={sketch} />
+          </a>
           <a href="https://www.axure.com/" target="_blank" rel="noreferrer">
             <img src={axure} className="Sponsors__smallerlogo" />
           </a>
+          <a href="https://streamyard.com/" target="_blank" rel="noreferrer">
+            <img src={streamyard} />
+          </a>
+
           <a
             href="https://rosenfeldmedia.com/"
             target="_blank"
             rel="noreferrer"
           >
             <img src={rosenfeld} />
-          </a>
-          <a href="https://www.divami.com/" target="_blank" rel="noreferrer">
-            <img src={divami} className="Sponsors__smallerlogo" />
-          </a>
-          <a href="https://www.github.com/" target="_blank" rel="noreferrer">
-            <img src={github} />
-          </a>
-          <a href="https://streamyard.com/" target="_blank" rel="noreferrer">
-            <img src={streamyard} />
           </a>
         </div>
       </Fade>

@@ -1,169 +1,171 @@
 #SelfTeamPage__container {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width: 800px;
-    border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  border-radius: 6px;
 }
 
-#SelfTeamPage__container input{
-    font-size: 1.65rem;
-    font-weight: 500;
-    margin-bottom: 0;
-    width: max-content;
-    text-align: center;
-    margin-top: 10px;
+#SelfTeamPage__container input {
+  font-size: 1.65rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  width: max-content;
+  text-align: center;
+  margin-top: 10px;
 }
 
 #SelfTeamPage__editbtn {
-    background: rgba(55, 26, 201, 0.16);
-    padding : 10px 10px;
-    margin : 0;
-    margin-top : 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-bottom: 20px;
+  background: rgba(55, 26, 201, 0.16);
+  padding: 10px 10px;
+  margin: 0;
+  margin-top: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 #SelfTeamPage__editbtn:hover {
-     box-shadow: 0 0 5px 1px rgba(86, 58, 232, 0.3);
+  box-shadow: 0 0 5px 1px rgba(86, 58, 232, 0.3);
 }
-#SelfTeamPage__editbtn h4{
-    margin: 0;
-    font-size: 0.96rem;
-    font-weight: 500;
-    color: rgba(86, 58, 232, 1);
+#SelfTeamPage__editbtn h4 {
+  margin: 0;
+  font-size: 0.96rem;
+  font-weight: 500;
+  color: rgba(86, 58, 232, 1);
 }
 #SelfTeamPage__userdetails {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin : 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
 }
 
 #SelfTeamPage__userdetail {
-    width :50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 7px;
-    padding-left: 7px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 7px;
+  padding-left: 7px;
 }
 #SelfTeamPage__userdetails.doubleteam #SelfTeamPage__userdetail:nth-child(1) {
-    border-right: 2px solid rgba(61, 61, 61, 1);
+  border-right: 2px solid rgba(61, 61, 61, 1);
 }
 
 #SelfTeamPage__userinfo {
-    width :100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #SelfTeamPage__userinfo img {
-    width : 74px;
-    height: 74px;
-    border-radius: 50%;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
 }
 #SelfTeamPage__userinfo h4 {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin-bottom: 0;
-    margin-top: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 10px;
 }
 
-#SelfTeamPage__userinfo h5{
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 5px;
-    font-weight: lighter;
-    color: rgba(122, 122, 122, 1);
+#SelfTeamPage__userinfo h5 {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: lighter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.25px;
+  color: #7a7a7a;
 }
 
 #SelfTeamPage__skills {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10px;
 }
 .SelfTeamPage__skill {
-    font-size: 0.9rem;
-    font-weight: 500;
-    padding : 6px 9px;
-    margin : 3px 3px;
-    border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 9px;
+  margin: 3px 3px;
+  border-radius: 5px;
 }
 
 #SelfTeamPage__discord {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 10px;
-    background: rgba(55, 26, 201, 0.16);
-    padding : 15px 15px;
-    border-radius: 5px;
-    width : 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  background: rgba(55, 26, 201, 0.16);
+  padding: 15px 15px;
+  border-radius: 5px;
+  width: 80%;
 }
 
 #SelfTeamPage__discord h4 {
-    font-size: 0.94rem;
-    font-weight: normal ;
-    margin : 0;
+  font-size: 0.94rem;
+  font-weight: normal;
+  margin: 0;
 }
 
 #SelfTeamPage__discordbtn {
-    background-color: rgba(86, 58, 232, 1);
-    color : white;
-    padding : 10px 12px;
-    border-radius: 7px;
-    font-size: 0.90rem;
-    font-weight: normal;
-    cursor: pointer;
+  background-color: rgba(86, 58, 232, 1);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  font-weight: normal;
+  cursor: pointer;
 }
 
 #SelfTeamPage__discordbtn:hover {
-    box-shadow : 0px 0px 3px 1px rgba(86, 58, 232, 0.65);
+  box-shadow: 0px 0px 3px 1px rgba(86, 58, 232, 0.65);
 }
 
 #SelfTeamPage__leave {
-    color : rgba(255, 45, 82, 1);
-    font-size: 0.89rem;
-    font-weight: lighter;
-    cursor: pointer;
-
+  color: rgba(255, 45, 82, 1);
+  font-size: 0.89rem;
+  font-weight: lighter;
+  cursor: pointer;
 }
 
-@media screen and (max-width : 1175px){
-    #SelfTeamPage__container {
-        width: 500px;
-        height: max-content;
-    }
+@media screen and (max-width: 1175px) {
+  #SelfTeamPage__container {
+    width: 500px;
+    height: max-content;
+  }
 
-    #SelfTeamPage__userdetails.doubleteam #SelfTeamPage__userdetail:nth-child(1) {
-        border-right: 0px;
-    }
+  #SelfTeamPage__userdetails.doubleteam #SelfTeamPage__userdetail:nth-child(1) {
+    border-right: 0px;
+  }
 
-    #SelfTeamPage__userdetails.doubleteam #SelfTeamPage__userdetail:nth-child(2) {
-        margin-top : 28px;
-    } 
+  #SelfTeamPage__userdetails.doubleteam #SelfTeamPage__userdetail:nth-child(2) {
+    margin-top: 28px;
+  }
 
-    #SelfTeamPage__userdetails {
-        flex-direction: column;
-        width : 100%;
-    }
-    #SelfTeamPage__userdetail {
-        width : 100%;
-    }
-    
+  #SelfTeamPage__userdetails {
+    flex-direction: column;
+    width: 100%;
+  }
+  #SelfTeamPage__userdetail {
+    width: 100%;
+  }
 }
 
-@media screen and (max-width : 854px) {
-    #SelfTeamPage__container {
-         width: 80%;
-    }
-   
+@media screen and (max-width: 854px) {
+  #SelfTeamPage__container {
+    width: 80%;
+  }
 }

@@ -1,61 +1,84 @@
 #TeamDetail__container {
-    display: flex;
-    width : 380px;
-    height : 300px;
-    padding : 8px 10px 10px 15px;
-    margin-left : 10px;
-    margin-right: 10px;
-    margin-bottom: 15px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+  display: flex;
+  width: 380px;
+  height: 300px;
+  padding: 8px 10px 10px 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
 }
+
+#TeamDetail__container h3 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  padding-bottom: 2.5rem;
+  letter-spacing: 0.15px;
+}
+
 .TeamDetail__userimg {
-    margin-right: 10px;
+  margin-right: 10px;
 }
-.TeamDetail__userimg img{
-    width : 45px;
-    height: 45px;
-    border-radius : 50%;
+.TeamDetail__userimg img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
 }
 
 .TeamDetail__userdetail {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: flex-start;
 }
 .TeamDetail__rightdiv {
-    display : flex;
-    flex-direction: column;
-    align-items: flex-start
-}
-#TeamDetail__name h4 {
-    margin: 0;
-    margin-left : 5px;
-    margin-bottom: 7px;
-    font-weight: 500;
-}
-#TeamDetail__skillscollection {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 10px;
-}
-.TeamDetail__skill {
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding : 6px 9px;
-    margin : 3px 3px;
-    border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-@media screen and (max-width : 1184px) {
-    #TeamDetail__container {
-        height : max-content;
-    }
+#TeamDetail__name h4 {
+  margin: 0;
+  margin-left: 5px;
+  margin-bottom: 7px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  letter-spacing: 0.15px;
+
+  color: #ffffff;
+}
+
+#TeamDetail__skillscollection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.TeamDetail__skill {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 9px;
+  margin: 3px 3px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1184px) {
+  #TeamDetail__container {
+    height: max-content;
+  }
 }

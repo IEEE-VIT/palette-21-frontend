@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./SideNavbar.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import SideNavbarPage from "../SideNavbarPage/SideNavbarPage";
+import ProblemStatementLock from "../../assets/problemLocked.svg";
 
 export default function SideNavbar(props) {
   const [copied, setCopied] = useState(false);
@@ -51,7 +52,11 @@ export default function SideNavbar(props) {
         </div>
       </CopyToClipboard>
       <div id="SideNavbar__generator" onClick={() => props.setSelectedPage(5)}>
-        <i className="fas fa-palette"></i>
+        <img
+          style={{ height: "25px", width: "auto", marginRight: "10px" }}
+          src={ProblemStatementLock}
+          alt=""
+        />
         <div className="SideNavbar__generator_text">Problem Generator</div>
       </div>
       <SideNavbarPage

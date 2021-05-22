@@ -18,7 +18,7 @@ export default function Dashboard() {
   const [selectedPage, setSelectedPage] = useState(0);
   const pageTitles = [
     "Palette",
-    "Team",
+    "Teams",
     "Reviews and Rounds",
     "Guide",
     "Help and Support",

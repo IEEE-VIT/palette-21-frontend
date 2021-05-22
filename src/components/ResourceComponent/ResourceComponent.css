@@ -26,6 +26,12 @@
   position: absolute;
   font-size: 24px;
   font-weight: 600;
+  font-family: Inter;
+  font-style: normal;
+  line-height: 27px;
+  /* or 113% */
+
+  text-align: center;
 }
 
 @media screen and (max-width: 1025px) {

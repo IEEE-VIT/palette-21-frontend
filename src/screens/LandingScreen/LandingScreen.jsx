@@ -19,6 +19,7 @@ import Footer from "../../components/LandingScreen/Footer/Footer";
 import { useCookies } from "react-cookie";
 import { useTheme } from "@material-ui/core";
 import PropTypes from "prop-types";
+import api from "../../api/regPortal";
 
 const LandingScreen = (props) => {
   const [cookies] = useCookies(["token"]);
@@ -29,7 +30,25 @@ const LandingScreen = (props) => {
       props.toggleTheme();
     }
     if (cookies.token !== undefined) {
-      history.push("/dashboard");
+      const regPortal = new api(
+        cookies.token,
+        // eslint-disable-next-line no-undef
+        process.env.REACT_APP_BACKEND_API
+      );
+      regPortal
+        .didFillForm()
+        .then((result) => {
+          console.log(result.data);
+          const apiData = result.data;
+          if (!apiData.data.round0 || !apiData.data.teamFormed) {
+            history.push("/userForm");
+          } else {
+            history.push("/dashboard");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   }, []);
   return (

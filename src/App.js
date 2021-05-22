@@ -4,7 +4,6 @@ import LandingScreen from "./screens/LandingScreen/LandingScreen";
 import UserFormScreen from "./screens/UserFormScreen/UserFormScreen";
 import SuccesfulAuth from "./screens/successfulAuth";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import Dashboard from "./screens/Dashboard/Dashboard";
 import PageNotFound from "./screens/PageNotFound/PageNotFound";
 import ProtectedRoute from "./utils/protectedRoute";
@@ -80,26 +79,34 @@ const AppRouter = () => {
     setTheme(newPaletteType);
   };
   return (
-    <BrowserRouter>
-      <Switch>
-        <ThemeProvider theme={theme}>
-          <Route
-            exact
-            path="/"
-            component={() => <LandingScreen toggleTheme={toggleDarkTheme} />}
-          />
-          <CssBaseline />
-          <Route
-            exact
-            path="/userForm"
-            component={() => <UserFormScreen toggleTheme={toggleDarkTheme} />}
-          />
-          <Route exact path="/successfulAuth" component={SuccesfulAuth} />
-          <Route exact path="/dashboard" component={Dashboard} />
-        </ThemeProvider>
-        <Route exact component={PageNotFound} />
-      </Switch>
-    </BrowserRouter>
+    <div>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              component={() => <LandingScreen toggleTheme={toggleDarkTheme} />}
+            />
+            {/* <CssBaseline /> */}
+            <Route exact path="/successfulAuth" component={SuccesfulAuth} />
+            <ProtectedRoute
+              exact
+              path="/userForm"
+              component={() => <UserFormScreen toggleTheme={toggleDarkTheme} />}
+              redirect="/"
+            />
+            <ProtectedRoute
+              exact
+              path="/dashboard"
+              component={Dashboard}
+              redirect="/"
+            />
+            <Route page="" component={PageNotFound} />
+          </Switch>
+        </BrowserRouter>
+      </ThemeProvider>
+    </div>
   );
 };
 

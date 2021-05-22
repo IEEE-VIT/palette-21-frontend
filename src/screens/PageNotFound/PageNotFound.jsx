@@ -3,9 +3,11 @@ import "./PageNotFound.css";
 import cookie from "react-cookies";
 import nfimg from "../../assets/404image.png";
 import { Button, Typography } from "@material-ui/core";
+import { useHistory } from "react-router";
 
 export default function PageNotFound() {
   const [mode, setMode] = useState("dark");
+  const history = useHistory();
   useEffect(() => {
     var mode = cookie.load("mode");
     //console.log("mode : " + mode);
@@ -40,7 +42,7 @@ export default function PageNotFound() {
         color="primary"
         variant="contained"
         onClick={() => {
-          window.location.assign("/");
+          history.push("/");
         }}
       >
         Go back to home page

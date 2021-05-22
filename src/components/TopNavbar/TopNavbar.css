@@ -22,11 +22,6 @@
   font-weight: 600;
   font-size: 23px;
   line-height: 28px;
-  /* identical to box height, or 122% */
-
-  /* White */
-
-  color: #ffffff;
 }
 
 #TopNavbar__profile {
@@ -48,7 +43,7 @@
   margin-bottom: 0;
   text-align: center;
   letter-spacing: 0.15px;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 #TopNavbar__profile img {

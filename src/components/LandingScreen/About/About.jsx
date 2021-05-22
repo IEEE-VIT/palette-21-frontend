@@ -1,6 +1,6 @@
 import React from "react";
 //import Typography from "@material-ui/core/Typography";
-import Palette from "../../../assets/palette_logo.png";
+import Palette from "../../../assets/paletteGif.gif";
 import dots from "../../../assets/dots-bkgd.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col } from "react-bootstrap";

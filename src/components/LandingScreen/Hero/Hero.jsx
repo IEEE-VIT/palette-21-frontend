@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import HeroP from "../../../assets/hero-p.svg";
 import HeroS from "../../../assets/hero-star.svg";
 import Event from "../../../assets/Hero-leftimg.svg";
-import Reg from "../../../assets/Hero-rightimg.svg";
-import RegMobile from "../../../assets/Hero-rightimg-phone.svg";
+import Reg from "../../../assets/regClosing27.svg";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core";
@@ -31,7 +30,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function Hero() {
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [setWindowWidth] = useState(0);
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWindowWidth(window.innerWidth);
@@ -61,11 +60,7 @@ export default function Hero() {
               <img src={Event} alt="" id="event-date"></img>
             </div>
             <div className="inline-block block-r">
-              <img
-                src={windowWidth >= 991 ? Reg : RegMobile}
-                alt=""
-                id="reg-date"
-              ></img>
+              <img src={Reg} alt="" id="reg-date"></img>
             </div>
           </div>
           <Button

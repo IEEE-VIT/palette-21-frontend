@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { createRef, useState, useEffect } from "react";
 import "./IndDetails.css";
 import PropTypes from "prop-types";
 import figma from "../../assets/figma.svg";
@@ -15,6 +15,7 @@ import Illustrator from "../../assets/adobe-illustrator.svg";
 import { sendInvite } from "../../utils/DashboardHelperFuncs";
 import cookies from "react-cookies";
 import { toastDark, toastLight } from "../../utils/Toast";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function IndDetails({
   mode,
@@ -27,6 +28,8 @@ export default function IndDetails({
 }) {
   //console.log(mode, name, imgUrl, skills, tools, inviteFunc);
   const [invited, setInvited] = useState(false);
+  const recapthaRef = createRef();
+
   useEffect(() => {
     setInvited(invitedBool);
   }, [invitedBool]);
@@ -103,10 +106,11 @@ export default function IndDetails({
       </div>
       <div
         id="IndDetails__btn"
-        onClick={() => {
+        onClick={async () => {
           try {
-            sendInvite(userId)
-              .then(() => {
+            const recaptchaToken = await recapthaRef.current.executeAsync();
+            sendInvite(userId, recaptchaToken)
+              .then(async () => {
                 setInvited(true);
               })
               .catch((err) => {
@@ -128,6 +132,13 @@ export default function IndDetails({
       >
         <h4>{invited ? "INVITE SENT" : "INVITE"}</h4>
       </div>
+      <ReCAPTCHA
+        ref={recapthaRef}
+        size="invisible"
+        sitekey={process.env.REACT_APP_SITE_KEY}
+        //lmao 4
+        theme="dark"
+      />
     </div>
   );
 }

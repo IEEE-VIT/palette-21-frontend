@@ -150,8 +150,8 @@ export default function Dashboard() {
                 lineHeight: "20px",
               }}
             >
-              Devs couldn’t complete what I designed, so please switch over to
-              desktop for better experience 🤗
+              Palette is too big to come under 1024 pixels. Please switch to the
+              desktop for a better experience. 🤗
             </div>
           </div>
           <div

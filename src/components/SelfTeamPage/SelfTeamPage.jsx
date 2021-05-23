@@ -147,11 +147,11 @@ export default function SelfTeamPage({
               .then(() => {
                 var curMode = cookies.load("mode");
                 curMode == "light"
-                  ? toastDark("Team left successfully! Reloading in 5 secs!")
-                  : toastLight("Team left successfully!  Reloading in 5 secs!");
+                  ? toastDark("Team left successfully! Reloading in 2 secs!")
+                  : toastLight("Team left successfully!  Reloading in 2 secs!");
                 setTimeout(() => {
                   window.location.reload();
-                }, 6000);
+                }, 2000);
               })
               .catch(() => {
                 var curMode = cookies.load("mode");

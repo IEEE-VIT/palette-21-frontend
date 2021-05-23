@@ -1,5 +1,36 @@
 #ProblemStatement__container {
-    display: flex;
-    color : white;
-    margin-top: 40px;
+  display: flex;
+  color: white;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.non-drag-img {
+  /* user-drag: none; */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+@media screen and (max-width: 1220px) {
+  .non-drag-img {
+    width: 900px !important;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .non-drag-img {
+    width: 800px !important;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .non-drag-img {
+    width: 700px !important;
+    height: auto;
+  }
 }

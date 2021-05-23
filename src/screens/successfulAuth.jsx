@@ -2,6 +2,8 @@
 import React, { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useHistory } from "react-router-dom";
+import LoadingScreen from "../components/LandingScreen/LoadingScreen/LoadingScreen";
+
 const axios = require("axios");
 
 export default function successfulAuth() {
@@ -41,5 +43,5 @@ export default function successfulAuth() {
         history.push("/");
       });
   };
-  return <div>Logging you in.....</div>;
+  return <LoadingScreen />;
 }

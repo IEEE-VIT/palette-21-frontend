@@ -32,6 +32,10 @@
   margin-bottom: 0.5rem;
 }
 .IndDetails__skill {
+  white-space: nowrap;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 0.9rem;
   font-weight: 500;
   padding: 6px 9px;

@@ -12,12 +12,15 @@ import {
   CircularProgress,
 } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
-import React, { useState } from "react";
+import React, { createRef, useState } from "react";
 import { useCookies } from "react-cookie";
 // import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import api from "../../../api/regPortal";
 import PropTypes from "prop-types";
+import { toastDark, toastLight } from "../../../utils/Toast";
+import ToastContainer from "../../../components/Toast/Toast";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const AntSwitch = withStyles((theme) => ({
   root: {
@@ -64,7 +67,7 @@ export default function CreateTeamForm(props) {
       paddingRight: "25px",
     },
   });
-  const [cookies] = useCookies(["token"]);
+  const [cookies] = useCookies(["token", "mode"]);
   const regPortalApi = new api(
     cookies.token,
     // eslint-disable-next-line no-undef
@@ -80,6 +83,9 @@ export default function CreateTeamForm(props) {
   const [isTeamCodeValid, setTeamCodeValid] = useState(false);
   const [codeLoading, setCodeLoading] = useState(false);
   const [createLoading, setCreateLoading] = useState(false);
+
+  const recapthaRef = createRef();
+  ///lmao 1
 
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
@@ -109,17 +115,30 @@ export default function CreateTeamForm(props) {
       needTeam: state.checkedA,
     };
     console.log(data);
-    setCreateLoading(true);
-    setTeamCodeValid(false);
-    // setTimeout(() => {
-    //   setCreateLoading(false);
-    // }, 2000);
+    if (teamName.length >= 15) {
+      const curMode = theme.palette.type;
+      curMode !== "light"
+        ? toastDark("Teamname should be less than 15 characters.")
+        : toastLight("Teamname should be less than 15 characters.");
+      setCreateLoading(false);
+      setTeamCodeValid(false);
+    } else {
+      setCreateLoading(true);
+      setTeamCodeValid(false);
+    }
     createTeamApi(data);
   };
 
-  const handleJoinTeam = () => {
+  const handleJoinTeam = async () => {
+    //lmao 2
+    const token = await recapthaRef.current.executeAsync();
+    // await getRecap(token);
+    console.log("Vdfvd", token);
+
     const data = {
       teamCode,
+      token,
+      //lma0 3
     };
     console.log(data);
     setCodeLoading(true);
@@ -337,6 +356,14 @@ export default function CreateTeamForm(props) {
           </Paper>
         </Box>
       </Grid>
+      <ToastContainer />{" "}
+      <ReCAPTCHA
+        ref={recapthaRef}
+        size="invisible"
+        sitekey={process.env.REACT_APP_SITE_KEY}
+        //lmao 4
+        theme="dark"
+      />
     </Grid>
   );
 }

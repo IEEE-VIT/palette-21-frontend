@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { createRef, useState, useEffect } from "react";
 import "./Invitation.css";
 import PropTypes from "prop-types";
 import figma from "../../assets/figma.svg";
@@ -19,6 +19,7 @@ import {
   rejectInvite,
   acceptInvite,
 } from "../../utils/DashboardHelperFuncs";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Invitation({
   mode,
@@ -31,6 +32,8 @@ export default function Invitation({
   userId,
   teamId,
 }) {
+  const recapthaRef = createRef();
+
   //console.log(status, status == "Pending");
   const [cancelled, setCancelled] = useState(false);
   const [rejected, setRejected] = useState(false);
@@ -137,10 +140,13 @@ export default function Invitation({
           </div>
           <div
             id="Invitation__btn"
-            onClick={() => {
+            onClick={async () => {
               if (!cancelled) {
                 try {
-                  cancelInvite(userId)
+                  const recaptchaToken =
+                    await recapthaRef.current.executeAsync();
+
+                  cancelInvite(userId, recaptchaToken)
                     .then(() => {
                       setCancelled(true);
                     })
@@ -236,6 +242,13 @@ export default function Invitation({
           </div>
         </div>
       )}
+      <ReCAPTCHA
+        ref={recapthaRef}
+        size="invisible"
+        sitekey={process.env.REACT_APP_SITE_KEY}
+        //lmao 4
+        theme="dark"
+      />
     </div>
   );
 }

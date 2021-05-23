@@ -45,6 +45,9 @@ const AppRouter = () => {
   });
 
   const lightTheme = createMuiTheme({
+    typography: {
+      fontFamily: ["Inter"].join(","),
+    },
     palette: {
       type: "light",
       background: {

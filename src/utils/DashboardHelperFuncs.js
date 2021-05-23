@@ -161,7 +161,7 @@ export const searchTeams = (pageNo, searchQuery = "") => {
   });
 };
 
-export const sendInvite = (userId) => {
+export const sendInvite = async (userId, recaptchaToken) => {
   var token = cookie.load("token");
   const config = {
     headers: {
@@ -175,6 +175,7 @@ export const sendInvite = (userId) => {
         "/v1/invites/send",
         {
           receiversId: userId,
+          token: recaptchaToken,
         },
         config
       )
@@ -236,7 +237,7 @@ export const recievedInvites = () => {
   });
 };
 
-export const cancelInvite = (userId) => {
+export const cancelInvite = (userId, recaptchaToken) => {
   var token = cookie.load("token");
   const config = {
     headers: {
@@ -250,6 +251,7 @@ export const cancelInvite = (userId) => {
         "/v1/invites/cancel",
         {
           receiversId: userId,
+          token: recaptchaToken,
         },
         config
       )

@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useHistory } from "react-router-dom";
 import LoadingScreen from "../components/LandingScreen/LoadingScreen/LoadingScreen";
-
+import api from "../api/regPortal";
 const axios = require("axios");
 
 export default function successfulAuth() {
@@ -21,7 +21,7 @@ export default function successfulAuth() {
     } else {
       console.log("Found Token lmao", googleAuth);
       setCookies("token", googleAuth);
-      history.push("/userForm");
+      redirectChecker(googleAuth);
     }
   }, []);
 
@@ -36,10 +36,30 @@ export default function successfulAuth() {
       .then((result) => {
         console.log("Figma Token", result.data.data.token);
         setCookies("token", result.data.data.token);
-        history.push("/userForm");
+        redirectChecker(result.data.data.token);
       })
       .catch((err) => {
         console.log("Figma auth error", err);
+        history.push("/");
+      });
+  };
+
+  const redirectChecker = (token) => {
+    const regPortal = new api(token, process.env.REACT_APP_BACKEND_API);
+    regPortal
+      .didFillForm()
+      .then((result) => {
+        const apiData = result.data;
+        if (!apiData.data.round0 || !apiData.data.teamFormed) {
+          history.push("/userForm");
+        } else {
+          history.push("/dashboard");
+        }
+        localStorage.setItem("userImage", apiData.data.userImg);
+        localStorage.setItem("userName", apiData.data.name);
+      })
+      .catch((err) => {
+        console.log(err);
         history.push("/");
       });
   };

@@ -14,6 +14,7 @@ import ae from "../../assets/adobe-after-effects.svg";
 import cookies from "react-cookies";
 import Illustrator from "../../assets/adobe-illustrator.svg";
 import { toastDark, toastLight } from "../../utils/Toast";
+import { CircularProgress } from "@material-ui/core";
 import {
   cancelInvite,
   rejectInvite,
@@ -38,6 +39,9 @@ export default function Invitation({
   const [cancelled, setCancelled] = useState(false);
   const [rejected, setRejected] = useState(false);
   const [accepted, setAccepted] = useState(false);
+  const [cancelling, setCancelling] = useState(false);
+  const [accepting, setAccepting] = useState(false);
+  const [rejecting, setRejecting] = useState(false);
   useEffect(() => {
     if (status.toLowerCase() == "rejected") {
       setRejected(true);
@@ -138,10 +142,19 @@ export default function Invitation({
               {status.charAt(0).toUpperCase() + status.slice(1)}
             </h4>
           </div>
+          <CircularProgress
+            style={{
+              display: cancelling ? "flex" : "none",
+              width: "27px",
+              height: "27px",
+              color: "red",
+            }}
+          />
           <div
             id="Invitation__btn"
             onClick={async () => {
               if (!cancelled) {
+                setCancelling(true);
                 try {
                   const recaptchaToken =
                     await recapthaRef.current.executeAsync();
@@ -149,8 +162,10 @@ export default function Invitation({
                   cancelInvite(userId, recaptchaToken)
                     .then(() => {
                       setCancelled(true);
+                      setCancelling(false);
                     })
                     .catch(() => {
+                      setCancelling(false);
                       var curMode = cookies.load("mode");
                       curMode == "light"
                         ? toastDark("Something Went Wrong! Please try again!")
@@ -167,11 +182,12 @@ export default function Invitation({
                 : "Invitation__invited"
             }
             style={{
-              display:
-                status.toLowerCase() == "rejected" ||
-                status.toLowerCase() == "accepted"
-                  ? "none"
-                  : "flex",
+              display: cancelling
+                ? "none"
+                : status.toLowerCase() == "rejected" ||
+                  status.toLowerCase() == "accepted"
+                ? "none"
+                : "flex",
             }}
           >
             <h4>{!cancelled ? "CANCEL INVITE" : "CANCELLED"}</h4>
@@ -190,13 +206,30 @@ export default function Invitation({
         >
           <h4 style={{ display: !rejected ? "none" : "flex" }}>Rejected</h4>
           <h4 style={{ display: !accepted ? "none" : "flex" }}>Accepted</h4>
+          <CircularProgress
+            style={{
+              display: accepting || rejecting ? "flex" : "none",
+              width: "27px",
+              height: "27px",
+              color: rejecting ? "red" : "blue",
+            }}
+          />
           <div
             id="Invitation__receivedaccept"
-            style={{ display: rejected || accepted ? "none" : "flex" }}
+            style={{
+              display:
+                rejected || accepted
+                  ? "none"
+                  : accepting || rejecting
+                  ? "none"
+                  : "flex",
+            }}
             onClick={() => {
               try {
+                setAccepting(true);
                 acceptInvite(userId, teamId)
                   .then(() => {
+                    setAccepting(false);
                     var curMode = cookies.load("mode");
                     curMode == "light"
                       ? toastDark("Successfully Accepted the request!")
@@ -206,6 +239,7 @@ export default function Invitation({
                     }, 1000);
                   })
                   .catch(() => {
+                    setAccepting(false);
                     var curMode = cookies.load("mode");
                     curMode == "light"
                       ? toastDark("Something Went Wrong! Please try again!")
@@ -220,14 +254,24 @@ export default function Invitation({
           </div>
           <div
             id="Invitation__receivedreject"
-            style={{ display: rejected || accepted ? "none" : "flex" }}
+            style={{
+              display:
+                rejected || accepted
+                  ? "none"
+                  : accepting || rejecting
+                  ? "none"
+                  : "flex",
+            }}
             onClick={() => {
               try {
+                setRejecting(true);
                 rejectInvite(teamId)
                   .then(() => {
+                    setRejecting(false);
                     setRejected(true);
                   })
                   .catch(() => {
+                    setRejecting(false);
                     var curMode = cookies.load("mode");
                     curMode == "light"
                       ? toastDark("Something Went Wrong! Please try again!")

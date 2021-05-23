@@ -7,6 +7,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { editTeamName, leaveTeam } from "../../utils/DashboardHelperFuncs";
 import { toastDark, toastLight } from "../../utils/Toast";
 import { joinTeam } from "../../utils/DashboardHelperFuncs";
+import { CircularProgress } from "@material-ui/core";
 
 export default function SelfTeamPage({
   mode,
@@ -21,6 +22,8 @@ export default function SelfTeamPage({
   const [curTeamName, setCurTeamName] = useState("");
   const [joinTeamCode, setJoinTeamCode] = useState("");
   const [copied, setCopied] = useState(false);
+  const [joining, setJoining] = useState(false);
+  const [leaving, setLeaving] = useState(false);
   useEffect(() => {
     setCurTeamName(teamName);
   }, [teamName]);
@@ -125,6 +128,7 @@ export default function SelfTeamPage({
             </div>
           </div>
         ))}
+
         <div
           id="SelfTeamPage__jointeam"
           style={{ display: teamUsers.length == 1 ? "flex" : "none" }}
@@ -164,10 +168,20 @@ export default function SelfTeamPage({
                 }}
               />
             </div>
+            <CircularProgress
+              style={{
+                display: joining ? "flex" : "none",
+                width: "30px",
+                height: "30px",
+                marginLeft: "35px",
+              }}
+            />
             <div
               id="SelfTeamPage__jointeambtn"
+              style={{ display: joining ? "none" : "flex" }}
               onClick={async () => {
                 try {
+                  setJoining(true);
                   const recaptchaToken =
                     await recapthaRef.current.executeAsync();
                   joinTeam(joinTeamCode.toUpperCase(), recaptchaToken)
@@ -183,6 +197,7 @@ export default function SelfTeamPage({
                       window.location.reload();
                     })
                     .catch((err) => {
+                      setJoining(false);
                       var curMode = cookies.load("mode");
                       curMode == "light" ? toastDark(err) : toastLight(err);
                     });
@@ -243,10 +258,22 @@ export default function SelfTeamPage({
           <h4>Click Here</h4>
         </div>
       </div>
+      <CircularProgress
+        style={{
+          display: leaving ? "flex" : "none",
+          width: "20px",
+          height: "20px",
+          color: "red",
+          marginTop: "18px",
+          marginBottom: "18px",
+        }}
+      />
       <h4
         id="SelfTeamPage__leave"
+        style={{ display: leaving ? "none" : "flex" }}
         onClick={() => {
           try {
+            setLeaving(true);
             leaveTeam()
               .then(() => {
                 var curMode = cookies.load("mode");
@@ -258,6 +285,7 @@ export default function SelfTeamPage({
                 }, 2000);
               })
               .catch(() => {
+                setLeaving(false);
                 var curMode = cookies.load("mode");
                 curMode == "light"
                   ? toastDark(

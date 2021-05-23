@@ -16,6 +16,7 @@ import { sendInvite } from "../../utils/DashboardHelperFuncs";
 import cookies from "react-cookies";
 import { toastDark, toastLight } from "../../utils/Toast";
 import ReCAPTCHA from "react-google-recaptcha";
+import { CircularProgress } from "@material-ui/core";
 
 export default function IndDetails({
   mode,
@@ -28,6 +29,7 @@ export default function IndDetails({
 }) {
   //console.log(mode, name, imgUrl, skills, tools, inviteFunc);
   const [invited, setInvited] = useState(false);
+  const [inviting, setInviting] = useState(false);
   const recapthaRef = createRef();
 
   useEffect(() => {
@@ -104,16 +106,29 @@ export default function IndDetails({
           <img key={index} src={retImgUrl(tool)} />
         ))}
       </div>
+      <CircularProgress
+        style={{
+          display: inviting ? "flex" : "none",
+          width: "30px",
+          height: "30px",
+          position: "absolute",
+          bottom: "20px",
+        }}
+      />
       <div
         id="IndDetails__btn"
+        style={{ display: inviting ? "none" : "flex" }}
         onClick={async () => {
           try {
+            setInviting(true);
             const recaptchaToken = await recapthaRef.current.executeAsync();
             sendInvite(userId, recaptchaToken)
               .then(async () => {
                 setInvited(true);
+                setInviting(false);
               })
               .catch((err) => {
+                setInviting(false);
                 var curMode = cookies.load("mode");
                 //console.log(curMode);
                 curMode == "light"

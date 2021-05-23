@@ -12,7 +12,7 @@ import {
   CircularProgress,
 } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
-import React, { useState } from "react";
+import React, { createRef, useState } from "react";
 import { useCookies } from "react-cookie";
 // import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
@@ -20,6 +20,7 @@ import api from "../../../api/regPortal";
 import PropTypes from "prop-types";
 import { toastDark, toastLight } from "../../../utils/Toast";
 import ToastContainer from "../../../components/Toast/Toast";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const AntSwitch = withStyles((theme) => ({
   root: {
@@ -83,6 +84,15 @@ export default function CreateTeamForm(props) {
   const [codeLoading, setCodeLoading] = useState(false);
   const [createLoading, setCreateLoading] = useState(false);
 
+  const recapthaRef = createRef();
+  const [recapthaToken, setRecapthaToken] = useState();
+
+  const getRecap = (token) => {
+    return new Promise((resolve) => {
+      resolve(setRecapthaToken(token));
+    });
+  };
+
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
@@ -105,10 +115,13 @@ export default function CreateTeamForm(props) {
     }
   };
 
-  const handleCreateTeam = () => {
+  const handleCreateTeam = async () => {
+    const token = await recapthaRef.current.executeAsync();
+    await getRecap(token);
     const data = {
       teamName,
       needTeam: state.checkedA,
+      token: recapthaToken,
     };
     console.log(data);
     if (teamName.length >= 15) {
@@ -345,7 +358,13 @@ export default function CreateTeamForm(props) {
           </Paper>
         </Box>
       </Grid>
-      <ToastContainer />
+      <ToastContainer />{" "}
+      <ReCAPTCHA
+        ref={recapthaRef}
+        size="invisible"
+        sitekey={process.env.REACT_APP_SITE_KEY}
+        theme="dark"
+      />
     </Grid>
   );
 }

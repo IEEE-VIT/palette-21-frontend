@@ -20,6 +20,8 @@ import GroupedButton from "../../../components/GroupedButton/groupButton";
 import NumberFormat from "react-number-format";
 import PropTypes from "prop-types";
 import api from "../../../api/regPortal";
+import { toastDark, toastLight } from "../../../utils/Toast";
+import ToastContainer from "../../../components/Toast/Toast";
 
 function NumberFormatCustom(props) {
   const { inputRef, onChange, ...other } = props;
@@ -187,6 +189,20 @@ export default function BasicDetailsForm(props) {
       tools: selectedTools,
       outreach: hearUs,
     };
+    if (data.discordHandle.length >= 32 || data.discordHandle.length <= 4) {
+      const curMode = theme.palette.type;
+      curMode !== "light"
+        ? toastDark("Discord Handle should be between 3-32 characters.")
+        : toastLight("Discord Handle should be between 3-32 characters.");
+      setLoading(false);
+    } else if (discordHash.length !== 4) {
+      const curMode = theme.palette.type;
+      curMode !== "light"
+        ? toastDark("Discord Hash should be 4 characters long.")
+        : toastLight("Discord Hash should be 4 characters long.");
+      setLoading(false);
+    }
+
     console.log(data);
     setLoading(true);
     // setTimeout(() => {
@@ -410,6 +426,7 @@ export default function BasicDetailsForm(props) {
           </Box>
         </Paper>
       </Box>
+      <ToastContainer />
     </div>
   );
 }

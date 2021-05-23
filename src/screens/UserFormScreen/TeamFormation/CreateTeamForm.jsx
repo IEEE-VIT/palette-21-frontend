@@ -18,6 +18,8 @@ import { useCookies } from "react-cookie";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import api from "../../../api/regPortal";
 import PropTypes from "prop-types";
+import { toastDark, toastLight } from "../../../utils/Toast";
+import ToastContainer from "../../../components/Toast/Toast";
 
 const AntSwitch = withStyles((theme) => ({
   root: {
@@ -64,7 +66,7 @@ export default function CreateTeamForm(props) {
       paddingRight: "25px",
     },
   });
-  const [cookies] = useCookies(["token"]);
+  const [cookies] = useCookies(["token", "mode"]);
   const regPortalApi = new api(
     cookies.token,
     // eslint-disable-next-line no-undef
@@ -109,11 +111,17 @@ export default function CreateTeamForm(props) {
       needTeam: state.checkedA,
     };
     console.log(data);
-    setCreateLoading(true);
-    setTeamCodeValid(false);
-    // setTimeout(() => {
-    //   setCreateLoading(false);
-    // }, 2000);
+    if (teamName.length >= 15) {
+      const curMode = theme.palette.type;
+      curMode !== "light"
+        ? toastDark("Teamname should be less than 15 characters.")
+        : toastLight("Teamname should be less than 15 characters.");
+      setCreateLoading(false);
+      setTeamCodeValid(false);
+    } else {
+      setCreateLoading(true);
+      setTeamCodeValid(false);
+    }
     createTeamApi(data);
   };
 
@@ -337,6 +345,7 @@ export default function CreateTeamForm(props) {
           </Paper>
         </Box>
       </Grid>
+      <ToastContainer />
     </Grid>
   );
 }

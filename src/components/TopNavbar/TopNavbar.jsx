@@ -47,6 +47,7 @@ export default function TopNavbar(props) {
             handleClose();
             cookies.remove("token");
             cookies.remove("mode");
+            cookies.remove("ffcheck");
             localStorage.clear();
             window.location.reload();
           }}

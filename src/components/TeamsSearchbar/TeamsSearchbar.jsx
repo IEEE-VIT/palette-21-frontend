@@ -19,8 +19,15 @@ export default function TeamsSearchbar({
   setCurPage,
   setCurPagePhone,
 }) {
+  const updateSearchPlaceholder = () => {
+    if (looking) {
+      return "Search for fellow designers looking for a team";
+    }
+    return "Search for other teams";
+  };
   const searchFunc = () => {
     //console.log("fucntion called!");
+
     if (!looking) {
       try {
         searchTeams(1, searchQuery)
@@ -82,7 +89,7 @@ export default function TeamsSearchbar({
             searchFunc();
           }
         }}
-        placeholder="Search for teams or members"
+        placeholder={updateSearchPlaceholder()}
         style={{
           color:
             mode == "dark" ? "rgba(194, 194, 194, 1)" : "rgba(20, 20, 20, 1)",

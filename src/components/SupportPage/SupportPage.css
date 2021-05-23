@@ -19,11 +19,16 @@
 #SupportPage__helpcontainer {
   display: flex;
   flex-direction: row;
-  width: 550px;
+  width: 750px;
   align-items: center;
+  background-color: #292929;
+  padding: 24px;
+  border-radius: 12px;
 }
 
 #SupportPage__helpcontainer img {
+  margin-left: 40px;
+  margin-right: 50px;
   width: 230px;
   height: auto;
 }
@@ -93,18 +98,34 @@
   font-family: "Inter", sans-serif;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
   #SupportPage__helpcontainer {
-    width: 400px;
+    width: 550px;
   }
   #SupportPage__helpcontainer img {
-    width: 200px;
+    width: 350px;
   }
   #SupportPage__helpinfo {
     font-size: 0.975rem;
   }
   #SupportPage__discordlink {
-    padding: 2px 10px;
+    padding: 10px 10px;
+    font-size: 0.855rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #SupportPage__helpcontainer {
+    width: 500px;
+  }
+  #SupportPage__helpcontainer img {
+    width: 150px;
+  }
+  #SupportPage__helpinfo {
+    font-size: 0.975rem;
+  }
+  #SupportPage__discordlink {
+    padding: 10px 10px;
     font-size: 0.855rem;
   }
 }
@@ -131,7 +152,7 @@
     margin-top: 5px;
   }
   #SupportPage__discordlink {
-    padding: 2px 10px;
+    padding: 6px 10px;
     font-size: 0.855rem;
   }
   #SupportPage__heading {

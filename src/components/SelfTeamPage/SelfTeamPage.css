@@ -152,6 +152,10 @@
   padding : 10px 20px;
 }
 
+.grecaptcha-badge{
+  display : none !important;
+}
+
 #SelfTeamPage__jointeambtn h4 {
   font-size: 1rem;
   text-align: center;

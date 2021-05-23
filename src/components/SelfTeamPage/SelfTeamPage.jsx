@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createRef } from "react";
 import "./SelfTeamPage.css";
+import ReCAPTCHA from "react-google-recaptcha";
 import cookies from "react-cookies";
 import PropTypes from "prop-types";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -15,6 +16,7 @@ export default function SelfTeamPage({
   teamCode,
 }) {
   //console.log(teamName);
+  const recapthaRef = createRef();
   const [changingName, setChangingName] = useState(false);
   const [curTeamName, setCurTeamName] = useState("");
   const [joinTeamCode, setJoinTeamCode] = useState("");
@@ -164,9 +166,11 @@ export default function SelfTeamPage({
             </div>
             <div
               id="SelfTeamPage__jointeambtn"
-              onClick={() => {
+              onClick={async () => {
                 try {
-                  joinTeam(joinTeamCode)
+                  const recaptchaToken =
+                    await recapthaRef.current.executeAsync();
+                  joinTeam(joinTeamCode.toUpperCase(), recaptchaToken)
                     .then(() => {
                       var curMode = cookies.load("mode");
                       curMode == "light"
@@ -274,6 +278,13 @@ export default function SelfTeamPage({
       >
         Leave Team
       </h4>
+      <ReCAPTCHA
+        ref={recapthaRef}
+        size="invisible"
+        sitekey={process.env.REACT_APP_SITE_KEY}
+        //lmao 4
+        theme="dark"
+      />
     </div>
   );
 }

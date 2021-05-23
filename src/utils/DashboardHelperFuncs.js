@@ -326,7 +326,7 @@ export const acceptInvite = (userId, teamId) => {
   });
 };
 
-export const joinTeam = (teamCode) => {
+export const joinTeam = (teamCode, recaptchaToken) => {
   var token = cookie.load("token");
   const config = {
     headers: {
@@ -340,6 +340,7 @@ export const joinTeam = (teamCode) => {
         "/v1/invites/joinByCode",
         {
           teamCode: teamCode,
+          token: recaptchaToken,
         },
         config
       )

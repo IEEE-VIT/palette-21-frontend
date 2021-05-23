@@ -1,6 +1,6 @@
 {
-  "short_name": "Palette",
-  "name": "Palette 2021",
+  "short_name": "Palette'21",
+  "name": "IEEE-VIT's Palette'21",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#563AE8",
+  "background_color": "#141414"
 }

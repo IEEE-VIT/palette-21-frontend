@@ -22,7 +22,7 @@ import PropTypes from "prop-types";
 import api from "../../api/regPortal";
 
 const LandingScreen = (props) => {
-  const [cookies] = useCookies(["token"]);
+  const [cookies, setCookies] = useCookies(["token", "ffcheck"]);
   const history = useHistory();
   const theme = useTheme();
   useEffect(() => {
@@ -43,6 +43,7 @@ const LandingScreen = (props) => {
           if (!apiData.data.round0 || !apiData.data.teamFormed) {
             history.push("/userForm");
           } else {
+            setCookies("ffcheck", "true");
             history.push("/dashboard");
           }
         })

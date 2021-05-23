@@ -7,7 +7,7 @@ import api from "../api/regPortal";
 const axios = require("axios");
 
 export default function successfulAuth() {
-  const [, setCookies] = useCookies(["token"]);
+  const [, setCookies] = useCookies(["token", "ffcheck"]);
   const history = useHistory();
   useEffect(() => {
     let search = window.location.search;
@@ -53,6 +53,7 @@ export default function successfulAuth() {
         if (!apiData.data.round0 || !apiData.data.teamFormed) {
           history.push("/userForm");
         } else {
+          setCookies("ffcheck", "true");
           history.push("/dashboard");
         }
         localStorage.setItem("userImage", apiData.data.userImg);

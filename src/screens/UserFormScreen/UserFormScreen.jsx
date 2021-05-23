@@ -16,7 +16,7 @@ export default function UserFormScreen(props) {
   const [screen, setScreen] = useState("userBasicDetails");
   const [name, setName] = useState("Epic Designer");
   const [img, setImage] = useState("");
-  const [cookies] = useCookies(["token"]);
+  const [cookies, setCookies] = useCookies(["token", "ffcheck"]);
   const [activity, setActivity] = useState(1);
   const history = useHistory();
 
@@ -43,6 +43,7 @@ export default function UserFormScreen(props) {
         if (apiData.data.round0 && !apiData.data.teamFormed) {
           setPage("teamFormation");
         } else if (apiData.data.round0) {
+          setCookies("ffcheck", "true");
           history.push("/dashboard");
         }
         localStorage.setItem("userImage", apiData.data.userImg);

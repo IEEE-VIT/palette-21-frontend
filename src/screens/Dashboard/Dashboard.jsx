@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import "./Dashboard.css";
 import cookies from "react-cookies";
 import SideNavbar from "../../components/SideNavbar/SideNavbar";
@@ -14,12 +15,14 @@ import ToastContainer from "../../components/Toast/Toast";
 import { toastDark, toastLight } from "../../utils/Toast";
 import LoadingScreen from "../../components/LandingScreen/LoadingScreen/LoadingScreen";
 import Logo from "../../assets/logo-mobile-view.svg";
+import api from "../../api/regPortal";
 
 export default function Dashboard() {
   const [userDetails, setUserDetails] = useState([]);
   const [mode, setMode] = useState("");
   const [selectedPage, setSelectedPage] = useState(0);
   const [pageLoading, setPageLoading] = useState(true);
+  const history = useHistory();
   const pageTitles = [
     "Palette",
     "Teams",
@@ -29,6 +32,29 @@ export default function Dashboard() {
     "Problem Statement",
   ];
   useEffect(() => {
+    const ffcheck = cookies.load("ffcheck");
+    const token = cookies.load("token");
+    if (ffcheck !== "true") {
+      // eslint-disable-next-line no-undef
+      const regPortal = new api(token, process.env.REACT_APP_BACKEND_API);
+      regPortal
+        .didFillForm()
+        .then((result) => {
+          const apiData = result.data;
+          if (!apiData.data.round0 || !apiData.data.teamFormed) {
+            history.push("/userForm");
+          } else {
+            cookies.save("ffcheck", "true");
+            history.push("/dashboard");
+          }
+          localStorage.setItem("userImage", apiData.data.userImg);
+          localStorage.setItem("userName", apiData.data.name);
+        })
+        .catch((err) => {
+          console.log(err);
+          history.push("/");
+        });
+    }
     try {
       userFetch()
         .then((resp) => {

@@ -1,6 +1,7 @@
 import { Grid, Button, Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 const useStyles = makeStyles({
   button: {
@@ -15,8 +16,10 @@ const useStyles = makeStyles({
 export default function UserFormCompletionScreen() {
   const classes = useStyles();
   const history = useHistory();
+  const [, setCookies] = useCookies(["ffcheck"]);
 
   const navigate = () => {
+    setCookies("ffcheck", "true");
     history.push("/dashboard");
   };
   return (

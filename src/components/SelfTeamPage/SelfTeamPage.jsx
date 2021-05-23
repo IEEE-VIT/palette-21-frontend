@@ -54,7 +54,7 @@ export default function SelfTeamPage({
             try {
               editTeamName(curTeamName)
                 .then(() => {
-                  //console.log("gg");
+                  window.location.reload();
                 })
                 .catch(() => {
                   setCurTeamName(teamName);

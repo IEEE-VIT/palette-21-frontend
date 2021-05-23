@@ -296,8 +296,8 @@ export default function CreateTeamForm(props) {
                           required
                           onChange={handleTeamCode}
                           label="Enter team code"
-                          placeholder="SSE-213"
-                          hint="SSEE-213"
+                          placeholder="ABC123"
+                          hint="ABC123"
                           InputProps={{
                             disableUnderline: true,
                             className: classes.inputFields,

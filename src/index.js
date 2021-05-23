@@ -4,6 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { CookiesProvider } from "react-cookie";
+import ReactGA from "react-ga";
+
+ReactGA.initialize("UA-185844805-1"); // add your tracking id here.
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
   <React.StrictMode>

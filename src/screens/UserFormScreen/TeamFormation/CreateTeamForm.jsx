@@ -85,13 +85,7 @@ export default function CreateTeamForm(props) {
   const [createLoading, setCreateLoading] = useState(false);
 
   const recapthaRef = createRef();
-  const [recapthaToken, setRecapthaToken] = useState();
-
-  const getRecap = (token) => {
-    return new Promise((resolve) => {
-      resolve(setRecapthaToken(token));
-    });
-  };
+  ///lmao 1
 
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
@@ -115,13 +109,10 @@ export default function CreateTeamForm(props) {
     }
   };
 
-  const handleCreateTeam = async () => {
-    const token = await recapthaRef.current.executeAsync();
-    await getRecap(token);
+  const handleCreateTeam = () => {
     const data = {
       teamName,
       needTeam: state.checkedA,
-      token: recapthaToken,
     };
     console.log(data);
     if (teamName.length >= 15) {
@@ -138,9 +129,16 @@ export default function CreateTeamForm(props) {
     createTeamApi(data);
   };
 
-  const handleJoinTeam = () => {
+  const handleJoinTeam = async () => {
+    //lmao 2
+    const token = await recapthaRef.current.executeAsync();
+    // await getRecap(token);
+    console.log("Vdfvd", token);
+
     const data = {
       teamCode,
+      token,
+      //lma0 3
     };
     console.log(data);
     setCodeLoading(true);
@@ -363,6 +361,7 @@ export default function CreateTeamForm(props) {
         ref={recapthaRef}
         size="invisible"
         sitekey={process.env.REACT_APP_SITE_KEY}
+        //lmao 4
         theme="dark"
       />
     </Grid>

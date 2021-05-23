@@ -4,10 +4,10 @@ import bannerImage from "../../../assets/basicDetails/banner.png";
 
 export default function BasicDetailsBanner() {
   return (
-    <Box mt={20}>
+    <Box mt={7}>
       <Grid container direction="column" alignItems="center" justify="center">
         <Grid item>
-          <img src={bannerImage} height={300} />
+          <img src={bannerImage} height={380} />
         </Grid>
       </Grid>
     </Box>

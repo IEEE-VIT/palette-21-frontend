@@ -421,6 +421,14 @@ export default function BasicDetailsForm(props) {
                     </Button>
                   )}
                 </Box>
+                <Box>
+                  <Typography
+                    variant="subtitle1"
+                    className={classes.helperTitle}
+                  >
+                    You cannot edit this later.
+                  </Typography>
+                </Box>
               </Grid>
             </Grid>
           </Box>

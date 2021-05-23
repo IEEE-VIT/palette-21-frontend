@@ -12,6 +12,16 @@
   align-items: center;
 }
 
+.TopNavbar__logout {
+  margin-top : 70px;
+  margin-right : 100px !important;
+  color: rgba(235, 72, 47, 1);
+}
+
+i.fas.fa-sign-out-alt {
+  margin-right: 16px;
+}
+
 #TopNavbar__title {
   /* font-weight: 620;
   font-size: 1.32rem; */
@@ -31,6 +41,10 @@
   padding-right: 7px;
   width: 350px;
   justify-content: space-around;
+}
+
+#TopNavbar__profile img {
+  cursor: pointer;
 }
 
 #TopNavbar__profile h2 {

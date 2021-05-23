@@ -28,7 +28,7 @@ export default function IndCollection({
     });
   }, []);
   useEffect(() => {
-    console.log("Ind - ", curIndDetails);
+    // console.log("Ind - ", curIndDetails);
   }, [curIndDetails]);
   return (
     <div

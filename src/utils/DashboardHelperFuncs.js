@@ -4,7 +4,7 @@ import paletteApi from "../apis/paletteApi";
 import { TeamsPerPage } from "./Constants";
 export const userFetch = () => {
   var token = cookie.load("token");
-  console.log("LMFAOOOO this is a nice cookie", token);
+  // console.log("LMFAOOOO this is a nice cookie", token);
   const config = {
     headers: {
       "Content-Type": "application/json; charset=utf-8",
@@ -74,8 +74,8 @@ export const leaveTeam = () => {
           throw new Error("Something Went Wrong!");
         }
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        // console.log(err);
         reject("Something Went Wrong!");
       });
   });
@@ -121,7 +121,7 @@ export const searchUsers = (pageNo, searchQuery = "") => {
     paletteApi
       .get("/v1/dashboard/searchusers", config)
       .then((resp) => {
-        console.log(resp);
+        // console.log(resp);
         resolve(resp);
         if (resp.status !== 200) {
           throw new Error("Something Went Wrong!");

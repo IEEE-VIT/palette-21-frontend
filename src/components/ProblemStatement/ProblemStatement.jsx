@@ -5,8 +5,8 @@ import cookies from "react-cookies";
 
 import psLockedDark from "../../assets/pslockeddark.png";
 import psLockedLight from "../../assets/pslockedlight.png";
-export default function ProblemStatement({ mode, selectedPage }) {
-  console.log(mode, selectedPage);
+export default function ProblemStatement({ selectedPage }) {
+  // console.log(mode, selectedPage);
   var curMode = cookies.load("mode");
   return (
     <div

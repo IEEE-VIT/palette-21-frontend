@@ -59,16 +59,16 @@ export default function TeamDetailCollection({
                     ...resp.data.data.teams,
                   ]);
                 })
-                .catch((err) => {
-                  console.log(err);
+                .catch(() => {
+                  // console.log(err);
                   var curMode = cookies.load("mode");
                   //console.log(curMode);
                   curMode == "light"
                     ? toastDark("Something Went Wrong! Please try again!")
                     : toastLight("Something Went Wrong! Please try again!");
                 });
-            } catch (error) {
-              console.log(`Caught by try/catch ${error}`);
+            } catch {
+              // console.log(`Caught by try/catch ${error}`);
             }
           }
         }}

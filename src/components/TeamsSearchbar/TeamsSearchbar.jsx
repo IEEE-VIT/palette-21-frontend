@@ -32,8 +32,8 @@ export default function TeamsSearchbar({
             setCurPage(1);
             setCurPagePhone(1);
           })
-          .catch((err) => {
-            console.log(err);
+          .catch(() => {
+            // console.log(err);
             var curMode = cookies.load("mode");
             curMode == "light"
               ? toastDark("Something Went Wrong! Please try again!")

@@ -38,7 +38,7 @@ const LandingScreen = (props) => {
       regPortal
         .didFillForm()
         .then((result) => {
-          console.log(result.data);
+          // console.log(result.data);
           const apiData = result.data;
           if (!apiData.data.round0 || !apiData.data.teamFormed) {
             history.push("/userForm");
@@ -47,8 +47,8 @@ const LandingScreen = (props) => {
             history.push("/dashboard");
           }
         })
-        .catch((err) => {
-          console.log(err);
+        .catch(() => {
+          // console.log(err);
         });
     }
   }, []);

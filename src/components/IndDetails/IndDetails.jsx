@@ -139,8 +139,8 @@ export default function IndDetails({
                       err ? err : "Something Went Wrong! Please try again!"
                     );
               });
-          } catch (error) {
-            console.log(`Caught by try/catch ${error}`);
+          } catch {
+            // console.log(`Caught by try/catch ${error}`);
           }
         }}
         className={invited ? "IndDetails__invited" : "dummy"}

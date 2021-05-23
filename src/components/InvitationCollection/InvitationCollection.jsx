@@ -17,7 +17,7 @@ export default function InvitationCollection({
       try {
         sentInvites()
           .then((resp) => {
-            console.log(resp);
+            // console.log(resp);
             setUsersDets(resp.data.data);
           })
           .catch(() => {
@@ -27,14 +27,14 @@ export default function InvitationCollection({
               ? toastDark("Something Went Wrong! Please try again!")
               : toastLight("Something Went Wrong! Please try again!");
           });
-      } catch (error) {
-        console.log(`Caught by try/catch ${error}`);
+      } catch {
+        // console.log(`Caught by try/catch ${error}`);
       }
     } else {
       try {
         recievedInvites()
           .then((resp) => {
-            console.log(resp.data.data);
+            // console.log(resp.data.data);
             setUsersDets(resp.data.data);
           })
           .catch(() => {
@@ -44,8 +44,8 @@ export default function InvitationCollection({
               ? toastDark("Something Went Wrong! Please try again!")
               : toastLight("Something Went Wrong! Please try again!");
           });
-      } catch (error) {
-        console.log(`Caught by try/catch ${error}`);
+      } catch {
+        // console.log(`Caught by try/catch ${error}`);
       }
     }
   }, [selectedInvitationComp]);

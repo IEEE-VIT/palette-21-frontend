@@ -110,10 +110,6 @@ export default function BasicDetailsForm(props) {
     checkValidation();
   }, [hearUs, discordHash, discordUsername, selectedSkills, selectedTools]);
 
-  useEffect(() => {
-    console.log("Initialise Call");
-  }, []);
-
   const handleSelectedSkillChange = (input) => {
     if (selectedSkills.includes(input)) {
       const index = selectedSkills.indexOf(input);
@@ -150,7 +146,7 @@ export default function BasicDetailsForm(props) {
         setSelectedTools(selectedTools);
       }
     }
-    console.log(selectedTools);
+    // console.log(selectedTools);
   };
 
   const handleHearUsSelection = (event) => {
@@ -159,16 +155,16 @@ export default function BasicDetailsForm(props) {
 
   const handleNameChange = (event) => {
     setDiscordUsername(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
 
   const handleHashChange = (event) => {
     setDiscordHash(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
 
   const checkValidation = () => {
-    console.log("This is from checkValidation", hearUs);
+    // console.log("This is from checkValidation", hearUs);
     if (
       selectedSkills.length !== 0 &&
       selectedTools.length !== 0 &&
@@ -203,7 +199,7 @@ export default function BasicDetailsForm(props) {
       setLoading(false);
     }
 
-    console.log(data);
+    // console.log(data);
     setLoading(true);
     // setTimeout(() => {
     //   setLoading(false);
@@ -220,12 +216,12 @@ export default function BasicDetailsForm(props) {
     );
     regPortalApi
       .userForm(data)
-      .then((result) => {
-        console.log(result);
+      .then(() => {
+        // console.log(result);
         props.moveNext("teamFormation");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        // console.log(error);
         setLoading(false);
       });
   };

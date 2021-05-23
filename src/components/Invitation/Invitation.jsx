@@ -171,7 +171,7 @@ export default function Invitation({
                         ? toastDark("Something Went Wrong! Please try again!")
                         : toastLight("Something Went Wrong! Please try again!");
                     });
-                } catch (error) {
+                } catch {
                   //console.log(`Caught by try/catch ${error}`);
                 }
               }
@@ -245,8 +245,8 @@ export default function Invitation({
                       ? toastDark("Something Went Wrong! Please try again!")
                       : toastLight("Something Went Wrong! Please try again!");
                   });
-              } catch (error) {
-                console.log(`Caught by try/catch ${error}`);
+              } catch {
+                // console.log(`Caught by try/catch ${error}`);
               }
             }}
           >
@@ -277,8 +277,8 @@ export default function Invitation({
                       ? toastDark("Something Went Wrong! Please try again!")
                       : toastLight("Something Went Wrong! Please try again!");
                   });
-              } catch (error) {
-                console.log(`Caught by try/catch ${error}`);
+              } catch {
+                // console.log(`Caught by try/catch ${error}`);
               }
             }}
           >

@@ -50,8 +50,8 @@ export default function Dashboard() {
           localStorage.setItem("userImage", apiData.data.userImg);
           localStorage.setItem("userName", apiData.data.name);
         })
-        .catch((err) => {
-          console.log(err);
+        .catch(() => {
+          // console.log(err);
           history.push("/");
         });
     }
@@ -75,7 +75,7 @@ export default function Dashboard() {
 
   if (!pageLoading) {
     if (window.innerWidth <= 943) {
-      console.log("userDetails", userDetails.user);
+      // console.log("userDetails", userDetails.user);
       return (
         <div
           style={{

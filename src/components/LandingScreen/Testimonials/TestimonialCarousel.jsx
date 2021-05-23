@@ -4,11 +4,11 @@ import Testimonial from "./TestimonialInner";
 import testimonialData from "./TestimonialData";
 
 function EventCarousel() {
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [setWindowWidth] = useState(0);
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWindowWidth(window.innerWidth);
-      console.log(windowWidth);
+      // console.log(windowWidth);
     });
   }, []);
   return (

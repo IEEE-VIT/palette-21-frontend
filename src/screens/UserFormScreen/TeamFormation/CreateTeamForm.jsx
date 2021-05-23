@@ -114,7 +114,7 @@ export default function CreateTeamForm(props) {
       teamName,
       needTeam: state.checkedA,
     };
-    console.log(data);
+    //console.log(data);
     if (teamName.length >= 15) {
       const curMode = theme.palette.type;
       curMode !== "light"
@@ -133,14 +133,14 @@ export default function CreateTeamForm(props) {
     //lmao 2
     const token = await recapthaRef.current.executeAsync();
     // await getRecap(token);
-    console.log("Vdfvd", token);
+    //console.log("Vdfvd", token);
 
     const data = {
       teamCode,
       token,
       //lma0 3
     };
-    console.log(data);
+    //console.log(data);
     setCodeLoading(true);
     setTeamNameValid(false);
     // setTimeout(() => {
@@ -154,12 +154,12 @@ export default function CreateTeamForm(props) {
     // props.moveNext("userRegCompletionScreen");
     regPortalApi
       .createTeam(data)
-      .then((result) => {
-        console.log(result);
+      .then(() => {
+        //console.log(result);
         props.moveNext("userRegCompletionScreen");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        //console.log(error);
         setCreateLoading(false);
       });
   };
@@ -167,13 +167,16 @@ export default function CreateTeamForm(props) {
   const joinTeamApi = (data) => {
     regPortalApi
       .joinTeam(data)
-      .then((result) => {
-        console.log(result);
+      .then(() => {
+        //console.log(result);
         props.moveNext("userRegCompletionScreen");
       })
       .catch((error) => {
-        console.log(error);
-        createTeamApi(false);
+        setCodeLoading(false);
+        const curMode = theme.palette.type;
+        curMode !== "light"
+          ? toastDark(error.response.data.message)
+          : toastLight(error.response.data.message);
       });
   };
 

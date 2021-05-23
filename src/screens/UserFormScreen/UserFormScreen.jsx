@@ -38,7 +38,7 @@ export default function UserFormScreen(props) {
     regPortal
       .didFillForm()
       .then((result) => {
-        console.log(result.data);
+        // console.log(result.data);
         const apiData = result.data;
         if (apiData.data.round0 && !apiData.data.teamFormed) {
           setPage("teamFormation");
@@ -51,8 +51,8 @@ export default function UserFormScreen(props) {
         setName(apiData.data.name);
         setImage(apiData.data.userImg);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        // console.log(err);
       });
   }, []);
 

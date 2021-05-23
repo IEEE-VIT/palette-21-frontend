@@ -14,12 +14,12 @@ export default function successfulAuth() {
     let params = new URLSearchParams(search);
     let googleAuth = params.get("token");
     let figmaAuth = params.get("code");
-    console.log("Google auth", googleAuth);
+    // console.log("Google auth", googleAuth);
     if (googleAuth === null) {
-      console.log("Found figma token lmaooo", figmaAuth);
+      // console.log("Found figma token lmaooo", figmaAuth);
       figmaAuthApi(figmaAuth);
     } else {
-      console.log("Found Token lmao", googleAuth);
+      // console.log("Found Token lmao", googleAuth);
       setCookies("token", googleAuth);
       redirectChecker(googleAuth);
     }
@@ -34,12 +34,12 @@ export default function successfulAuth() {
       // eslint-disable-next-line no-undef
       .post(process.env.REACT_APP_OAUTH_URL + "/auth/figma", data)
       .then((result) => {
-        console.log("Figma Token", result.data.data.token);
+        // console.log("Figma Token", result.data.data.token);
         setCookies("token", result.data.data.token);
         redirectChecker(result.data.data.token);
       })
-      .catch((err) => {
-        console.log("Figma auth error", err);
+      .catch(() => {
+        // console.log("Figma auth error", err);
         history.push("/");
       });
   };
@@ -59,8 +59,8 @@ export default function successfulAuth() {
         localStorage.setItem("userImage", apiData.data.userImg);
         localStorage.setItem("userName", apiData.data.name);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        // console.log(err);
         history.push("/");
       });
   };

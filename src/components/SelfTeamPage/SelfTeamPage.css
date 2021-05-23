@@ -50,7 +50,7 @@
   padding-right: 7px;
   padding-left: 7px;
 }
-#SelfTeamPage__userdetails.doubleteam #SelfTeamPage__userdetail:nth-child(1) {
+#SelfTeamPage__userdetails #SelfTeamPage__userdetail:nth-child(1) {
   border-right: 2px solid rgba(61, 61, 61, 1);
 }
 
@@ -145,13 +145,144 @@
   color: #ff2d52;
 }
 
+#SelfTeamPage__jointeam {
+  display: flex;
+  flex-direction: column;
+  width : 50%;
+  padding : 10px 20px;
+}
+
+#SelfTeamPage__jointeambtn h4 {
+  font-size: 1rem;
+  text-align: center;
+  margin : 5px 7px;
+
+}
+
+#SelfTeamPage__jointeam p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+#SelfTeamPage__jointeam-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 20px !important;
+}
+
+#SelfTeamPage__enterteam {
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#SelfTeamPage__enterteam div:nth-child(1) {
+  padding : 10px 20px;
+  width : 64%;
+}
+
+#SelfTeamPage__enterteam div:nth-child(1) input {
+  width : 70%;
+  height : 40px;
+  background-color: transparent;
+  border : 0px;
+  outline: none;
+  font-size: 1.05rem;
+  font-weight: normal;
+  margin-top: 0;
+  text-align: left;
+}
+
+#SelfTeamPage__jointeambtn {
+  color : white;
+  padding : 6px 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color:  rgba(86, 58, 232, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#SelfTeamPage__jointeambtn:hover {
+  box-shadow: 0px 0px 3px 1px rgba(86, 58, 232, 1);;
+}
+
+#SelfTeamPage__enterteam div:nth-child(1) h2 {
+  font-size: 1.02rem;
+  font-weight: 500;
+  margin-bottom: 0px !important;
+}
+
+#SelfTeamPage__teamcode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #563ae8;
+  color: #563ae8;
+  font-weight: 500 !important;
+  font-size: 0.8rem;
+  /* margin-top: 10px;
+  padding: 3px 15px; */
+  padding: 2rem 0;
+  border-radius: 5px;
+  justify-content: center;
+  cursor: pointer;
+  width: 250px;
+  height: 45px;
+  margin-bottom: 4px;
+}
+
+#SelfTeamPage__teamcode:hover {
+  box-shadow: 0 0 5px 1px #563ae8;
+}
+
+#SelfTeamPage__teamcode.SelfTeamPage__copied {
+  cursor: initial;
+  border: 1px solid rgba(77, 220, 74, 1);
+  color: rgba(77, 220, 74, 1);
+}
+
+#SelfTeamPage__teamcode.SelfTeamPage__copied:hover {
+  box-shadow: 0 0 0 0;
+}
+
+#SelfTeamPage__teamcode h3 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  /* identical to box height, or 133% */
+
+  text-align: center;
+  letter-spacing: 0.4px;
+
+  /* Primary */
+
+  /* color: #563ae8; */
+
+  /* margin-right: 15px; */
+
+  /* font-weight: 550 !important;
+  font-size: 1rem !important; */
+}
+
 @media screen and (max-width: 1175px) {
   #SelfTeamPage__container {
     width: 500px;
     height: max-content;
   }
+  #SelfTeamPage__jointeam {
+    align-items: center;
+    margin-top : 20px;
+    width : 90%;
+  }
 
-  #SelfTeamPage__userdetails.doubleteam #SelfTeamPage__userdetail:nth-child(1) {
+  #SelfTeamPage__userdetails #SelfTeamPage__userdetail:nth-child(1) {
     border-right: 0px;
   }
 

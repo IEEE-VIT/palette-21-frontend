@@ -2,18 +2,23 @@ import React, { useState, useEffect } from "react";
 import "./SelfTeamPage.css";
 import cookies from "react-cookies";
 import PropTypes from "prop-types";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import { editTeamName, leaveTeam } from "../../utils/DashboardHelperFuncs";
 import { toastDark, toastLight } from "../../utils/Toast";
+import { joinTeam } from "../../utils/DashboardHelperFuncs";
 
 export default function SelfTeamPage({
   mode,
   selectedComp,
   teamName,
   teamUsers,
+  teamCode,
 }) {
   //console.log(teamName);
   const [changingName, setChangingName] = useState(false);
   const [curTeamName, setCurTeamName] = useState("");
+  const [joinTeamCode, setJoinTeamCode] = useState("");
+  const [copied, setCopied] = useState(false);
   useEffect(() => {
     setCurTeamName(teamName);
   }, [teamName]);
@@ -118,6 +123,101 @@ export default function SelfTeamPage({
             </div>
           </div>
         ))}
+        <div
+          id="SelfTeamPage__jointeam"
+          style={{ display: teamUsers.length == 1 ? "flex" : "none" }}
+        >
+          <h3
+            id="SelfTeamPage__jointeam-title"
+            style={{
+              color: mode == "dark" ? "#FFFFFF" : "rgba(20, 20, 20, 1)",
+            }}
+          >
+            Join a Team
+          </h3>
+          <div
+            id="SelfTeamPage__enterteam"
+            style={{
+              border:
+                mode == "dark"
+                  ? "1px solid rgba(255, 255, 255, 1)"
+                  : "1px solid rgba(20, 20, 20, 1)",
+            }}
+          >
+            <div>
+              <h2
+                style={{
+                  color: mode == "dark" ? "#FFFFFF" : "rgba(20, 20, 20, 1)",
+                }}
+              >
+                Enter Team Code
+              </h2>
+              <input
+                type="text"
+                value={joinTeamCode}
+                onChange={(event) => setJoinTeamCode(event.target.value)}
+                placeholder="Ex: GGWP99"
+                style={{
+                  color: mode == "dark" ? "#FFFFFF" : "rgba(20, 20, 20, 1)",
+                }}
+              />
+            </div>
+            <div
+              id="SelfTeamPage__jointeambtn"
+              onClick={() => {
+                try {
+                  joinTeam(joinTeamCode)
+                    .then(() => {
+                      var curMode = cookies.load("mode");
+                      curMode == "light"
+                        ? toastDark(
+                            "Joined team successfully! Reloading in 5 secs!"
+                          )
+                        : toastLight(
+                            "Joined team successfully! Reloading in 5 secs!"
+                          );
+                      window.location.reload();
+                    })
+                    .catch((err) => {
+                      var curMode = cookies.load("mode");
+                      curMode == "light" ? toastDark(err) : toastLight(err);
+                    });
+                } catch (error) {
+                  var curMode = cookies.load("mode");
+                  curMode == "light" ? toastDark(error) : toastLight(error);
+                }
+              }}
+            >
+              <h4>Join Team</h4>
+            </div>
+          </div>
+          <p style={{ color: "rgba(122, 122, 122, 1)" }}>or</p>
+          <CopyToClipboard text={teamCode}>
+            <div
+              onClick={() => {
+                setCopied(true);
+                setTimeout(() => {
+                  setCopied(false);
+                }, 2500);
+              }}
+              id="SelfTeamPage__teamcode"
+              className={copied ? "SelfTeamPage__copied" : ""}
+            >
+              {!copied ? <h3>Team Code: {teamCode}</h3> : <h3>Code copied</h3>}
+              {!copied ? (
+                <i style={{ marginLeft: "8px" }} className="fas fa-clone"></i>
+              ) : (
+                <i
+                  style={{ marginLeft: "8px" }}
+                  className="fas fa-check-circle"
+                ></i>
+              )}
+            </div>
+          </CopyToClipboard>
+          <p style={{ color: "rgba(122, 122, 122, 1)" }}>
+            Send this code to your friend to join your team
+          </p>
+        </div>
       </div>
       <div id="SelfTeamPage__discord">
         <h4

@@ -8,6 +8,7 @@ import TeamsPage from "../../components/TeamsPage/TeamsPage";
 import BottomNavbar from "../../components/BottomNavbar/BottomNavbar";
 import SupportPage from "../../components/SupportPage/SupportPage";
 import ReviewsPage from "../../components/ReviewsPage/ReviewsPage";
+import ProblemStatement from "../../components/ProblemStatement/ProblemStatement";
 import { userFetch } from "../../utils/DashboardHelperFuncs";
 import ToastContainer from "../../components/Toast/Toast";
 import { toastDark, toastLight } from "../../utils/Toast";
@@ -127,6 +128,7 @@ export default function Dashboard() {
       />
       <ReviewsPage mode={mode} selectedPage={selectedPage} />
       <SupportPage mode={mode} selectedPage={selectedPage} />
+      <ProblemStatement mode={mode} selectedPage={selectedPage} />
       <BottomNavbar />
       <ToastContainer />
     </div>

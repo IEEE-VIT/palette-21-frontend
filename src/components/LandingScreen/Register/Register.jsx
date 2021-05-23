@@ -39,7 +39,7 @@ const Register = () => {
           <button
             className="Register__btn Register__register"
             onClick={() => {
-              const url = `https://www.figma.com/oauth?client_id=cKpPiJvmHHgpYSxbrSgz3s&redirect_uri=${process.env.REACT_APP_FIGMA_CALLBACK}&scope=file_read&state=abc&response_type=code`;
+              const url = `https://www.figma.com/oauth?client_id=a2rQkR6iPgOvn3VHC6uCIh&redirect_uri=${process.env.REACT_APP_FIGMA_CALLBACK}&scope=file_read&state=abc&response_type=code`;
               window.open(url, "_self");
             }}
           >

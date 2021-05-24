@@ -8,7 +8,12 @@ export default function ReviewsPage({ selectedPage, mode }) {
       id="ReviewsPage__container"
       style={{ display: selectedPage == 2 ? "flex" : "none" }}
     >
-      <div id="ReviewsPage__contentcontainer">
+      <div
+        id="ReviewsPage__contentcontainer"
+        style={{
+          backgroundColor: mode == "light" ? "rgb(244, 244, 244)" : "#292929",
+        }}
+      >
         <img src={monalisa} />
         <div id="ReviewsPage__reviewsooninfo">
           <h4

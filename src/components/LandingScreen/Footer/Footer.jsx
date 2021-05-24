@@ -34,7 +34,10 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="container-fluid footer-bg-2 d-flex flex-row justify-content-between align-items-start whiteb">
+        <div
+          style={{ zIndex: "6", backgroundColor: "black" }}
+          className="container-fluid footer-bg-2 d-flex flex-row justify-content-between align-items-start whiteb"
+        >
           <div className="col-md-5 d-flex flex-column justify-content-start align-items-start">
             <div className="palette-desc-left">
               <a href="https://ieeevit.org/" target="_blank" rel="noreferrer">

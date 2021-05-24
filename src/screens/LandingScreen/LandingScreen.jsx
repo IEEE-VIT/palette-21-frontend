@@ -16,6 +16,7 @@ import EventThemes from "../../components/LandingScreen/EventThemes/EventThemes"
 import EventCarousel from "../../components/LandingScreen/Event/EventCarouselSection";
 import TestimonialCarousel from "../../components/LandingScreen/Testimonials/TestimonialCarousel";
 import Footer from "../../components/LandingScreen/Footer/Footer";
+import Discord from "../../components/LandingScreen/Discord/Discord";
 import { useCookies } from "react-cookie";
 import { useTheme } from "@material-ui/core";
 import PropTypes from "prop-types";
@@ -101,6 +102,7 @@ const LandingScreen = (props) => {
       <div id="ContactUs">
         <Footer />
       </div>
+      <Discord />
     </div>
   );
 };

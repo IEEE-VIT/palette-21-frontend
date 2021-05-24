@@ -5,13 +5,13 @@ import cookies from "react-cookies";
 
 import psLockedDark from "../../assets/pslockeddark.png";
 import psLockedLight from "../../assets/pslockedlight.png";
-export default function ProblemStatement({ selectedPage }) {
-  // console.log(mode, selectedPage);
+export default function ProblemStatement(props) {
+  // console.log(mode);
   var curMode = cookies.load("mode");
   return (
     <div
       id="ProblemStatement__container"
-      style={{ display: selectedPage == 5 ? "flex" : "none" }}
+      style={{ display: props.selectedPage == 5 ? "flex" : "none" }}
     >
       {curMode === "dark" ? (
         <img className="non-drag-img" src={psLockedDark} alt="" />
@@ -23,6 +23,6 @@ export default function ProblemStatement({ selectedPage }) {
 }
 
 ProblemStatement.propTypes = {
-  mode: PropTypes.string.isRequired,
+  mode: PropTypes.string,
   selectedPage: PropTypes.func.isRequired,
 };

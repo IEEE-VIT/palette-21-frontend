@@ -22,6 +22,13 @@ export default function Dashboard() {
   const [mode, setMode] = useState("");
   const [selectedPage, setSelectedPage] = useState(0);
   const [pageLoading, setPageLoading] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(0);
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", () => {
+      setWindowWidth(window.innerWidth);
+    });
+  });
   const history = useHistory();
   const pageTitles = [
     "Palette",
@@ -74,7 +81,7 @@ export default function Dashboard() {
   }, []);
 
   if (!pageLoading) {
-    if (window.innerWidth <= 943) {
+    if (windowWidth <= 943) {
       // console.log("userDetails", userDetails.user);
       return (
         <div

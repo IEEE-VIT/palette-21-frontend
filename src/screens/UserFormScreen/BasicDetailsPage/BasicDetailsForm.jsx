@@ -185,11 +185,11 @@ export default function BasicDetailsForm(props) {
       tools: selectedTools,
       outreach: hearUs,
     };
-    if (data.discordHandle.length >= 32 || data.discordHandle.length <= 4) {
+    if (data.discordHandle.length >= 32 || data.discordHandle.length < 2) {
       const curMode = theme.palette.type;
       curMode !== "light"
-        ? toastDark("Discord Handle should be between 3-32 characters.")
-        : toastLight("Discord Handle should be between 3-32 characters.");
+        ? toastDark("Discord Handle should be between 2-32 characters.")
+        : toastLight("Discord Handle should be between 2-32 characters.");
       setLoading(false);
     } else if (discordHash.length !== 4) {
       const curMode = theme.palette.type;

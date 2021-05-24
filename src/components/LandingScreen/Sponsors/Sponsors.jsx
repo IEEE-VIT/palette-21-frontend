@@ -8,7 +8,7 @@ import rosenfeld from "../../../assets/rosenfeld.png";
 import sketch from "../../../assets/sketch.png";
 import streamyard from "../../../assets/streamyard.png";
 import icons8 from "../../../assets/icons8.svg";
-import unbearable from "../../../assets/unbearable.svg";
+import unbearable from "../../../assets/unbearable.jpg";
 import CP from "../../../assets/CP.svg";
 
 import Fade from "react-reveal/Fade";

@@ -23,7 +23,6 @@
     "react-cookies": "^0.1.1",
     "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "next",
-    "react-ga": "^3.3.0",
     "react-google-recaptcha": "^2.1.0",
     "react-input-switch": "^2.2.2",
     "react-number-format": "^4.5.5",

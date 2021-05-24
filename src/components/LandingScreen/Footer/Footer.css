@@ -1,121 +1,124 @@
 .footer-bg {
-    height: 53vh;
-    position: relative;
-    overflow-x: hidden;
-    background: linear-gradient(to right, #0A0A0A 50%, #0A0A0A 50%);
+  height: 53vh;
+  position: relative;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #0a0a0a 50%, #0a0a0a 50%);
+  z-index: 1;
 }
 
 .palette-desc-left {
-    z-index: 10;
-    margin-left: 6vw;
+  z-index: 10;
+  margin-left: 6vw;
 }
 
 .palette-desc-left h1 {
-    font-size: 5.5rem;
-    font-family: NeueMontreal-BoldItalic;
-    font-weight: 700;
+  font-size: 5.5rem;
+  font-family: NeueMontreal-BoldItalic;
+  font-weight: 700;
 }
 
 .palette-desc-left h3 {
-    padding-top: 0.6rem;
-    font-family: NeueMontreal-Regular;
+  padding-top: 0.6rem;
+  font-family: NeueMontreal-Regular;
 }
 
 .palette-desc-right {
-    margin-right: 6vw;
+  margin-right: 6vw;
 }
 
 .palette-desc-right h1 {
-    font-size: 5.5rem;
-    font-family: NeueMontreal-BoldItalic;
-    font-weight: 700;
+  font-size: 5.5rem;
+  font-family: NeueMontreal-BoldItalic;
+  font-weight: 700;
 }
 
 .palette-desc-right h3 {
-    padding-top: 0.6rem;
-    font-family: NeueMontreal-Regular;
+  padding-top: 0.6rem;
+  font-family: NeueMontreal-Regular;
 }
 
 .footer-bg-2 {
-    height: 12vh;
-    overflow-y: hidden;
-    background: linear-gradient(to right, #0A0A0A 50%, #0A0A0A 50%);
+  height: 12vh;
+  overflow-y: hidden;
+  background: linear-gradient(to right, #0a0a0a 50%, #0a0a0a 50%);
 }
 
 .pb-6vh {
-    padding-bottom: 10vh;
+  padding-bottom: 10vh;
 }
 
 .contact-det {
-    padding-right: 6vw;
+  padding-right: 6vw;
 }
 
 .footer-bg-sm {
-    height: 150vh;
-    overflow-x: hidden;
-    background: linear-gradient(to right, #0A0A0A 50%, #0A0A0A 50%);
+  height: 150vh;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #0a0a0a 50%, #0a0a0a 50%);
 }
 
 .palette-desc-right-sm {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .palette-desc-right-sm h1 {
-    font-size: 3.5rem;
-    font-family: NeueMontreal-BoldItalic;
-    font-weight: 700;
+  font-size: 3.5rem;
+  font-family: NeueMontreal-BoldItalic;
+  font-weight: 700;
 }
 
 .palette-desc-right-sm h3 {
-    padding-top: 0.6rem;
-    font-family: NeueMontreal-Regular;
+  padding-top: 0.6rem;
+  font-family: NeueMontreal-Regular;
 }
 
-#Footer__phone , #Footer__email {
-    font-family: NeueMontreal-Regular;
-    font-size: 1.05rem;
+#Footer__phone,
+#Footer__email {
+  font-family: NeueMontreal-Regular;
+  font-size: 1.05rem;
 }
 
 #Footer__socialicons {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 #Footer__socialicons img {
-    width : 30px;
-    height : 30px;
-    margin : 0px 10px;
+  width: 30px;
+  height: 30px;
+  margin: 0px 10px;
 }
 
-#Footer__phonediv , #Footer__maildiv {
-    white-space: nowrap;
+#Footer__phonediv,
+#Footer__maildiv {
+  white-space: nowrap;
 }
 
-@media screen and (max-width : 1137px) {
-    #Footer__container .pb-3{
-        width : fit-content;
-    }
-    
-    #Footer__container .col-md-11.col-lg-6 {
-        width : fit-content;
-    }
+@media screen and (max-width: 1137px) {
+  #Footer__container .pb-3 {
+    width: fit-content;
+  }
+
+  #Footer__container .col-md-11.col-lg-6 {
+    width: fit-content;
+  }
 }
 
-@media screen and (max-width : 768px){
-    #Footer__phone , #Footer__email {
-        font-size: 1.2rem;
-    }
-    .palette-desc-right-sm {
-        padding-top : 80px;
-    }
-    .palette-desc-right-sm h1 {
-        padding-top : 50px;
-        text-align: center;
-    }
-    .palette-desc-right-sm h3 {
-        text-align: center;
-        padding : 5px 20px;
-    }
-    
+@media screen and (max-width: 768px) {
+  #Footer__phone,
+  #Footer__email {
+    font-size: 1.2rem;
+  }
+  .palette-desc-right-sm {
+    padding-top: 80px;
+  }
+  .palette-desc-right-sm h1 {
+    padding-top: 50px;
+    text-align: center;
+  }
+  .palette-desc-right-sm h3 {
+    text-align: center;
+    padding: 5px 20px;
+  }
 }

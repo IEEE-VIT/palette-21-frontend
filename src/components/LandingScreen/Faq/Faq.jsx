@@ -59,7 +59,7 @@ const Faq = () => {
     {
       question: "How to participate?",
       answer:
-        "Head over to the *link* , follow the instructions to register and start hacking!",
+        "Head over to the Register Now section , follow the instructions to register and start hacking!",
     },
     {
       question: "Why would someone participate in Palette?",

@@ -24,7 +24,12 @@ export default function SupportPage({ mode, selectedPage }) {
       >
         Hey, How can we help you?
       </h4>
-      <div id="SupportPage__helpcontainer">
+      <div
+        id="SupportPage__helpcontainer"
+        style={{
+          backgroundColor: mode == "light" ? "rgb(244, 244, 244)" : "#292929",
+        }}
+      >
         <img src={despairimg} />
         <div id="SupportPage__helpinfo">
           <p

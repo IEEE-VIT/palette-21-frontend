@@ -22,7 +22,7 @@ export default function TeamsNavbar({
           }
         }}
       >
-        <h3>All Teams</h3>
+        <h3>{looking ? "All Users" : "All Teams"}</h3>
       </div>
       <div
         style={{

@@ -1,13 +1,13 @@
 #TeamDetail__container {
   display: flex;
   width: 380px;
-  height: 300px;
+  height: 340px;
   padding: 8px 10px 10px 15px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 15px;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   border-radius: 5px;
 }
@@ -18,8 +18,9 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 24px;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
   letter-spacing: 0.15px;
+  align-self: center;
 }
 
 .TeamDetail__userimg {
@@ -67,7 +68,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .TeamDetail__skill {
   font-size: 0.8rem;

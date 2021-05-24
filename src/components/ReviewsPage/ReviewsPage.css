@@ -13,11 +13,13 @@
   flex-direction: row;
   height: fit-content;
   width: 75%;
+  padding: 32px;
+  border-radius: 12px;
 }
 
 #ReviewsPage__contentcontainer img {
   width: 300px;
-  margin-right: 100px;
+  margin-right: 70px;
 }
 
 #ReviewsPage__heading {
@@ -54,10 +56,9 @@
 
 @media screen and (max-width: 1230px) {
   #ReviewsPage__contentcontainer img {
+    width: fit-content;
+    height: auto;
     margin-right: 40px;
-  }
-  #ReviewsPage__contentcontainer {
-    width: 95%;
   }
   #ReviewsPage__heading {
     font-size: 1.5rem;
@@ -65,6 +66,34 @@
   }
   #ReviewsPage__fact {
     font-size: 0.95rem;
+    letter-spacing: normal;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #ReviewsPage__container {
+    width: 98%;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  #ReviewsPage__contentcontainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    padding: 20px 20px;
+  }
+  #ReviewsPage__contentcontainer img {
+    width: 235px;
+    margin-right: 0;
+  }
+  #ReviewsPage__heading {
+    font-size: 1.28rem;
+    text-align: center;
+  }
+  #ReviewsPage__fact {
+    font-size: 0.9rem;
+    font-weight: normal;
     letter-spacing: normal;
   }
 }

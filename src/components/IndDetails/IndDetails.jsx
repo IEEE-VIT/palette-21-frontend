@@ -119,28 +119,30 @@ export default function IndDetails({
         id="IndDetails__btn"
         style={{ display: inviting ? "none" : "flex" }}
         onClick={async () => {
-          try {
-            setInviting(true);
-            const recaptchaToken = await recapthaRef.current.executeAsync();
-            sendInvite(userId, recaptchaToken)
-              .then(async () => {
-                setInvited(true);
-                setInviting(false);
-              })
-              .catch((err) => {
-                setInviting(false);
-                var curMode = cookies.load("mode");
-                //console.log(curMode);
-                curMode == "light"
-                  ? toastDark(
-                      err ? err : "Something Went Wrong! Please try again!"
-                    )
-                  : toastLight(
-                      err ? err : "Something Went Wrong! Please try again!"
-                    );
-              });
-          } catch {
-            // console.log(`Caught by try/catch ${error}`);
+          if (!invited) {
+            try {
+              setInviting(true);
+              const recaptchaToken = await recapthaRef.current.executeAsync();
+              sendInvite(userId, recaptchaToken)
+                .then(async () => {
+                  setInvited(true);
+                  setInviting(false);
+                })
+                .catch((err) => {
+                  setInviting(false);
+                  var curMode = cookies.load("mode");
+                  //console.log(curMode);
+                  curMode == "light"
+                    ? toastDark(
+                        err ? err : "Something Went Wrong! Please try again!"
+                      )
+                    : toastLight(
+                        err ? err : "Something Went Wrong! Please try again!"
+                      );
+                });
+            } catch {
+              // console.log(`Caught by try/catch ${error}`);
+            }
           }
         }}
         className={invited ? "IndDetails__invited" : "dummy"}

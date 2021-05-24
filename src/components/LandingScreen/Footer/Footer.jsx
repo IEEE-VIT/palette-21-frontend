@@ -80,7 +80,10 @@ function Footer() {
           </div>
           <div className="col-md-5 d-flex flex-column justify-content-start align-items-end">
             <div className="col-md-1 col-lg-6"></div>
-            <div className="col-md-11 col-lg-6">
+            <div
+              className="col-md-11 col-lg-6"
+              style={{ zIndex: "1", backgroundColor: "black" }}
+            >
               <div id="Footer__phonediv" className="pb-3">
                 <a href="tel:+919977955466">
                   <img src={phoneFooterIcon} className="pr-3" />

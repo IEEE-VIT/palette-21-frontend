@@ -48,7 +48,7 @@ export default function InvitationCollection({
         // console.log(`Caught by try/catch ${error}`);
       }
     }
-  }, [selectedInvitationComp]);
+  }, [selectedInvitationComp, selectedComp]);
 
   return (
     <div

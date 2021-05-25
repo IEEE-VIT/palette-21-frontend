@@ -1,9 +1,7 @@
 #EventOverview__container {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
-  overflow-y: auto;
 }
 
 #EventOverview__timeline-phone {
@@ -12,7 +10,6 @@
 
 #EventOverview__leftdiv {
   width: 63%;
-  height: 100%;
   padding-top: 40px;
   display: flex;
   flex-direction: column;
@@ -31,16 +28,16 @@
   padding-left: 32px;
   padding-right: 10px;
   padding-top: 32px;
-  font-family: NeueMontreal-BoldItalic i !important;
+  font-family: NeueMontreal-BoldItalic !important;
   background-image: url("../../assets/eye.png");
   background-repeat: no-repeat;
   background-position: top right;
   box-shadow: 0px 10px 30px 4px rgb(67 41 232 / 45%);
-  height: 300px;
+  height: 280px;
 }
 
 #EventOverview__timelinesoondiv {
-  height: 86%;
+  height: 87%;
   margin-top: 10px;
   border-radius: 8px;
   width: 95%;
@@ -52,6 +49,7 @@
 }
 
 #EventOverview__timelinesoondiv h3 {
+  margin-top : 20px;
   font-size: 1.2rem;
   font-weight: 500;
   font-family: Inter;
@@ -71,35 +69,21 @@
 }
 
 #EventOverview__start h3 {
-  font-size: 4.5rem;
+  font-size: 4.9rem;
   margin: 0;
-}
-
-#EventOverview__start h3 i {
-  /* font-size: 4.5rem;
-  margin: 0; */
+  margin-bottom: 5px !important;
   font-family: NeueMontreal-BoldItalic;
-  font-style: italic;
-  font-weight: bold;
-  font-size: 79.1169px;
-  line-height: 95px;
-  /* identical to box height */
-
-  /* White */
-
-  color: #ffffff;
 }
 
-#EventOverview__start h4 i {
+
+#EventOverview__start h4{
   /* margin-top: 0.09vh;
   font-size: 1rem;
   font-weight: 500; */
 
   font-family: NeueMontreal-BoldItalic;
-  font-style: italic;
   font-weight: 500;
   font-size: 18px;
-  line-height: 19px;
 
   /* White */
 
@@ -112,12 +96,14 @@
   align-self: flex-start;
   margin-left: 25px;
   margin-top: 48px;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 #EventOverview__rightdiv {
   width: 37%;
-  height: 100%;
+  position: relative;
+  top : 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   padding-top: 40px;
@@ -293,18 +279,12 @@
 }
 
 @media screen and (max-height: 820px) {
-  #EventOverview__leftdiv {
-    margin-bottom: 100px;
-  }
   #EventOverview__timeline {
     height: 100%;
   }
 }
 
 @media screen and (max-height: 900px) {
-  #EventOverview__leftdiv {
-    margin-bottom: 100px;
-  }
   #EventOverview__timeline {
     height: 95%;
   }

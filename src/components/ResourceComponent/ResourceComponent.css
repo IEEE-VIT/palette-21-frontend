@@ -6,7 +6,7 @@
   text-align: center;
   /* width: 47.5%; */
   width: 46%;
-  height: 50%;
+  height: 150px;
   margin-bottom: 3.7%;
   color: white;
   cursor: pointer;
@@ -25,7 +25,7 @@
 }
 #ResourceComponent__container h3 {
   position: absolute;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   font-family: Inter;
   font-style: normal;
@@ -37,10 +37,18 @@
 }
 
 @media screen and (max-width: 1200px) {
+  #ResourceComponent__container {
+    height  : 130px;
+  }
   #ResourceComponent__container h3 {
-    position: absolute;
-    font-size: 19px;
-    font-weight: 600;
+    font-size: 1.1rem ;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width : 1024px) {
+  #ResourceComponent__container {
+    height : 110px;
   }
 }
 

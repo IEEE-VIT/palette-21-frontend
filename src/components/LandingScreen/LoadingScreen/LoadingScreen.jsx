@@ -34,7 +34,7 @@ const LoadingScreen = () => {
         <span style={{ color: randomColor() }}>e&apos;</span>
         <span style={{ color: randomColor() }}>21</span>
       </b>
-      <div className="loading-subtitle">Prototype your imaginaton</div>
+      <div className="loading-subtitle">Prototype your imagination</div>
       <div
         style={{
           marginTop: "200px",

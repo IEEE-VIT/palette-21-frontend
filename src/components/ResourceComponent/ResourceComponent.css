@@ -25,27 +25,28 @@
 }
 #ResourceComponent__container h3 {
   position: absolute;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   font-family: Inter;
   font-style: normal;
   line-height: 27px;
+  padding : 0px 10px;
   /* or 113% */
 
   text-align: center;
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1200px) {
   #ResourceComponent__container h3 {
     position: absolute;
-    font-size: 24px;
+    font-size: 19px;
     font-weight: 600;
   }
 }
 
 @media screen and (max-width: 943px) {
   #ResourceComponent__container h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 

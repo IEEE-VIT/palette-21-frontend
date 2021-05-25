@@ -21,7 +21,7 @@ export default function EventOverview({ mode, selectedPage }) {
             </b>
           </h3>
           <h4>
-            <i>Prototype your imaginaton</i>
+            <i>Prototype your imagination</i>
           </h4>
           <CountdownTimer />
         </div>

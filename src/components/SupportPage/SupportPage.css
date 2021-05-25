@@ -41,6 +41,10 @@
   text-align: center;
 }
 
+#SupportPage__socialinfo p {
+  margin-bottom: 1rem;
+}
+
 #SupportPage__socialicons {
   display: flex;
   flex-direction: row;
@@ -103,7 +107,7 @@
     width: 550px;
   }
   #SupportPage__helpcontainer img {
-    width: 350px;
+    width: 200px;
   }
   #SupportPage__helpinfo {
     font-size: 0.975rem;
@@ -162,18 +166,8 @@
 }
 
 @media screen and (max-height: 670px) {
-  #SupportPage__helpcontainer img {
-    width: 40vw;
-  }
   #SupportPage__heading {
     margin: 0 5px;
-  }
-  #SupportPage__helpinfo {
-    font-size: 0.9rem;
-  }
-  #SupportPage__discordlink {
-    padding: 2px 8px;
-    font-size: 0.8rem;
   }
   #SupportPage__discordinfo p:nth-child(2) {
     font-size: 0.8rem;
@@ -184,5 +178,8 @@
   #SupportPage__socialicons img {
     width: 28px;
     margin: 0 9px;
+  }
+  #SupportPage__container {
+    padding-top : 40px;
   }
 }

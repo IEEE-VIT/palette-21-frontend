@@ -23,6 +23,7 @@
 	height: 18px;
 	width: 45px;
 	transform: scale(1.5);
+	margin-bottom: 0;
 }
 
 .TeamsSlider__disabled #TeamsSlider__label {

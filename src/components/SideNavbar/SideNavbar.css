@@ -27,7 +27,8 @@
   cursor: pointer;
   width: 250px;
   height: 48px;
-  margin-bottom: 4px;
+  margin-top : 8px;
+  margin-bottom: 8px;
 }
 
 #SideNavbar__teamcode:hover {
@@ -128,19 +129,19 @@
   /* margin-bottom: 0; */
 }
 #SideNavbar__teamname {
-  /* margin-top: 9px;
-  font-weight: 600;
+  margin-top: 10px;
+  /*font-weight: 600;
   font-size: 1.3rem; */
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
-  font-size: 26px;
+  font-size: 25px;
   line-height: 28px;
   /* identical to box height, or 122% */
 
   /* Black */
 
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 
   color: #141414;
 }
@@ -181,7 +182,7 @@
 @media screen and (max-height: 658px) {
   #SideNavbar__teamname {
     margin-top: 7px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   #SideNavbar__teamcode {
     font-size: 0.85rem;

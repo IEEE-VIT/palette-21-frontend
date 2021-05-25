@@ -15,14 +15,8 @@ export default function EventOverview({ mode, selectedPage }) {
     >
       <div id="EventOverview__leftdiv">
         <div id="EventOverview__start">
-          <h3>
-            <b>
-              <i>Palette</i>
-            </b>
-          </h3>
-          <h4>
-            <i>Prototype your imaginaton</i>
-          </h4>
+          <h3>Palette</h3>
+          <h4>Prototype your imagination</h4>
           <CountdownTimer />
         </div>
         <div

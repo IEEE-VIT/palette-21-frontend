@@ -93,7 +93,6 @@ export default function TeamsSearchbar({
         style={{
           color:
             mode == "dark" ? "rgba(194, 194, 194, 1)" : "rgba(20, 20, 20, 1)",
-          display: selectedComp == 2 ? "none" : "flex",
         }}
       />
       <i

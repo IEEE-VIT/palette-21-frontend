@@ -113,6 +113,9 @@
   .palette-desc-right-sm {
     padding-top: 80px;
   }
+  .footer-bg-sm {
+    height: fit-content;
+  }
   .palette-desc-right-sm h1 {
     padding-top: 50px;
     text-align: center;

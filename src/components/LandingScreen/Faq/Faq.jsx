@@ -78,6 +78,10 @@ const Faq = () => {
         "Anyone is welcome to participate in this event. There are no prerequisites necessary.",
     },
     {
+      question: "Can I participate solo?",
+      answer: "Yes! You can either participate solo or in a team of 2.",
+    },
+    {
       question: "How much does it cost?",
       answer:
         "There is NO registration fee for Palette. It is FREE for all participants. ",

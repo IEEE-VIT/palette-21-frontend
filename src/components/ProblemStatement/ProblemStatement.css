@@ -1,9 +1,228 @@
 #ProblemStatement__container {
   display: flex;
   color: white;
-  margin-top: 40px;
+  height : 100%;
+  width : 100%;
   justify-content: center;
   align-items: center;
+}
+
+#ProblemStatement__divscont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height : 450px;
+  width : 90%;
+  border-radius: 8px;
+}
+
+#ProblemStatement__generator {
+  width : 55%;
+  height : 100%;
+  border-radius : 8px;
+}
+
+#ProblemStatement__generator-title {
+  text-align: center;
+  padding : 10px 10px;
+  height : 10%;
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  align-items: center;
+  background-color: transparent;
+  border-top-left-radius: 8px;
+}
+
+#ProblemStatement__generator-title h3 {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.ProblemStatement__part {
+  width: 100%;
+  height: 33.333333333%;
+  display: flex;
+  flex-direction: row;
+}
+
+.ProblemStatement__part div:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width : 25%;
+  background-color: rgba(18, 18, 18, 1);
+  color :  rgba(255, 255, 255, 1);
+  height : 100%;
+  padding : 5px 10px;
+  padding-left : 5%;
+}
+
+.ProblemStatement__part div:nth-child(1) .fa-unlock {
+  cursor: pointer;
+}
+
+.ProblemStatement__part div:nth-child(1) h4 {
+  font-size: 1rem;
+  margin-top: 7px;
+  margin-left: 15px;
+}
+
+.ProblemStatement__part div:nth-child(1) i {
+  font-size: 1.35rem;
+}
+
+.ProblemStatement__part div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding : 5px 13px;
+  width : 75%;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.ProblemStatement__part div:nth-child(2) h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color  :rgba(0, 0, 0, 1);
+  border-bottom: 5px solid  rgba(67, 41, 232, 0.35);
+}
+
+#ProblemStatement__parts {
+  height : 57%;
+}
+
+#ProblemStatement__rightdiv{
+  width : 40%;
+  height: 100%;
+  border-radius : 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#ProblemStatement__attempts {
+  padding : 8px 5px;
+  height : 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+#ProblemStatement__attempts h4 {
+  font-size: 0.96rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#ProblemStatement__genagain {
+  display : flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  height : 12%;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#ProblemStatement__genagain h3 {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+#ProblemStatement__instructions {
+  width : 100%;
+  height : 78%;
+  padding : 0 5px 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius  : 8px;
+}
+
+#ProblemStatement__instructions h3 {
+  font-size  : 1.2rem;
+  margin : 20px 0 !important;
+  padding-bottom: 20px;
+  width : 60%;
+  text-align:  center;
+  border-bottom:  0.66px solid rgba(61, 61, 61, 1);
+}
+
+#ProblemStatement__instructions ul{
+  padding-right: 5px;
+  overflow-y: auto;
+}
+
+#ProblemStatement__lockst {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height : 13%;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  cursor: pointer;
+}
+
+#ProblemStatement__lockst div:nth-child(1) {
+  background-color: rgba(7, 1, 47, 1);
+  height: 100%;
+  aspect-ratio: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 8px;
+}
+
+#ProblemStatement__lockst div:nth-child(1) i{
+  font-size: 1.2rem;
+}
+
+#ProblemStatement__lockst div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color:  rgba(67, 41, 232, 1);
+  height: 100%;
+  border-bottom-right-radius: 8px;
+}
+
+#ProblemStatement__lockst div:nth-child(2) h4{
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-family: NeueMontreal-Regular;
+  font-weight: 400;
+}
+
+#ProblemStatement__socials {
+  display: flex;
+  flex-direction: row;
+  width : 100%;
+  height : 16%;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+#ProblemStatement__socials h4{
+  font-size: 1rem;
+  margin-right :7px;
+  margin-bottom: 0;
+}
+
+#ProblemStatement__socialicons {
+  display: flex;
+  flex-direction: row;
+}
+
+#ProblemStatement__socialicons img{
+  margin : 0 5px;
 }
 
 .non-drag-img {

@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./CountdownTimer.css";
+var moment = require("moment-timezone");
+moment.tz("Asia/Kolkata");
+console.log(moment().tz("Asia/Kolkata").format());
 function calculateCountdown(endDate) {
-  let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000;
+  let diff =
+    (Date.parse(new Date(endDate)) -
+      Date.parse(moment().tz("Asia/Kolkata").toDate())) /
+    1000;
 
   // clear countdown when date is reached
   if (diff <= 0) return false;
@@ -42,10 +48,15 @@ function calculateCountdown(endDate) {
 export default function CountdownTimer() {
   const [left, setLeft] = useState("");
   useEffect(() => {
-    const date = calculateCountdown(new Date("May 27, 2021 20:00:00"));
+    const date = calculateCountdown(
+      moment.tz("2021-05-27 20:00:00", "Asia/Kolkata").toDate()
+    );
+    console.log(moment.tz("2021-05-27 20:00:00", "Asia/Kolkata").toDate());
     setLeft(date);
     setInterval(() => {
-      const date = calculateCountdown(new Date("May 27, 2021 20:00:00"));
+      const date = calculateCountdown(
+        moment.tz("2021-05-27 20:00:00", "Asia/Kolkata").toDate()
+      );
       setLeft(date);
     }, 60000);
   }, []);

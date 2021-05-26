@@ -63,7 +63,7 @@ const Prizes = () => {
                   Goodies and subscriptions
                 </Box>
                 <Box className="bottom-prize-text">
-                  Sketch licenses and UX E-books
+                  Unbearable tees and Axure RP Team licenses
                 </Box>
               </Box>
             </Box>
@@ -74,7 +74,7 @@ const Prizes = () => {
                   Goodies and subscriptions
                 </Box>
                 <Box className="bottom-prize-text">
-                  Sketch licenses and UX E-books
+                  Axure RP Team licenses and E-books
                 </Box>
               </Box>
             </Box>

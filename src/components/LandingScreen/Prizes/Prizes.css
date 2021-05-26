@@ -151,6 +151,28 @@
     margin: 24px 0 0 0;
   }
 }
+@media screen and (max-height: 900px) {
+  .prizes-div {
+    /* padding-bottom: 0; */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: auto;
+  }
+  .prizes-img {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 300px;
+    height: auto;
+  }
+  .prize-rows {
+    margin-left: 30px;
+  }
+  .prizes-sub-head {
+    /* text-align: center; */
+    margin-left: 30px !important;
+    margin: 24px 0 0 0;
+  }
+}
 
 .prizes-footer {
   font-size: 24px;

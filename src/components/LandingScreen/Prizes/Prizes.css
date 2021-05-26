@@ -1,35 +1,216 @@
-.prizes-div{
-    height : 100vh;
-    width : 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    padding-bottom: 100px;
-    
-}
-.prizes-heading{
-    font-size:2.8rem;
-    font-family: NeueMontreal-Regular;
-}
-.prizes-content{
-    font-size:1.4rem;
-    font-family: NeueMontreal-Regular;
+.prizes-div {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  padding-bottom: 100px;
+  background-image: url("../../../assets/PrizesBack.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  width: 100%;
 }
 
-@media screen and (max-width : 500px) {
-    .prizes-div {
-        padding-bottom: 0;
-    }
-    .prizes-heading{
-        font-size:2rem;
-        font-weight: 600;
-    }
-    .prizes-content{
-        font-size:1.2rem;
-        font-weight: normal;
-    }
-    
+.prizes-heading {
+  font-family: NeueMontreal-Regular;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 160%;
+  /* identical to box height, or 77px */
+
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+}
+.prizes-content {
+  font-size: 1.4rem;
+  font-family: NeueMontreal-Regular;
+}
+
+.prizes-box {
+  width: 100%;
+  flex-wrap: wrap-reverse;
+}
+
+.top-prize {
+  font-size: 36px;
+  line-height: 160%;
+
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+  /* margin-right: 5rem; */
+  width: 250px;
+  /* white-space: nowrap; */
+  text-align: left;
+  margin-right: 3rem;
+}
+
+.top-prize-money {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 160%;
+  /* identical to box height, or 64px */
+
+  letter-spacing: 0.04em;
+
+  /* brand/dark-pink */
+  color: #fb2022;
+}
+
+.top-prize-text {
+  font-size: 16px;
+  line-height: 160%;
+  /* identical to box height, or 26px */
+
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #ffffff;
+}
+
+.prizes-sub-head {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+
+  /* identical to box height, or 32px */
+
+  letter-spacing: 0.04em;
+  text-align: left;
+
+  color: #84d321;
+}
+
+.bottom-prize {
+  font-size: 24px;
+  line-height: 160%;
+  /* or 38px */
+  margin-right: 3rem;
+  letter-spacing: 0.04em;
+  width: 250px;
+  text-align: left;
+
+  color: #ffffff;
+}
+
+.bottom-prize-money {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 160%;
+
+  letter-spacing: 0.04em;
+
+  color: #84d321;
+}
+
+.bottom-yellow-prize-money {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 160%;
+
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #f0db49;
+}
+
+.prize-rows {
+  background: rgba(118, 118, 118, 0.25);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+}
+.prizes-img {
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .prizes-div {
+    /* padding-bottom: 0; */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: auto;
+  }
+  .prizes-img {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 300px;
+    height: auto;
+  }
+  .prize-rows {
+    margin-left: 30px;
+  }
+  .prizes-sub-head {
+    /* text-align: center; */
+    margin-left: 30px !important;
+    margin: 24px 0 0 0;
+  }
+}
+
+.prizes-footer {
+  font-size: 24px;
+  line-height: 160%;
+  /* identical to box height, or 26px */
+
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+  /* width: 75vw; */
+  margin-top: 5rem;
+  /* text-align: left; */
+}
+
+.gst-footer {
+  margin-top: 2rem;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media screen and (max-width: 500px) {
+  .prizes-div {
+    /* padding-bottom: 0; */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: auto;
+  }
+  .prizes-img {
+    margin-top: 3rem;
+    width: 300px;
+    height: auto;
+  }
+  .prize-rows {
+    margin-left: 2px;
+  }
+  .prizes-heading {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .prizes-content {
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
+  .prizes-footer {
+    font-size: 18px;
+    line-height: 160%;
+    /* identical to box height, or 26px */
+
+    letter-spacing: 0.04em;
+
+    color: #ffffff;
+    /* width: 75vw; */
+    margin-top: 5rem;
+    /* text-align: left; */
+  }
+
+  .gst-footer {
+    margin-top: 2rem;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+  }
 }

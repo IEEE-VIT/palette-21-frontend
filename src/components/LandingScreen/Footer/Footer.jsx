@@ -34,7 +34,10 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="container-fluid footer-bg-2 d-flex flex-row justify-content-between align-items-start whiteb">
+        <div
+          className="container-fluid footer-bg-2 d-flex flex-row justify-content-between align-items-start whiteb"
+          style={{ zIndex: "1", position: "relative" }}
+        >
           <div className="col-md-5 d-flex flex-column justify-content-start align-items-start">
             <div className="palette-desc-left">
               <a href="https://ieeevit.org/" target="_blank" rel="noreferrer">
@@ -80,10 +83,7 @@ function Footer() {
           </div>
           <div className="col-md-5 d-flex flex-column justify-content-start align-items-end">
             <div className="col-md-1 col-lg-6"></div>
-            <div
-              className="col-md-11 col-lg-6"
-              style={{ zIndex: "1", backgroundColor: "black" }}
-            >
+            <div className="col-md-11 col-lg-6">
               <div id="Footer__phonediv" className="pb-3">
                 <a href="tel:+919977955466">
                   <img src={phoneFooterIcon} className="pr-3" />

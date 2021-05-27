@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./InvitationCollection.css";
 import PropTypes from "prop-types";
-import cookies from "react-cookies";
+//import cookies from "react-cookies";
 import Invitation from "../Invitation/Invitation";
 import { sentInvites, recievedInvites } from "../../utils/DashboardHelperFuncs";
-import { toastDark, toastLight } from "../../utils/Toast";
+//import { toastDark, toastLight } from "../../utils/Toast";
 
 export default function InvitationCollection({
   mode,
@@ -20,10 +20,10 @@ export default function InvitationCollection({
             // console.log(resp);
             setUsersDets(resp.data.data);
           })
-          .catch((err) => {
-            var curMode = cookies.load("mode");
+          .catch(() => {
+            /*var curMode = cookies.load("mode");
             //console.log(curMode);
-            curMode == "light" ? toastDark(err) : toastLight(err);
+            curMode == "light" ? toastDark(err) : toastLight(err);*/
           });
       } catch {
         // console.log(`Caught by try/catch ${error}`);
@@ -35,10 +35,10 @@ export default function InvitationCollection({
             // console.log(resp.data.data);
             setUsersDets(resp.data.data);
           })
-          .catch((err) => {
-            var curMode = cookies.load("mode");
+          .catch(() => {
+            /*var curMode = cookies.load("mode");
             //console.log(curMode);
-            curMode == "light" ? toastDark(err) : toastLight(err);
+            curMode == "light" ? toastDark(err) : toastLight(err);*/
           });
       } catch {
         // console.log(`Caught by try/catch ${error}`);

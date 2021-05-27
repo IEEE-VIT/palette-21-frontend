@@ -89,9 +89,25 @@ export default function EventOverview({ mode, selectedPage }) {
                 color: mode == "dark" ? "#FFFFFF" : "rgba(20, 20, 20, 1)",
               }}
             >
-              To be revealed soon
+              Head over to our{" "}
+              <a
+                style={{ color: "#007bff", textDecoration: "none" }}
+                href="https://www.instagram.com/p/CPV9vPztZqe/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram Page
+              </a>{" "}
+              to get a look at our timeline
             </h3>
-            <h4 style={{ color: "rgba(61, 61, 61, 1)" }}>Stay Tuned!</h4>
+            <h4
+              style={{
+                color:
+                  mode == "dark" ? "rgb(171 171 171)" : "rgba(61, 61, 61, 1)",
+              }}
+            >
+              All times are mentioned in IST!
+            </h4>
           </div>
         </div>
       </div>

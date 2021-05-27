@@ -70,7 +70,22 @@ export default function CountdownTimer() {
         </h3>
       ) : (
         <h3 id="CountdownTimer__live">
-          Palette is live. Head over to Discord for further announcements!
+          Palette is live. Head over to{" "}
+          <a
+            href="http://palette-discord.ieeevit.org/"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              color: "white",
+              fontFamily: "NeueMontreal-Regular",
+              textDecoration: "none",
+              fontWeight: "600",
+              letterSpacing: "0.5px",
+            }}
+          >
+            Discord
+          </a>{" "}
+          for further announcements!
         </h3>
       )}
     </div>

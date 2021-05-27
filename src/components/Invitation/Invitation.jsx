@@ -164,12 +164,10 @@ export default function Invitation({
                       setCancelled(true);
                       setCancelling(false);
                     })
-                    .catch(() => {
+                    .catch((err) => {
                       setCancelling(false);
                       var curMode = cookies.load("mode");
-                      curMode == "light"
-                        ? toastDark("Something Went Wrong! Please try again!")
-                        : toastLight("Something Went Wrong! Please try again!");
+                      curMode == "light" ? toastDark(err) : toastLight(err);
                     });
                 } catch {
                   //console.log(`Caught by try/catch ${error}`);
@@ -238,12 +236,10 @@ export default function Invitation({
                       window.location.reload();
                     }, 1000);
                   })
-                  .catch(() => {
+                  .catch((err) => {
                     setAccepting(false);
                     var curMode = cookies.load("mode");
-                    curMode == "light"
-                      ? toastDark("Something Went Wrong! Please try again!")
-                      : toastLight("Something Went Wrong! Please try again!");
+                    curMode == "light" ? toastDark(err) : toastLight(err);
                   });
               } catch {
                 // console.log(`Caught by try/catch ${error}`);
@@ -270,12 +266,10 @@ export default function Invitation({
                     setRejecting(false);
                     setRejected(true);
                   })
-                  .catch(() => {
+                  .catch((err) => {
                     setRejecting(false);
                     var curMode = cookies.load("mode");
-                    curMode == "light"
-                      ? toastDark("Something Went Wrong! Please try again!")
-                      : toastLight("Something Went Wrong! Please try again!");
+                    curMode == "light" ? toastDark(err) : toastLight(err);
                   });
               } catch {
                 // console.log(`Caught by try/catch ${error}`);

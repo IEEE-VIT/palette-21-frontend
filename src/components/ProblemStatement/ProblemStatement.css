@@ -97,6 +97,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   color  :rgba(0, 0, 0, 1);
+  margin-top : 5px;
   border-bottom: 5px solid  rgba(67, 41, 232, 0.35);
 }
 
@@ -112,7 +113,6 @@
 }
 
 .ProblemStatement__part-locked {
-  cursor: initial !important;
   background-color: rgba(65, 237, 103, 0.25) !important;
   color : rgba(65, 237, 103, 1) !important ;
 }
@@ -231,6 +231,10 @@
 
 #ProblemStatement__modal {
   padding : 10px 5px;
+}
+
+#ProblemStatement__modal p {
+  font-family: 'Inter', sans-serif;
 }
 
 #ProblemStatement__lockst div:nth-child(1) {

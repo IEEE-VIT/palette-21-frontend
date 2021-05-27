@@ -127,8 +127,8 @@ export const editTeamName = (newTeamName) => {
           throw new Error("Something Went Wrong!");
         }
       })
-      .catch(() => {
-        reject("Something Went Wrong!");
+      .catch((err) => {
+        reject(err.response.data.message);
       });
   });
 };
@@ -151,9 +151,9 @@ export const leaveTeam = () => {
           throw new Error("Something Went Wrong!");
         }
       })
-      .catch(() => {
+      .catch((err) => {
         // console.log(err);
-        reject("Something Went Wrong!");
+        reject(err.response.data.message);
       });
   });
 };
@@ -175,8 +175,8 @@ export const toggleNeedTeam = () => {
           throw new Error("Something Went Wrong!");
         }
       })
-      .catch(() => {
-        reject("Something Went Wrong!");
+      .catch((err) => {
+        reject(err.response.data.message);
       });
   });
 };
@@ -285,8 +285,8 @@ export const sentInvites = () => {
           throw new Error("Something Went Wrong!");
         }
       })
-      .catch(() => {
-        reject("Something Went Wrong!");
+      .catch((err) => {
+        reject(err.response.data.message);
       });
   });
 };
@@ -308,8 +308,8 @@ export const recievedInvites = () => {
           throw new Error("Something Went Wrong!");
         }
       })
-      .catch(() => {
-        reject("Something Went Wrong!");
+      .catch((err) => {
+        reject(err.response.data.message);
       });
   });
 };
@@ -338,8 +338,8 @@ export const cancelInvite = (userId, recaptchaToken) => {
           throw new Error("Something Went Wrong!");
         }
       })
-      .catch(() => {
-        reject("Something Went Wrong!");
+      .catch((err) => {
+        reject(err.response.data.message);
       });
   });
 };
@@ -367,8 +367,8 @@ export const rejectInvite = (teamId) => {
           throw new Error("Something Went Wrong!");
         }
       })
-      .catch(() => {
-        reject("Something Went Wrong!");
+      .catch((err) => {
+        reject(err.response.data.message);
       });
   });
 };
@@ -397,8 +397,8 @@ export const acceptInvite = (userId, teamId) => {
           throw new Error("Something Went Wrong!");
         }
       })
-      .catch(() => {
-        reject("Something Went Wrong!");
+      .catch((err) => {
+        reject(err.response.data.message);
       });
   });
 };

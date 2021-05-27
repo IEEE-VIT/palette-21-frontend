@@ -66,15 +66,15 @@ export default function SelfTeamPage({
                 .then(() => {
                   window.location.reload();
                 })
-                .catch(() => {
+                .catch((err) => {
                   setCurTeamName(teamName);
                   var curMode = cookies.load("mode");
-                  curMode == "light"
-                    ? toastDark("Something Went Wrong! Please try again!")
-                    : toastLight("Something Went Wrong! Please try again!");
+                  curMode == "light" ? toastDark(err) : toastLight(err);
                 });
             } catch (error) {
-              setCurTeamName(teamName);
+              var curMode = cookies.load("mode");
+              curMode == "light" ? toastDark(error) : toastLight(error);
+              //setCurTeamName(teamName);
               //console.log(`Caught by try/catch ${error}`);
             }
             setChangingName(false);

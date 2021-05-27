@@ -38,6 +38,9 @@ export default function ProblemStatement(props) {
   const [part1, setPart1] = useState("What you will design");
   const [part2, setPart2] = useState("for what purpose");
   const [part3, setPart3] = useState("to help whom");
+  const [part1Locking, setPart1Locking] = useState(false);
+  const [part2Locking, setPart2Locking] = useState(false);
+  const [part3Locking, setPart3Locking] = useState(false);
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [locking, setLocking] = useState(false);
@@ -61,7 +64,6 @@ export default function ProblemStatement(props) {
     try {
       getCurProb()
         .then((resp) => {
-          console.log(resp);
           setAttLeft(3 - resp.triesUsed);
           //resp.problemStatement
           setPart1Locked(resp.locked[0]);
@@ -151,25 +153,59 @@ export default function ProblemStatement(props) {
               </div>
               <div
                 onClick={() => {
+                  setPart1Locking(true);
                   if (!part1Locked) {
                     try {
                       lockProb(true, part2Locked, part3Locked)
                         .then(() => {
+                          setPart1Locking(false);
                           setPart1Locked(true);
                         })
                         .catch((err) => {
+                          setPart1Locking(false);
                           var curMode = cookies.load("mode");
                           curMode == "light" ? toastDark(err) : toastLight(err);
                         });
                     } catch (error) {
+                      setPart1Locking(false);
                       var curMode = cookies.load("mode");
+                      curMode == "light" ? toastDark(error) : toastLight(error);
+                    }
+                  } else {
+                    try {
+                      lockProb(false, part2Locked, part3Locked)
+                        .then(() => {
+                          setPart1Locking(false);
+                          setPart1Locked(false);
+                        })
+                        .catch((err) => {
+                          setPart1Locking(false);
+                          var curMode = cookies.load("mode");
+                          curMode == "light" ? toastDark(err) : toastLight(err);
+                        });
+                    } catch (error) {
+                      setPart1Locking(false);
+                      curMode = cookies.load("mode");
                       curMode == "light" ? toastDark(error) : toastLight(error);
                     }
                   }
                 }}
                 className={part1Locked ? "ProblemStatement__part-locked" : ""}
               >
-                {part1Locked ? (
+                {part1Locking ? (
+                  <CircularProgress
+                    style={{
+                      width: "22px",
+                      height: "22px",
+                      alignSelf: "center",
+                      backgroundColor: "transparent",
+                      color: !part1Locked
+                        ? "rgba(235, 72, 47, 1)"
+                        : "rgba(65, 237, 103, 1)",
+                      padding: "initial",
+                    }}
+                  />
+                ) : part1Locked ? (
                   <i className="fas fa-lock"></i>
                 ) : (
                   <i className="fas fa-unlock"></i>
@@ -201,25 +237,59 @@ export default function ProblemStatement(props) {
               </div>
               <div
                 onClick={() => {
+                  setPart2Locking(true);
                   if (!part2Locked) {
                     try {
                       lockProb(part1Locked, true, part3Locked)
                         .then(() => {
+                          setPart2Locking(false);
                           setPart2Locked(true);
                         })
                         .catch((err) => {
+                          setPart2Locking(false);
                           var curMode = cookies.load("mode");
                           curMode == "light" ? toastDark(err) : toastLight(err);
                         });
                     } catch (error) {
+                      setPart2Locking(false);
                       var curMode = cookies.load("mode");
+                      curMode == "light" ? toastDark(error) : toastLight(error);
+                    }
+                  } else {
+                    try {
+                      lockProb(part1Locked, false, part3Locked)
+                        .then(() => {
+                          setPart2Locking(false);
+                          setPart2Locked(false);
+                        })
+                        .catch((err) => {
+                          setPart2Locking(false);
+                          var curMode = cookies.load("mode");
+                          curMode == "light" ? toastDark(err) : toastLight(err);
+                        });
+                    } catch (error) {
+                      setPart2Locking(false);
+                      curMode = cookies.load("mode");
                       curMode == "light" ? toastDark(error) : toastLight(error);
                     }
                   }
                 }}
                 className={part2Locked ? "ProblemStatement__part-locked" : ""}
               >
-                {part2Locked ? (
+                {part2Locking ? (
+                  <CircularProgress
+                    style={{
+                      width: "22px",
+                      height: "22px",
+                      alignSelf: "center",
+                      backgroundColor: "transparent",
+                      color: !part2Locked
+                        ? "rgba(235, 72, 47, 1)"
+                        : "rgba(65, 237, 103, 1)",
+                      padding: "initial",
+                    }}
+                  />
+                ) : part2Locked ? (
                   <i className="fas fa-lock"></i>
                 ) : (
                   <i className="fas fa-unlock"></i>
@@ -251,25 +321,59 @@ export default function ProblemStatement(props) {
               </div>
               <div
                 onClick={() => {
+                  setPart3Locking(true);
                   if (!part3Locked) {
                     try {
                       lockProb(part1Locked, part2Locked, true)
                         .then(() => {
+                          setPart3Locking(false);
                           setPart3Locked(true);
                         })
                         .catch((err) => {
+                          setPart3Locking(false);
                           var curMode = cookies.load("mode");
                           curMode == "light" ? toastDark(err) : toastLight(err);
                         });
                     } catch (error) {
+                      setPart3Locking(false);
                       var curMode = cookies.load("mode");
+                      curMode == "light" ? toastDark(error) : toastLight(error);
+                    }
+                  } else {
+                    try {
+                      lockProb(part1Locked, part2Locked, false)
+                        .then(() => {
+                          setPart3Locking(false);
+                          setPart3Locked(false);
+                        })
+                        .catch((err) => {
+                          setPart3Locking(false);
+                          var curMode = cookies.load("mode");
+                          curMode == "light" ? toastDark(err) : toastLight(err);
+                        });
+                    } catch (error) {
+                      setPart3Locking(false);
+                      curMode = cookies.load("mode");
                       curMode == "light" ? toastDark(error) : toastLight(error);
                     }
                   }
                 }}
                 className={part3Locked ? "ProblemStatement__part-locked" : ""}
               >
-                {part3Locked ? (
+                {part3Locking ? (
+                  <CircularProgress
+                    style={{
+                      width: "22px",
+                      height: "22px",
+                      alignSelf: "center",
+                      backgroundColor: "transparent",
+                      color: !part3Locked
+                        ? "rgba(235, 72, 47, 1)"
+                        : "rgba(65, 237, 103, 1)",
+                      padding: "initial",
+                    }}
+                  />
+                ) : part3Locked ? (
                   <i className="fas fa-lock"></i>
                 ) : (
                   <i className="fas fa-unlock"></i>
@@ -437,6 +541,11 @@ export default function ProblemStatement(props) {
                 lock button on right. This will make sure that the section which
                 is locked in stays static even after you chose to generate
                 randomly for other sections.
+                <br />
+                <br />
+                You can unlock each section of the statement unless you have
+                already locked all sections of the statement or locked the
+                entire problem statement.
               </li>
               <li>
                 Once you are satisfied with your problem statement, go ahead and

@@ -272,6 +272,10 @@
   background-color: initial !important;
 }
 
+#ProblemStatement__genagain.ProblemStatement__nogenagain:hover {
+  background-color: rgba(81, 51, 235, 0.08) !important;
+}
+
 .ProblemStatement__nogenagain h4{
   color : rgba(18, 18, 18, 1);
   font-size: 0.87rem;

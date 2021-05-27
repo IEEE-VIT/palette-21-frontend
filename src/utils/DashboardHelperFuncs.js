@@ -27,6 +27,83 @@ export const userFetch = () => {
   });
 };
 
+export const getCurProb = () => {
+  var token = cookie.load("token");
+  const config = {
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  return new Promise((resolve, reject) => {
+    paletteApi
+      .get("/v1/problem/getMyProblemStatement", config)
+      .then((resp) => {
+        resolve(resp.data.data);
+        if (resp.status !== 200) {
+          throw new Error("Something Went Wrong!");
+        }
+      })
+      .catch((err) => {
+        reject(err.response.data.message);
+      });
+  });
+};
+
+export const generateProb = () => {
+  var token = cookie.load("token");
+  const config = {
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  return new Promise((resolve, reject) => {
+    paletteApi
+      .get("/v1/problem/generate", config)
+      .then((resp) => {
+        resolve(resp.data.data);
+        if (resp.status !== 200) {
+          throw new Error("Something Went Wrong!");
+        }
+      })
+      .catch((err) => {
+        reject(err.response.data.message);
+      });
+  });
+};
+
+export const lockProb = (pt1, pt2, pt3) => {
+  var token = cookie.load("token");
+  const config = {
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  return new Promise((resolve, reject) => {
+    paletteApi
+      .post(
+        "/v1/problem/lock",
+        {
+          part1: pt1,
+          part2: pt2,
+          part3: pt3,
+        },
+        config
+      )
+      .then((resp) => {
+        resolve(resp);
+        if (resp.status !== 200) {
+          throw new Error("Something Went Wrong!");
+        }
+      })
+      .catch((err) => {
+        reject(err.response.data.message);
+      });
+  });
+};
+
 export const editTeamName = (newTeamName) => {
   var token = cookie.load("token");
   const config = {

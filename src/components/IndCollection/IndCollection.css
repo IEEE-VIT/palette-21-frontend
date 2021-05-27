@@ -18,7 +18,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #3a3a3a;
+  background: rgba(86, 58, 232, 0.24);
   border-radius: 10px;
 }
 

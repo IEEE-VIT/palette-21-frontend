@@ -20,12 +20,10 @@ export default function InvitationCollection({
             // console.log(resp);
             setUsersDets(resp.data.data);
           })
-          .catch(() => {
+          .catch((err) => {
             var curMode = cookies.load("mode");
             //console.log(curMode);
-            curMode == "light"
-              ? toastDark("Something Went Wrong! Please try again!")
-              : toastLight("Something Went Wrong! Please try again!");
+            curMode == "light" ? toastDark(err) : toastLight(err);
           });
       } catch {
         // console.log(`Caught by try/catch ${error}`);
@@ -37,12 +35,10 @@ export default function InvitationCollection({
             // console.log(resp.data.data);
             setUsersDets(resp.data.data);
           })
-          .catch(() => {
+          .catch((err) => {
             var curMode = cookies.load("mode");
             //console.log(curMode);
-            curMode == "light"
-              ? toastDark("Something Went Wrong! Please try again!")
-              : toastLight("Something Went Wrong! Please try again!");
+            curMode == "light" ? toastDark(err) : toastLight(err);
           });
       } catch {
         // console.log(`Caught by try/catch ${error}`);

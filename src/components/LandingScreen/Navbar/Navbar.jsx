@@ -205,9 +205,10 @@ export default class NavbarComponent extends React.Component {
               style={{
                 color: this.state.status === "top" ? "white" : "#4329E8",
                 borderColor: this.state.status === "top" ? "white" : "#4329E8",
+                padding: "5px 40px",
               }}
             >
-              REGISTER NOW
+              LOGIN
             </Button>
           )}
         </Navbar.Collapse>

@@ -66,15 +66,15 @@ export default function SelfTeamPage({
                 .then(() => {
                   window.location.reload();
                 })
-                .catch(() => {
+                .catch((err) => {
                   setCurTeamName(teamName);
                   var curMode = cookies.load("mode");
-                  curMode == "light"
-                    ? toastDark("Something Went Wrong! Please try again!")
-                    : toastLight("Something Went Wrong! Please try again!");
+                  curMode == "light" ? toastDark(err) : toastLight(err);
                 });
             } catch (error) {
-              setCurTeamName(teamName);
+              var curMode = cookies.load("mode");
+              curMode == "light" ? toastDark(error) : toastLight(error);
+              //setCurTeamName(teamName);
               //console.log(`Caught by try/catch ${error}`);
             }
             setChangingName(false);
@@ -284,20 +284,12 @@ export default function SelfTeamPage({
                   window.location.reload();
                 }, 2000);
               })
-              .catch(() => {
+              .catch((err) => {
                 setLeaving(false);
                 var curMode = cookies.load("mode");
                 curMode == "light"
-                  ? toastDark(
-                      teamUsers.length == 1
-                        ? "You can't leave your own team!"
-                        : "Something Went Wrong! Please try again!"
-                    )
-                  : toastLight(
-                      teamUsers.length == 1
-                        ? "You can't leave your own team!"
-                        : "Something Went Wrong! Please try again!"
-                    );
+                  ? toastDark(teamUsers.length == 1 ? err : err)
+                  : toastLight(teamUsers.length == 1 ? err : err);
               });
           } catch (error) {
             //console.log(`Caught by try/catch ${error}`);

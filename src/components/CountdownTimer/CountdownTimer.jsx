@@ -60,7 +60,9 @@ export default function CountdownTimer() {
           </span>
         </h3>
       ) : (
-        <h3 id="CountdownTimer__live">Palette is live. Lezzzzgooo!</h3>
+        <h3 id="CountdownTimer__live">
+          Palette is live. Head over to Discord for further announcements!
+        </h3>
       )}
     </div>
   );

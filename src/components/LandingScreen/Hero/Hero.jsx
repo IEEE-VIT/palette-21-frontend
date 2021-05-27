@@ -72,7 +72,7 @@ export default function Hero() {
               window.location.replace("/#Register");
             }}
           >
-            REGISTER NOW
+            LOGIN
           </Button>
         </Col>
       </Row>

@@ -521,8 +521,10 @@ export default function ProblemStatement(props) {
             <h3>Instructions</h3>
             <ul>
               <li>
-                Please make sure that only one of the members of the team
-                interacts with the generator for a smoother workflow
+                <b>
+                  Please make sure that only one of the members of the team
+                  interacts with the generator for a smoother workflow
+                </b>
               </li>
               <li>
                 The problem statements are provided in the{" "}
@@ -543,18 +545,23 @@ export default function ProblemStatement(props) {
                 randomly for other sections.
                 <br />
                 <br />
-                You can unlock each section of the statement unless you have
-                already locked all sections of the statement or locked the
-                entire problem statement.
+                <b>
+                  You can unlock each section of the statement unless you have
+                  already locked all sections of the statement or locked the
+                  entire problem statement.
+                </b>
               </li>
               <li>
                 Once you are satisfied with your problem statement, go ahead and
                 click on Lock the Statement.
               </li>
               <li>
-                Each team will have a total of 3 attempts to generate a problem
-                statement of their choice. After the third attempt, the problem
-                displayed would get locked automatically.
+                <b>
+                  Each team will have a total of 3 attempts to generate a
+                  problem statement of their choice.
+                </b>{" "}
+                After the third attempt, the problem displayed would get locked
+                automatically.
               </li>
               <li>
                 For any guidance or queries, kindly head over to discord and

@@ -284,20 +284,12 @@ export default function SelfTeamPage({
                   window.location.reload();
                 }, 2000);
               })
-              .catch(() => {
+              .catch((err) => {
                 setLeaving(false);
                 var curMode = cookies.load("mode");
                 curMode == "light"
-                  ? toastDark(
-                      teamUsers.length == 1
-                        ? "You can't leave your own team!"
-                        : "Something Went Wrong! Please try again!"
-                    )
-                  : toastLight(
-                      teamUsers.length == 1
-                        ? "You can't leave your own team!"
-                        : "Something Went Wrong! Please try again!"
-                    );
+                  ? toastDark(teamUsers.length == 1 ? err : err)
+                  : toastLight(teamUsers.length == 1 ? err : err);
               });
           } catch (error) {
             //console.log(`Caught by try/catch ${error}`);

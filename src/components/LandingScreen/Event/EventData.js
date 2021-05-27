@@ -1,4 +1,5 @@
 import speakerEv1 from "../../../assets/speaker-ev-1.png";
+import speakerEv2 from "../../../assets/speaker-ev-2.png";
 import speakerEv3 from "../../../assets/speaker-ev-3.png";
 
 const eventData = [
@@ -8,6 +9,15 @@ const eventData = [
     speakerDesc: "UX designer- II, Microsoft",
     speakerPic: speakerEv1,
     eventName: "Designing with Human-AI guidelines",
+    eventCategory: "DESIGN TALKS",
+    eventDesc: "",
+  },
+  {
+    date: "28th May 2021",
+    speakerName: "Aditi Sharma",
+    speakerDesc: "Product Designer at Walmart Labs",
+    speakerPic: speakerEv2,
+    eventName: "Preparing yourself for your design journey",
     eventCategory: "DESIGN TALKS",
     eventDesc: "",
   },

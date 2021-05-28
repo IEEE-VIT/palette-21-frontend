@@ -44,7 +44,7 @@ export default function ReviewsPage({ selectedPage, setSelectedPage }) {
   const [lastSaved, setLastSaved] = useState("");
   const [tracks, setTracks] = useState([]);
   const deadlines = [
-    "28th May 2021, 12PM",
+    "28th May 2021, 12:30PM",
     "28th May 2021, 9PM",
     "29th May 2021, 3PM",
   ];

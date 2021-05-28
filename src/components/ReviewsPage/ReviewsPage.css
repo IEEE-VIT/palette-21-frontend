@@ -3,130 +3,120 @@
   flex-direction: row;
   width: 100%;
   height: 100%;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+  margin-top: 50px;
+}
+
+#ReviewsPage__form {
+  margin-top: 20px;
+  background-color: white;
+  width : 90%;
+  border-radius: 8px;
+  height : max-content;
+  margin-bottom: 50px;
+}
+
+#ReviewsPage__enddiv {
+  border : 0.67px solid rgba(20, 20, 20, 1);
+  color : rgba(20, 20, 20, 1);
+  padding : 10px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  width : 345px;
+  min-width: 345px;
+  margin-right : 20px;
+  height : 45px;
+  max-height: 45px;
+}
+
+#ReviewsPage__enddiv span {
+  font-weight: 600;
+}
+
+.ReviewsPage__submitbtn {
+  background-color: rgba(67, 41, 232, 1);
+  color : white;
+  display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
+  padding : 10px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  width : 160px;
 }
 
-#ReviewsPage__contentcontainer {
-  display: flex;
-  flex-direction: row;
-  height: fit-content;
-  width: 75%;
-  padding: 32px;
-  border-radius: 12px;
+.ReviewsPage__submitbtn.ReviewsPage__saving{
+  cursor :initial;
 }
 
-#ReviewsPage__contentcontainer img {
-  width: 300px;
-  margin-right: 70px;
+.ReviewsPage__submitbtn:hover {
+  background-color: rgba(105, 79, 239, 1);
 }
 
-#ReviewsPage__heading {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 33px;
-  line-height: 40px;
-  /* or 121% */
-
-  letter-spacing: 0.25px;
+.ReviewsPage__submitbtn:active
+{
+  background-color : rgba(56, 27, 202, 1);
 }
 
-#ReviewsPage__fact {
-  /* font-size: 1rem;
-  letter-spacing: 1px;
-  font-weight: normal; */
-
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 160%;
-  /* or 26px */
-
-  letter-spacing: 1px;
+.ReviewsPage__submitbtn.ReviewsPage__saving:hover {
+  background-color: rgba(67, 41, 232, 1);
 }
 
-#ReviewsPage__reviewsooninfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+.ReviewsPage__submitbtn.ReviewsPage__saving:active
+{
+  background-color : rgba(67, 41, 232, 1);
+}
+.ReviewsPage__helpertext {
+  margin-bottom : 20px;
+  margin-top: -12px;
+  font-size: 0.9rem;
+  color :rgba(194, 194, 194, 1);
+}
+#ReviewsPage__form input , #ReviewsPage__form textarea {
+  color: rgba(20, 20, 20, 1) !important;
+  border :  2px solid rgba(170, 170, 170, 1) !important;
+  border-radius: 5px;
+  padding : 10px 10px;
+  margin-bottom: 20px;
+  width : 100%;
+  font-size: 1rem;
 }
 
-@media screen and (max-width: 1230px) {
-  #ReviewsPage__contentcontainer img {
-    width: fit-content;
-    height: auto;
-    margin-right: 40px;
-  }
-  #ReviewsPage__heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  #ReviewsPage__fact {
-    font-size: 0.95rem;
-    letter-spacing: normal;
-  }
+#ReviewsPage__form textarea {
+  min-height: 250px;
 }
 
-@media screen and (max-width: 700px) {
-  #ReviewsPage__container {
-    width: 98%;
-    align-items: flex-start;
-    padding-top: 20px;
-  }
-  #ReviewsPage__contentcontainer {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: fit-content;
-    padding: 20px 20px;
-  }
-  #ReviewsPage__contentcontainer img {
-    width: 235px;
-    margin-right: 0;
-  }
-  #ReviewsPage__heading {
-    font-size: 1.28rem;
-    text-align: center;
-  }
-  #ReviewsPage__fact {
-    font-size: 0.9rem;
-    font-weight: normal;
-    letter-spacing: normal;
-  }
+.ReviewsPage__required {
+  color : red;
+  margin-left: 2px;
 }
 
-@media screen and (max-width: 542px) {
-  #ReviewsPage__container {
-    width: 98%;
-    align-items: flex-start;
-  }
-  #ReviewsPage__contentcontainer {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: fit-content;
-    padding: 20px 20px;
-  }
-  #ReviewsPage__contentcontainer img {
-    width: 235px;
-    margin-right: 0;
-  }
-  #ReviewsPage__heading {
-    font-size: 1.28rem;
-    text-align: center;
-  }
-  #ReviewsPage__fact {
-    font-size: 0.9rem;
-    font-weight: normal;
-    letter-spacing: normal;
-  }
+#ReviewsPage__probst h3 {
+  font-size : 1rem;
+  font-weight: bold;
+  margin : 10px 0px;
 }
 
-@media screen and (max-width: 400px) {
-  #ReviewsPage__contentcontainer img {
-    width: 200px;
-  }
+#ReviewsPage__projinfo {
+  margin: 20px 0 !important;
+}
+
+.ReviewsPage__qtitle {
+  font-size: 1rem;
+  margin-bottom: 20px !important;
+}
+
+#ReviewsPage__probst p {
+  font-size: 1.1rem;
+  margin  : 10px 0;
+  font-family: NeueMontreal-Regular !important;
+}
+
+#ReviewsPage__probst p span {
+  font-family: NeueMontreal-Regular !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }

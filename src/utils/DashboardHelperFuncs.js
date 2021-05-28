@@ -27,6 +27,86 @@ export const userFetch = () => {
   });
 };
 
+export const getCurSubmission = () => {
+  var token = cookie.load("token");
+  const config = {
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  return new Promise((resolve, reject) => {
+    paletteApi
+      .get("/v1/submission/my", config)
+      .then((resp) => {
+        resolve(resp.data.data);
+        if (resp.status !== 200) {
+          throw new Error("Something Went Wrong!");
+        }
+      })
+      .catch((err) => {
+        reject(err.response.data.message);
+      });
+  });
+};
+
+///v1/submission/roundDetail
+
+export const getRoundDetail = () => {
+  var token = cookie.load("token");
+  const config = {
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  return new Promise((resolve, reject) => {
+    paletteApi
+      .get("/v1/submission/roundDetail", config)
+      .then((resp) => {
+        resolve(resp.data.data);
+        if (resp.status !== 200) {
+          throw new Error("Something Went Wrong!");
+        }
+      })
+      .catch((err) => {
+        reject(err.response.data.message);
+      });
+  });
+};
+
+export const createSubmission = (title, desc, tracks, subLink) => {
+  var token = cookie.load("token");
+  const config = {
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  return new Promise((resolve, reject) => {
+    paletteApi
+      .post(
+        "/v1/submission/create",
+        {
+          title: title,
+          description: desc,
+          tracks: tracks,
+          submissionLink: subLink,
+        },
+        config
+      )
+      .then((resp) => {
+        resolve(resp);
+        if (resp.status !== 200) {
+          throw new Error("Something Went Wrong!");
+        }
+      })
+      .catch((err) => {
+        reject(err.response.data.message);
+      });
+  });
+};
+
 export const getCurProb = () => {
   var token = cookie.load("token");
   const config = {

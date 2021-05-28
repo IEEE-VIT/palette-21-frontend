@@ -84,7 +84,7 @@ graphicDesignTrack: "Best Graphic Design",
     var strDate =
       date.getDate() +
       "th " +
-      months[date.getMonth() + 1] +
+      months[date.getMonth()] +
       " 2021, " +
       prefWithZero(date.getHours()) +
       ":" +
@@ -201,6 +201,7 @@ graphicDesignTrack: "Best Graphic Design",
                   marginBottom: "0",
                   color: "rgba(122, 122, 122, 1)",
                   fontSize: "0.9rem",
+                  fontFamily: "NeueMontreal-Regular",
                 }}
               >
                 {lastSaved == "" ? "" : "Last saved on " + lastSaved}
@@ -358,7 +359,13 @@ graphicDesignTrack: "Best Graphic Design",
                 }
               }}
             />{" "}
-            <p style={{ marginBottom: "0", fontSize: "1rem" }}>
+            <p
+              style={{
+                marginBottom: "0",
+                fontSize: "1rem",
+                fontFamily: "NeueMontreal-Regular",
+              }}
+            >
               Best Graphic Design
             </p>
           </div>
@@ -397,7 +404,15 @@ graphicDesignTrack: "Best Graphic Design",
                 }
               }}
             />{" "}
-            <p style={{ marginBottom: "0", fontSize: "1rem" }}>Best Pitch</p>
+            <p
+              style={{
+                marginBottom: "0",
+                fontSize: "1rem",
+                fontFamily: "NeueMontreal-Regular",
+              }}
+            >
+              Best Pitch
+            </p>
           </div>
           <div
             style={{
@@ -434,7 +449,15 @@ graphicDesignTrack: "Best Graphic Design",
                 }
               }}
             />{" "}
-            <p style={{ marginBottom: "0", fontSize: "1rem" }}>Best Freshers</p>
+            <p
+              style={{
+                marginBottom: "0",
+                fontSize: "1rem",
+                fontFamily: "NeueMontreal-Regular",
+              }}
+            >
+              Best Freshers
+            </p>
           </div>
           <div
             style={{
@@ -473,7 +496,13 @@ graphicDesignTrack: "Best Graphic Design",
                 }
               }}
             />{" "}
-            <p style={{ marginBottom: "0", fontSize: "1rem" }}>
+            <p
+              style={{
+                marginBottom: "0",
+                fontSize: "1rem",
+                fontFamily: "NeueMontreal-Regular",
+              }}
+            >
               Best Community Voted Solution
             </p>
           </div>
@@ -487,7 +516,10 @@ graphicDesignTrack: "Best Graphic Design",
           placeholder="eg. https://figma.com"
           onChange={(event) => setSubmissionLink(event.target.value)}
         />
-        <p className="ReviewsPage__helpertext">
+        <p
+          className="ReviewsPage__helpertext"
+          style={{ fontFamily: "NeueMontreal-Regular" }}
+        >
           Submit your Figma, Sketch, XD ,etc file link
         </p>
         <h3 className="ReviewsPage__qtitle">Enter Prototype Link</h3>
@@ -497,7 +529,10 @@ graphicDesignTrack: "Best Graphic Design",
           placeholder="eg.  https://figma.com/[prototype link]"
           onChange={(event) => setPrototypeLink(event.target.value)}
         />
-        <p className="ReviewsPage__helpertext">
+        <p
+          className="ReviewsPage__helpertext"
+          style={{ fontFamily: "NeueMontreal-Regular" }}
+        >
           Submit your interactive prototype link
         </p>
         <h3 className="ReviewsPage__qtitle">Enter Presentation Link</h3>
@@ -507,7 +542,12 @@ graphicDesignTrack: "Best Graphic Design",
           placeholder="eg. https://drive.google.com/asdasdasd"
           onChange={(event) => setPresentationLink(event.target.value)}
         />
-        <p className="ReviewsPage__helpertext">Upload your presentation link</p>
+        <p
+          className="ReviewsPage__helpertext"
+          style={{ fontFamily: "NeueMontreal-Regular" }}
+        >
+          Upload your presentation link
+        </p>
         <h3 className="ReviewsPage__qtitle">Enter Any Other Relevant Link</h3>
         <input
           type="text"
@@ -515,7 +555,10 @@ graphicDesignTrack: "Best Graphic Design",
           placeholder="eg. https://drive.google.com/asdasdasd"
           onChange={(event) => setAnyOtherLink(event.target.value)}
         />
-        <p className="ReviewsPage__helpertext">
+        <p
+          className="ReviewsPage__helpertext"
+          style={{ fontFamily: "NeueMontreal-Regular" }}
+        >
           Upload any other relevant link, wireframe, any relevant research work,
           etc
         </p>
@@ -547,6 +590,7 @@ graphicDesignTrack: "Best Graphic Design",
                   marginBottom: "0",
                   color: "rgba(122, 122, 122, 1)",
                   fontSize: "0.9rem",
+                  fontFamily: "NeueMontreal-Regular",
                 }}
               >
                 {lastSaved == "" ? "" : "Last saved on " + lastSaved}

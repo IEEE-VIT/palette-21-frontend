@@ -89,8 +89,8 @@ graphicDesignTrack: "Best Graphic Design",
       prefWithZero(date.getHours()) +
       ":" +
       prefWithZero(date.getMinutes());
-    console.log(strDate);
-    console.log(tracks);
+    //console.log(strDate);
+    //console.log(tracks);
     return strDate;
   };
   const parseFedDate = (date) => {
@@ -108,19 +108,19 @@ graphicDesignTrack: "Best Graphic Design",
     try {
       getCurSubmission()
         .then((resp) => {
-          console.log(resp);
+          //console.log(resp);
           // new Date(resp.nextDeadline.getHighBits() * 1000)
           //2021-05-28T01:18:47.567Z
-          console.log(moment.tz("2021-05-28T01:18:47.567Z"));
-          console.log(local);
+          // console.log(moment.tz("2021-05-28T01:18:47.567Z"));
+          //console.log(local);
           if (!resp.eligibilty) {
             setOpen(true);
           }
           if (resp.submissionAlreadyExists) {
-            console.log(resp.submissionAlreadyExists.updatedAt);
+            // console.log(resp.submissionAlreadyExists.updatedAt);
             setTitle(resp.submissionAlreadyExists.title);
             setDescription(resp.submissionAlreadyExists.description);
-            console.log(resp.submissionAlreadyExists.tracks);
+            //console.log(resp.submissionAlreadyExists.tracks);
             var stillUtc = moment
               .utc(resp.submissionAlreadyExists.updatedAt)
               .toDate();
@@ -151,7 +151,7 @@ graphicDesignTrack: "Best Graphic Design",
       getRoundDetail()
         .then((resp) => {
           setRoundNo(resp.currentRoundNo);
-          console.log(new Date(resp.nextDeadline.getHighBits() * 1000));
+          //console.log(new Date(resp.nextDeadline.getHighBits() * 1000));
         })
         .catch((err) => {
           var curMode = cookies.load("mode");
@@ -234,7 +234,7 @@ graphicDesignTrack: "Best Graphic Design",
                     ])
                       .then(() => {
                         var fDate = formatDate();
-                        console.log(fDate);
+                        //console.log(fDate);
                         setLastSaved(fDate);
                         setSaving(false);
                       })

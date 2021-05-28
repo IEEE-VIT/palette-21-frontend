@@ -7,7 +7,7 @@ import github from "../../../assets/github.jpg";
 import rosenfeld from "../../../assets/rosenfeld.png";
 import sketch from "../../../assets/sketch.png";
 import streamyard from "../../../assets/streamyard.png";
-import icons8 from "../../../assets/icons8.svg";
+import icons8 from "../../../assets/icons8final.png";
 import unbearable from "../../../assets/unbearable.jpg";
 import CP from "../../../assets/CP.svg";
 
@@ -19,6 +19,13 @@ export default function Sponsors() {
       <Fade bottom cascade duration={1000} delay={500}>
         <p id="Sponsors__heading">Meet our Sponsors</p>
         <div id="Sponsors__logos">
+          <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
+              className="Sponsors__smallerlogo"
+              style={{ height: "70px" }}
+            />
+          </a>
           <a href="https://www.divami.com/" target="_blank" rel="noreferrer">
             <img src={divami} className="Sponsors__smallerlogo" />
           </a>

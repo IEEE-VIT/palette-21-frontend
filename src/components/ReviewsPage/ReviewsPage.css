@@ -25,8 +25,9 @@
   padding : 10px 10px;
   border-radius: 8px;
   font-size: 0.9rem;
-  width : 345px;
-  min-width: 345px;
+  width : 335px;
+  text-align: center;
+  min-width: 335px;
   margin-right : 20px;
   height : 45px;
   max-height: 45px;
@@ -46,6 +47,9 @@
   cursor: pointer;
   border-radius: 8px;
   width : 160px;
+  min-width: 160px;
+  height: 43px;
+  max-height: 43px;
 }
 
 .ReviewsPage__submitbtn.ReviewsPage__saving{

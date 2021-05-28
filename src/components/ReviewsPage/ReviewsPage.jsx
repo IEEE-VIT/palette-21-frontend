@@ -44,7 +44,7 @@ export default function ReviewsPage({ selectedPage, setSelectedPage }) {
   const [lastSaved, setLastSaved] = useState("");
   const [tracks, setTracks] = useState([]);
   const deadlines = [
-    "28th May 2021, 1PM",
+    "28th May 2021, 12PM",
     "28th May 2021, 9PM",
     "29th May 2021, 3PM",
   ];
@@ -208,29 +208,46 @@ graphicDesignTrack: "Best Graphic Design",
             </div>
             <div
               onClick={() => {
-                setSaving(true);
-                try {
-                  createSubmission(title, description, tracks, [
-                    submissionLink,
-                    prototypeLink,
-                    presentationLink,
-                    anyOtherLink,
-                  ])
-                    .then(() => {
-                      var fDate = formatDate();
-                      console.log(fDate);
-                      setLastSaved(fDate);
-                      setSaving(false);
-                    })
-                    .catch((err) => {
-                      setSaving(false);
-                      var curMode = cookies.load("mode");
-                      curMode == "light" ? toastDark(err) : toastLight(err);
-                    });
-                } catch (error) {
-                  setSaving(false);
+                if (title.trim() == "") {
                   var curMode = cookies.load("mode");
-                  curMode == "light" ? toastDark(error) : toastLight(error);
+                  curMode == "light"
+                    ? toastDark("Title can't be empty!")
+                    : toastLight("Title can't be empty!");
+                } else if (description.trim() == "") {
+                  curMode = cookies.load("mode");
+                  curMode == "light"
+                    ? toastDark("Description can't be empty!")
+                    : toastLight("Description can't be empty!");
+                } else if (submissionLink.trim() == "") {
+                  curMode = cookies.load("mode");
+                  curMode == "light"
+                    ? toastDark("Submission Link can't be empty!")
+                    : toastLight("Submission Link can't be empty!");
+                } else {
+                  setSaving(true);
+                  try {
+                    createSubmission(title, description, tracks, [
+                      submissionLink,
+                      prototypeLink,
+                      presentationLink,
+                      anyOtherLink,
+                    ])
+                      .then(() => {
+                        var fDate = formatDate();
+                        console.log(fDate);
+                        setLastSaved(fDate);
+                        setSaving(false);
+                      })
+                      .catch((err) => {
+                        setSaving(false);
+                        var curMode = cookies.load("mode");
+                        curMode == "light" ? toastDark(err) : toastLight(err);
+                      });
+                  } catch (error) {
+                    setSaving(false);
+                    curMode = cookies.load("mode");
+                    curMode == "light" ? toastDark(error) : toastLight(error);
+                  }
                 }
               }}
               className={
@@ -499,7 +516,8 @@ graphicDesignTrack: "Best Graphic Design",
           onChange={(event) => setAnyOtherLink(event.target.value)}
         />
         <p className="ReviewsPage__helpertext">
-          Upload any other relevant link , wireframe,etc
+          Upload any other relevant link, wireframe, any relevant research work,
+          etc
         </p>
         <div
           style={{
@@ -536,27 +554,44 @@ graphicDesignTrack: "Best Graphic Design",
             </div>
             <div
               onClick={() => {
-                setSaving(true);
-                try {
-                  createSubmission(title, description, tracks, [
-                    submissionLink,
-                    prototypeLink,
-                    presentationLink,
-                    anyOtherLink,
-                  ])
-                    .then(() => {
-                      setLastSaved(formatDate());
-                      setSaving(false);
-                    })
-                    .catch((err) => {
-                      setSaving(false);
-                      var curMode = cookies.load("mode");
-                      curMode == "light" ? toastDark(err) : toastLight(err);
-                    });
-                } catch (error) {
-                  setSaving(false);
+                if (title.trim() == "") {
                   var curMode = cookies.load("mode");
-                  curMode == "light" ? toastDark(error) : toastLight(error);
+                  curMode == "light"
+                    ? toastDark("Title can't be empty!")
+                    : toastLight("Title can't be empty!");
+                } else if (description.trim() == "") {
+                  curMode = cookies.load("mode");
+                  curMode == "light"
+                    ? toastDark("Description can't be empty!")
+                    : toastLight("Description can't be empty!");
+                } else if (submissionLink.trim() == "") {
+                  curMode = cookies.load("mode");
+                  curMode == "light"
+                    ? toastDark("Submission Link can't be empty!")
+                    : toastLight("Submission Link can't be empty!");
+                } else {
+                  setSaving(true);
+                  try {
+                    createSubmission(title, description, tracks, [
+                      submissionLink,
+                      prototypeLink,
+                      presentationLink,
+                      anyOtherLink,
+                    ])
+                      .then(() => {
+                        setLastSaved(formatDate());
+                        setSaving(false);
+                      })
+                      .catch((err) => {
+                        setSaving(false);
+                        var curMode = cookies.load("mode");
+                        curMode == "light" ? toastDark(err) : toastLight(err);
+                      });
+                  } catch (error) {
+                    setSaving(false);
+                    curMode = cookies.load("mode");
+                    curMode == "light" ? toastDark(error) : toastLight(error);
+                  }
                 }
               }}
               className={

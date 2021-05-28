@@ -260,7 +260,11 @@ export default function Dashboard() {
             : []
         }
       />
-      <ReviewsPage mode={mode} selectedPage={selectedPage} />
+      <ReviewsPage
+        mode={mode}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
       <SupportPage mode={mode} selectedPage={selectedPage} />
       <ProblemStatement mode={mode} selectedPage={selectedPage} />
       <BottomNavbar />

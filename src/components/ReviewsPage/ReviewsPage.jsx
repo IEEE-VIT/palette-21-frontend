@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+//import React, { useState, useEffect } from "react";
+import React from "react";
 import "./ReviewsPage.css";
-import { CircularProgress } from "@material-ui/core";
+import PropTypes from "prop-types";
+/*import { CircularProgress } from "@material-ui/core";
 import round1pic from "../../assets/round1_disquali.png";
 import round2pic from "../../assets/round2_disquali.png";
 //import monalisa from "../../assets/monalisa.png";
@@ -16,9 +18,36 @@ import cookies from "react-cookies";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-var moment = require("moment-timezone");
+var moment = require("moment-timezone");*/
 
-export default function ReviewsPage({ selectedPage, setSelectedPage }) {
+export default function ReviewsPage({ selectedPage }) {
+  return (
+    <div
+      style={{
+        display: selectedPage == 2 ? "flex" : "none",
+      }}
+      id="ReviewsPage__container"
+    >
+      <div id="ReviewsPage__reviewended">
+        <h3>PALETTE RAN OUT OF PAINT</h3>
+        <p>
+          Hope you had a great time solving our challenging problem statements.
+        </p>
+        <div
+          id="ReviewsPage__btn"
+          onClick={() => {
+            window.open("https://links.ieeevit.org/finalday", "_blank");
+          }}
+        >
+          CHECK US OUT LIVE ON YOUTUBE
+        </div>
+        <p>5:30PM IST - Round 3 | 10PM IST - Closing Ceremony</p>
+      </div>
+    </div>
+  );
+}
+
+/*export default function ReviewsPage({ selectedPage, setSelectedPage }) {
   const useStyles = makeStyles(() => ({
     modal: {
       display: "flex",
@@ -57,7 +86,7 @@ graphicDesignTrack: "Best Graphic Design",
   bestPitchTrack: "Best Pitch",
   bestFreshersTrack: "Best Freshers",
   bestCommunityVotedSolutionTrack: "Best Community Voted Solution",
-  */
+  */ /*
   const prefWithZero = (x) => {
     if (parseInt(x) < 10) {
       return "0" + x;
@@ -697,7 +726,7 @@ graphicDesignTrack: "Best Graphic Design",
       </Modal>
     </div>
   );
-}
+}*/
 
 ReviewsPage.propTypes = {
   mode: PropTypes.string.isRequired,

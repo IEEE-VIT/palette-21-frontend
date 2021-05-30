@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
+//import { useHistory } from "react-router-dom";
 import "./LandingScreen.css";
 import Flashback from "../../components/LandingScreen/Flashback/Flashback";
 import Sponsors from "../../components/LandingScreen/Sponsors/Sponsors";
@@ -17,16 +17,16 @@ import EventCarousel from "../../components/LandingScreen/Event/EventCarouselSec
 import TestimonialCarousel from "../../components/LandingScreen/Testimonials/TestimonialCarousel";
 import Footer from "../../components/LandingScreen/Footer/Footer";
 import Discord from "../../components/LandingScreen/Discord/Discord";
-import { useCookies } from "react-cookie";
-import { useTheme } from "@material-ui/core";
+//import { useCookies } from "react-cookie";
+//import { useTheme } from "@material-ui/core";
 import PropTypes from "prop-types";
-import api from "../../api/regPortal";
+//import api from "../../api/regPortal";
 
-const LandingScreen = (props) => {
-  const [cookies, setCookies] = useCookies(["token", "ffcheck"]);
-  const history = useHistory();
-  const theme = useTheme();
-  useEffect(() => {
+const LandingScreen = () => {
+  //const [cookies, setCookies] = useCookies(["token", "ffcheck"]);
+  //const history = useHistory();
+  //const theme = useTheme();
+  /*useEffect(() => {
     if (theme.palette.type === "dark") {
       props.toggleTheme();
     }
@@ -52,7 +52,7 @@ const LandingScreen = (props) => {
           // console.log(err);
         });
     }
-  }, []);
+  }, []);*/
   return (
     <div
       data-spy="scroll"

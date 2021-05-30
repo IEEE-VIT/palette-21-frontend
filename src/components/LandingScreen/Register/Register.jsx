@@ -21,26 +21,26 @@ const Register = () => {
       </Fade>
       <Fade bottom cascade delay={500} duration={1000}>
         <p className="Register__register-heading">
-          Login yourself for Palette{" "}
-          <span style={{ whiteSpace: "nowrap" }}>2021!</span>
+          Thank you for participating in Palette&apos;21. The hackathon has
+          ended.
         </p>
         <br />
         <div id="Register__register-btns">
           <button
-            className="Register__btn Register__register"
+            className="Register__btn Register__register Register__disabledbtn"
             onClick={() => {
-              const url = process.env.REACT_APP_OAUTH_URL + "/auth/google";
-              window.open(url, "_self");
+              /*const url = process.env.REACT_APP_OAUTH_URL + "/auth/google";
+              window.open(url, "_self");*/
             }}
           >
             <img src={google} />
             CONTINUE WITH GOOGLE
           </button>
           <button
-            className="Register__btn Register__register"
+            className="Register__btn Register__register Register__disabledbtn"
             onClick={() => {
-              const url = `https://www.figma.com/oauth?client_id=a2rQkR6iPgOvn3VHC6uCIh&redirect_uri=${process.env.REACT_APP_FIGMA_CALLBACK}&scope=file_read&state=abc&response_type=code`;
-              window.open(url, "_self");
+              /*const url = `https://www.figma.com/oauth?client_id=a2rQkR6iPgOvn3VHC6uCIh&redirect_uri=${process.env.REACT_APP_FIGMA_CALLBACK}&scope=file_read&state=abc&response_type=code`;
+              window.open(url, "_self");*/
             }}
           >
             <img src={figma} />

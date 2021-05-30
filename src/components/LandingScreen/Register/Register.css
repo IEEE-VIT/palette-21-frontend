@@ -37,20 +37,22 @@
     margin-bottom: 20px;
     border : none !important;
     outline:  none !important;
+    cursor : initial;
+    opacity : 0.85 !important;
 }
 
 .Register__btn.Register__register img {
     width : 20px;
     margin-right: 10px;
 }
-.Register__register:hover{
+/*.Register__register:hover{
     box-shadow: 0px 0px 3px 1px rgb(67,41,232);
 }
 .Register__register:active , .Register__register:focus{
     box-shadow: 0px 0px 3px 1px rgb(67,41,232);
     border : none !important;
     outline:  none !important;
-}
+}*/
 .Register__nav-register{
     color:rgb(67,41,232);
     background-color:rgb(67,41,232,0.16);
@@ -59,7 +61,7 @@
     padding:10px;
 }
 .Register__register-heading{
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     margin-bottom:5vw;
     font-family: NeueMontreal-Regular;
     font-weight: 500;

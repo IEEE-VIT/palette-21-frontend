@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LandingScreen from "./screens/LandingScreen/LandingScreen";
-import UserFormScreen from "./screens/UserFormScreen/UserFormScreen";
-import SuccesfulAuth from "./screens/successfulAuth";
+//import UserFormScreen from "./screens/UserFormScreen/UserFormScreen";
+//import SuccesfulAuth from "./screens/successfulAuth";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import Dashboard from "./screens/Dashboard/Dashboard";
+//import Dashboard from "./screens/Dashboard/Dashboard";
 import PageNotFound from "./screens/PageNotFound/PageNotFound";
-import ProtectedRoute from "./utils/protectedRoute";
+//import ProtectedRoute from "./utils/protectedRoute";
 
 const AppRouter = () => {
   const darkTheme = createMuiTheme({
@@ -92,19 +92,6 @@ const AppRouter = () => {
               component={() => <LandingScreen toggleTheme={toggleDarkTheme} />}
             />
             {/* <CssBaseline /> */}
-            <Route exact path="/successfulAuth" component={SuccesfulAuth} />
-            <ProtectedRoute
-              exact
-              path="/userForm"
-              component={() => <UserFormScreen toggleTheme={toggleDarkTheme} />}
-              redirect="/"
-            />
-            <ProtectedRoute
-              exact
-              path="/dashboard"
-              component={Dashboard}
-              redirect="/"
-            />
             <Route page="" component={PageNotFound} />
           </Switch>
         </BrowserRouter>

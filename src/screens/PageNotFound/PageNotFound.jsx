@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./PageNotFound.css";
-import cookie from "react-cookies";
+//import cookie from "react-cookies";
 import nfimg from "../../assets/404image.png";
 import { Button, Typography } from "@material-ui/core";
 import { useHistory } from "react-router";
 
 export default function PageNotFound() {
-  const [mode, setMode] = useState("dark");
+  //const [mode, setMode] = useState("dark");
   const history = useHistory();
-  useEffect(() => {
+  /*useEffect(() => {
     var mode = cookie.load("mode");
     //console.log("mode : " + mode);
     if (mode !== "dark" && mode !== "light") {
@@ -17,7 +17,7 @@ export default function PageNotFound() {
     } else {
       setMode(mode);
     }
-  }, []);
+  }, []);*/
   return (
     <div
       id="PageNotFound__container"
@@ -29,8 +29,7 @@ export default function PageNotFound() {
       <p
         id="PageNotFound__message"
         style={{
-          color:
-            mode == "light" ? "rgba(20, 20, 20, 1)" : "rgba(255, 255, 255, 1)",
+          color: "rgba(255, 255, 255, 1)",
         }}
       >
         <Typography>

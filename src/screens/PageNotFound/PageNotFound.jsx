@@ -22,8 +22,7 @@ export default function PageNotFound() {
     <div
       id="PageNotFound__container"
       style={{
-        backgroundColor:
-          mode == "dark" ? "rgba(20, 20, 20, 1)" : "rgba(255, 255, 255, 1)",
+        backgroundColor: "rgba(20, 20, 20, 1)",
       }}
     >
       <img src={nfimg} />

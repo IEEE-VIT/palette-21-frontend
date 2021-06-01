@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Palette 2021 Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Banner](src/assets/title.png)
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+Palette 2021 Frontend, This project was to create a frontend that ensures a smooth functioning for participants of Palette 21.<br/>
+Participants can register and log in either via their Google or Figma accounts.
+You can create a team or join an existing one. After registering, you can send invites to other participants who are looking for a teammate. The participant who received the invite can either accept or reject an invite.<br/>
+Once the registration deadline passes, new users cannot register. Once the team formation deadline passes, you cannot change your team.<br/>
+Each team can generate up to 3 new random problem statements. You and your teammate can either lock individual parts of the problem statement or the entire one at once. Once the three tries are over, your last generated problem statement is locked if you haven't locked one before it.<br/>
+Each team has to submit their submission for the first round before the deadline passes. You can edit your submission as many times as you want. Once the deadline passes and the judges have released the qualified teams, the next round begins and only the qualified teams can make updates to their previous submissions accordingly for the next round.<br/>
 
-### `yarn start`
+## Tools and Technology Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- HTML
+- CSS
+- JavaScript
+- React.js
+- Bootstrap
+- MaterialUI
+- CloudFlare Pages for hosting
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `yarn test`
+To get started:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Clone the repo.
+    `git clone https://github.com/IEEE-VIT/Palette-Frontend-21.git`
+-   Checkout to a new branch.
+    `git checkout -b my-amazing-feature`
+-   Make some amazing changes.
+-   `git add .`
+-   `git commit -m "A short description about the feature."`
+-   `git push origin my-amazing-feature`
+-   Open a pull request :)
 
-### `yarn build`
+*   For running this project successfully you'll need to create a `.env` file and store your firebase credentials there like following
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+REACT_APP_BACKEND_API=<BACKEND URL with /v1/ appended>
+REACT_APP_BACKEND_URL=<BACKEND URL>
+REACT_APP_OAUTH_URL=<FRONTEND URL>
+REACT_APP_FIGMA_CALLBACK=<URL OF SUCCESSFUL AUTH PAGE HOSTED>
+REACT_APP_SITE_KEY=<RECAPTCHA KEY>
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To start contributing, check out [`CONTRIBUTING.md`](https://github.com/IEEE-VIT/Palette-Frontend-21/blob/main/CONTRIBUTING.md) . New contributors are always welcome to support this project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### Development Run
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```shell
+yarn install
+yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Production Run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```shell
+yarn install
+yarn start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contributors ✨
 
-## Learn More
+<table>
+	<tr>
+    <td align="center">
+    		<a href="https://github.com/r-ush"><img src="https://avatars.githubusercontent.com/r-ush" width="100px;" alt="Rush"/><br /><sub><b>Aarush Bhat</b></sub></a>
+    	</td>
+    <td align="center">
+    		<a href="https://github.com/agnivabasak"><img src="https://avatars.githubusercontent.com/u/59768167?v=4" width="100px;" alt="Agniva"/><br /><sub><b>Agniva Basak</b></sub></a>
+    	</td>
+    <td align="center">
+			<a href="https://github.com/DarthBenro008"><img src="https://avatars.githubusercontent.com/u/31009634?v=4" width="100px;" alt="Benro"/><br /><sub><b>Hemanth Krishna</b></sub></a>
+		</td>
+    <td align="center">
+			<a href="https://github.com/CyberneTech"><img src="https://avatars.githubusercontent.com/u/62790233?v=4" width="100px;" alt="Shruti"/><br /><sub><b>Shruti Jain</b></sub></a>
+		</td>
+    <td align="center">
+			<a href="https://github.com/ShubhamPalriwala"><img src="https://avatars.githubusercontent.com/u/55556994?v=4" width="100px;" alt="Shubham"/><br /><sub><b>Shubham Palriwala</b></sub></a>
+		</td>
+		<td align="center">
+			<a href="https://github.com/souris-dev"><img src="https://avatars.githubusercontent.com/u/5001953?v=4" width="100px;" alt="Souris"/><br /><sub><b>Souris Ash</b></sub></a>
+		</td>
+    	<td align="center">
+    		<a href="https://github.com/Srish-tii"><img src="https://avatars.githubusercontent.com/u/64086884?s=64&v=4" width="100px;" alt="Rush"/><br /><sub><b>Srishti Lodha</b></sub></a>
+    	</td>
+    </tr>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+</table>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br />
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">Made with ❤ by IEEE-VIT</p>

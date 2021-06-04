@@ -4,11 +4,11 @@
 
 ## About
 
-Palette 2021 Frontend, This project was to create a frontend that ensures a smooth functioning for participants of Palette 21.<br/>
+Palette 2021 Frontend, This project was to create a frontend that ensures a smooth functioning for participants of Palette 21.<br/><br/>
 Participants can register and log in either via their Google or Figma accounts.
-You can create a team or join an existing one. After registering, you can send invites to other participants who are looking for a teammate. The participant who received the invite can either accept or reject an invite.<br/>
-Once the registration deadline passes, new users cannot register. Once the team formation deadline passes, you cannot change your team.<br/>
-Each team can generate up to 3 new random problem statements. You and your teammate can either lock individual parts of the problem statement or the entire one at once. Once the three tries are over, your last generated problem statement is locked if you haven't locked one before it.<br/>
+You can create a team or join an existing one. After registering, you can send invites to other participants who are looking for a teammate. The participant who received the invite can either accept or reject an invite.<br/><br/>
+Once the registration deadline passes, new users cannot register. Once the team formation deadline passes, you cannot change your team.<br/><br/>
+Each team can generate up to 3 new random problem statements. You and your teammate can either lock individual parts of the problem statement or the entire one at once. Once the three tries are over, your last generated problem statement is locked if you haven't locked one before it.<br/><br/>
 Each team has to submit their submission for the first round before the deadline passes. You can edit your submission as many times as you want. Once the deadline passes and the judges have released the qualified teams, the next round begins and only the qualified teams can make updates to their previous submissions accordingly for the next round.<br/>
 
 ## Tools and Technology Used

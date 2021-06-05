@@ -1,6 +1,12 @@
 # Palette 2021 Frontend
 
 ![Banner](src/assets/title.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg?style=flat-square)
+[![GitHub Issues](https://img.shields.io/github/issues/aryan9600/IEEE-CTF-Questions.svg)](https://github.com/IEEE-VIT/Palette-Frontend-21/issues)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg?style=flat-square)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-yellow.svg?style=flat-square)](#contributors-)
 
 ## About
 
@@ -61,6 +67,9 @@ yarn start
 yarn install
 yarn start
 ```
+## License
+
+This project is licensed under [MIT](https://github.com/IEEE-VIT/Palette-Frontend-21/blob/main/LICENSE).
 
 ## Contributors ✨
 

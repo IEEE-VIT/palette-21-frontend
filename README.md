@@ -3,7 +3,7 @@
 ![Banner](src/assets/title.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg?style=flat-square)
-[![GitHub Issues](https://img.shields.io/github/issues/aryan9600/IEEE-CTF-Questions.svg)](https://github.com/IEEE-VIT/Palette-Frontend-21/issues)
+[![GitHub Issues](https://img.shields.io/github/issues/aryan9600/IEEE-CTF-Questions.svg)](https://github.com/IEEE-VIT/palette-21-frontend/issues)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg?style=flat-square)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-yellow.svg?style=flat-square)](#contributors-)
@@ -32,7 +32,7 @@ Each team has to submit their submission for the first round before the deadline
 To get started:
 
 -   Clone the repo.
-    `git clone https://github.com/IEEE-VIT/Palette-Frontend-21.git`
+    `git clone https://github.com/IEEE-VIT/palette-21-frontend.git`
 -   Checkout to a new branch.
     `git checkout -b my-amazing-feature`
 -   Make some amazing changes.
@@ -51,7 +51,7 @@ REACT_APP_FIGMA_CALLBACK=<URL OF SUCCESSFUL AUTH PAGE HOSTED>
 REACT_APP_SITE_KEY=<RECAPTCHA KEY>
 ```
 
-To start contributing, check out [`CONTRIBUTING.md`](https://github.com/IEEE-VIT/Palette-Frontend-21/blob/main/CONTRIBUTING.md) . New contributors are always welcome to support this project.
+To start contributing, check out [`CONTRIBUTING.md`](https://github.com/IEEE-VIT/palette-21-frontend/blob/main/CONTRIBUTING.md) . New contributors are always welcome to support this project.
 
 
 ### Development Run
@@ -69,7 +69,7 @@ yarn start
 ```
 ## License
 
-This project is licensed under [MIT](https://github.com/IEEE-VIT/Palette-Frontend-21/blob/main/LICENSE).
+This project is licensed under [MIT](https://github.com/IEEE-VIT/palette-21-frontend/blob/main/LICENSE).
 
 ## Contributors ✨
 

@@ -76,7 +76,7 @@ This project is licensed under [MIT](https://github.com/IEEE-VIT/palette-21-fron
 <table>
 	<tr>
     <td align="center">
-    		<a href="https://github.com/r-ush"><img src="https://avatars.githubusercontent.com/r-ush" width="100px;" alt="Rush"/><br /><sub><b>Aarush Bhat</b></sub></a>
+    		<a href="https://github.com/sloorush"><img src="https://avatars.githubusercontent.com/sloorush" width="100px;" alt="sloorush"/><br /><sub><b>Aarush Bhat</b></sub></a>
     	</td>
     <td align="center">
     		<a href="https://github.com/agnivabasak"><img src="https://avatars.githubusercontent.com/u/59768167?v=4" width="100px;" alt="Agniva"/><br /><sub><b>Agniva Basak</b></sub></a>
